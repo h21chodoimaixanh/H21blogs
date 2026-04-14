@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chương Trình H21 Là Gì? — H21 Cho Đời Mãi Xanh</title>
+<meta name="description" content="Tại sao hơn 1.000 người đã chọn H21 để chuyển hóa sức khỏe? WHY - WHAT - HOW của chương trình 90 ngày 1:1 cùng KHG Thuy-Trinh Nguyen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green-deep:#0a3d2b;
+  --green-mid:#1a6b49;
+  --green-bright:#2eb87a;
+  --green-pale:#d6f0e4;
+  --green-mist:#eef8f3;
+  --cream:#f9f5ee;
+  --ink:#1c1c1a;
+  --muted:#6b6b60;
+  --border:#ddd8cc;
+  --gold:#b07d1a;
+  --gold-lt:#fdf0d5;
+}
+html{scroll-behavior:smooth;font-size:17px}
+body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.8}
+
+/* NAV */
+header{background:var(--green-deep);padding:0 2rem;position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;height:56px;border-bottom:1px solid rgba(255,255,255,.08)}
+.logo{font-family:'Playfair Display',serif;color:#fff;font-size:15px;text-decoration:none}
+.logo span{color:var(--green-bright)}
+nav a{color:rgba(255,255,255,.6);text-decoration:none;font-size:13px;margin-left:24px;transition:color .2s}
+nav a:hover{color:#fff}
+
+/* HERO */
+.hero{background:var(--green-deep);padding:80px 2rem 70px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 100%,rgba(46,184,122,.15),transparent);pointer-events:none}
+.hero-tag{display:inline-block;background:rgba(46,184,122,.18);color:var(--green-bright);font-size:11px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;padding:5px 14px;border-radius:20px;border:1px solid rgba(46,184,122,.3);margin-bottom:28px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,58px);font-weight:700;color:#fff;line-height:1.12;max-width:720px;margin:0 auto 20px}
+.hero h1 em{font-style:italic;color:var(--green-bright)}
+.hero-sub{color:rgba(255,255,255,.6);font-size:15px;max-width:540px;margin:0 auto 36px;line-height:1.7}
+.byline{display:flex;align-items:center;justify-content:center;gap:12px}
+.avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--green-bright),var(--green-mid));display:flex;align-items:center;justify-content:center;font-weight:500;font-size:14px;color:#fff;border:2px solid rgba(255,255,255,.2)}
+.byline-name{font-size:14px;font-weight:500;color:#fff;display:block}
+.byline-role{font-size:12px;color:rgba(255,255,255,.45);display:block}
+
+/* SOCIAL PROOF BAND */
+.proof-band{background:var(--green-bright);padding:1.5rem 2rem}
+.proof-inner{max-width:740px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.2);border-radius:8px;overflow:hidden}
+.proof-cell{background:rgba(255,255,255,.08);padding:1rem;text-align:center}
+.proof-n{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:#fff;line-height:1;display:block}
+.proof-l{font-size:11px;color:rgba(255,255,255,.8);display:block;margin-top:4px;line-height:1.4}
+
+/* LAYOUT */
+.container{max-width:740px;margin:0 auto;padding:0 1.5rem}
+article{padding:56px 0 80px}
+
+/* LEAD */
+.lead{font-size:19px;font-weight:400;line-height:1.75;color:var(--green-deep);border-left:3px solid var(--green-bright);padding-left:24px;margin-bottom:48px}
+
+/* WHY / WHAT / HOW LABELS */
+.framework-label{display:inline-flex;align-items:center;gap:10px;margin-bottom:8px}
+.fw-badge{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:#fff;flex-shrink:0}
+.fw-why{background:var(--green-deep)}
+.fw-what{background:var(--green-mid)}
+.fw-how{background:var(--green-bright)}
+.fw-text{font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+
+/* SECTION HEADING */
+.section-num{display:flex;align-items:center;gap:16px;margin:56px 0 18px}
+.num{font-family:'Playfair Display',serif;font-size:48px;font-weight:700;color:var(--green-pale);line-height:1;user-select:none}
+.section-label small{display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--green-bright);font-weight:500;margin-bottom:2px}
+.section-label h2{font-family:'Playfair Display',serif;font-size:23px;font-weight:700;color:var(--ink);line-height:1.3}
+
+p{margin-bottom:20px}
+strong{font-weight:500;color:var(--green-deep)}
+
+/* PROBLEM CARDS */
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:28px 0}
+.prob-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 20px;border-left:3px solid #c9581a}
+.prob-icon{font-size:22px;margin-bottom:8px;display:block}
+.prob-title{font-size:14px;font-weight:500;color:#7a2510;margin-bottom:6px}
+.prob-desc{font-size:13px;color:var(--muted);line-height:1.6;margin:0}
+
+/* WHAT BOX */
+.what-box{background:linear-gradient(135deg,var(--green-deep),var(--green-mid));border-radius:16px;padding:36px;margin:32px 0;color:#fff}
+.what-box h3{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:20px;color:#fff}
+.what-row{display:flex;align-items:flex-start;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.what-row:last-child{border-bottom:none;padding-bottom:0}
+.what-icon{width:34px;height:34px;border-radius:50%;background:rgba(46,184,122,.25);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;margin-top:2px}
+.what-title{font-size:14px;font-weight:500;color:#fff;margin-bottom:3px}
+.what-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.55}
+
+/* HOW STEPS */
+.how-steps{margin:28px 0}
+.how-step{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--border)}
+.how-step:last-child{border-bottom:none}
+.step-num{width:44px;height:44px;border-radius:50%;background:var(--green-deep);color:#fff;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:4px}
+.step-content h4{font-size:15px;font-weight:500;color:var(--green-deep);margin-bottom:6px}
+.step-content p{font-size:14px;color:var(--muted);line-height:1.65;margin:0}
+
+/* CONDITIONS */
+.condition-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:24px 0}
+.cond-item{background:#fff;border:1px solid var(--border);border-radius:10px;padding:14px 10px;text-align:center}
+.cond-icon{font-size:22px;display:block;margin-bottom:6px}
+.cond-name{font-size:12px;font-weight:500;color:var(--green-deep);line-height:1.3}
+
+/* TESTIMONIAL */
+.testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:28px 0}
+.testi-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px;border-top:3px solid var(--green-bright)}
+.testi-quote{font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:var(--ink);line-height:1.65;margin-bottom:12px}
+.testi-name{font-size:12px;font-weight:500;color:var(--green-mid);letter-spacing:.03em}
+.testi-location{font-size:11px;color:var(--muted)}
+
+/* PULLQUOTE */
+.pullquote{background:var(--green-deep);color:#fff;border-radius:16px;padding:36px 40px;margin:48px 0;position:relative;overflow:hidden}
+.pullquote::before{content:'"';position:absolute;top:-12px;left:24px;font-family:'Playfair Display',serif;font-size:120px;color:rgba(46,184,122,.12);line-height:1;pointer-events:none}
+.pullquote p{font-family:'Playfair Display',serif;font-size:19px;font-style:italic;line-height:1.65;color:#fff;position:relative;margin:0}
+.pullquote cite{display:block;margin-top:16px;font-size:13px;font-style:normal;font-weight:500;color:var(--green-bright)}
+
+/* DIFF TABLE */
+.diff-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:14px;border-radius:12px;overflow:hidden;border:1px solid var(--border)}
+.diff-table thead{background:var(--green-deep);color:#fff}
+.diff-table th{padding:12px 16px;font-weight:500;text-align:left;font-size:12px;letter-spacing:.5px}
+.diff-table td{padding:11px 16px;border-top:1px solid var(--border);color:var(--muted);line-height:1.5}
+.diff-table td:first-child{font-weight:500;color:var(--ink)}
+.diff-table tr:nth-child(even) td{background:#faf8f4}
+.tag-yes{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:500;background:var(--green-pale);color:var(--green-mid)}
+.tag-no{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:500;background:#fdeee7;color:#c9581a}
+
+/* VIDEO LINK */
+.video-link{display:flex;align-items:center;gap:14px;background:var(--gold-lt);border:1px solid #e8c870;border-radius:12px;padding:16px 20px;margin:24px 0;text-decoration:none;transition:background .2s}
+.video-link:hover{background:#f5e4b0}
+.play-btn{width:44px;height:44px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px}
+.video-txt .vt1{font-size:14px;font-weight:500;color:var(--ink);display:block}
+.video-txt .vt2{font-size:12px;color:var(--muted);display:block;margin-top:2px}
+
+/* CTA */
+.cta-box{background:var(--green-deep);border-radius:20px;padding:48px 40px;text-align:center;margin-top:64px}
+.cta-box h2{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#fff;margin-bottom:12px;line-height:1.3}
+.cta-box p{color:rgba(255,255,255,.6);font-size:15px;max-width:440px;margin:0 auto 28px}
+.cta-btn{display:inline-block;background:var(--green-bright);color:#fff;font-size:14px;font-weight:500;padding:13px 32px;border-radius:100px;text-decoration:none;transition:opacity .2s;margin:6px}
+.cta-btn:hover{opacity:.85}
+.cta-btn-outline{display:inline-block;background:transparent;color:rgba(255,255,255,.7);font-size:14px;font-weight:400;padding:13px 28px;border-radius:100px;text-decoration:none;border:1px solid rgba(255,255,255,.3);transition:all .2s;margin:6px}
+.cta-btn-outline:hover{border-color:#fff;color:#fff}
+
+/* DIVIDER */
+.divider{display:flex;align-items:center;gap:16px;margin:48px 0}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--border)}
+.divider span{font-size:18px;color:var(--green-bright)}
+
+/* FOOTER */
+footer{background:var(--green-deep);border-top:1px solid rgba(255,255,255,.06);padding:36px 2rem;text-align:center}
+.footer-logo{font-family:'Playfair Display',serif;color:#fff;font-size:18px;margin-bottom:8px}
+.footer-logo span{color:var(--green-bright)}
+footer p{font-size:13px;color:rgba(255,255,255,.35);margin:0}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero>*{animation:fadeUp .7s ease both}
+.hero .hero-tag{animation-delay:.1s}
+.hero h1{animation-delay:.22s}
+.hero .hero-sub{animation-delay:.34s}
+.hero .byline{animation-delay:.46s}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .proof-inner{grid-template-columns:1fr}
+  .problem-grid{grid-template-columns:1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .condition-grid{grid-template-columns:repeat(2,1fr)}
+  .pullquote{padding:28px 24px}
+  .pullquote p{font-size:16px}
+  .cta-box{padding:36px 20px}
+  nav{display:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">H21 <span>Cho Đời Mãi Xanh</span></a>
+  <nav>
+    <a href="index.html">← Trang chủ</a>
+    <a href="https://www.h21chodoimaixanh.com" target="_blank">Website</a>
+    <a href="https://substack.com/@h21chodoimaixanh" target="_blank">Substack</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-tag">Chương Trình · 90 Ngày · 1:1 Coaching</div>
+  <h1>Chương Trình H21<br>Là Gì — Và Tại Sao<br><em>Hơn 1.000 Người Chọn H21?</em></h1>
+  <p class="hero-sub">Không phải thuốc. Không phải thực phẩm chức năng thần kỳ. Đây là khoa học dinh dưỡng ứng dụng — được cá nhân hóa cho chính bạn.</p>
+  <div class="byline">
+    <div class="avatar">TN</div>
+    <div>
+      <span class="byline-name">Khoa Học Gia Thuy-Trinh Nguyen</span>
+      <span class="byline-role">H21 Cho Đời Mãi Xanh · 21DaysHealthierU</span>
+    </div>
+  </div>
+</div>
+
+<!-- PROOF BAND -->
+<div class="proof-band">
+  <div class="proof-inner">
+    <div class="proof-cell"><span class="proof-n">1,000+</span><span class="proof-l">người đã chuyển hóa sức khỏe cùng H21</span></div>
+    <div class="proof-cell"><span class="proof-n">90</span><span class="proof-l">ngày coaching 1:1 cá nhân hóa</span></div>
+    <div class="proof-cell"><span class="proof-n">8+</span><span class="proof-l">nhóm vấn đề sức khỏe được hỗ trợ</span></div>
+  </div>
+</div>
+
+<div class="container">
+<article>
+
+  <p class="lead">Bạn đã từng cố gắng ăn kiêng, tập thể dục, uống thực phẩm chức năng — nhưng vẫn thấy mình loanh quanh ở vạch xuất phát? Đó không phải lỗi của bạn. Đó là lỗi của một hệ thống chưa được cá nhân hóa cho cơ thể của bạn.</p>
+
+  <!-- WHY -->
+  <div class="section-num">
+    <div class="num">01</div>
+    <div class="section-label">
+      <small>WHY — Tại Sao Cần H21</small>
+      <h2>Vấn Đề Mà Hầu Hết Chúng Ta Đang Gặp Phải</h2>
+    </div>
+  </div>
+
+  <p>Y học hiện đại rất giỏi trong việc <strong>trị ngọn</strong> — kê thuốc khi có bệnh, can thiệp khi chỉ số xấu. Nhưng không ai dạy chúng ta cách <strong>nuôi cơ thể từ gốc</strong> để những vấn đề đó không xảy ra.</p>
+
+  <div class="problem-grid">
+    <div class="prob-card">
+      <span class="prob-icon">😴</span>
+      <div class="prob-title">Mệt mỏi không rõ lý do</div>
+      <p class="prob-desc">Ngủ đủ giấc nhưng vẫn không phục hồi năng lượng — cơ thể đang thiếu dưỡng chất thiết yếu.</p>
+    </div>
+    <div class="prob-card">
+      <span class="prob-icon">⚖️</span>
+      <div class="prob-title">Cân nặng không kiểm soát được</div>
+      <p class="prob-desc">Ăn ít vẫn tăng cân, tập nhiều vẫn không giảm — đây là vấn đề chuyển hóa, không phải ý chí.</p>
+    </div>
+    <div class="prob-card">
+      <span class="prob-icon">📊</span>
+      <div class="prob-title">Chỉ số không cải thiện</div>
+      <p class="prob-desc">Huyết áp, đường huyết, mỡ máu cứ duy trì ở mức đáng lo dù đã uống thuốc đều đặn.</p>
+    </div>
+    <div class="prob-card">
+      <span class="prob-icon">🔄</span>
+      <div class="prob-title">Thông tin dinh dưỡng mâu thuẫn</div>
+      <p class="prob-desc">Hôm nay đọc thứ này tốt, ngày mai thấy bảo xấu — không biết tin ai, không biết bắt đầu từ đâu.</p>
+    </div>
+  </div>
+
+  <div class="pullquote">
+    <p>Thức ăn của hôm nay không nuôi bạn ngay bây giờ — nó đang xây dựng, hoặc phá hủy, con người bạn 10 năm sau.</p>
+    <cite>— KHG Thuy-Trinh Nguyen · H21 Cho Đời Mãi Xanh</cite>
+  </div>
+
+  <div class="divider"><span>✦</span></div>
+
+  <!-- WHAT -->
+  <div class="section-num">
+    <div class="num">02</div>
+    <div class="section-label">
+      <small>WHAT — H21 Là Gì</small>
+      <h2>Chương Trình H21 — Không Phải Ăn Kiêng, Là Chuyển Hóa</h2>
+    </div>
+  </div>
+
+  <p><strong>H21 — 21DaysHealthierU</strong> là chương trình khoa học dinh dưỡng ứng dụng, được thiết kế bởi Khoa học gia Thuy-Trinh Nguyen — người có hơn 30 năm kinh nghiệm trong nghiên cứu dược phẩm tại Pfizer, Boehringer Ingelheim và Bayer, hiện đang sống và làm việc tại Hoa Kỳ.</p>
+
+  <div class="what-box">
+    <h3>H21 bao gồm những gì?</h3>
+    <div class="what-row">
+      <div class="what-icon">🧬</div>
+      <div>
+        <div class="what-title">Nền tảng khoa học dinh dưỡng cá nhân hóa</div>
+        <div class="what-desc">Không phải công thức chung chung. Chương trình được thiết kế dựa trên tình trạng sức khỏe, lối sống và mục tiêu cụ thể của từng người.</div>
+      </div>
+    </div>
+    <div class="what-row">
+      <div class="what-icon">👥</div>
+      <div>
+        <div class="what-title">Coaching 1:1 trong 90 ngày</div>
+        <div class="what-desc">Đội ngũ coach đồng hành trực tiếp, theo dõi tiến trình, điều chỉnh thực đơn và giải đáp mọi câu hỏi trong suốt hành trình.</div>
+      </div>
+    </div>
+    <div class="what-row">
+      <div class="what-icon">🥗</div>
+      <div>
+        <div class="what-title">Thực đơn ăn ngon, đủ chất — không đói</div>
+        <div class="what-desc">Không yêu cầu nhịn ăn hay tập luyện khắt khe. Ăn đủ no, đủ chất, phù hợp với khẩu vị và sinh hoạt thực tế của bạn.</div>
+      </div>
+    </div>
+    <div class="what-row">
+      <div class="what-icon">📈</div>
+      <div>
+        <div class="what-title">Theo dõi chỉ số sức khỏe có thể đo lường</div>
+        <div class="what-desc">Kết quả được kiểm chứng qua xét nghiệm máu, cân nặng, huyết áp và các chỉ số sức khỏe cụ thể — không phải cảm giác chủ quan.</div>
+      </div>
+    </div>
+    <div class="what-row">
+      <div class="what-icon">🌿</div>
+      <div>
+        <div class="what-title">H21 Thảo Mộc Trà — hỗ trợ từ bên trong</div>
+        <div class="what-desc">Các công thức trà thảo mộc được nghiên cứu chuyên biệt, hỗ trợ song song với chế độ ăn cho từng nhóm vấn đề sức khỏe.</div>
+      </div>
+    </div>
+    <div class="what-row">
+      <div class="what-icon">📚</div>
+      <div>
+        <div class="what-title">Kiến thức dinh dưỡng suốt đời</div>
+        <div class="what-desc">Bạn không chỉ thay đổi trong 90 ngày — bạn học được cách ăn đúng để áp dụng cho cả gia đình, suốt phần đời còn lại.</div>
+      </div>
+    </div>
+  </div>
+
+  <p>H21 hỗ trợ các vấn đề sức khỏe:</p>
+  <div class="condition-grid">
+    <div class="cond-item"><span class="cond-icon">⚖️</span><span class="cond-name">Cân nặng &amp; Vóc dáng</span></div>
+    <div class="cond-item"><span class="cond-icon">🩸</span><span class="cond-name">Tiểu đường</span></div>
+    <div class="cond-item"><span class="cond-icon">❤️</span><span class="cond-name">Huyết áp</span></div>
+    <div class="cond-item"><span class="cond-icon">🫀</span><span class="cond-name">Mỡ máu</span></div>
+    <div class="cond-item"><span class="cond-icon">🫁</span><span class="cond-name">Gan nhiễm mỡ</span></div>
+    <div class="cond-item"><span class="cond-icon">🌀</span><span class="cond-name">Tiêu hóa</span></div>
+    <div class="cond-item"><span class="cond-icon">😴</span><span class="cond-name">Mất ngủ</span></div>
+    <div class="cond-item"><span class="cond-icon">🛡️</span><span class="cond-name">Phòng ngừa ung thư</span></div>
+  </div>
+
+  <div class="divider"><span>✦</span></div>
+
+  <!-- HOW -->
+  <div class="section-num">
+    <div class="num">03</div>
+    <div class="section-label">
+      <small>HOW — H21 Giúp Bạn Như Thế Nào</small>
+      <h2>Hành Trình 90 Ngày — Từng Bước Rõ Ràng</h2>
+    </div>
+  </div>
+
+  <p>H21 không phải "mua về tự làm". Đây là hành trình có đồng hành — được thiết kế để bạn <strong>không phải tự mò một mình</strong>.</p>
+
+  <div class="how-steps">
+    <div class="how-step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>Đánh giá tình trạng sức khỏe hiện tại</h4>
+        <p>Bắt đầu bằng việc hiểu rõ bạn đang ở đâu — chỉ số sức khỏe, thói quen ăn uống, lối sống và mục tiêu cụ thể bạn muốn đạt được.</p>
+      </div>
+    </div>
+    <div class="how-step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>Thiết kế thực đơn và kế hoạch cá nhân hóa</h4>
+        <p>KHG Thuy-Trinh Nguyen và đội ngũ coach xây dựng thực đơn phù hợp với khẩu vị, sức khỏe và lịch sinh hoạt của riêng bạn — không sao chép từ ai khác.</p>
+      </div>
+    </div>
+    <div class="how-step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>Đồng hành 1:1 trong suốt 90 ngày</h4>
+        <p>Đội ngũ coach theo dõi, điều chỉnh và hỗ trợ bạn mỗi tuần. Bạn không bao giờ bị bỏ lại một mình giữa chừng — đây là điểm khác biệt lớn nhất của H21.</p>
+      </div>
+    </div>
+    <div class="how-step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>Đo lường kết quả bằng chỉ số thực tế</h4>
+        <p>Sau 21 ngày đầu — bạn bắt đầu thấy khác biệt. Sau 90 ngày — kết quả được kiểm chứng qua xét nghiệm máu và các chỉ số sức khỏe cụ thể, không phải cảm giác chủ quan.</p>
+      </div>
+    </div>
+    <div class="how-step">
+      <div class="step-num">5</div>
+      <div class="step-content">
+        <h4>Duy trì bền vững — không bị yoyo</h4>
+        <p>Vì bạn hiểu nguyên lý — không phải chỉ làm theo công thức — nên kết quả được duy trì lâu dài, cho cả gia đình, không bị đảo ngược sau khi kết thúc chương trình.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"><span>✦</span></div>
+
+  <!-- DIFFERENCE -->
+  <div class="section-num">
+    <div class="num">04</div>
+    <div class="section-label">
+      <small>H21 Khác Gì So Với Những Gì Bạn Đã Thử</small>
+      <h2>Tại Sao Những Gì Trước Đây Không Hiệu Quả?</h2>
+    </div>
+  </div>
+
+  <table class="diff-table">
+    <thead>
+      <tr>
+        <th>Tiêu chí</th>
+        <th>Phương pháp thông thường</th>
+        <th>Chương trình H21</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Cá nhân hóa</td>
+        <td>Công thức chung cho tất cả</td>
+        <td><span class="tag-yes">Thiết kế riêng cho bạn</span></td>
+      </tr>
+      <tr>
+        <td>Đồng hành</td>
+        <td>Tự làm một mình</td>
+        <td><span class="tag-yes">Coach 1:1 trong 90 ngày</span></td>
+      </tr>
+      <tr>
+        <td>Nền tảng</td>
+        <td>Xu hướng, trào lưu mạng xã hội</td>
+        <td><span class="tag-yes">Khoa học dinh dưỡng có trích dẫn</span></td>
+      </tr>
+      <tr>
+        <td>Kết quả</td>
+        <td>Cảm giác, không đo lường được</td>
+        <td><span class="tag-yes">Chỉ số xét nghiệm thực tế</span></td>
+      </tr>
+      <tr>
+        <td>Tập luyện</td>
+        <td>Bắt buộc, khắt khe</td>
+        <td><span class="tag-yes">Không bắt buộc, linh hoạt</span></td>
+      </tr>
+      <tr>
+        <td>Tính bền vững</td>
+        <td>Bị yoyo sau khi dừng</td>
+        <td><span class="tag-yes">Hiểu nguyên lý, duy trì lâu dài</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="divider"><span>✦</span></div>
+
+  <!-- TESTIMONIALS -->
+  <div class="section-num">
+    <div class="num">05</div>
+    <div class="section-label">
+      <small>Bằng Chứng Thực Tế</small>
+      <h2>Những Người Đã Thay Đổi Cuộc Đời Cùng H21</h2>
+    </div>
+  </div>
+
+  <p>Hơn 1.000 thành viên H21 — từ Việt Nam đến Mỹ, Úc, Canada — đã và đang chuyển hóa sức khỏe. Đây là một số câu chuyện thực tế:</p>
+
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-quote">"Sau 6 tháng cùng H21, bác sĩ hoàn toàn ngạc nhiên với kết quả xét nghiệm. Thiếu máu, thiếu sắt đã cải thiện rõ rệt — điều tôi không nghĩ có thể xảy ra chỉ qua ăn uống."</div>
+      <div class="testi-name">Chị Như Nguyễn</div>
+      <div class="testi-location">USA · Thiếu máu, thiếu sắt</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-quote">"Cơ thể săn chắc, khoẻ mạnh hơn. Thực đơn dễ áp dụng, không thấy đói, không cảm giác đang 'ăn kiêng'. Đây là lần đầu tiên tôi thực sự duy trì được."</div>
+      <div class="testi-name">Chị Rose Đào</div>
+      <div class="testi-location">USA · Cân nặng & Vóc dáng</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-quote">"Hạnh phúc khi được ở trong cộng đồng H21 — không chỉ là kiến thức, mà là sự đồng hành. Tôi không còn cảm thấy một mình trong hành trình chăm sóc sức khỏe."</div>
+      <div class="testi-name">Chị Fila Trâm Nguyễn</div>
+      <div class="testi-location">USA · Sức khỏe tổng thể</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-quote">"Hồi phục sức khoẻ sau khi hư thận, chuẩn bị thay thận — H21 đã giúp tôi cải thiện được những chỉ số mà tôi nghĩ không thể nào thay đổi được."</div>
+      <div class="testi-name">Anh Gary</div>
+      <div class="testi-location">USA · Hỗ trợ thận, phục hồi</div>
+    </div>
+  </div>
+
+  <a href="https://www.facebook.com/media/set/?set=a.10223494001926182&type=3" target="_blank" class="video-link">
+    <div class="play-btn">▶</div>
+    <div class="video-txt">
+      <span class="vt1">Xem thêm hàng trăm testimonial thực tế từ thành viên H21</span>
+      <span class="vt2">Facebook · Ảnh & Video · KHG Thuy-Trinh Nguyen</span>
+    </div>
+  </a>
+
+  <a href="https://youtu.be/bQeHeo-UCVs?si=JjvFRZz4SofNuSnn" target="_blank" class="video-link" style="background:#fdeee7;border-color:#e8b09a">
+    <div class="play-btn" style="background:#c9581a">▶</div>
+    <div class="video-txt">
+      <span class="vt1">Xem video giới thiệu chương trình H21 trên YouTube</span>
+      <span class="vt2">YouTube · KHG Thuy-Trinh Nguyen</span>
+    </div>
+  </a>
+
+  <div class="pullquote">
+    <p>Chăm sóc sức khỏe là một hành trình của nhận thức — không phải một cuộc chạy theo trào lưu. Và hành trình ấy luôn bắt đầu từ việc biết chọn điều đúng cho chính mình.</p>
+    <cite>— KHG Thuy-Trinh Nguyen · H21 Cho Đời Mãi Xanh</cite>
+  </div>
+
+  <div class="cta-box">
+    <h2>Bắt Đầu Hành Trình Của Bạn Ngay Hôm Nay</h2>
+    <p>Hơn 1.000 người đã thay đổi. Câu hỏi duy nhất là: bạn có muốn là người tiếp theo không?</p>
+    <a href="https://www.facebook.com/xanhlenbenhxuong/" target="_blank" class="cta-btn">Đăng Ký Khóa Học H21 →</a>
+    <a href="https://www.h21chodoimaixanh.com/ch%C6%B0%C6%A1ng-tr%C3%ACnh-h21" target="_blank" class="cta-btn-outline">Tìm Hiểu Thêm</a>
+  </div>
+
+</article>
+</div>
+
+<footer>
+  <div class="footer-logo">H21 <span>Cho Đời Mãi Xanh</span></div>
+  <p style="margin-bottom:6px">Khoa Học Gia Thuy-Trinh Nguyen · 21DaysHealthierU · © 2026</p>
+  <p><a href="https://www.h21chodoimaixanh.com" target="_blank" style="color:var(--green-bright);text-decoration:none;font-size:13px">www.h21chodoimaixanh.com</a></p>
+</footer>
+
+</body>
+</html>
