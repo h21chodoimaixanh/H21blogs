@@ -3,568 +3,527 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cà Rốt & Ung Thư Vú — Ăn Hôm Nay Sức Khỏe Ngày Mai</title>
+<title>H21 Cho Đời Mãi Xanh — Khoa học gia Thuy-Trinh Nguyen</title>
+<meta name="description" content="Khoa học dinh dưỡng ứng dụng — Ăn Hôm Nay, Sức Khỏe Ngày Mai. Chương trình H21 do Khoa học gia Thuy-Trinh Nguyen sáng lập.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#FFFFFF;--bg:#F8FAF8;--bg-alt:#EFF6EF;
+  --green-dark:#1E4D2B;--green-mid:#2D7A42;--green:#3A9652;--green-lt:#5AB86C;
+  --green-pale:#C8E8CF;--green-mist:#E8F5EA;
+  --teal:#1A6B5A;--teal-lt:#E0F2EE;
+  --gold:#B07D1A;--gold-lt:#FBF0D8;
+  --ink:#1A2E1E;--ink-mid:#2E4A34;--ink-body:#3D5542;--ink-light:#6B8A72;--ink-hint:#9DB8A4;
+  --rule:#C8DEC9;--rule-lt:#E2EEE3;
+  --shadow:rgba(30,77,43,0.08);
+}
+html{font-size:17px;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
 
-  :root {
-    --cream: #F7F3EE;
-    --ink: #1A1610;
-    --ink-mid: #3D3529;
-    --ink-light: #7A6F62;
-    --sage: #4A6741;
-    --sage-light: #D4E4CF;
-    --amber: #C4862A;
-    --amber-light: #F5E8D0;
-    --rule: #C8BFB2;
-    --white: #FEFCFA;
-  }
+/* NAV */
+nav{background:var(--white);border-bottom:1.5px solid var(--green-pale);position:sticky;top:0;z-index:200;box-shadow:0 2px 12px var(--shadow)}
+.nav-inner{max-width:1140px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:64px;gap:1rem}
+.nav-brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.nav-h21-badge{background:var(--green-dark);color:var(--white);font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;width:46px;height:46px;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.b1{font-size:13px;font-weight:500;color:var(--green-dark);display:block;line-height:1.2}
+.b2{font-size:11px;color:var(--ink-light);display:block;margin-top:1px}
+.nav-links{display:flex;align-items:center;list-style:none}
+.nav-links li a{font-size:13px;font-weight:400;color:var(--ink-light);padding:0 1rem;height:64px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+.nav-links li a:hover{color:var(--green);border-bottom-color:var(--green-pale)}
+.nav-cta-btn{background:var(--green) !important;color:var(--white) !important;border-radius:4px;padding:10px 18px !important;height:auto !important;border-bottom:none !important;font-weight:500 !important;transition:background .2s !important}
+.nav-cta-btn:hover{background:var(--green-dark) !important}
+.hamburger{display:none;background:none;border:1.5px solid var(--rule);border-radius:4px;padding:8px 10px;cursor:pointer;flex-direction:column;gap:4px}
+.hamburger span{width:20px;height:2px;background:var(--ink-mid);border-radius:2px;display:block}
+.mobile-menu{display:none;background:var(--white);border-top:1px solid var(--rule-lt);padding:1rem 1.5rem 1.5rem;flex-direction:column;gap:0}
+.mobile-menu a{font-size:15px;color:var(--ink-mid);padding:.75rem 0;border-bottom:.5px solid var(--rule-lt);display:block}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu .m-cta{margin-top:.75rem;background:var(--green);color:var(--white) !important;text-align:center;border-radius:4px;padding:.8rem !important;font-weight:500;border-bottom:none !important}
 
-  html { font-size: 16px; }
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--green-dark) 0%,#2A6038 50%,#1E5535 100%);padding:4rem 1.5rem 0;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-40px;right:-60px;width:400px;height:400px;border-radius:50%;background:rgba(255,255,255,.03);pointer-events:none}
+.hero-inner{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1fr 360px;gap:3rem;align-items:end;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:5px 14px 5px 10px;margin-bottom:1.5rem}
+.hero-badge-dot{width:7px;height:7px;border-radius:50%;background:#6EE89A;animation:blink 2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
+.hero-badge-txt{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85)}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,4.2rem);font-weight:600;line-height:1.05;color:var(--white);margin-bottom:1rem}
+.hero-title em{font-style:italic;color:#90E8A8}
+.hero-sub{font-family:'Source Serif 4',serif;font-size:1.05rem;font-style:italic;color:rgba(255,255,255,.7);margin-bottom:2rem;line-height:1.7;max-width:540px}
+.hero-socials{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:3rem}
+.s-btn{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:500;color:rgba(255,255,255,.75);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:4px;padding:7px 13px;transition:background .2s,color .2s}
+.s-btn:hover{background:rgba(255,255,255,.15);color:var(--white)}
+.s-btn svg{width:14px;height:14px;fill:currentColor;flex-shrink:0}
+.s-btn-course{background:rgba(144,232,168,.15) !important;border-color:rgba(144,232,168,.35) !important;color:#90E8A8 !important}
 
-  body {
-    background: var(--cream);
-    color: var(--ink);
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 300;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-  }
+/* Hero card */
+.hero-card{background:var(--white);border-radius:8px;padding:1.6rem;box-shadow:0 8px 32px rgba(0,0,0,.18);margin-bottom:2px}
+.hc-eyebrow{font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--green-mid);margin-bottom:.8rem;display:flex;align-items:center;gap:8px}
+.hc-eyebrow::after{content:'';flex:1;height:1px;background:var(--rule-lt)}
+.hc-title{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;line-height:1.25;color:var(--ink);margin-bottom:.6rem;transition:color .2s;display:block}
+.hc-title:hover{color:var(--green-mid)}
+.hc-deck{font-family:'Source Serif 4',serif;font-size:.82rem;font-style:italic;color:var(--ink-light);line-height:1.65;margin-bottom:1rem}
+.hc-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule-lt);border:1px solid var(--rule-lt);border-radius:4px;overflow:hidden;margin-bottom:1rem}
+.hc-stat{background:var(--green-mist);padding:.7rem .8rem;text-align:center}
+.hc-num{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:600;color:var(--green-dark);line-height:1;display:block}
+.hc-lbl{font-size:9.5px;color:var(--ink-light);margin-top:3px;display:block;line-height:1.4}
+.hc-link{display:flex;align-items:center;justify-content:space-between;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--green-mid);border-top:1px solid var(--rule-lt);padding-top:.8rem;transition:color .2s}
+.hc-link:hover{color:var(--green-dark)}
 
-  /* ── MASTHEAD ── */
-  .masthead {
-    background: var(--ink);
-    color: var(--cream);
-    padding: 0;
-    position: relative;
-    overflow: hidden;
-  }
+/* TABS */
+.tabs-wrap{background:var(--white);border-bottom:1.5px solid var(--rule);position:sticky;top:64px;z-index:100;box-shadow:0 2px 8px var(--shadow)}
+.tabs-inner{max-width:1140px;margin:0 auto;padding:0 1.5rem;display:flex;overflow-x:auto;scrollbar-width:none;gap:0}
+.tabs-inner::-webkit-scrollbar{display:none}
+.tab{font-size:12.5px;font-weight:500;color:var(--ink-light);padding:.9rem 1.1rem;white-space:nowrap;cursor:pointer;border-bottom:2.5px solid transparent;transition:color .2s,border-color .2s;flex-shrink:0}
+.tab:hover{color:var(--green)}
+.tab.active{color:var(--green-dark);border-bottom-color:var(--green)}
+.tab-herbal{color:var(--teal) !important}
+.tab-herbal.active{border-bottom-color:var(--teal) !important}
 
-  .masthead-inner {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 3rem 2.5rem 0;
-  }
+/* STATS BAND */
+.stats-band{background:var(--green-dark);padding:2.5rem 1.5rem}
+.stats-inner{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1);border-radius:8px;overflow:hidden}
+.stat-cell{background:rgba(255,255,255,.04);padding:1.5rem 1.2rem;text-align:center}
+.stat-n{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:600;color:#90E8A8;line-height:1;display:block}
+.stat-l{font-size:12px;color:rgba(255,255,255,.6);margin-top:6px;display:block;line-height:1.45}
 
-  .mag-label {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--amber);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 2rem;
-  }
-  .mag-label::before, .mag-label::after {
-    content: '';
-    height: 0.5px;
-    background: var(--amber);
-    flex: 1;
-  }
+/* SECTION HEADER */
+.sec-hd{max-width:1140px;margin:2.5rem auto 0;padding:0 1.5rem;display:flex;align-items:center;gap:1rem}
+.sec-hd-lbl{font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-hint);white-space:nowrap}
+.sec-hd-line{flex:1;height:1px;background:var(--rule-lt)}
 
-  .headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 300;
-    font-size: clamp(3rem, 7vw, 5.5rem);
-    line-height: 1.0;
-    letter-spacing: -0.01em;
-    color: var(--white);
-    margin-bottom: 1.5rem;
-  }
-  .headline em {
-    font-style: italic;
-    color: #D4A862;
-  }
+/* ARTICLES GRID */
+.articles{max-width:1140px;margin:1.5rem auto 0;padding:0 1.5rem 3rem;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--white);border:1.5px solid var(--rule-lt);border-radius:8px;padding:1.6rem;display:flex;flex-direction:column;transition:box-shadow .25s,border-color .25s,transform .2s;position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--green-pale);transition:background .3s}
+.card.live::before{background:var(--green)}
+.card.herbal::before{background:var(--teal)}
+.card.live{cursor:pointer}
+.card.live:hover{box-shadow:0 8px 28px var(--shadow);border-color:var(--green-pale);transform:translateY(-2px)}
+.card-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:400;color:var(--rule);line-height:1;margin-bottom:.4rem}
+.card-tag{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--green-mid);margin-bottom:.5rem}
+.card-tag.herbal-tag{color:var(--teal)}
+.card-title{font-family:'Source Serif 4',serif;font-size:1.05rem;font-weight:600;line-height:1.35;color:var(--ink);margin-bottom:.7rem;flex:1;transition:color .2s}
+.card.live:hover .card-title{color:var(--green-mid)}
+.card-excerpt{font-size:.85rem;line-height:1.7;color:var(--ink-light);margin-bottom:1.2rem}
+.card-foot{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--rule-lt);padding-top:.8rem;margin-top:auto}
+.pill{font-size:10px;font-weight:500;padding:4px 10px;border-radius:20px}
+.pill-live{background:#E6F7EC;color:var(--green-mid)}
+.pill-soon{background:var(--gold-lt);color:var(--gold)}
+.pill-herbal{background:var(--teal-lt);color:var(--teal)}
+.card-arr{font-size:16px;color:var(--rule);transition:color .2s,transform .2s}
+.card.live:hover .card-arr{color:var(--green);transform:translateX(4px)}
 
-  .deck {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 1.05rem;
-    font-weight: 400;
-    font-style: italic;
-    line-height: 1.7;
-    color: #B8AFA4;
-    max-width: 600px;
-    margin-bottom: 2.5rem;
-  }
+/* ABOUT */
+.about{background:var(--white);border-top:1.5px solid var(--rule-lt);border-bottom:1.5px solid var(--rule-lt);padding:3.5rem 1.5rem;margin-top:1rem}
+.about-inner{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.about-eyebrow{font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--green-mid);margin-bottom:.8rem;display:flex;align-items:center;gap:8px}
+.about-eyebrow::after{content:'';flex:1;height:1px;background:var(--rule-lt)}
+.about-title{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;line-height:1.15;color:var(--green-dark);margin-bottom:1.25rem}
+.about-title em{font-style:italic;color:var(--green-mid)}
+.about-body{font-family:'Source Serif 4',serif;font-size:.95rem;line-height:1.85;color:var(--ink-body);margin-bottom:1rem}
+.about-body strong{color:var(--ink);font-weight:600}
+.about-motto{background:var(--green-mist);border-left:3px solid var(--green);border-radius:0 4px 4px 0;padding:1rem 1.2rem;margin-top:1.5rem}
+.about-motto p{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;font-weight:600;color:var(--green-dark);line-height:1.5}
 
-  .byline-bar {
-    border-top: 0.5px solid #3D3529;
-    padding: 1.2rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-  .byline {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .byline-avatar {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: var(--sage);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 15px;
-    color: var(--cream);
-    font-weight: 600;
-    flex-shrink: 0;
-  }
-  .byline-name {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--white);
-  }
-  .byline-role {
-    font-size: 11px;
-    color: #7A6F62;
-    margin-top: 2px;
-    letter-spacing: 0.03em;
-  }
-  .byline-meta {
-    font-size: 11px;
-    color: #7A6F62;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
+.link-cards{display:flex;flex-direction:column;gap:10px}
+.link-card{display:flex;align-items:center;gap:14px;background:var(--bg);border:1.5px solid var(--rule-lt);border-radius:8px;padding:1rem 1.1rem;transition:border-color .2s,background .2s,transform .2s}
+.link-card:hover{border-color:var(--green-pale);background:var(--green-mist);transform:translateX(3px)}
+.link-icon{width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.link-icon svg{width:18px;height:18px;fill:currentColor}
+.i-web{background:var(--green-mist);color:var(--green-dark)}
+.i-sub{background:var(--gold-lt);color:var(--gold)}
+.i-yt{background:#FDEAEA;color:#C0392B}
+.i-fb{background:#EAF0FF;color:#2B56C0}
+.i-course{background:var(--teal-lt);color:var(--teal)}
+.lt1{font-size:13px;font-weight:500;color:var(--ink);display:block}
+.lt2{font-size:11px;color:var(--ink-light);display:block;margin-top:2px}
+.link-arr2{margin-left:auto;font-size:14px;color:var(--ink-hint);flex-shrink:0;transition:color .2s}
+.link-card:hover .link-arr2{color:var(--green)}
+.link-card-course{border-color:var(--green-pale) !important;background:var(--green-mist) !important}
 
-  /* ── HERO STAT BAND ── */
-  .stat-band {
-    background: var(--amber);
-    padding: 0;
-  }
-  .stat-band-inner {
-    max-width: 900px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .stat-item {
-    padding: 1.8rem 2rem;
-    border-right: 0.5px solid rgba(26,22,16,0.2);
-    text-align: center;
-  }
-  .stat-item:last-child { border-right: none; }
-  .stat-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3rem;
-    font-weight: 600;
-    color: var(--ink);
-    line-height: 1;
-    display: block;
-  }
-  .stat-desc {
-    font-size: 10.5px;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--ink-mid);
-    margin-top: 6px;
-    line-height: 1.5;
-    display: block;
-  }
+/* AUTHOR SECTION */
+.author-section{background:var(--bg-alt);border-top:1.5px solid var(--rule-lt);padding:3.5rem 1.5rem}
+.author-inner{max-width:1140px;margin:0 auto}
+.author-header{text-align:center;margin-bottom:2.5rem}
+.author-eyebrow{font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--green-mid);margin-bottom:.6rem}
+.author-title{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;color:var(--green-dark);line-height:1.15;margin-bottom:1.2rem}
+.author-title em{font-style:italic;color:var(--green-mid)}
+.author-quote{font-family:'Source Serif 4',serif;font-size:1rem;font-style:italic;color:var(--ink-body);line-height:1.75;max-width:680px;margin:0 auto;padding:1.2rem 1.5rem;border-left:3px solid var(--green-pale);background:var(--white);border-radius:0 6px 6px 0;text-align:left}
+.bio-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:2rem}
+.bio-card{background:var(--white);border:1.5px solid var(--rule-lt);border-radius:8px;padding:1.5rem;border-top:3px solid var(--green-pale)}
+.bio-card.bio-card-green{background:var(--green-dark);border-color:var(--green-dark);border-top-color:var(--green-lt)}
+.bio-card-title{font-size:13px;font-weight:500;color:var(--green-dark);margin-bottom:.8rem;letter-spacing:.02em}
+.bio-card-body{font-family:'Source Serif 4',serif;font-size:.9rem;line-height:1.75;color:var(--ink-body);margin-bottom:.8rem}
+.bio-card-body strong{color:var(--ink);font-weight:600}
+.pharma-logos{display:flex;gap:8px;flex-wrap:wrap;margin-top:.5rem}
+.pharma-pill{font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;background:var(--green-mist);color:var(--green-dark);border:1px solid var(--green-pale)}
+.bio-motto{font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:var(--green-mid);background:var(--green-mist);border-left:3px solid var(--green);border-radius:0 4px 4px 0;padding:.7rem .9rem;margin-top:.5rem}
+.bio-timeline{display:flex;flex-direction:column;gap:10px}
+.tl-item{display:flex;gap:10px;align-items:flex-start}
+.tl-year{font-size:11px;font-weight:500;color:var(--white);background:var(--green-mid);padding:2px 8px;border-radius:20px;white-space:nowrap;flex-shrink:0;margin-top:2px}
+.tl-txt{font-size:.875rem;color:var(--ink-body);line-height:1.55}
+.tl-txt strong{color:var(--ink);font-weight:600}
+.condition-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:.5rem}
+.condition-item{font-size:11px;font-weight:500;color:rgba(255,255,255,.85);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:6px;padding:8px 6px;text-align:center;line-height:1.4}
+.contact-bar{background:var(--green-dark);border-radius:8px;padding:1.2rem 1.8rem;display:flex;align-items:center;flex-wrap:wrap;gap:1.5rem;justify-content:center}
+.contact-item{display:flex;align-items:center;gap:8px;font-size:13px}
+.contact-item a{color:#90E8A8;transition:color .2s}
+.contact-item a:hover{color:var(--white)}
+.contact-item span:not(.contact-icon){color:rgba(255,255,255,.75)}
+.contact-icon{font-size:16px}
+@media(max-width:640px){
+  .bio-grid{grid-template-columns:1fr}
+  .condition-grid{grid-template-columns:repeat(4,1fr)}
+  .contact-bar{flex-direction:column;align-items:flex-start;gap:10px}
+  .author-title{font-size:1.7rem}
+}
 
-  /* ── BODY ── */
-  .body-wrap {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 2.5rem;
-  }
+/* NEWSLETTER */
+.newsletter{background:var(--bg-alt);border-top:1.5px solid var(--rule-lt);padding:3.5rem 1.5rem}
+.nl-inner{max-width:600px;margin:0 auto;text-align:center}
+.nl-tag{display:inline-block;font-size:10px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--green-mid);background:var(--green-mist);border:1px solid var(--green-pale);border-radius:20px;padding:4px 14px;margin-bottom:1rem}
+.nl-title{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--green-dark);margin-bottom:.5rem;line-height:1.2}
+.nl-title em{font-style:italic}
+.nl-sub{font-size:.95rem;color:var(--ink-light);margin-bottom:1.8rem;line-height:1.65}
+.nl-form{display:flex;max-width:440px;margin:0 auto;border-radius:6px;overflow:hidden;border:1.5px solid var(--rule);background:var(--white)}
+.nl-form input{flex:1;padding:.85rem 1rem;font-size:14px;font-family:'DM Sans',sans-serif;background:transparent;border:none;color:var(--ink);outline:none}
+.nl-form input::placeholder{color:var(--ink-hint)}
+.nl-form button{padding:.85rem 1.4rem;background:var(--green);color:var(--white);font-size:13px;font-weight:500;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap;transition:background .2s}
+.nl-form button:hover{background:var(--green-dark)}
+.nl-note{font-size:11px;color:var(--ink-hint);margin-top:.7rem}
+.nl-note a{color:var(--green-mid);text-decoration:underline}
 
-  /* ── SECTION I ── */
-  .article-section {
-    padding: 3.5rem 0;
-    border-bottom: 0.5px solid var(--rule);
-  }
+/* FOOTER */
+footer{background:var(--green-dark);padding:2.5rem 1.5rem 1.5rem}
+.footer-top{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:2.5rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:1.5rem}
+.ft-col-title{font-size:11px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:1rem}
+.ft-brand-name{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:#90E8A8;display:block;margin-bottom:4px}
+.ft-brand-sub{font-size:12px;color:rgba(255,255,255,.45);line-height:1.6}
+.ft-links-list{display:flex;flex-direction:column;gap:8px}
+.ft-links-list a{font-size:13px;color:rgba(255,255,255,.5);transition:color .2s}
+.ft-links-list a:hover{color:rgba(255,255,255,.9)}
+.footer-copy{max-width:1140px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:11px;color:rgba(255,255,255,.25)}
 
-  .section-label {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 9.5px;
-    font-weight: 500;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--sage);
-    margin-bottom: 1.25rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .section-label::after {
-    content: '';
-    height: 0.5px;
-    background: var(--sage);
-    flex: 1;
-  }
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.anim{animation:fadeUp .65s ease both}
 
-  .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.2rem;
-    font-weight: 600;
-    line-height: 1.1;
-    color: var(--ink);
-    margin-bottom: 1.5rem;
-    letter-spacing: -0.01em;
-  }
-
-  .two-col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-    align-items: start;
-  }
-
-  .body-text {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 0.925rem;
-    line-height: 1.85;
-    color: var(--ink-mid);
-    margin-bottom: 1.2rem;
-  }
-  .body-text:first-of-type::first-letter {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 4rem;
-    font-weight: 600;
-    float: left;
-    line-height: 0.78;
-    margin: 0.08em 0.08em 0 0;
-    color: var(--ink);
-  }
-
-  /* ── PULL QUOTE ── */
-  .pull-quote {
-    border-top: 2px solid var(--ink);
-    border-bottom: 0.5px solid var(--rule);
-    padding: 1.5rem 0;
-    margin: 2rem 0;
-  }
-  .pull-quote-text {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.65rem;
-    font-weight: 300;
-    font-style: italic;
-    line-height: 1.35;
-    color: var(--ink);
-  }
-  .pull-quote-text span {
-    color: var(--sage);
-    font-weight: 600;
-    font-style: normal;
-  }
-
-  /* ── HIGHLIGHT BOX ── */
-  .callout {
-    background: var(--sage-light);
-    border-left: 3px solid var(--sage);
-    padding: 1.25rem 1.4rem;
-    margin: 1.5rem 0;
-  }
-  .callout p {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.875rem;
-    font-weight: 400;
-    line-height: 1.7;
-    color: #2D4228;
-  }
-  .callout strong {
-    font-weight: 500;
-    color: var(--sage);
-  }
-
-  /* ── SECTION II — FAD ── */
-  .fad-section {
-    padding: 3.5rem 0;
-    border-bottom: 0.5px solid var(--rule);
-  }
-
-  .accent-card {
-    background: var(--ink);
-    color: var(--cream);
-    padding: 2rem 2.2rem;
-  }
-  .accent-card .section-label { color: var(--amber); }
-  .accent-card .section-label::after { background: var(--amber); }
-  .accent-card .section-title { color: var(--white); }
-  .accent-card .body-text { color: #B8AFA4; }
-  .accent-card .body-text::first-letter { color: var(--amber); }
-
-  /* ── TIPS ── */
-  .tips-section {
-    padding: 3.5rem 0;
-    border-bottom: 0.5px solid var(--rule);
-  }
-
-  .tips-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1px;
-    background: var(--rule);
-    border: 0.5px solid var(--rule);
-    margin-top: 2rem;
-  }
-  .tip-card {
-    background: var(--white);
-    padding: 1.5rem 1.6rem;
-  }
-  .tip-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.5rem;
-    font-weight: 300;
-    color: var(--rule);
-    line-height: 1;
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-  .tip-title {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--sage);
-    margin-bottom: 0.6rem;
-  }
-  .tip-body {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 0.875rem;
-    line-height: 1.75;
-    color: var(--ink-mid);
-  }
-
-  /* ── CLOSING ── */
-  .closing-section {
-    padding: 3.5rem 0 1rem;
-  }
-
-  .closing-quote {
-    text-align: center;
-    padding: 2rem 0;
-  }
-  .closing-quote p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
-    font-style: italic;
-    font-weight: 300;
-    color: var(--ink);
-    line-height: 1.4;
-  }
-  .closing-quote em { color: var(--sage); }
-
-  /* ── FOOTER ── */
-  .footer {
-    background: var(--ink);
-    padding: 2rem 2.5rem;
-    margin-top: 3rem;
-  }
-  .footer-inner {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  .footer-brand {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    font-style: italic;
-    color: var(--cream);
-  }
-  .footer-sources {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 11px;
-    color: #5A5045;
-    text-align: right;
-    line-height: 1.6;
-  }
-  .footer-sources span {
-    color: #7A6F62;
-  }
-
-  /* ── DIVIDER ── */
-  .ornament {
-    text-align: center;
-    color: var(--rule);
-    font-size: 1.2rem;
-    margin: 1rem 0;
-    letter-spacing: 0.5em;
-  }
-
-  /* ── FADE-IN ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(18px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  .masthead-inner > * {
-    animation: fadeUp 0.7s ease both;
-  }
-  .masthead-inner > *:nth-child(1) { animation-delay: 0.05s; }
-  .masthead-inner > *:nth-child(2) { animation-delay: 0.15s; }
-  .masthead-inner > *:nth-child(3) { animation-delay: 0.25s; }
-  .masthead-inner > *:nth-child(4) { animation-delay: 0.35s; }
-
-  @media (max-width: 640px) {
-    .two-col, .tips-grid { grid-template-columns: 1fr; }
-    .stat-band-inner { grid-template-columns: 1fr; }
-    .stat-item { border-right: none; border-bottom: 0.5px solid rgba(26,22,16,0.2); }
-    .stat-item:last-child { border-bottom: none; }
-    .body-wrap { padding: 0 1.25rem; }
-    .masthead-inner { padding: 2rem 1.25rem 0; }
-    .headline { font-size: 2.6rem; }
-    .footer { padding: 1.5rem 1.25rem; }
-    .footer-inner { flex-direction: column; align-items: flex-start; }
-    .footer-sources { text-align: left; }
-  }
+/* RESPONSIVE */
+@media(max-width:1000px){
+  .articles{grid-template-columns:1fr 1fr}
+  .stats-inner{grid-template-columns:repeat(3,1fr)}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:780px){
+  html{font-size:16px}
+  .hero-inner{grid-template-columns:1fr}
+  .hero-card{display:none}
+  .about-inner{grid-template-columns:1fr;gap:2rem}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .mobile-menu.open{display:flex}
+  .tabs-wrap{top:64px}
+}
+@media(max-width:560px){
+  .articles{grid-template-columns:1fr}
+  .hero{padding:2.5rem 1.25rem 0}
+  .footer-top{grid-template-columns:1fr;gap:1.5rem}
+  .nl-form{flex-direction:column}
+  .nav-inner{padding:0 1rem}
+  .stats-inner{grid-template-columns:1fr 1fr}
+}
 </style>
 </head>
 <body>
 
-<!-- MASTHEAD -->
-<header class="masthead">
-  <div class="masthead-inner">
-    <div class="mag-label">Ăn Hôm Nay · Sức Khỏe Ngày Mai</div>
-    <h1 class="headline">Củ cà rốt<br>và <em>ung thư vú</em>—<br>điều khoa học<br>đang nói</h1>
-    <p class="deck">Beta-carotene và falcarindiol, hai hợp chất trong củ cà rốt bình dị, đang cho thấy tiềm năng đáng kinh ngạc trong việc bảo vệ phụ nữ khỏi những thể ung thư nguy hiểm nhất.</p>
-    <div class="byline-bar">
-      <div class="byline">
-        <div class="byline-avatar">TN</div>
-        <div>
-          <div class="byline-name">Khoa học gia Thuy-Trinh Nguyen</div>
-          <div class="byline-role">Dinh dưỡng & Phòng bệnh · Khoa học ứng dụng</div>
-        </div>
+<nav>
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <img src="h21-logo.png" alt="H21 HealthierU Logo" style="height:44px;width:auto;display:block;filter:brightness(0) saturate(100%) invert(35%) sepia(40%) saturate(600%) hue-rotate(90deg) brightness(0.8);">
+      <div>
+        <span class="b1">Cho Đời Mãi Xanh</span>
+        <span class="b2">Khoa học gia Thuy-Trinh Nguyen</span>
       </div>
-      <div class="byline-meta">Chuyên đề · Ung thư học dinh dưỡng</div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#articles">Bài viết</a></li>
+      <li><a href="#about">Về H21</a></li>
+      <li><a href="#tacgia">Khoa học gia</a></li>
+      <li><a href="https://substack.com/@h21chodoimaixanh" target="_blank">Substack</a></li>
+      <li><a href="https://www.facebook.com/xanhlenbenhxuong/" target="_blank" class="nav-cta-btn">Đăng ký khóa học</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#articles" onclick="toggleMenu()">Bài viết</a>
+    <a href="#about" onclick="toggleMenu()">Về chương trình H21</a>
+    <a href="https://www.h21chodoimaixanh.com" target="_blank">Trang web chính</a>
+    <a href="https://substack.com/@h21chodoimaixanh" target="_blank">Substack</a>
+    <a href="https://www.youtube.com/thuytrinhnguyen" target="_blank">YouTube</a>
+    <a href="https://www.facebook.com/khg.thuytrinhnguyen/" target="_blank">Facebook</a>
+    <a href="https://www.facebook.com/xanhlenbenhxuong/" target="_blank" class="m-cta">Đăng ký khóa học H21</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="anim">
+      <img src="h21-logo.png" alt="H21 21 Days HealthierU" style="height:90px;width:auto;margin-bottom:1.5rem;display:block;filter:brightness(0) invert(1) opacity(0.92);">
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        <span class="hero-badge-txt">Chương trình H21 · Cho Đời Mãi Xanh</span>
+      </div>
+      <h1 class="hero-title"><em>Ăn Hôm Nay</em><br>Sức Khỏe Ngày Mai</h1>
+      <p class="hero-sub">Khoa học dinh dưỡng từ rau củ quả — được dịch thành thói quen thực tế cho cuộc sống mãi xanh và khỏe mạnh.</p>
+      <div class="hero-socials">
+        <a href="https://www.h21chodoimaixanh.com" target="_blank" class="s-btn">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>Website
+        </a>
+        <a href="https://substack.com/@h21chodoimaixanh" target="_blank" class="s-btn">
+          <svg viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>Substack
+        </a>
+        <a href="https://www.youtube.com/thuytrinhnguyen" target="_blank" class="s-btn">
+          <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube
+        </a>
+        <a href="https://www.facebook.com/khg.thuytrinhnguyen/" target="_blank" class="s-btn">
+          <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook
+        </a>
+        <a href="https://www.facebook.com/xanhlenbenhxuong/" target="_blank" class="s-btn s-btn-course">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Đăng ký khóa học
+        </a>
+      </div>
+    </div>
+    <div class="hero-card anim" style="animation-delay:.22s">
+      <div class="hc-eyebrow">Bài nổi bật</div>
+      <a href="carrot-cancer.html" class="hc-title">Củ cà rốt và ung thư vú — Điều khoa học đang nói</a>
+      <p class="hc-deck">Beta-carotene và falcarindiol trong cà rốt cho thấy tiềm năng bảo vệ phụ nữ khỏi những thể ung thư nguy hiểm nhất.</p>
+      <div class="hc-stats">
+        <div class="hc-stat"><span class="hc-num">68%</span><span class="hc-lbl">Giảm nguy cơ ung thư vú tử vong</span></div>
+        <div class="hc-stat"><span class="hc-num">75%</span><span class="hc-lbl">Tế bào ung thư bị tiêu diệt</span></div>
+      </div>
+      <a href="carrot-cancer.html" class="hc-link"><span>Đọc bài viết</span><span>→</span></a>
     </div>
   </div>
-</header>
+</section>
 
-<!-- STAT BAND -->
-<div class="stat-band">
-  <div class="stat-band-inner">
-    <div class="stat-item">
-      <span class="stat-num">68%</span>
-      <span class="stat-desc">Giảm nguy cơ ung thư vú<br>gây tử vong hoặc tái phát</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num">28%</span>
-      <span class="stat-desc">Giảm nguy cơ ung thư vú<br>tổng thể với beta-carotene cao</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num">75–78%</span>
-      <span class="stat-desc">Tế bào ung thư bị tiêu diệt<br>trong thí nghiệm ống nghiệm</span>
-    </div>
+<div class="tabs-wrap">
+  <div class="tabs-inner">
+    <div class="tab active">TẤT CẢ</div>
+    <div class="tab">UNG THƯ &amp; PHÒNG BỆNH</div>
+    <div class="tab">CHẤT CHỐNG OXY HÓA</div>
+    <div class="tab">RAU CỦ &amp; THỰC PHẨM</div>
+    <div class="tab">TIM MẠCH</div>
+    <div class="tab">MIỄN DỊCH</div>
+    <div class="tab">NGHIÊN CỨU MỚI</div>
+    <div class="tab tab-herbal">🌿 H21 THẢO MỘC TRÀ</div>
   </div>
 </div>
 
-<main class="body-wrap">
+<div class="stats-band">
+  <div class="stats-inner">
+    <div class="stat-cell"><span class="stat-n">1,000+</span><span class="stat-l">người đã chuyển hóa sức khỏe cùng H21</span></div>
+    <div class="stat-cell"><span class="stat-n">100%</span><span class="stat-l">Bài viết có trích dẫn PubMed</span></div>
+    <div class="stat-cell"><span class="stat-n">H21</span><span class="stat-l">Dinh dưỡng từ gốc — không phải trị ngọn</span></div>
+  </div>
+</div>
 
-  <!-- SECTION I: BETA-CAROTENE -->
-  <section class="article-section">
-    <div class="section-label">Phần I · Beta-Carotene</div>
-    <div class="two-col">
-      <div>
-        <h2 class="section-title">Chất chống oxy hóa mạnh nhất từ cà rốt</h2>
-        <p class="body-text">Trong một nghiên cứu quan sát quy mô lớn tại Mỹ, phụ nữ có nồng độ beta-carotene cao trong máu có nguy cơ mắc ung thư vú tổng thể thấp hơn 28%. Nhưng con số thực sự gây chú ý nằm ở đây: cùng những nồng độ đó được liên kết với nguy cơ ung thư vú gây tử vong hoặc tái phát thấp hơn đến 68%.</p>
-        <p class="body-text">Điều này không chỉ có nghĩa là phòng bệnh — mà là bảo vệ khỏi những thể bệnh nguy hiểm và khó điều trị nhất. Khoảng cách giữa 28% và 68% cho thấy beta-carotene có thể can thiệp đặc biệt hiệu quả vào các cơ chế gây di căn và tái phát.</p>
-      </div>
-      <div>
-        <div class="pull-quote">
-          <div class="pull-quote-text">"Nguy cơ ung thư vú gây tử vong thấp hơn <span>68%</span> — không phải với một loại thuốc, mà với mức beta-carotene trong máu cao."</div>
+<div class="sec-hd" id="articles">
+  <span class="sec-hd-lbl">Tất cả bài viết</span>
+  <div class="sec-hd-line"></div>
+</div>
+
+<div class="articles">
+  <a href="carrot-cancer.html" class="card live">
+    <span class="card-num">01</span>
+    <div class="card-tag">Ung thư · Chất chống oxy hóa</div>
+    <h3 class="card-title">Củ cà rốt và ung thư vú — Điều khoa học đang nói</h3>
+    <p class="card-excerpt">Beta-carotene và falcarindiol trong cà rốt cho thấy tiềm năng phòng ngừa ung thư vú đáng kinh ngạc — giảm đến 68% nguy cơ gây tử vong.</p>
+    <div class="card-foot"><span class="pill pill-live">Đã đăng</span><span class="card-arr">→</span></div>
+  </a>
+  <div class="card">
+    <span class="card-num">02</span>
+    <div class="card-tag">Tim mạch · Thực phẩm</div>
+    <h3 class="card-title" style="color:var(--ink-hint)">Bài viết sắp ra mắt</h3>
+    <p class="card-excerpt" style="color:var(--rule)">Nội dung khoa học mới đang được chuẩn bị. Đăng ký nhận thông báo ngay khi xuất bản.</p>
+    <div class="card-foot"><span class="pill pill-soon">Sắp ra mắt</span></div>
+  </div>
+  <div class="card">
+    <span class="card-num">03</span>
+    <div class="card-tag">Miễn dịch · Rau củ</div>
+    <h3 class="card-title" style="color:var(--ink-hint)">Bài viết sắp ra mắt</h3>
+    <p class="card-excerpt" style="color:var(--rule)">Nội dung khoa học mới đang được chuẩn bị. Đăng ký nhận thông báo ngay khi xuất bản.</p>
+    <div class="card-foot"><span class="pill pill-soon">Sắp ra mắt</span></div>
+  </div>
+  <div class="card herbal">
+    <span class="card-num">04</span>
+    <div class="card-tag herbal-tag">🌿 H21 Thảo Mộc Trà</div>
+    <h3 class="card-title" style="color:var(--teal)">Chuyên mục đang được xây dựng</h3>
+    <p class="card-excerpt">Những bài viết về thảo mộc, trà dược liệu và y học cổ truyền kết hợp khoa học hiện đại — sắp ra mắt.</p>
+    <div class="card-foot"><span class="pill pill-herbal">🌿 Thảo Mộc Trà</span></div>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div class="about-inner">
+    <div>
+      <div class="about-eyebrow">Về chương trình H21</div>
+      <h2 class="about-title">Khoa học dinh dưỡng<br>cho <em>cuộc sống mãi xanh</em></h2>
+      <p class="about-body"><strong>H21 — Cho Đời Mãi Xanh</strong> là chương trình khoa học dinh dưỡng ứng dụng do Khoa học gia Thuy-Trinh Nguyen sáng lập. Tại đây, những hợp chất, nghiên cứu và bằng chứng khoa học được chuyển hóa thành ngôn ngữ dễ hiểu, gần gũi với bữa ăn hằng ngày, giúp mỗi người đưa ra lựa chọn thực phẩm có chủ đích và có nền tảng khoa học.</p>
+      <p class="about-body">Nếu bạn vẫn còn lăn tăn không biết bắt đầu ứng dụng dinh dưỡng vào đời sống thế nào để cải thiện cân nặng, vóc dáng, hỗ trợ các vấn đề sức khỏe liên quan đến ăn uống như <strong>huyết áp, tiểu đường, mỡ máu, và hướng đến phòng ngừa ung thư</strong>, H21 là nơi đồng hành dành cho bạn — chương trình đã giúp <strong>hơn 1.000 người</strong> từng bước chuyển hóa sức khỏe từ gốc.</p>
+      <p class="about-body">Y học hiện đại rất giỏi trong việc trị ngọn. Nhưng dinh dưỡng và lối sống mới là nền tảng để nuôi dưỡng sức khỏe từ gốc.</p>
+      <div class="about-motto"><p>Thức ăn của hôm nay chính là sức khỏe của ngày mai.</p></div>
+    </div>
+    <div class="link-cards">
+      <a href="https://www.h21chodoimaixanh.com" target="_blank" class="link-card">
+        <div class="link-icon i-web"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
+        <div class="link-txt"><span class="lt1">Trang web chính thức</span><span class="lt2">h21chodoimaixanh.com</span></div>
+        <span class="link-arr2">→</span>
+      </a>
+      <a href="https://substack.com/@h21chodoimaixanh" target="_blank" class="link-card">
+        <div class="link-icon i-sub"><svg viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg></div>
+        <div class="link-txt"><span class="lt1">Substack Newsletter</span><span class="lt2">substack.com/@h21chodoimaixanh</span></div>
+        <span class="link-arr2">→</span>
+      </a>
+      <a href="https://www.youtube.com/thuytrinhnguyen" target="_blank" class="link-card">
+        <div class="link-icon i-yt"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></div>
+        <div class="link-txt"><span class="lt1">YouTube</span><span class="lt2">youtube.com/thuytrinhnguyen</span></div>
+        <span class="link-arr2">→</span>
+      </a>
+      <a href="https://www.facebook.com/khg.thuytrinhnguyen/" target="_blank" class="link-card">
+        <div class="link-icon i-fb"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></div>
+        <div class="link-txt"><span class="lt1">Facebook cá nhân</span><span class="lt2">facebook.com/khg.thuytrinhnguyen</span></div>
+        <span class="link-arr2">→</span>
+      </a>
+      <a href="https://www.facebook.com/xanhlenbenhxuong/" target="_blank" class="link-card link-card-course">
+        <div class="link-icon i-course"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <div class="link-txt"><span class="lt1" style="color:var(--teal)">Đăng ký khóa học H21</span><span class="lt2">facebook.com/xanhlenbenhxuong</span></div>
+        <span class="link-arr2" style="color:var(--teal)">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="author-section" id="tacgia">
+  <div class="author-inner">
+    <div class="author-header">
+      <div class="author-eyebrow">Người sáng lập chương trình H21</div>
+      <h2 class="author-title">Khoa học gia<br><em>Thuy-Trinh Nguyen</em></h2>
+      <blockquote class="author-quote">"Y học hiện đại xuất sắc trong việc 'trị ngọn', nhưng dinh dưỡng và lối sống mới là chìa khóa để 'dưỡng gốc'. Thức ăn của ngày hôm nay chính là sức khỏe của ngày mai."</blockquote>
+    </div>
+    <div class="bio-grid">
+      <div class="bio-card">
+        <div class="bio-card-title">🎓 NỀN TẢNG CHUYÊN MÔN</div>
+        <p class="bio-card-body">Định cư ở Hoa Kỳ năm 1988. Trưởng thành trong môi trường khoa học và nghiên cứu đỉnh cao. Kinh nghiệm tại các tập đoàn dược phẩm hàng đầu thế giới:</p>
+        <div class="pharma-logos">
+          <span class="pharma-pill">Pfizer</span>
+          <span class="pharma-pill">Boehringer Ingelheim</span>
+          <span class="pharma-pill">Bayer</span>
         </div>
-        <p class="body-text">Trong thí nghiệm ống nghiệm (in vitro), beta-carotene tiêu diệt 75% tế bào ung thư vú di căn MDA-MB-231 — một trong những dòng tế bào hung hãn và kháng điều trị nhất — chỉ trong 96 giờ. Beta-carotene là một trong những chất chống oxy hóa mạnh mẽ nhất trong chuỗi thực phẩm của chúng ta.</p>
       </div>
-    </div>
-
-    <div class="callout">
-      <p><strong>Cà rốt</strong> là nguồn beta-carotene phong phú nhất trong tự nhiên — tiếp theo là khoai lang. Chỉ một khẩu phần mỗi ngày đã đủ để nâng nồng độ beta-carotene trong máu lên mức bảo vệ, đặc biệt khi tiêu thụ dưới dạng nước ép.</p>
-    </div>
-  </section>
-
-  <!-- SECTION II: FAD -->
-  <section class="fad-section">
-    <div class="accent-card">
-      <div class="section-label">Phần II · Falcarindiol (FAD)</div>
-      <h2 class="section-title">Hợp chất bí ẩn<br>trong lớp vỏ cà rốt</h2>
-      <div class="two-col">
-        <div>
-          <p class="body-text">Cà rốt còn chứa một nhóm hợp chất ít được biết đến gọi là polyacetylene — bao gồm falcarinol và falcarindiol (FAD). Trong thí nghiệm ống nghiệm, FAD ức chế tế bào ung thư vú lên đến 78%, cho thấy hoạt tính kháng ung thư mạnh mẽ trên nhiều loại tế bào khác nhau.</p>
-          <p class="body-text">Điều đáng lưu ý: FAD tập trung cao nhất ở lớp vỏ cà rốt và cực kỳ nhạy cảm với nhiệt và nước. Nó sẽ rò rỉ ra ngoài trong quá trình nấu ăn nếu dùng nhiều nước hoặc nấu quá lâu — thậm chí có thể biến mất hoàn toàn nếu gọt vỏ trước khi chế biến.</p>
-        </div>
-        <div>
-          <p class="body-text">Đây là lý do tại sao phương pháp chế biến không chỉ là chuyện khẩu vị — mà là quyết định trực tiếp lượng hợp chất bảo vệ bạn thực sự nhận được vào cơ thể. Khoa học không chỉ nói "ăn cà rốt". Khoa học nói "ăn cà rốt <em style="color:#D4A862">như thế này</em>".</p>
-          <div class="callout" style="background: rgba(212,168,98,0.12); border-left-color: var(--amber);">
-            <p style="color: #D4A862;">Không gọt vỏ khi có thể · Nấu tối đa 10 phút · Dùng ít nước · Hoặc ăn sống dưới dạng xay/ép</p>
-          </div>
+      <div class="bio-card">
+        <div class="bio-card-title">🔬 BƯỚC NGOẶT &amp; TRIẾT LÝ</div>
+        <p class="bio-card-body">Năm 2011, rời phòng thí nghiệm khép kín, chính thức dấn thân vào hành trình mang khoa học ứng dụng vào đời sống — chuyển dịch từ y tế trị liệu sang <strong>phòng ngừa</strong>.</p>
+        <div class="bio-motto">"Trị bệnh là cần thiết, nhưng 'dưỡng gốc' mới bền vững."</div>
+      </div>
+      <div class="bio-card">
+        <div class="bio-card-title">🌱 HÀNH TRÌNH &amp; DẤU MỐC</div>
+        <div class="bio-timeline">
+          <div class="tl-item"><span class="tl-year">2017</span><span class="tl-txt">Sáng lập <strong>Cho Đời Mãi Xanh</strong> &amp; Quỹ thiện nguyện, lan toả công thức xanh</span></div>
+          <div class="tl-item"><span class="tl-year">2022</span><span class="tl-txt">Tác giả sách <strong>"100 Công Thức Xanh"</strong> — truyền cảm hứng toàn cầu</span></div>
+          <div class="tl-item"><span class="tl-year">2023</span><span class="tl-txt">Sáng lập <strong>H21 Counseling &amp; Wellness LLC</strong> — giúp hơn 1.000 người tái thiết sức khỏe</span></div>
+          <div class="tl-item"><span class="tl-year">2025</span><span class="tl-txt">Ra mắt <strong>H21 Thảo Mộc Trà</strong> — tinh hoa nghiên cứu chuyên biệt</span></div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- SECTION III: HOW TO EAT -->
-  <section class="tips-section">
-    <div class="section-label">Phần III · Hướng dẫn thực hành</div>
-    <h2 class="section-title">Cách ăn để tối đa hóa lợi ích</h2>
-    <p class="body-text" style="max-width: 620px;">Beta-carotene và FAD có đặc điểm hấp thu ngược chiều nhau — một cần nhiệt để giải phóng, một cần tránh nhiệt để bảo tồn. Chiến lược dưới đây giúp bạn cân bằng cả hai:</p>
-
-    <div class="tips-grid">
-      <div class="tip-card">
-        <span class="tip-number">01</span>
-        <div class="tip-title">Ép hoặc xay nhuyễn</div>
-        <p class="tip-body">Phá vỡ thành tế bào cà rốt giải phóng beta-carotene dạng tinh thể vốn bị khóa bên trong. Đây là cách hiệu quả nhất để tăng hấp thu beta-carotene đồng thời bảo tồn một phần FAD nếu không gọt vỏ.</p>
-      </div>
-      <div class="tip-card">
-        <span class="tip-number">02</span>
-        <div class="tip-title">Nấu tối đa 10 phút</div>
-        <p class="tip-body">Nấu chín ngắn hạn giúp phá vỡ tế bào, tăng beta-carotene khả dụng sinh học. Nhưng nấu quá 10 phút hoặc dùng nhiều nước sẽ làm FAD rò rỉ và mất hoàn toàn.</p>
-      </div>
-      <div class="tip-card">
-        <span class="tip-number">03</span>
-        <div class="tip-title">Giữ nguyên vỏ</div>
-        <p class="tip-body">FAD tập trung cao nhất ở vỏ cà rốt. Rửa sạch và sử dụng nguyên vỏ hoặc gọt tối thiểu để bảo tồn tối đa falcarindiol — đặc biệt quan trọng nếu bạn ăn sống hoặc ép.</p>
-      </div>
-      <div class="tip-card">
-        <span class="tip-number">04</span>
-        <div class="tip-title">Một khẩu phần mỗi ngày</div>
-        <p class="tip-body">Một củ cà rốt vừa hoặc một ly nước ép cà rốt mỗi ngày đã đủ để nâng nồng độ beta-carotene trong máu đến mức được quan sát trong nghiên cứu. Tính nhất quán quan trọng hơn số lượng.</p>
+      <div class="bio-card bio-card-green">
+        <div class="bio-card-title" style="color:var(--white)">🌿 H21 THẢO MỘC TRÀ — HỖ TRỢ CÁC VẤN ĐỀ VỀ SỨC KHỎE</div>
+        <div class="condition-grid">
+          <div class="condition-item">😴 Ngủ</div>
+          <div class="condition-item">🩸 Đường huyết</div>
+          <div class="condition-item">❤️ Huyết áp</div>
+          <div class="condition-item">🫀 Mỡ máu</div>
+          <div class="condition-item">🫁 Dạ dày</div>
+          <div class="condition-item">🤧 Dị ứng</div>
+          <div class="condition-item">🩹 Chàm</div>
+          <div class="condition-item">🔬 Vẩy nến</div>
+        </div>
       </div>
     </div>
-  </section>
-
-  <!-- CLOSING -->
-  <section class="closing-section">
-    <div class="section-label">Lưu ý khoa học</div>
-    <p class="body-text" style="max-width: 680px;">Các bằng chứng được trình bày là nghiên cứu quan sát và thí nghiệm tế bào — chưa phải thử nghiệm lâm sàng đối chứng ngẫu nhiên. Cà rốt không thay thế điều trị y tế. Tuy nhiên, với một loại thực phẩm phổ biến, chi phí thấp và hoàn toàn an toàn, bằng chứng hiện có đủ mạnh để hình thành một thói quen dinh dưỡng có chủ đích và nhất quán.</p>
-
-    <div class="ornament">· · ·</div>
-
-    <div class="closing-quote">
-      <p>"Ăn hôm nay —<br>để cơ thể được <em>bảo vệ</em> ngày mai."</p>
+    <div class="contact-bar">
+      <div class="contact-item"><span class="contact-icon">🌐</span><a href="https://www.h21chodoimaixanh.com" target="_blank">www.h21chodoimaixanh.com</a></div>
+      <div class="contact-item"><span class="contact-icon">📘</span><a href="https://www.facebook.com/khg.thuytrinhnguyen/" target="_blank">Fanpage: Cho Đời Mãi Xanh</a></div>
+      <div class="contact-item"><span class="contact-icon">📞</span><span>(USA) +1-860-471-6699</span></div>
+      <div class="contact-item"><span class="contact-icon">📱</span><span>(VN) +84-911-230-037</span></div>
     </div>
-  </section>
+  </div>
+</section>
 
-</main>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-brand">Ăn Hôm Nay Sức Khỏe Ngày Mai<br><span style="font-size:0.85rem; color:#5A5045; font-style:normal; font-family:'DM Sans',sans-serif;">Khoa học gia Thuy-Trinh Nguyen</span></div>
-    <div class="footer-sources">
-      <span>Nguồn tham khảo khoa học</span><br>
-      PubMed ID: 24596385 · 25877493 · 28441457
+<section class="newsletter" id="newsletter">
+  <div class="nl-inner">
+    <div class="nl-tag">Nhận bài viết mới nhất</div>
+    <h2 class="nl-title">Mỗi tuần một hợp chất.<br><em>Mỗi bữa một quyết định.</em></h2>
+    <p class="nl-sub">Đăng ký để nhận bài viết khoa học dinh dưỡng mới nhất từ chương trình H21 — miễn phí, không spam, có thể hủy bất cứ lúc nào.</p>
+    <div class="nl-form">
+      <input type="email" placeholder="Nhập email của bạn...">
+      <button type="button">Đăng ký ngay</button>
     </div>
+    <p class="nl-note">Hoặc theo dõi trực tiếp trên <a href="https://substack.com/@h21chodoimaixanh" target="_blank">Substack</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="ft-col-title">Chương trình</div>
+      <span class="ft-brand-name">H21</span>
+      <span class="ft-brand-sub">Cho Đời Mãi Xanh<br>Khoa học gia Thuy-Trinh Nguyen<br>Ăn Hôm Nay · Sức Khỏe Ngày Mai</span>
+    </div>
+    <div>
+      <div class="ft-col-title">Bài viết</div>
+      <div class="ft-links-list">
+        <a href="#articles">Tất cả bài viết</a>
+        <a href="#">Ung thư &amp; Phòng bệnh</a>
+        <a href="#">Rau củ &amp; Thực phẩm</a>
+        <a href="#">Tim mạch</a>
+        <a href="#">🌿 H21 THẢO MỘC TRÀ</a>
+      </div>
+    </div>
+    <div>
+      <div class="ft-col-title">Kết nối</div>
+      <div class="ft-links-list">
+        <a href="https://www.h21chodoimaixanh.com" target="_blank">Website chính thức</a>
+        <a href="https://substack.com/@h21chodoimaixanh" target="_blank">Substack</a>
+        <a href="https://www.youtube.com/thuytrinhnguyen" target="_blank">YouTube</a>
+        <a href="https://www.facebook.com/khg.thuytrinhnguyen/" target="_blank">Facebook cá nhân</a>
+        <a href="https://www.facebook.com/xanhlenbenhxuong/" target="_blank">Đăng ký khóa học H21</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copy">
+    <span>© 2026 H21 Cho Đời Mãi Xanh · Khoa học gia Thuy-Trinh Nguyen</span>
+    <span>Ăn Hôm Nay · Sức Khỏe Ngày Mai</span>
   </div>
 </footer>
 
+<script>
+function toggleMenu(){
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+document.addEventListener('click',function(e){
+  if(!document.querySelector('nav').contains(e.target))
+    document.getElementById('mobileMenu').classList.remove('open');
+});
+document.querySelectorAll('.tab').forEach(function(tab){
+  tab.addEventListener('click',function(){
+    document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active')});
+    this.classList.add('active');
+  });
+});
+</script>
 </body>
 </html>

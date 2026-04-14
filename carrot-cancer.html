@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cà Rốt & Ung Thư Vú — Ăn Hôm Nay Sức Khỏe Ngày Mai</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #F7F3EE;
+    --ink: #1A1610;
+    --ink-mid: #3D3529;
+    --ink-light: #7A6F62;
+    --sage: #4A6741;
+    --sage-light: #D4E4CF;
+    --amber: #C4862A;
+    --amber-light: #F5E8D0;
+    --rule: #C8BFB2;
+    --white: #FEFCFA;
+  }
+
+  html { font-size: 16px; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── MASTHEAD ── */
+  .masthead {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .masthead-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2.5rem 0;
+  }
+
+  .mag-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--amber);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 2rem;
+  }
+  .mag-label::before, .mag-label::after {
+    content: '';
+    height: 0.5px;
+    background: var(--amber);
+    flex: 1;
+  }
+
+  .headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 1.0;
+    letter-spacing: -0.01em;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+  }
+  .headline em {
+    font-style: italic;
+    color: #D4A862;
+  }
+
+  .deck {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.7;
+    color: #B8AFA4;
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+  }
+
+  .byline-bar {
+    border-top: 0.5px solid #3D3529;
+    padding: 1.2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .byline {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .byline-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--sage);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    color: var(--cream);
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  .byline-name {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--white);
+  }
+  .byline-role {
+    font-size: 11px;
+    color: #7A6F62;
+    margin-top: 2px;
+    letter-spacing: 0.03em;
+  }
+  .byline-meta {
+    font-size: 11px;
+    color: #7A6F62;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* ── HERO STAT BAND ── */
+  .stat-band {
+    background: var(--amber);
+    padding: 0;
+  }
+  .stat-band-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .stat-item {
+    padding: 1.8rem 2rem;
+    border-right: 0.5px solid rgba(26,22,16,0.2);
+    text-align: center;
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1;
+    display: block;
+  }
+  .stat-desc {
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-mid);
+    margin-top: 6px;
+    line-height: 1.5;
+    display: block;
+  }
+
+  /* ── BODY ── */
+  .body-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+  }
+
+  /* ── SECTION I ── */
+  .article-section {
+    padding: 3.5rem 0;
+    border-bottom: 0.5px solid var(--rule);
+  }
+
+  .section-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9.5px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-label::after {
+    content: '';
+    height: 0.5px;
+    background: var(--sage);
+    flex: 1;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  .body-text {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.925rem;
+    line-height: 1.85;
+    color: var(--ink-mid);
+    margin-bottom: 1.2rem;
+  }
+  .body-text:first-of-type::first-letter {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    font-weight: 600;
+    float: left;
+    line-height: 0.78;
+    margin: 0.08em 0.08em 0 0;
+    color: var(--ink);
+  }
+
+  /* ── PULL QUOTE ── */
+  .pull-quote {
+    border-top: 2px solid var(--ink);
+    border-bottom: 0.5px solid var(--rule);
+    padding: 1.5rem 0;
+    margin: 2rem 0;
+  }
+  .pull-quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.65rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.35;
+    color: var(--ink);
+  }
+  .pull-quote-text span {
+    color: var(--sage);
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  /* ── HIGHLIGHT BOX ── */
+  .callout {
+    background: var(--sage-light);
+    border-left: 3px solid var(--sage);
+    padding: 1.25rem 1.4rem;
+    margin: 1.5rem 0;
+  }
+  .callout p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #2D4228;
+  }
+  .callout strong {
+    font-weight: 500;
+    color: var(--sage);
+  }
+
+  /* ── SECTION II — FAD ── */
+  .fad-section {
+    padding: 3.5rem 0;
+    border-bottom: 0.5px solid var(--rule);
+  }
+
+  .accent-card {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 2rem 2.2rem;
+  }
+  .accent-card .section-label { color: var(--amber); }
+  .accent-card .section-label::after { background: var(--amber); }
+  .accent-card .section-title { color: var(--white); }
+  .accent-card .body-text { color: #B8AFA4; }
+  .accent-card .body-text::first-letter { color: var(--amber); }
+
+  /* ── TIPS ── */
+  .tips-section {
+    padding: 3.5rem 0;
+    border-bottom: 0.5px solid var(--rule);
+  }
+
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 0.5px solid var(--rule);
+    margin-top: 2rem;
+  }
+  .tip-card {
+    background: var(--white);
+    padding: 1.5rem 1.6rem;
+  }
+  .tip-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--rule);
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .tip-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 0.6rem;
+  }
+  .tip-body {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.875rem;
+    line-height: 1.75;
+    color: var(--ink-mid);
+  }
+
+  /* ── CLOSING ── */
+  .closing-section {
+    padding: 3.5rem 0 1rem;
+  }
+
+  .closing-quote {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  .closing-quote p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1.4;
+  }
+  .closing-quote em { color: var(--sage); }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    padding: 2rem 2.5rem;
+    margin-top: 3rem;
+  }
+  .footer-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--cream);
+  }
+  .footer-sources {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    color: #5A5045;
+    text-align: right;
+    line-height: 1.6;
+  }
+  .footer-sources span {
+    color: #7A6F62;
+  }
+
+  /* ── DIVIDER ── */
+  .ornament {
+    text-align: center;
+    color: var(--rule);
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    letter-spacing: 0.5em;
+  }
+
+  /* ── FADE-IN ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .masthead-inner > * {
+    animation: fadeUp 0.7s ease both;
+  }
+  .masthead-inner > *:nth-child(1) { animation-delay: 0.05s; }
+  .masthead-inner > *:nth-child(2) { animation-delay: 0.15s; }
+  .masthead-inner > *:nth-child(3) { animation-delay: 0.25s; }
+  .masthead-inner > *:nth-child(4) { animation-delay: 0.35s; }
+
+  @media (max-width: 640px) {
+    .two-col, .tips-grid { grid-template-columns: 1fr; }
+    .stat-band-inner { grid-template-columns: 1fr; }
+    .stat-item { border-right: none; border-bottom: 0.5px solid rgba(26,22,16,0.2); }
+    .stat-item:last-child { border-bottom: none; }
+    .body-wrap { padding: 0 1.25rem; }
+    .masthead-inner { padding: 2rem 1.25rem 0; }
+    .headline { font-size: 2.6rem; }
+    .footer { padding: 1.5rem 1.25rem; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+    .footer-sources { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="mag-label">Ăn Hôm Nay · Sức Khỏe Ngày Mai</div>
+    <h1 class="headline">Củ cà rốt<br>và <em>ung thư vú</em>—<br>điều khoa học<br>đang nói</h1>
+    <p class="deck">Beta-carotene và falcarindiol, hai hợp chất trong củ cà rốt bình dị, đang cho thấy tiềm năng đáng kinh ngạc trong việc bảo vệ phụ nữ khỏi những thể ung thư nguy hiểm nhất.</p>
+    <div class="byline-bar">
+      <div class="byline">
+        <div class="byline-avatar">TN</div>
+        <div>
+          <div class="byline-name">Khoa học gia Thuy-Trinh Nguyen</div>
+          <div class="byline-role">Dinh dưỡng & Phòng bệnh · Khoa học ứng dụng</div>
+        </div>
+      </div>
+      <div class="byline-meta">Chuyên đề · Ung thư học dinh dưỡng</div>
+    </div>
+  </div>
+</header>
+
+<!-- STAT BAND -->
+<div class="stat-band">
+  <div class="stat-band-inner">
+    <div class="stat-item">
+      <span class="stat-num">68%</span>
+      <span class="stat-desc">Giảm nguy cơ ung thư vú<br>gây tử vong hoặc tái phát</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">28%</span>
+      <span class="stat-desc">Giảm nguy cơ ung thư vú<br>tổng thể với beta-carotene cao</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">75–78%</span>
+      <span class="stat-desc">Tế bào ung thư bị tiêu diệt<br>trong thí nghiệm ống nghiệm</span>
+    </div>
+  </div>
+</div>
+
+<main class="body-wrap">
+
+  <!-- SECTION I: BETA-CAROTENE -->
+  <section class="article-section">
+    <div class="section-label">Phần I · Beta-Carotene</div>
+    <div class="two-col">
+      <div>
+        <h2 class="section-title">Chất chống oxy hóa mạnh nhất từ cà rốt</h2>
+        <p class="body-text">Trong một nghiên cứu quan sát quy mô lớn tại Mỹ, phụ nữ có nồng độ beta-carotene cao trong máu có nguy cơ mắc ung thư vú tổng thể thấp hơn 28%. Nhưng con số thực sự gây chú ý nằm ở đây: cùng những nồng độ đó được liên kết với nguy cơ ung thư vú gây tử vong hoặc tái phát thấp hơn đến 68%.</p>
+        <p class="body-text">Điều này không chỉ có nghĩa là phòng bệnh — mà là bảo vệ khỏi những thể bệnh nguy hiểm và khó điều trị nhất. Khoảng cách giữa 28% và 68% cho thấy beta-carotene có thể can thiệp đặc biệt hiệu quả vào các cơ chế gây di căn và tái phát.</p>
+      </div>
+      <div>
+        <div class="pull-quote">
+          <div class="pull-quote-text">"Nguy cơ ung thư vú gây tử vong thấp hơn <span>68%</span> — không phải với một loại thuốc, mà với mức beta-carotene trong máu cao."</div>
+        </div>
+        <p class="body-text">Trong thí nghiệm ống nghiệm (in vitro), beta-carotene tiêu diệt 75% tế bào ung thư vú di căn MDA-MB-231 — một trong những dòng tế bào hung hãn và kháng điều trị nhất — chỉ trong 96 giờ. Beta-carotene là một trong những chất chống oxy hóa mạnh mẽ nhất trong chuỗi thực phẩm của chúng ta.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <p><strong>Cà rốt</strong> là nguồn beta-carotene phong phú nhất trong tự nhiên — tiếp theo là khoai lang. Chỉ một khẩu phần mỗi ngày đã đủ để nâng nồng độ beta-carotene trong máu lên mức bảo vệ, đặc biệt khi tiêu thụ dưới dạng nước ép.</p>
+    </div>
+  </section>
+
+  <!-- SECTION II: FAD -->
+  <section class="fad-section">
+    <div class="accent-card">
+      <div class="section-label">Phần II · Falcarindiol (FAD)</div>
+      <h2 class="section-title">Hợp chất bí ẩn<br>trong lớp vỏ cà rốt</h2>
+      <div class="two-col">
+        <div>
+          <p class="body-text">Cà rốt còn chứa một nhóm hợp chất ít được biết đến gọi là polyacetylene — bao gồm falcarinol và falcarindiol (FAD). Trong thí nghiệm ống nghiệm, FAD ức chế tế bào ung thư vú lên đến 78%, cho thấy hoạt tính kháng ung thư mạnh mẽ trên nhiều loại tế bào khác nhau.</p>
+          <p class="body-text">Điều đáng lưu ý: FAD tập trung cao nhất ở lớp vỏ cà rốt và cực kỳ nhạy cảm với nhiệt và nước. Nó sẽ rò rỉ ra ngoài trong quá trình nấu ăn nếu dùng nhiều nước hoặc nấu quá lâu — thậm chí có thể biến mất hoàn toàn nếu gọt vỏ trước khi chế biến.</p>
+        </div>
+        <div>
+          <p class="body-text">Đây là lý do tại sao phương pháp chế biến không chỉ là chuyện khẩu vị — mà là quyết định trực tiếp lượng hợp chất bảo vệ bạn thực sự nhận được vào cơ thể. Khoa học không chỉ nói "ăn cà rốt". Khoa học nói "ăn cà rốt <em style="color:#D4A862">như thế này</em>".</p>
+          <div class="callout" style="background: rgba(212,168,98,0.12); border-left-color: var(--amber);">
+            <p style="color: #D4A862;">Không gọt vỏ khi có thể · Nấu tối đa 10 phút · Dùng ít nước · Hoặc ăn sống dưới dạng xay/ép</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION III: HOW TO EAT -->
+  <section class="tips-section">
+    <div class="section-label">Phần III · Hướng dẫn thực hành</div>
+    <h2 class="section-title">Cách ăn để tối đa hóa lợi ích</h2>
+    <p class="body-text" style="max-width: 620px;">Beta-carotene và FAD có đặc điểm hấp thu ngược chiều nhau — một cần nhiệt để giải phóng, một cần tránh nhiệt để bảo tồn. Chiến lược dưới đây giúp bạn cân bằng cả hai:</p>
+
+    <div class="tips-grid">
+      <div class="tip-card">
+        <span class="tip-number">01</span>
+        <div class="tip-title">Ép hoặc xay nhuyễn</div>
+        <p class="tip-body">Phá vỡ thành tế bào cà rốt giải phóng beta-carotene dạng tinh thể vốn bị khóa bên trong. Đây là cách hiệu quả nhất để tăng hấp thu beta-carotene đồng thời bảo tồn một phần FAD nếu không gọt vỏ.</p>
+      </div>
+      <div class="tip-card">
+        <span class="tip-number">02</span>
+        <div class="tip-title">Nấu tối đa 10 phút</div>
+        <p class="tip-body">Nấu chín ngắn hạn giúp phá vỡ tế bào, tăng beta-carotene khả dụng sinh học. Nhưng nấu quá 10 phút hoặc dùng nhiều nước sẽ làm FAD rò rỉ và mất hoàn toàn.</p>
+      </div>
+      <div class="tip-card">
+        <span class="tip-number">03</span>
+        <div class="tip-title">Giữ nguyên vỏ</div>
+        <p class="tip-body">FAD tập trung cao nhất ở vỏ cà rốt. Rửa sạch và sử dụng nguyên vỏ hoặc gọt tối thiểu để bảo tồn tối đa falcarindiol — đặc biệt quan trọng nếu bạn ăn sống hoặc ép.</p>
+      </div>
+      <div class="tip-card">
+        <span class="tip-number">04</span>
+        <div class="tip-title">Một khẩu phần mỗi ngày</div>
+        <p class="tip-body">Một củ cà rốt vừa hoặc một ly nước ép cà rốt mỗi ngày đã đủ để nâng nồng độ beta-carotene trong máu đến mức được quan sát trong nghiên cứu. Tính nhất quán quan trọng hơn số lượng.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing-section">
+    <div class="section-label">Lưu ý khoa học</div>
+    <p class="body-text" style="max-width: 680px;">Các bằng chứng được trình bày là nghiên cứu quan sát và thí nghiệm tế bào — chưa phải thử nghiệm lâm sàng đối chứng ngẫu nhiên. Cà rốt không thay thế điều trị y tế. Tuy nhiên, với một loại thực phẩm phổ biến, chi phí thấp và hoàn toàn an toàn, bằng chứng hiện có đủ mạnh để hình thành một thói quen dinh dưỡng có chủ đích và nhất quán.</p>
+
+    <div class="ornament">· · ·</div>
+
+    <div class="closing-quote">
+      <p>"Ăn hôm nay —<br>để cơ thể được <em>bảo vệ</em> ngày mai."</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">Ăn Hôm Nay Sức Khỏe Ngày Mai<br><span style="font-size:0.85rem; color:#5A5045; font-style:normal; font-family:'DM Sans',sans-serif;">Khoa học gia Thuy-Trinh Nguyen</span></div>
+    <div class="footer-sources">
+      <span>Nguồn tham khảo khoa học</span><br>
+      PubMed ID: 24596385 · 25877493 · 28441457
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
