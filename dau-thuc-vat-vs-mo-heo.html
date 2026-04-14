@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dầu Thực Vật vs. Mỡ Heo — H21 · Thuy-Trinh Nguyen</title>
+<meta name="description" content="Đừng để vài video trên mạng khiến bạn tin rằng mỡ heo tốt hơn khoa học. Bởi KHG Thuy-Trinh Nguyen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green-deep:#0a3d2b;
+  --green-mid:#1a6b49;
+  --green-bright:#2eb87a;
+  --green-pale:#d6f0e4;
+  --cream:#f9f5ee;
+  --ink:#1c1c1a;
+  --muted:#6b6b60;
+  --border:#ddd8cc;
+  --accent:#c9581a;
+  --amber:#b07d1a;
+  --amber-lt:#fdf0d5;
+}
+html{scroll-behavior:smooth;font-size:17px}
+body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.8}
+
+/* NAV */
+header{background:var(--green-deep);padding:0 2rem;position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;height:56px;border-bottom:1px solid rgba(255,255,255,.08)}
+.logo{font-family:'Playfair Display',serif;color:#fff;font-size:15px;letter-spacing:.5px;text-decoration:none}
+.logo span{color:var(--green-bright)}
+nav a{color:rgba(255,255,255,.6);text-decoration:none;font-size:13px;margin-left:24px;transition:color .2s}
+nav a:hover{color:#fff}
+
+/* HERO */
+.hero{background:var(--green-deep);padding:70px 2rem 60px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 100%,rgba(46,184,122,.12),transparent);pointer-events:none}
+.hero-tag{display:inline-block;background:rgba(201,88,26,.2);color:#e8904a;font-size:11px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;padding:5px 14px;border-radius:20px;border:1px solid rgba(201,88,26,.35);margin-bottom:28px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,60px);font-weight:700;color:#fff;line-height:1.1;max-width:720px;margin:0 auto 20px}
+.hero h1 em{font-style:italic;color:#e8904a}
+.hero h1 .vs{color:var(--green-bright);font-style:normal}
+.hero-sub{color:rgba(255,255,255,.55);font-size:15px;max-width:520px;margin:0 auto 32px;line-height:1.7}
+.byline{display:flex;align-items:center;justify-content:center;gap:12px}
+.avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--green-bright),var(--green-mid));display:flex;align-items:center;justify-content:center;font-weight:500;font-size:14px;color:#fff;border:2px solid rgba(255,255,255,.2)}
+.byline-name{font-size:14px;font-weight:500;color:#fff;display:block}
+.byline-role{font-size:12px;color:rgba(255,255,255,.45);display:block}
+
+/* HERO IMAGE */
+.hero-img-wrap{max-width:480px;margin:0 auto;padding:0 1.5rem}
+.hero-img-wrap img{width:100%;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.35);margin-top:-40px;position:relative;z-index:2}
+
+/* LAYOUT */
+.container{max-width:740px;margin:0 auto;padding:0 1.5rem}
+article{padding:56px 0 96px}
+
+/* LEAD */
+.lead{font-size:19px;font-weight:400;line-height:1.75;color:var(--green-deep);border-left:3px solid var(--accent);padding-left:24px;margin-bottom:48px;font-style:italic}
+
+/* WARNING BOX */
+.warning-box{background:linear-gradient(135deg,#3d1005,#7a2510);border-radius:14px;padding:28px 32px;margin:40px 0;color:#fff;position:relative;overflow:hidden}
+.warning-box::before{content:'⚠';position:absolute;right:20px;top:10px;font-size:80px;opacity:.08;line-height:1}
+.warning-box h3{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;margin-bottom:12px;color:#e8904a}
+.warning-box p{font-size:14px;line-height:1.7;color:rgba(255,255,255,.8);margin:0}
+
+/* SECTION */
+.section-num{display:flex;align-items:center;gap:16px;margin:56px 0 18px}
+.num{font-family:'Playfair Display',serif;font-size:48px;font-weight:700;color:var(--green-pale);line-height:1;user-select:none}
+.section-label small{display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--green-bright);font-weight:500;margin-bottom:2px}
+.section-label h2{font-family:'Playfair Display',serif;font-size:23px;font-weight:700;color:var(--ink);line-height:1.3}
+
+p{margin-bottom:20px}
+p:last-child{margin-bottom:0}
+strong{font-weight:500;color:var(--green-deep)}
+em-accent{font-style:italic;color:var(--accent)}
+
+/* COMPARE TABLE */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0}
+.compare-card{border-radius:14px;padding:24px;border:1px solid var(--border)}
+.compare-card.good{background:linear-gradient(160deg,#f0faf5,#e0f5ea);border-color:#a8dcc0}
+.compare-card.bad{background:linear-gradient(160deg,#fdf3ee,#fae5da);border-color:#e8b89a}
+.compare-head{font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}
+.compare-card.good .compare-head{color:var(--green-mid)}
+.compare-card.bad .compare-head{color:var(--accent)}
+.compare-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;margin-bottom:14px}
+.compare-card.good .compare-title{color:var(--green-deep)}
+.compare-card.bad .compare-title{color:#7a2510}
+.compare-list{list-style:none}
+.compare-list li{font-size:14px;padding:7px 0;border-bottom:1px solid rgba(0,0,0,.06);display:flex;gap:8px;line-height:1.5;color:var(--muted)}
+.compare-list li:last-child{border-bottom:none}
+.compare-list li .icon{flex-shrink:0;font-size:13px}
+
+/* SCIENCE BOX */
+.science-box{background:linear-gradient(135deg,#0a3d2b,#1a6b49);border-radius:16px;padding:32px 36px;margin:40px 0;color:#fff}
+.science-box h3{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;margin-bottom:20px;color:#fff}
+.fat-row{display:flex;align-items:flex-start;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.fat-row:last-child{border-bottom:none;padding-bottom:0}
+.fat-icon{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;margin-top:2px}
+.fat-icon.good{background:rgba(46,184,122,.25)}
+.fat-icon.bad{background:rgba(201,88,26,.25)}
+.fat-name{font-size:14px;font-weight:500;color:#fff;margin-bottom:3px}
+.fat-desc{font-size:13px;color:rgba(255,255,255,.6);line-height:1.5}
+.fat-badge{font-size:10px;font-weight:500;letter-spacing:1px;padding:3px 9px;border-radius:20px;margin-top:5px;display:inline-block}
+.badge-good{background:rgba(46,184,122,.2);color:#2eb87a}
+.badge-bad{background:rgba(201,88,26,.2);color:#e07a50}
+
+/* PULLQUOTE */
+.pullquote{background:var(--green-deep);color:#fff;border-radius:16px;padding:36px 40px;margin:48px 0;position:relative;overflow:hidden}
+.pullquote::before{content:'"';position:absolute;top:-12px;left:24px;font-family:'Playfair Display',serif;font-size:120px;color:rgba(46,184,122,.12);line-height:1;pointer-events:none}
+.pullquote p{font-family:'Playfair Display',serif;font-size:19px;font-style:italic;line-height:1.65;color:#fff;position:relative;margin:0}
+.pullquote cite{display:block;margin-top:16px;font-size:13px;font-style:normal;font-weight:500;color:var(--green-bright)}
+
+/* CALLOUT */
+.callout{background:var(--amber-lt);border-left:3px solid var(--amber);border-radius:0 8px 8px 0;padding:20px 24px;margin:32px 0}
+.callout p{font-size:14px;line-height:1.7;color:#5a4010;margin:0}
+.callout p strong{color:#3a2a08}
+
+/* DIVIDER */
+.divider{display:flex;align-items:center;gap:16px;margin:52px 0}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--border)}
+.divider span{font-size:18px;color:var(--green-bright)}
+
+/* CTA */
+.cta-box{background:var(--green-deep);border-radius:20px;padding:44px 40px;text-align:center;margin-top:64px}
+.cta-box h2{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#fff;margin-bottom:12px;line-height:1.3}
+.cta-box p{color:rgba(255,255,255,.6);font-size:15px;max-width:440px;margin:0 auto 28px}
+.cta-btn{display:inline-block;background:var(--green-bright);color:#fff;font-size:14px;font-weight:500;padding:13px 32px;border-radius:100px;text-decoration:none;transition:opacity .2s}
+.cta-btn:hover{opacity:.85}
+
+/* FOOTER */
+footer{background:var(--green-deep);border-top:1px solid rgba(255,255,255,.06);padding:40px 2rem;text-align:center}
+.footer-logo{font-family:'Playfair Display',serif;color:#fff;font-size:18px;margin-bottom:8px}
+.footer-logo span{color:var(--green-bright)}
+footer p{font-size:13px;color:rgba(255,255,255,.35);margin:0}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero>*{animation:fadeUp .7s ease both}
+.hero .hero-tag{animation-delay:.1s}
+.hero h1{animation-delay:.22s}
+.hero .hero-sub{animation-delay:.34s}
+.hero .byline{animation-delay:.46s}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .compare{grid-template-columns:1fr}
+  .pullquote{padding:28px 24px}
+  .pullquote p{font-size:17px}
+  .cta-box{padding:36px 24px}
+  .science-box{padding:24px 20px}
+  nav{display:none}
+  .hero-img-wrap{padding:0 1rem}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">H21 <span>Cho Đời Mãi Xanh</span></a>
+  <nav>
+    <a href="index.html">← Trang chủ</a>
+    <a href="https://www.h21chodoimaixanh.com" target="_blank">Website</a>
+    <a href="https://substack.com/@h21chodoimaixanh" target="_blank">Substack</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-tag">Tim Mạch · Chất Béo · Khoa Học Dinh Dưỡng</div>
+  <h1>Dầu Thực Vật <span class="vs">vs.</span><br><em>Mỡ Heo</em></h1>
+  <p class="hero-sub">Đừng để vài video trên mạng khiến bạn tin rằng mỡ heo tốt hơn khoa học.</p>
+  <div class="byline">
+    <div class="avatar">TN</div>
+    <div>
+      <span class="byline-name">Khoa Học Gia Thuy-Trinh Nguyen</span>
+      <span class="byline-role">H21 Cho Đời Mãi Xanh · Y Học Lối Sống</span>
+    </div>
+  </div>
+</div>
+
+<!-- HERO IMAGE -->
+<div style="background:var(--green-deep);padding-bottom:60px">
+  <div class="hero-img-wrap">
+    <img src="mo-heo.jpg" alt="Dầu Thực Vật vs Mỡ Heo — Chọn Lựa Sáng Suốt Cho Sức Khỏe">
+  </div>
+</div>
+
+<div class="container">
+<article>
+
+  <p class="lead">Mỗi giai đoạn, mạng xã hội lại đưa một loại thực phẩm lên vị trí "người hùng" mới. Gần đây, mỡ heo được nhắc đến như một lựa chọn nấu ăn "tự nhiên hơn" và vì thế "tốt hơn" dầu thực vật. Nhưng trong dinh dưỡng ứng dụng, một điều tự nhiên chưa chắc đã là một điều tối ưu.</p>
+
+  <div class="warning-box">
+    <h3>Vấn đề với những xu hướng trên mạng xã hội</h3>
+    <p>Với nền tảng nhiều năm làm việc trong lĩnh vực khoa học và nghiên cứu dược phẩm, tôi luôn nhìn dinh dưỡng không qua trào lưu — mà qua tính hợp lý, tính ứng dụng và giá trị sức khỏe lâu dài.</p>
+  </div>
+
+  <!-- SECTION 1 -->
+  <div class="section-num">
+    <div class="num">01</div>
+    <div class="section-label">
+      <small>Vấn đề cốt lõi</small>
+      <h2>Không Phải Mỡ Hay Dầu — Mà Là Chất Lượng Chất Béo</h2>
+    </div>
+  </div>
+
+  <p>Vấn đề cốt lõi không nằm ở việc chúng ta dùng mỡ hay dùng dầu. <strong>Vấn đề nằm ở chất lượng của loại chất béo được đưa vào cơ thể mỗi ngày.</strong></p>
+
+  <div class="compare">
+    <div class="compare-card good">
+      <div class="compare-head">✓ Sự lựa chọn tốt hơn</div>
+      <div class="compare-title">Dầu Thực Vật Đúng Loại</div>
+      <ul class="compare-list">
+        <li><span class="icon">🫒</span>Dầu olive extra virgin</li>
+        <li><span class="icon">🥑</span>Dầu avocado</li>
+        <li><span class="icon">🌿</span>Dầu canola chất lượng cao</li>
+        <li><span class="icon">✅</span>Giàu chất béo không bão hòa</li>
+        <li><span class="icon">✅</span>Hỗ trợ sức khỏe tim mạch</li>
+        <li><span class="icon">✅</span>Giảm Cholesterol xấu (LDL)</li>
+      </ul>
+    </div>
+    <div class="compare-card bad">
+      <div class="compare-head">⚠ Lựa chọn nguy hiểm hơn</div>
+      <div class="compare-title">Mỡ Heo</div>
+      <ul class="compare-list">
+        <li><span class="icon">🐷</span>Chất béo động vật đặc</li>
+        <li><span class="icon">❌</span>Tỷ lệ chất béo bão hòa cao</li>
+        <li><span class="icon">❌</span>Tăng Cholesterol LDL</li>
+        <li><span class="icon">❌</span>Tăng nguy cơ bệnh tim mạch</li>
+        <li><span class="icon">⚠</span>Không phải "độc" — nhưng không tối ưu</li>
+        <li><span class="icon">⚠</span>Không nên là lựa chọn chính</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="section-num">
+    <div class="num">02</div>
+    <div class="section-label">
+      <small>Khoa học chất béo</small>
+      <h2>Tại Sao Dầu Thực Vật Đúng Loại Vượt Trội Hơn?</h2>
+    </div>
+  </div>
+
+  <p>Những loại dầu thực vật phù hợp có giá trị hơn trong một chế độ ăn hiện đại, nhờ ưu thế về thành phần chất béo không bão hòa. <strong>Khi được sử dụng đúng cách, đúng nhiệt độ, đúng mục đích nấu nướng</strong>, đây là những lựa chọn hỗ trợ tốt hơn cho sức khỏe tim mạch và cân bằng chuyển hóa.</p>
+
+  <div class="science-box">
+    <h3>Khoa học chất béo — Hiểu để chọn đúng</h3>
+    <div class="fat-row">
+      <div class="fat-icon good">🫒</div>
+      <div>
+        <div class="fat-name">Chất béo không bão hòa đơn (MUFA)</div>
+        <div class="fat-desc">Có nhiều trong dầu olive, dầu avocado. Giúp giảm LDL cholesterol, bảo vệ tim mạch, chống viêm.</div>
+        <span class="fat-badge badge-good">BẢO VỆ TIM MẠCH</span>
+      </div>
+    </div>
+    <div class="fat-row">
+      <div class="fat-icon good">🐟</div>
+      <div>
+        <div class="fat-name">Chất béo không bão hòa đa (PUFA / Omega-3)</div>
+        <div class="fat-desc">Có trong dầu canola, cá béo. Chống viêm mạn tính, hỗ trợ não bộ và hệ miễn dịch.</div>
+        <span class="fat-badge badge-good">CHỐNG VIÊM MẠN TÍNH</span>
+      </div>
+    </div>
+    <div class="fat-row">
+      <div class="fat-icon bad">🐷</div>
+      <div>
+        <div class="fat-name">Chất béo bão hòa (Saturated Fat)</div>
+        <div class="fat-desc">Chiếm tỷ lệ cao trong mỡ heo. Dùng nhiều làm tăng LDL cholesterol — yếu tố nguy cơ của bệnh tim mạch và xơ vữa động mạch.</div>
+        <span class="fat-badge badge-bad">NGUY CƠ TIM MẠCH KHI DÙNG NHIỀU</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="pullquote">
+    <p>Ngon miệng là một chuyện. Nuôi cơ thể khỏe mạnh mới là chuyện quan trọng hơn.</p>
+    <cite>— KHG Thuy-Trinh Nguyen · H21 Cho Đời Mãi Xanh</cite>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="section-num">
+    <div class="num">03</div>
+    <div class="section-label">
+      <small>Quan điểm H21</small>
+      <h2>Không Cực Đoan — Nhưng Phải Dựa Trên Khoa Học</h2>
+    </div>
+  </div>
+
+  <p>Mỡ heo vẫn là chất béo động vật với tỷ lệ chất béo bão hòa cao hơn. Điều đó <strong>không đồng nghĩa với việc phải cực đoan loại bỏ</strong> — nhưng nếu biến mỡ heo thành lựa chọn chính trong căn bếp chỉ vì một làn sóng truyền thông, thì đó không phải là một quyết định dựa trên nền tảng khoa học vững vàng.</p>
+
+  <div class="callout">
+    <p>Điều tôi luôn nhắc cộng đồng và những thành viên H21 của tôi là: <strong>chăm sóc sức khỏe không bắt đầu từ những điều gây tranh cãi nhất, mà bắt đầu từ những điều đúng đắn nhất được lặp lại mỗi ngày.</strong></p>
+  </div>
+
+  <p>Một ít hiểu biết đúng sẽ bảo vệ cơ thể tốt hơn rất nhiều so với việc chạy theo những kết luận hấp dẫn nhưng thiếu chiều sâu.</p>
+
+  <div class="divider"><span>✦</span></div>
+
+  <!-- SECTION 4 -->
+  <div class="section-num">
+    <div class="num">04</div>
+    <div class="section-label">
+      <small>Kết luận thực tế</small>
+      <h2>Vậy Nên Chọn Gì Cho Bếp Nhà Mình?</h2>
+    </div>
+  </div>
+
+  <p>Nếu hỏi đâu là lựa chọn sáng suốt hơn cho việc nấu ăn thường nhật, thì câu trả lời vẫn là: <strong>dầu thực vật đúng loại, dùng đúng cách, vẫn là hướng đi phù hợp hơn cho sức khỏe lâu dài.</strong></p>
+
+  <div class="compare">
+    <div class="compare-card good">
+      <div class="compare-head">✓ Dùng cho nấu ăn hằng ngày</div>
+      <div class="compare-title" style="font-size:16px">Dầu olive extra virgin</div>
+      <ul class="compare-list">
+        <li><span class="icon">🌡</span>Xào nhẹ, trộn salad, nêm nếm</li>
+        <li><span class="icon">✅</span>Nhiệt độ vừa phải (&lt;180°C)</li>
+      </ul>
+    </div>
+    <div class="compare-card good">
+      <div class="compare-head">✓ Dùng cho nấu nhiệt cao</div>
+      <div class="compare-title" style="font-size:16px">Dầu avocado / canola</div>
+      <ul class="compare-list">
+        <li><span class="icon">🔥</span>Chiên, xào nhiệt cao</li>
+        <li><span class="icon">✅</span>Điểm bốc khói cao, ổn định</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="pullquote">
+    <p>Chăm sóc sức khỏe là một hành trình của nhận thức, không phải một cuộc chạy theo trào lưu. Và hành trình ấy luôn bắt đầu từ việc biết chọn điều đúng cho chính mình.</p>
+    <cite>— KHG Thuy-Trinh Nguyen · H21 Cho Đời Mãi Xanh</cite>
+  </div>
+
+  <div class="cta-box">
+    <h2>Bạn muốn hiểu đúng hơn về dinh dưỡng?</h2>
+    <p>Tham gia cộng đồng H21 — nơi khoa học dinh dưỡng được dịch thành thói quen thực tế mỗi ngày.</p>
+    <a href="https://www.facebook.com/xanhlenbenhxuong/" target="_blank" class="cta-btn">Đăng Ký Khóa Học H21 →</a>
+  </div>
+
+</article>
+</div>
+
+<footer>
+  <div class="footer-logo">H21 <span>Cho Đời Mãi Xanh</span></div>
+  <p style="margin-bottom:6px">Khoa Học Gia Thuy-Trinh Nguyen · Lifestyle Medicine · © 2026</p>
+  <p><a href="https://www.h21chodoimaixanh.com" target="_blank" style="color:var(--green-bright);text-decoration:none;font-size:13px">www.h21chodoimaixanh.com</a></p>
+</footer>
+
+</body>
+</html>
