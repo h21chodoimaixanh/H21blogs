@@ -82,6 +82,8 @@ nav{background:var(--white);border-bottom:1.5px solid var(--green-pale);position
 .tab.active{color:var(--green-dark);border-bottom-color:var(--green)}
 .tab-herbal{color:var(--teal) !important}
 .tab-herbal.active{border-bottom-color:var(--teal) !important}
+.tab-matcha{color:#4E8C4A !important}
+.tab-matcha:hover{color:#3A6B38 !important;border-bottom-color:#6AAF65 !important}
 
 /* STATS BAND */
 .stats-band{background:var(--green-dark);padding:2.5rem 1.5rem}
@@ -242,7 +244,7 @@ footer{background:var(--green-dark);padding:2.5rem 1.5rem 1.5rem}
 
 <nav>
   <div class="nav-inner">
-    <a href="https://www.h21chodoimaixanh.com" target="_blank" class="nav-brand" style="text-decoration:none;">
+    <a href="https://www.h21chodoimaixanh.com" target="_blank" class="nav-brand" style="text-decoration:none;display:flex;align-items:center;gap:10px;flex-shrink:0;">
       <div class="nav-h21-badge">H21</div>
       <div>
         <span class="b1">Cho Đời Mãi Xanh</span>
@@ -315,13 +317,14 @@ footer{background:var(--green-dark);padding:2.5rem 1.5rem 1.5rem}
 <div class="tabs-wrap">
   <div class="tabs-inner">
     <div class="tab active">TẤT CẢ</div>
-    <div class="tab">UNG THƯ &amp; PHÒNG BỆNH</div>
+    <a href="carrot-cancer.html" class="tab" style="text-decoration:none;">UNG THƯ &amp; PHÒNG BỆNH</a>
     <div class="tab">CHẤT CHỐNG OXY HÓA</div>
     <div class="tab">RAU CỦ &amp; THỰC PHẨM</div>
     <div class="tab">TIM MẠCH</div>
-    <div class="tab">MIỄN DỊCH</div>
+    <a href="nam-suc-khoe.html" class="tab" style="text-decoration:none;">MIỄN DỊCH</a>
     <div class="tab">NGHIÊN CỨU MỚI</div>
-    <div class="tab tab-herbal">🌿 H21 THẢO MỘC TRÀ</div>
+    <a href="h21-thao-moc-tra.html" class="tab tab-herbal" style="text-decoration:none;">🌿 H21 THẢO MỘC TRÀ</a>
+    <a href="h21-matcha.html" class="tab tab-matcha" style="text-decoration:none;">🍵 H21 MATCHA</a>
   </div>
 </div>
 
@@ -354,29 +357,36 @@ footer{background:var(--green-dark);padding:2.5rem 1.5rem 1.5rem}
     <p class="card-excerpt">Không phải thuốc, không phải ăn kiêng — đây là khoa học dinh dưỡng được cá nhân hóa cho chính bạn, với coaching 1:1 trong 90 ngày.</p>
     <div class="card-foot"><span class="pill pill-live">Đã đăng</span><span class="card-arr">→</span></div>
   </a>
-  <a href="an-hom-nay-suc-khoe-ngay-mai.html" class="card live">
+  <a href="h21-matcha.html" class="card live">
     <span class="card-num">03</span>
+    <div class="card-tag">🍵 Matcha · EGCG · Chống Oxy Hóa</div>
+    <h3 class="card-title">H21 Matcha — Khoa Học Đằng Sau Tách Trà Xanh</h3>
+    <p class="card-excerpt">Matcha chứa lượng EGCG cao hơn 137 lần so với trà xanh thông thường — khoa học 2025 xác nhận tác động lên tim mạch, não bộ, gan và chuyển hóa.</p>
+    <div class="card-foot"><span class="pill pill-live">Đã đăng</span><span class="card-arr">→</span></div>
+  </a>
+  <a href="an-hom-nay-suc-khoe-ngay-mai.html" class="card live">
+    <span class="card-num">04</span>
     <div class="card-tag">Y Học Lối Sống · Epigenetics</div>
     <h3 class="card-title">Ăn Hôm Nay — Sức Khỏe Ngày Mai</h3>
     <p class="card-excerpt">Tại sao thức ăn bạn chọn hôm nay là quyết định quan trọng nhất cho sức khỏe tương lai — khoa học Epigenetics và nguyên lý tích lũy.</p>
     <div class="card-foot"><span class="pill pill-live">Đã đăng</span><span class="card-arr">→</span></div>
   </a>
   <a href="carrot-cancer.html" class="card live">
-    <span class="card-num">04</span>
+    <span class="card-num">05</span>
     <div class="card-tag">Ung Thư · Chất Chống Oxy Hóa</div>
     <h3 class="card-title">Củ Cà Rốt & Ung Thư Vú — Điều Khoa Học Đang Nói</h3>
     <p class="card-excerpt">Beta-carotene và falcarindiol trong cà rốt cho thấy tiềm năng phòng ngừa ung thư vú đáng kinh ngạc — giảm đến 68% nguy cơ gây tử vong.</p>
     <div class="card-foot"><span class="pill pill-live">Đã đăng</span><span class="card-arr">→</span></div>
   </a>
   <a href="nam-suc-khoe.html" class="card live">
-    <span class="card-num">05</span>
+    <span class="card-num">06</span>
     <div class="card-tag">Miễn Dịch · Dinh Dưỡng · Não Bộ</div>
     <h3 class="card-title">Nấm – Người Bạn Nhỏ Của Bữa Ăn Lành Mạnh</h3>
     <p class="card-excerpt">Giảm 16% nguy cơ tử vong, tăng cường miễn dịch và não bộ — chỉ với một loại thực phẩm quen thuộc trong bếp Việt.</p>
     <div class="card-foot"><span class="pill pill-live">Đã đăng</span><span class="card-arr">→</span></div>
   </a>
   <a href="dau-thuc-vat-vs-mo-heo.html" class="card live">
-    <span class="card-num">06</span>
+    <span class="card-num">07</span>
     <div class="card-tag">Tim Mạch · Chất Béo · Khoa Học</div>
     <h3 class="card-title">Dầu Thực Vật vs. Mỡ Heo — Chọn Lựa Sáng Suốt Cho Sức Khỏe</h3>
     <p class="card-excerpt">Đừng để vài video trên mạng khiến bạn tin rằng mỡ heo tốt hơn khoa học. Một điều tự nhiên chưa chắc đã là một điều tối ưu.</p>
