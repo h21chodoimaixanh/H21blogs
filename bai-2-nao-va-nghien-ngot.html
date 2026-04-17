@@ -85,9 +85,9 @@ body{background:#ede9e3;font-family:'Lora',Georgia,serif;color:var(--ink);}
 .takeaway strong{color:white;font-weight:700;}
 /* CTA */
 .cta-box{background:var(--forest);border-radius:14px;padding:30px 32px;margin-top:36px;text-align:center;}
-.cta-box .cta-eyebrow{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
-.cta-box .cta-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:white;margin-bottom:10px;line-height:1.35;}
-.cta-box .cta-desc{font-size:14px;color:rgba(255,255,255,0.72);max-width:420px;margin:0 auto 22px;line-height:1.7;font-family:'Lora',serif;}
+.cta-eyebrow{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--mint);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
+.cta-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:white;margin-bottom:10px;line-height:1.35;}
+.cta-desc{font-size:14px;color:rgba(255,255,255,0.65);max-width:400px;margin:0 auto 22px;line-height:1.7;font-family:'Lora',serif;}
 .cta-btn{display:inline-block;background:var(--accent);color:white;font-size:14px;font-weight:600;padding:13px 32px;border-radius:100px;text-decoration:none;font-family:'Be Vietnam Pro',sans-serif;transition:opacity .2s;}
 .cta-btn:hover{opacity:0.88;}
 /* FOOTER */
@@ -169,15 +169,55 @@ body{background:#ede9e3;font-family:'Lora',Georgia,serif;color:var(--ink);}
     <p>Điều xảy ra tiếp theo mới là vấn đề: khi bạn liên tục kích thích vùng này bằng đường, não phản ứng bằng cách <strong>giảm số lượng dopamine receptor</strong>. Ít receptor hơn đồng nghĩa với việc bạn cần nhiều đường hơn để đạt cùng cảm giác hài lòng. Đây là cơ chế của sự <em>dung nạp</em> &mdash; cùng cơ chế xảy ra với nghiện thuốc lá hay nghiện rượu.</p>
     <p>Và khi thiếu đường? Não gửi tín hiệu thiếu hụt thật sự: bồn chồn, lo âu, khó tập trung, mệt mỏi &mdash; những gì nhiều người gọi là &#8220;hạ đường huyết&#8221; hay &#8220;cần ăn gì ngọt một chút&#8221;. Thực ra đó là <strong>triệu chứng cai nghiện nhẹ</strong>.</p>
 
-    <div class="label-guide">
-      <div class="lg-label">&#128161; Ví Dụ</div>
-      <p>Hãy tưởng tượng bạn uống cà phê sữa mỗi sáng trong nhiều năm. Một buổi sáng nào đó không có &mdash; bạn thấy đau đầu, khó chịu, không thể tập trung. Cơ thể không thiếu caffeine để tồn tại, nhưng não đã quen với mức dopamine đó và đang &#8220;đòi&#8221; lại liều quen thuộc. <strong>Đường hoạt động theo đúng cơ chế đó &mdash; chỉ là âm thầm hơn và diễn ra nhiều lần mỗi ngày, với mỗi bữa ăn.</strong> Cơn thèm ngọt lúc 3 giờ chiều của bạn không phải cơ thể cần năng lượng &mdash; đó là não đang yêu cầu đúng &#8220;liều&#8221; của nó.</p>
-    </div>
-
     <div class="science-box">
       <div class="sb-label">&#128300; Nghiên Cứu Tham Khảo</div>
       <p>Avena, Rada &amp; Hoebel (2008) &mdash; <em>Neuroscience &amp; Biobehavioral Reviews</em>: Tiêu thụ đường liên tục dẫn đến các thay đổi thần kinh tương đồng với lạm dụng opioid, bao gồm tăng giải phóng dopamine pha đầu, giảm phản ứng dopamine cơ bản, và triệu chứng lo âu khi ngừng tiếp cận đường. Kết luận: <strong>&#8220;Sugar bingeing shares characteristics with drug abuse.&#8221;</strong></p>
     </div>
+
+    <svg viewBox="0 0 620 140" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;margin:8px 0 8px;" role="img" aria-label="Vòng lặp dopamine và đường">
+      <defs>
+        <marker id="arrbr" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto">
+          <path d="M0,0 L0,7 L8,3.5 Z" fill="#7F77DD"/>
+        </marker>
+      </defs>
+      <!-- Step 1 -->
+      <rect x="2" y="22" width="104" height="96" rx="10" fill="#EEEDFE" stroke="#7F77DD" stroke-width="1.5"/>
+      <text x="54" y="55" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="26">🍬</text>
+      <text x="54" y="78" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#26215C">Ăn đường</text>
+      <text x="54" y="95" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#534AB7">liều đầu tiên</text>
+      <!-- Arrow -->
+      <line x1="112" y1="70" x2="128" y2="70" stroke="#7F77DD" stroke-width="1.8" marker-end="url(#arrbr)"/>
+      <!-- Step 2 -->
+      <rect x="131" y="22" width="104" height="96" rx="10" fill="#7F77DD" stroke="#534AB7" stroke-width="1.5"/>
+      <text x="183" y="55" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="26">⚡</text>
+      <text x="183" y="78" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="white">Dopamine</text>
+      <text x="183" y="95" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="rgba(255,255,255,0.8)">tăng vọt</text>
+      <!-- Arrow -->
+      <line x1="241" y1="70" x2="257" y2="70" stroke="#7F77DD" stroke-width="1.8" marker-end="url(#arrbr)"/>
+      <!-- Step 3 -->
+      <rect x="260" y="22" width="104" height="96" rx="10" fill="#EEEDFE" stroke="#7F77DD" stroke-width="1.5"/>
+      <text x="312" y="55" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="26">😊</text>
+      <text x="312" y="78" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#26215C">Cảm giác tốt</text>
+      <text x="312" y="95" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#534AB7">tạm thời</text>
+      <!-- Arrow -->
+      <line x1="370" y1="70" x2="386" y2="70" stroke="#7F77DD" stroke-width="1.8" marker-end="url(#arrbr)"/>
+      <!-- Step 4 -->
+      <rect x="389" y="22" width="112" height="96" rx="10" fill="#26215C" stroke="#534AB7" stroke-width="1.5"/>
+      <text x="445" y="55" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="26">📉</text>
+      <text x="445" y="76" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="white">Não giảm</text>
+      <text x="445" y="92" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="white">receptor</text>
+      <!-- Arrow -->
+      <line x1="507" y1="70" x2="521" y2="70" stroke="#7F77DD" stroke-width="1.8" marker-end="url(#arrbr)"/>
+      <!-- Step 5 -->
+      <rect x="524" y="22" width="92" height="96" rx="10" fill="#EEEDFE" stroke="#7F77DD" stroke-width="1.5"/>
+      <text x="570" y="55" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="26">😐</text>
+      <text x="570" y="77" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#26215C">Cần nhiều</text>
+      <text x="570" y="93" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#26215C">hơn nữa</text>
+      <!-- Loop arrow below -->
+      <path d="M570,118 Q570,135 310,135 Q50,135 54,118" stroke="#7F77DD" stroke-width="1.5" fill="none" stroke-dasharray="5,3" marker-end="url(#arrbr)"/>
+      <text x="310" y="132" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="#534AB7">vòng lặp tiếp tục...</text>
+    </svg>
+    <p style="font-size:13px;color:var(--light);text-align:center;margin-bottom:28px;font-family:'Be Vietnam Pro',sans-serif;font-style:italic">Cơ chế dung nạp: não càng quen với đường, bạn càng cần nhiều đường hơn để cảm thấy bình thường</p>
 
     <h2>Vì Sao Đây Không Phải Lỗi Của Bạn</h2>
     <p>Khi bạn không thể ngừng thèm ngọt dù đã cố gắng, <strong>não bạn đang hoạt động hoàn toàn đúng theo cách nó được lập trình bởi đường</strong>. Đó không phải yếu đuối về mặt tâm lý. Đó là thần kinh học.</p>
@@ -192,9 +232,76 @@ body{background:#ede9e3;font-family:'Lora',Georgia,serif;color:var(--ink);}
     <p>Một trong những ảnh hưởng ít được nói đến nhất của đường là tác động lên <strong>tâm trạng và cảm xúc</strong>. Đường tạo ra cảm giác tốt ngay lập tức &mdash; nhưng spike dopamine nhanh kéo theo crash: 60&ndash;90 phút sau bữa ăn nhiều đường, nhiều người cảm thấy mệt mỏi, cáu kỉnh, và thèm ngọt trở lại.</p>
     <p>Theo thời gian, dao động liên tục này góp phần vào lo âu mãn tính, khó ngủ, và trầm cảm nhẹ. Nghiên cứu năm 2017 trên <em>Scientific Reports</em> theo dõi 8.000 người trong 22 năm cho thấy: những người ăn nhiều đường có <strong>nguy cơ mắc trầm cảm cao hơn 23%</strong> so với nhóm ăn ít đường.</p>
 
+    <svg viewBox="0 0 580 170" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;margin:8px 0 8px;" role="img" aria-label="Tâm trạng lên xuống theo lượng đường trong ngày">
+      <!-- Background -->
+      <rect x="50" y="10" width="520" height="120" rx="8" fill="#EEEDFE" stroke="#CCC9F0" stroke-width="1"/>
+      <!-- Y axis label -->
+      <text x="14" y="72" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#534AB7" transform="rotate(-90,14,72)">Tâm trạng</text>
+      <!-- Baseline -->
+      <line x1="56" y1="90" x2="564" y2="90" stroke="#CCC9F0" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="56" y="104" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#534AB7">Bình thường</text>
+      <!-- Sugar spike curve 1 -->
+      <path d="M80,90 Q110,20 140,22 Q165,24 175,90 Q185,140 210,148 Q230,152 240,90" stroke="#7F77DD" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <text x="140" y="18" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#26215C">😊 Tốt</text>
+      <text x="207" y="162" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#993C1D">😔 Crash</text>
+      <!-- Candy icon 1 -->
+      <text x="82" y="106" font-family="'Be Vietnam Pro',sans-serif" font-size="14">🍬</text>
+      <!-- Sugar spike curve 2 -->
+      <path d="M240,90 Q270,25 300,22 Q325,24 335,90 Q345,140 370,148 Q390,152 400,90" stroke="#7F77DD" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <text x="242" y="106" font-family="'Be Vietnam Pro',sans-serif" font-size="14">🍬</text>
+      <!-- Sugar spike curve 3 -->
+      <path d="M400,90 Q430,30 460,28 Q485,30 495,90 Q505,138 525,144 Q540,148 555,90" stroke="#7F77DD" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <text x="402" y="106" font-family="'Be Vietnam Pro',sans-serif" font-size="14">🍬</text>
+      <!-- Labels at bottom -->
+      <text x="90" y="152" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#534AB7">Bữa sáng</text>
+      <text x="260" y="152" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#534AB7">Snack trưa</text>
+      <text x="430" y="152" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#534AB7">Snack chiều</text>
+    </svg>
+    <p style="font-size:13px;color:var(--light);text-align:center;margin-bottom:28px;font-family:'Be Vietnam Pro',sans-serif;font-style:italic">Mỗi lần ăn đường là một lần tâm trạng lên rồi xuống &mdash; lặp đi lặp lại cả ngày</p>
+
     <h2>Reset Não Bằng Dinh Dưỡng &mdash; Không Phải Nhịn</h2>
     <p>Phương pháp tôi áp dụng trong hệ sinh thái H21 không dựa trên sự kiêng khem hay ép buộc. Nó dựa trên nguyên tắc đơn giản hơn: <strong>thay thế thứ não đang thèm bằng thứ não thật sự cần</strong>.</p>
     <p>Khi cơ thể được cung cấp đủ protein thực vật, chất béo lành mạnh, chất xơ, và vi chất dinh dưỡng &mdash; đặc biệt là magnesium, zinc, và vitamin nhóm B &mdash; tín hiệu thèm ăn từ não bắt đầu thay đổi. Trong vòng 5&ndash;10 ngày, phần lớn người nhận thấy cơn thèm ngọt giảm rõ rệt. Không phải vì họ mạnh mẽ hơn &mdash; mà vì <em>não họ đang nhận được thứ nó thật sự cần</em>.</p>
+
+    <svg viewBox="0 0 580 150" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;margin:8px 0 8px;" role="img" aria-label="Các dưỡng chất giúp reset não bộ">
+      <defs>
+        <marker id="arrteal" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto">
+          <path d="M0,0 L0,7 L8,3.5 Z" fill="#1D9E75"/>
+        </marker>
+      </defs>
+      <!-- Center brain -->
+      <circle cx="290" cy="75" r="50" fill="#7F77DD"/>
+      <text x="290" y="65" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="28">🧠</text>
+      <text x="290" y="88" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" font-weight="700" fill="white">Não được</text>
+      <text x="290" y="102" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" font-weight="700" fill="white">reset</text>
+      <!-- Nutrients flowing in - left column -->
+      <rect x="2" y="8" width="118" height="30" rx="8" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1.2"/>
+      <text x="61" y="28" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" fill="#04342C">💪 Protein thực vật</text>
+      <line x1="120" y1="23" x2="238" y2="55" stroke="#1D9E75" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrteal)"/>
+
+      <rect x="2" y="55" width="118" height="30" rx="8" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1.2"/>
+      <text x="61" y="75" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" fill="#04342C">🥑 Chất béo tốt</text>
+      <line x1="120" y1="70" x2="238" y2="72" stroke="#1D9E75" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrteal)"/>
+
+      <rect x="2" y="102" width="118" height="30" rx="8" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1.2"/>
+      <text x="61" y="122" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" fill="#04342C">🌾 Chất xơ</text>
+      <line x1="120" y1="117" x2="238" y2="90" stroke="#1D9E75" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrteal)"/>
+
+      <!-- Right column -->
+      <rect x="460" y="8" width="118" height="30" rx="8" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1.2"/>
+      <text x="519" y="28" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" fill="#04342C">🫐 Magnesium</text>
+      <line x1="460" y1="23" x2="342" y2="55" stroke="#1D9E75" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrteal)"/>
+
+      <rect x="460" y="55" width="118" height="30" rx="8" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1.2"/>
+      <text x="519" y="75" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" fill="#04342C">🥦 Zinc</text>
+      <line x1="460" y1="70" x2="342" y2="72" stroke="#1D9E75" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrteal)"/>
+
+      <rect x="460" y="102" width="118" height="30" rx="8" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1.2"/>
+      <text x="519" y="122" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" fill="#04342C">🌻 Vitamin nhóm B</text>
+      <line x1="460" y1="117" x2="342" y2="90" stroke="#1D9E75" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrteal)"/>
+    </svg>
+    <p style="font-size:13px;color:var(--light);text-align:center;margin-bottom:28px;font-family:'Be Vietnam Pro',sans-serif;font-style:italic">Khi não nhận đủ các dưỡng chất thật sự cần, tín hiệu thèm đường bắt đầu giảm tự nhiên</p>
+
     <p>Smoothie rau xanh và protein thực vật buổi sáng không phải là &#8220;ăn kiêng&#8221;. Đó là nguyên liệu thô để não hoạt động đúng cách &mdash; và khi não hoạt động đúng, nó ngừng gửi các tín hiệu thèm muốn sai lệch.</p>
 
     <p>Điều tôi nhận thấy qua quá trình đồng hành cùng học viên H21: nhiều người bắt đầu cảm nhận sự thay đổi rõ rệt chỉ sau <strong>10 ngày đầu</strong> &mdash; không phải sau khi hoàn thành toàn bộ hành trình. Năng lượng ổn định hơn, cơn thèm ngọt buổi chiều bớt dữ dội, giấc ngủ bắt đầu sâu hơn. Đây không phải ngẫu nhiên &mdash; đó là sinh học đang phản hồi lại những lựa chọn mới. Sự thay đổi này xuất hiện sớm bởi vì não và ruột phản ứng nhanh hơn ta nghĩ, khi được hỗ trợ đúng cách. Đó là nơi đồng hành và kiến thức chuyên môn tạo ra sự khác biệt &mdash; không phải thay thế nỗ lực của người học, mà giúp họ đi đúng hướng từ những bước đầu tiên.</p>
