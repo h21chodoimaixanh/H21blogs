@@ -1,153 +1,248 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Bạn đang ăn bao nhiêu đường mỗi ngày mà không biết? Đường ẩn trong nước ép, sữa chua, sốt cà chua — và tác động lâu dài lên sức khỏe của bạn.">
-<title>Bạn Đang Ăn 32 Viên Đường Mỗi Ngày — Blog H21</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Đường ẩn trong sữa chua, nước ép, sốt cà chua -- bạn cần biết chúng tên gì trên nhãn thực phẩm.">
+<title>Bạn Đang Ăn 32 Viên Đường Mỗi Ngày -- Mà Không Hề Biết — Blog H21</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--forest:#1a3d2b;--sage:#4a7c59;--mint:#7eb89a;--cream:#f7f3ec;--gold:#c9a84c;--gold-light:#fdf5e0;--coral:#d4705a;--border:#e0d8cc;--mid:#3a3a3a;--light:#7a7a7a;--ink:#0f1f17;}
+:root{
+  --accent:#D85A30;--accent-light:#FAECE7;
+  --accent-mid:#993C1D;--accent-dark:#4A1B0C;
+  --forest:#1a3d2b;--sage:#4a7c59;--mint:#7eb89a;
+  --cream:#f7f3ec;--gold:#c9a84c;--gold-light:#fdf5e0;
+  --border:#e0d8cc;--mid:#3a3a3a;--light:#6b7280;--ink:#0f1f17;
+}
 *{margin:0;padding:0;box-sizing:border-box;}
-body{background:#ede9e3;font-family:'DM Sans',sans-serif;color:var(--ink);}
+body{background:#ede9e3;font-family:'Lora',Georgia,serif;color:var(--ink);}
+/* NAV */
 .site-nav{background:var(--forest);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(0,0,0,0.25);}
 .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
-.nav-logo-mark{width:34px;height:34px;background:var(--mint);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;}
-.nav-logo-name{font-size:14px;font-weight:700;color:white;}.nav-logo-tag{font-size:10px;color:rgba(255,255,255,0.5);margin-top:1px;}
-.nav-right{display:flex;align-items:center;gap:16px;}
-.nav-back{font-size:13px;color:rgba(255,255,255,0.7);text-decoration:none;display:flex;align-items:center;gap:6px;font-weight:500;transition:color 0.2s;}
+.nav-logo-mark{width:34px;height:34px;background:var(--mint);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-family:sans-serif;}
+.nav-logo-name{font-size:14px;font-weight:600;color:white;font-family:'Be Vietnam Pro',sans-serif;}
+.nav-logo-tag{font-size:10px;color:rgba(255,255,255,0.5);margin-top:1px;font-family:'Be Vietnam Pro',sans-serif;}
+.nav-back{font-size:13px;color:rgba(255,255,255,0.75);text-decoration:none;font-weight:500;font-family:'Be Vietnam Pro',sans-serif;transition:color 0.2s;}
 .nav-back:hover{color:var(--mint);}
-.nav-series{font-size:11px;color:var(--gold);font-weight:600;letter-spacing:1px;border:1px solid rgba(201,168,76,0.35);border-radius:20px;padding:5px 14px;}
-.article-wrap{max-width:720px;margin:0 auto;padding:52px 24px 80px;}
-.cat-label{display:inline-flex;align-items:center;gap:8px;font-size:10.5px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--sage);margin-bottom:18px;}
-.cat-label::before{content:'';display:inline-block;width:32px;height:2px;background:var(--sage);}
-.article-h1{font-family:'Playfair Display',serif;font-size:42px;font-weight:900;line-height:1.15;color:var(--ink);margin-bottom:18px;letter-spacing:-0.5px;}
-.article-h1 em{color:var(--sage);font-style:normal;}
-.article-deck{font-family:'DM Serif Display',serif;font-size:19px;line-height:1.6;color:#3a3a3a;margin-bottom:28px;font-style:italic;border-left:4px solid var(--gold);padding-left:18px;}
-.byline{display:flex;align-items:center;gap:14px;padding:16px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:36px;}
-.byline-av{width:44px;height:44px;background:var(--forest);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;color:white;font-weight:700;flex-shrink:0;}
-.byline-name{font-size:13.5px;font-weight:700;color:var(--forest);}.byline-role{font-size:12px;color:var(--light);margin-top:2px;}
-.byline-meta{margin-left:auto;text-align:right;}.byline-url{font-size:12px;color:var(--light);}
-.read-time{font-size:11px;color:var(--sage);font-weight:600;margin-top:2px;}
-.article-body{font-size:16.5px;line-height:1.85;color:var(--mid);}
-.article-body p{margin-bottom:22px;}.article-body strong{color:var(--ink);font-weight:700;}
-.article-body em{color:var(--sage);font-style:italic;font-weight:600;}
-.article-body h2{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--forest);margin:38px 0 14px;line-height:1.3;}
-.pull-quote{margin:36px 0;padding:28px 32px;background:var(--forest);border-radius:14px;color:white;text-align:center;position:relative;}
-.pull-quote::before{content:'"';font-family:'Playfair Display',serif;font-size:80px;line-height:0.5;color:rgba(255,255,255,0.12);position:absolute;top:24px;left:20px;}
-.pull-quote p{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.6;color:rgba(255,255,255,0.95);font-style:italic;margin:0;}
-.pull-quote cite{display:block;margin-top:12px;font-size:12px;color:var(--mint);font-weight:600;letter-spacing:1px;font-style:normal;}
-.science-box{background:var(--gold-light);border:1px solid #e8d5a3;border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:20px 24px;margin:28px 0;}
-.science-box .sb-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
-.science-box p{font-size:14.5px;color:var(--mid);margin:0;line-height:1.65;}
+/* HERO */
+.article-hero{background:linear-gradient(135deg,#4A1B0C 0%,#993C1D 55%,#D85A30 100%);padding:48px 24px 40px;position:relative;overflow:hidden;}
+.article-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 30%,rgba(255,255,255,0.06) 0%,transparent 60%);}
+.hero-inner{max-width:720px;margin:0 auto;position:relative;z-index:1;}
+.cat-label{display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:14px;font-family:'Be Vietnam Pro',sans-serif;}
+.cat-label::before{content:'';display:inline-block;width:28px;height:1.5px;background:rgba(255,255,255,0.5);}
+.article-h1{font-family:'Playfair Display',serif;font-size:40px;font-weight:700;line-height:1.2;color:white;margin-bottom:16px;letter-spacing:-0.3px;}
+.article-h1 em{color:rgba(255,255,255,0.82);font-style:italic;}
+.article-deck{font-family:'Lora',serif;font-size:18px;line-height:1.7;color:rgba(255,255,255,0.78);font-style:italic;margin:0;}
+/* BYLINE */
+.byline-bar{background:white;border-bottom:1px solid var(--border);padding:14px 24px;}
+.byline-inner{max-width:720px;margin:0 auto;display:flex;align-items:center;gap:14px;}
+.byline-av{width:40px;height:40px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:white;font-weight:700;flex-shrink:0;font-family:'Be Vietnam Pro',sans-serif;}
+.byline-name{font-size:13.5px;font-weight:600;color:var(--ink);font-family:'Be Vietnam Pro',sans-serif;}
+.byline-role{font-size:11.5px;color:var(--light);margin-top:1px;font-family:'Be Vietnam Pro',sans-serif;}
+.byline-meta{margin-left:auto;text-align:right;}
+.byline-url{font-size:11.5px;color:var(--light);font-family:'Be Vietnam Pro',sans-serif;}
+.read-time{font-size:11px;color:var(--accent);font-weight:600;margin-top:2px;font-family:'Be Vietnam Pro',sans-serif;}
+/* ARTICLE WRAP */
+.article-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px;}
+/* HERO IMAGE */
+.hero-img{margin-bottom:36px;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.12);}
+.hero-img img{width:100%;display:block;}
+/* BODY */
+.article-body{font-family:'Lora',Georgia,serif;font-size:17px;line-height:1.9;color:var(--mid);}
+.article-body p{margin-bottom:22px;}
+.article-body strong{color:var(--ink);font-weight:700;}
+.article-body em{color:var(--accent-mid);font-style:italic;font-weight:600;}
+.article-body h2{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--ink);margin:40px 0 14px;line-height:1.3;}
+.article-body h3{font-family:'Be Vietnam Pro',sans-serif;font-size:16px;font-weight:700;color:var(--accent-dark);margin:26px 0 10px;text-transform:uppercase;letter-spacing:1px;}
+/* FACT STRIP */
 .fact-strip{display:grid;grid-template-columns:repeat(3,1fr);margin:32px 0;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:white;}
-.fact-item{padding:20px 18px;text-align:center;border-right:1px solid var(--border);}
+.fact-item{padding:20px 16px;text-align:center;border-right:1px solid var(--border);}
 .fact-item:last-child{border-right:none;}
-.fact-num{font-family:'Playfair Display',serif;font-size:30px;font-weight:900;color:var(--coral);line-height:1;}
-.fact-label{font-size:12px;color:var(--light);margin-top:5px;line-height:1.4;}
-.takeaway{background:linear-gradient(135deg,var(--forest),#2d5a38);border-radius:14px;padding:26px 30px;margin:36px 0 0;color:white;}
-.takeaway-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--mint);margin-bottom:10px;}
-.takeaway p{font-size:15.5px;color:rgba(255,255,255,0.9);line-height:1.7;margin:0;}
-.takeaway strong{color:var(--gold-light);}
+.fact-num{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:var(--accent);line-height:1;}
+.fact-label{font-size:11.5px;color:var(--light);margin-top:6px;line-height:1.5;font-family:'Be Vietnam Pro',sans-serif;}
+/* SUGAR NAMES GRID */
+.sugar-names{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:18px 0;}
+.sugar-pill{background:white;border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:9px 12px;font-size:13px;color:var(--mid);font-family:'Be Vietnam Pro',sans-serif;}
+/* SCIENCE BOX */
+.science-box{background:var(--accent-light);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:0 12px 12px 0;padding:20px 24px;margin:28px 0;}
+.science-box .sb-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent-mid);margin-bottom:8px;font-family:'Be Vietnam Pro',sans-serif;}
+.science-box p{font-size:15px;color:var(--mid);margin:0;line-height:1.7;font-family:'Lora',serif;}
+.science-box strong{color:var(--accent-dark);}
+/* LABEL GUIDE */
+.label-guide{background:#fff;border:1px solid var(--border);border-left:4px solid var(--accent-mid);border-radius:0 12px 12px 0;padding:20px 24px;margin:28px 0;}
+.label-guide .lg-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent-mid);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
+.label-guide p{font-size:15px;color:var(--mid);margin:0;line-height:1.8;font-family:'Lora',serif;}
+/* PULL QUOTE */
+.pull-quote{margin:38px 0;padding:30px 36px;background:var(--accent-dark);border-radius:14px;color:white;text-align:center;position:relative;}
+.pull-quote::before{content:'"';font-family:'Playfair Display',serif;font-size:80px;line-height:0.5;color:rgba(255,255,255,0.1);position:absolute;top:26px;left:22px;}
+.pull-quote p{font-family:'Lora',serif;font-size:20px;line-height:1.65;color:rgba(255,255,255,0.93);font-style:italic;margin:0;}
+.pull-quote cite{display:block;margin-top:14px;font-size:11px;color:rgba(255,255,255,0.5);font-weight:600;letter-spacing:1.5px;text-transform:uppercase;font-style:normal;font-family:'Be Vietnam Pro',sans-serif;}
+/* TAKEAWAY */
+.takeaway{background:linear-gradient(135deg,var(--accent-dark),var(--accent-mid));border-radius:14px;padding:26px 30px;margin:36px 0 0;color:white;}
+.takeaway-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
+.takeaway p{font-size:16px;color:rgba(255,255,255,0.92);line-height:1.8;margin:0;font-family:'Lora',serif;}
+.takeaway strong{color:white;font-weight:700;}
+/* CTA */
+.cta-box{background:var(--forest);border-radius:14px;padding:30px 32px;margin-top:36px;text-align:center;}
+.cta-box .cta-eyebrow{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
+.cta-box .cta-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:white;margin-bottom:10px;line-height:1.35;}
+.cta-box .cta-desc{font-size:14px;color:rgba(255,255,255,0.72);max-width:420px;margin:0 auto 22px;line-height:1.7;font-family:'Lora',serif;}
+.cta-btn{display:inline-block;background:var(--accent);color:white;font-size:14px;font-weight:600;padding:13px 32px;border-radius:100px;text-decoration:none;font-family:'Be Vietnam Pro',sans-serif;transition:opacity .2s;}
+.cta-btn:hover{opacity:0.88;}
+/* FOOTER */
 .article-footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--border);}
-.footer-brand{font-size:12.5px;color:var(--light);line-height:1.8;}
-.footer-brand strong{color:var(--forest);}.footer-brand a{color:var(--sage);text-decoration:none;}
-.series-nav{background:white;border:1px solid var(--border);border-radius:14px;padding:20px 24px;margin-top:40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
-.sn-label{font-size:11px;color:var(--light);font-weight:600;letter-spacing:1px;text-transform:uppercase;}
-.sn-btns{display:flex;gap:8px;}
-.sn-btn{padding:9px 18px;border-radius:8px;border:1px solid var(--border);background:white;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:var(--mid);text-decoration:none;display:inline-flex;align-items:center;transition:all 0.2s;}
-.sn-btn:hover{background:var(--forest);color:white;border-color:var(--forest);}
-.sn-btn.next{background:var(--forest);color:white;border-color:var(--forest);}
-.sn-btn.next:hover{background:var(--sage);border-color:var(--sage);}
-.site-footer{background:#0f1f17;padding:28px 40px;text-align:center;font-size:12px;color:rgba(255,255,255,0.4);line-height:1.8;margin-top:0;}
-.site-footer a{color:var(--gold);text-decoration:none;}.site-footer strong{color:rgba(255,255,255,0.65);}
-@media(max-width:600px){.article-h1{font-size:30px;}.article-deck{font-size:16px;}.fact-strip{grid-template-columns:1fr;}.fact-item{border-right:none;border-bottom:1px solid var(--border);}.fact-item:last-child{border-bottom:none;}.article-wrap{padding:32px 18px 60px;}.nav-series{display:none;}.site-nav{padding:12px 20px;}}
+.footer-brand{font-size:12.5px;color:var(--light);line-height:1.8;font-family:'Be Vietnam Pro',sans-serif;}
+.footer-brand strong{color:var(--forest);}
+.footer-brand a{color:var(--sage);text-decoration:none;}
+.site-footer{background:#0f1f17;padding:28px 40px;text-align:center;font-size:12px;color:rgba(255,255,255,0.4);line-height:1.8;font-family:'Be Vietnam Pro',sans-serif;}
+.site-footer a{color:var(--gold);text-decoration:none;}
+.site-footer strong{color:rgba(255,255,255,0.65);}
+@media(max-width:600px){
+  .article-h1{font-size:28px;}
+  .article-deck{font-size:16px;}
+  .fact-strip{grid-template-columns:1fr;}
+  .fact-item{border-right:none;border-bottom:1px solid var(--border);}
+  .fact-item:last-child{border-bottom:none;}
+  .sugar-names{grid-template-columns:1fr 1fr;}
+  .article-wrap{padding:32px 18px 60px;}
+  .site-nav{padding:12px 20px;}
+  .article-hero{padding:36px 18px 30px;}
+}
 </style>
 </head>
 <body>
-
 <nav class="site-nav">
   <a href="index.html" class="nav-logo">
     <div class="nav-logo-mark">🌿</div>
-    <div><div class="nav-logo-name">H21 - Cho Đời Mãi Xanh</div><div class="nav-logo-tag">Khoa Học Gia Thuy-Trinh Nguyen</div></div>
+    <div>
+      <div class="nav-logo-name">H21 - Cho Đời Mãi Xanh</div>
+      <div class="nav-logo-tag">Khoa Học Gia Thuy-Trinh Nguyen</div>
+    </div>
   </a>
-  <div class="nav-right">
-    <a href="index.html" class="nav-back">← Trở về Blog</a>
-  </div>
+  <a href="index.html" class="nav-back">&#8592; Trở về Blog</a>
 </nav>
-
-<div class="article-wrap">
-  <div class="cat-label">Dinh Dưỡng & Khoa Học</div>
-  <h1 class="article-h1">Bạn Đang Ăn <em>32 Viên Đường</em><br>Mỗi Ngày — Mà Không Hề Biết</h1>
-  <p class="article-deck">Không phải từ kẹo hay bánh ngọt. Mà từ những thứ bạn vẫn nghĩ là "ăn uống bình thường" hàng ngày.</p>
-  <div class="byline">
+<section class="article-hero">
+  <div class="hero-inner">
+    <div class="cat-label">Dinh Dưỡng &amp; Khoa Học</div>
+    <h1 class="article-h1">Bạn Đang Ăn <em>32 Viên Đường</em><br>Mỗi Ngày -- Mà Không Hề Biết</h1>
+    <p class="article-deck">Không phải từ kẹo hay bánh ngọt. Mà từ những thứ bạn vẫn nghĩ là &#8220;ăn uống bình thường&#8221; hàng ngày.</p>
+  </div>
+</section>
+<div class="byline-bar">
+  <div class="byline-inner">
     <div class="byline-av">TT</div>
-    <div><div class="byline-name">Thuy-Trinh Nguyen</div><div class="byline-role">Khoa Học Gia · Nhà Sáng Lập H21 - Cho Đời Mãi Xanh</div></div>
-    <div class="byline-meta"><div class="byline-url">www.h21chodoimaixanh.com</div><div class="read-time">⏱ Đọc trong 4 phút</div></div>
+    <div>
+      <div class="byline-name">Thuy-Trinh Nguyen</div>
+      <div class="byline-role">Khoa Học Gia &middot; Nhà Sáng Lập H21 - Cho Đời Mãi Xanh</div>
+    </div>
+    <div class="byline-meta">
+      <div class="byline-url">www.h21chodoimaixanh.com</div>
+      <div class="read-time">&#9200; Đọc trong 5 phút</div>
+    </div>
   </div>
+</div>
 
-  <div style="margin:0 0 36px;border-radius:14px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.12);">
-    <img src="duong-an-ke-thu.png" alt="Đường Ẩn — Kẻ Thù Giấu Mặt · H21 Cho Đời Mãi Xanh" style="width:100%;display:block;">
-  </div>
-
+<div class="article-wrap"><div class="hero-img"><img src="duong-an-ke-thu.png" alt="Đường Ẩn -- Kẻ Thù Giấu Mặt · H21 Cho Đời Mãi Xanh"></div>
   <div class="article-body">
-    <p>Mỗi sáng, hàng triệu người Việt bắt đầu ngày mới bằng một ly cà phê sữa đá, một ổ bánh mì, hoặc một hộp sữa chua. Họ không nghĩ đang làm gì sai. Thật ra, họ đang nạp vào cơ thể 30–45 gram đường chỉ trong một giờ đầu tiên của ngày — tương đương 8 đến 11 viên đường.</p>
+
+    <p>Mỗi sáng, hàng triệu người Việt bắt đầu ngày mới bằng một ly cà phê sữa đá, một ổ bánh mì, hoặc một hộp sữa chua. Họ không nghĩ đang làm gì sai. Thật ra, họ đang nạp vào cơ thể 30&ndash;45 gram đường chỉ trong một giờ đầu tiên của ngày &mdash; tương đương 8 đến 11 viên đường.</p>
     <p>Và đó mới chỉ là buổi sáng.</p>
 
     <div class="fact-strip">
-      <div class="fact-item"><div class="fact-num">126g</div><div class="fact-label">đường/ngày người Mỹ trung bình ăn — tương đương 32 viên đường</div></div>
-      <div class="fact-item"><div class="fact-num">25g</div><div class="fact-label">giới hạn tối đa WHO khuyến nghị mỗi ngày cho người trưởng thành</div></div>
-      <div class="fact-item"><div class="fact-num">5×</div><div class="fact-label">mức tiêu thụ đường hiện đại cao hơn thế hệ cha ông chúng ta</div></div>
+      <div class="fact-item">
+        <div class="fact-num">126g</div>
+        <div class="fact-label">đường mỗi ngày người Mỹ trung bình ăn &mdash; tương đương 32 viên đường</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-num">25g</div>
+        <div class="fact-label">giới hạn tối đa WHO khuyến nghị mỗi ngày cho người trưởng thành</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-num">5&times;</div>
+        <div class="fact-label">mức tiêu thụ đường hiện đại cao hơn thế hệ cha ông chúng ta</div>
+      </div>
     </div>
 
-    <h2>Đường Ẩn — Kẻ Thù Giấu Mặt</h2>
-    <p>Vấn đề không nằm ở kẹo hay nước ngọt — những thứ đó ai cũng biết là có đường. Vấn đề nằm ở <strong>đường ẩn</strong>: đường được nhà sản xuất thực phẩm che giấu dưới hơn 60 tên gọi khác nhau trong danh sách nguyên liệu.</p>
-    <p>Sốt cà chua đóng hộp: 4–6 gram đường mỗi muỗng canh. Sữa chua ít béo "healthy": 12–20 gram mỗi hũ. Nước ép trái cây 100% tự nhiên: 21 gram đường mỗi ly — và không có một gram chất xơ nào đi kèm để làm chậm tốc độ hấp thụ. Bánh mì sandwich "nguyên cám": thường có 5–8 gram đường thêm vào trong quá trình sản xuất.</p>
+    <h2>Đường Ẩn &mdash; Kẻ Thù Giấu Mặt</h2>
+    <p>Vấn đề không nằm ở kẹo hay nước ngọt &mdash; những thứ đó ai cũng biết là có đường. Vấn đề nằm ở <strong>đường ẩn</strong>: đường được nhà sản xuất thực phẩm che giấu dưới hơn 60 tên gọi khác nhau trong danh sách nguyên liệu.</p>
+    <p>Sốt cà chua đóng hộp: 4&ndash;6 gram đường mỗi muỗng canh. Sữa chua ít béo &#8220;healthy&#8221;: 12&ndash;20 gram mỗi hũ. Nước ép trái cây 100% tự nhiên: 21 gram đường mỗi ly &mdash; và không có một gram chất xơ nào đi kèm để làm chậm tốc độ hấp thụ. Bánh mì sandwich &#8220;nguyên cám&#8221;: thường có 5&ndash;8 gram đường thêm vào trong quá trình sản xuất.</p>
 
     <div class="science-box">
-      <div class="sb-label">🔬 Góc Khoa Học</div>
-      <p>Khi đường không đi kèm chất xơ, nó vào máu trong vòng 15–30 phút, gây ra cơn tăng đường huyết đột ngột (glucose spike). Tuyến tụy phản ứng bằng cách tiết insulin. Sau khoảng 90 phút, đường huyết rơi xuống nhanh — và não bạn bắt đầu gửi tín hiệu đói, mệt, và <strong>thèm ngọt trở lại</strong>. Vòng lặp này lặp đi lặp lại nhiều lần trong ngày.</p>
+      <div class="sb-label">&#128300; Góc Khoa Học</div>
+      <p>Khi đường không đi kèm chất xơ, nó vào máu trong vòng 15&ndash;30 phút, gây ra cơn tăng đường huyết đột ngột (glucose spike). Tuyến tụy phản ứng bằng cách tiết insulin. Sau khoảng 90 phút, đường huyết rơi xuống nhanh &mdash; và não bạn bắt đầu gửi tín hiệu đói, mệt, và <strong>thèm ngọt trở lại</strong>. Vòng lặp này lặp đi lặp lại nhiều lần trong ngày.</p>
     </div>
 
-    <h2>Tại Sao Điều Này Quan Trọng Với Sức Khỏe Lâu Dài?</h2>
-    <p>Nghiên cứu y khoa trong 20 năm qua đã chỉ ra mối liên hệ ngày càng rõ ràng giữa tiêu thụ đường cao và hàng loạt bệnh mãn tính: kháng insulin và tiểu đường type 2, bệnh tim mạch, viêm gan nhiễm mỡ không do rượu (NAFLD), suy giảm nhận thức, và quá trình lão hóa sớm thông qua cơ chế glycation — quá trình đường gắn kết với protein trong tế bào, tạo ra các hợp chất AGEs làm tổn thương mô và cơ quan.</p>
-    <p>Nhưng điều quan trọng hơn là điều này: <strong>tác động không xảy ra trong một sớm một chiều.</strong> Nó tích lũy âm thầm qua hàng trăm quyết định nhỏ mỗi ngày — mà ta không nhận ra vì chúng quá bình thường.</p>
+    <h2>60 Cái Tên Của Đường &mdash; Đọc Nhãn Đúng Cách</h2>
+    <p>Các nhà sản xuất thực phẩm được phép ghi đường dưới hơn 60 tên gọi hợp pháp khác nhau. Mục đích: để đường không xuất hiện ở vị trí đầu trong danh sách nguyên liệu &mdash; vì nguyên liệu luôn được liệt kê theo thứ tự từ <em>nhiều đến ít</em>. Khi chia nhỏ thành nhiều tên, mỗi tên có vẻ ít &mdash; nhưng cộng lại tổng vẫn rất cao.</p>
+
+    <p><strong>Những tên gọi phổ biến nhất của đường ẩn cần nhận ra trên nhãn:</strong></p>
+    <div class="sugar-names">
+      <div class="sugar-pill">High-fructose corn syrup</div>
+      <div class="sugar-pill">Corn syrup / Glucose syrup</div>
+      <div class="sugar-pill">Fructose / Sucrose</div>
+      <div class="sugar-pill">Maltose / Dextrose</div>
+      <div class="sugar-pill">Cane sugar / Cane juice</div>
+      <div class="sugar-pill">Brown sugar / Raw sugar</div>
+      <div class="sugar-pill">Agave nectar / Agave syrup</div>
+      <div class="sugar-pill">Rice syrup / Malt syrup</div>
+      <div class="sugar-pill">Fruit juice concentrate</div>
+      <div class="sugar-pill">Molasses / Treacle</div>
+      <div class="sugar-pill">Honey / Mật ong</div>
+      <div class="sugar-pill">Maple syrup / Caramel</div>
+    </div>
+
+    <div class="label-guide">
+      <div class="lg-label">&#128203; Hướng Dẫn Đọc Nhãn Thực Phẩm</div>
+      <p>
+        <strong>Quy tắc 1:</strong> Tìm dòng &#8220;Added Sugars&#8221; (Đường thêm vào) trong bảng Nutrition Facts &mdash; đây là con số quan trọng nhất, không phải &#8220;Total Sugars&#8221;.<br><br>
+        <strong>Quy tắc 2:</strong> Nếu bất kỳ dạng đường nào xuất hiện trong 3 nguyên liệu đầu tiên của danh sách &mdash; đó là sản phẩm nhiều đường.<br><br>
+        <strong>Quy tắc 3:</strong> Nếu có 3&ndash;4 tên khác nhau của đường trong cùng một sản phẩm &mdash; cộng lại, đường có thể là thành phần chiếm tỉ lệ cao nhất.<br><br>
+        <strong>Quy tắc 4:</strong> Mật ong, đường nâu, agave nectar &mdash; tất cả đều là đường. Cơ thể không phân biệt nguồn gốc.
+      </p>
+    </div>
+
+    <h2>Đường Ẩn Trong Thực Phẩm &#8220;Lành Mạnh&#8221;</h2>
+    <p>Điều đáng lo ngại hơn kẹo bánh là những thực phẩm mang nhãn &#8220;healthy&#8221;, &#8220;low-fat&#8221;, &#8220;natural&#8221;, hay &#8220;organic&#8221; &mdash; vì chính lớp marketing đó khiến chúng ta giảm cảnh giác.</p>
+    <p><strong>Granola đóng gói:</strong> trung bình 12&ndash;16g đường nửa cup &mdash; gần bằng một cốc Coca nhỏ. <strong>Nước tăng lực &#8220;vitamin&#8221;:</strong> 27&ndash;34g đường mỗi chai. <strong>Sữa chua có trái cây:</strong> 20&ndash;26g đường mỗi hũ. <strong>Sốt mì trộn đóng gói:</strong> thường 6&ndash;10g đường mỗi muỗng. <strong>Protein bar &#8220;fitness&#8221;:</strong> nhiều loại chứa 18&ndash;24g đường &mdash; gần bằng một thanh chocolate. Nhãn &#8220;lành mạnh&#8221; <em>không có nghĩa là ít đường</em>. Chỉ có đọc nhãn mới biết được sự thật.</p>
 
     <div class="pull-quote">
       <p>Mỗi lần ăn uống là một lần bạn đưa ra quyết định: nuôi bệnh hay chống bệnh.</p>
-      <cite>— H21 - Cho Đời Mãi Xanh</cite>
+      <cite>&mdash; H21 - Cho Đời Mãi Xanh</cite>
     </div>
+
+    <h2>Tại Sao Điều Này Quan Trọng Với Sức Khỏe Lâu Dài</h2>
+    <p>Nghiên cứu y khoa trong 20 năm qua đã chỉ ra mối liên hệ ngày càng rõ ràng giữa tiêu thụ đường cao và hàng loạt bệnh mãn tính: kháng insulin và tiểu đường type 2, bệnh tim mạch, viêm gan nhiễm mỡ không do rượu (NAFLD), suy giảm nhận thức, và lão hóa sớm thông qua cơ chế <em>glycation</em> &mdash; quá trình đường gắn kết với protein trong tế bào, tạo ra các hợp chất AGEs làm tổn thương mô và cơ quan.</p>
+    <p>Tác động không xảy ra trong một sớm một chiều. Nó tích lũy âm thầm qua hàng trăm quyết định nhỏ mỗi ngày &mdash; mà ta không nhận ra vì chúng quá bình thường.</p>
 
     <h2>Bước Đầu Tiên: Nhìn Thấy Trước Khi Thay Đổi</h2>
     <p>Trong nhiều năm nghiên cứu và làm việc với cộng đồng, tôi nhận thấy một điều: phần lớn mọi người không thất bại vì thiếu ý chí hay thiếu thông tin. Họ thất bại vì <strong>họ không nhìn thấy rõ mình đang làm gì</strong>.</p>
-    <p>Bước thay đổi đơn giản và mạnh nhất không phải là ngay lập tức cắt bỏ tất cả đường. Đó là <strong>ghi chép một ngày</strong>: tất cả những gì bạn ăn uống, và thử tìm hiểu lượng đường trong từng thứ. Không cần hoàn hảo. Chỉ cần nhìn thấy.</p>
-    <p>Khi bạn thấy con số — thường là khoảng 60–100 gram với một ngày ăn uống "bình thường" — bạn sẽ hiểu tại sao cơ thể mình đang hoạt động theo cách nó đang hoạt động. Và từ đó, bạn mới có thể bắt đầu thay đổi một cách có cơ sở, bền vững, và không cần đến ý chí sắt đá.</p>
+    <p>Bước thay đổi đơn giản và mạnh nhất không phải là ngay lập tức cắt bỏ tất cả đường. Đó là <strong>ghi chép một ngày</strong>: tất cả những gì bạn ăn uống, và tìm hiểu lượng đường trong từng thứ. Không cần hoàn hảo. Chỉ cần nhìn thấy. Khi bạn thấy con số &mdash; thường là 60&ndash;100 gram với một ngày &#8220;bình thường&#8221; &mdash; bạn sẽ hiểu tại sao cơ thể mình đang hoạt động theo cách nó đang hoạt động.</p>
 
     <div class="takeaway">
-      <div class="takeaway-label">💡 Điểm Mấu Chốt</div>
-      <p>Nhận thức đi trước hành động. Trước khi giảm đường, hãy <strong>nhìn thấy đường</strong> — trong mỗi bữa ăn, mỗi thức uống, mỗi nhãn thực phẩm bạn cầm trên tay. Đó là bước đầu tiên, và thường là bước khó nhất.</p>
+      <div class="takeaway-label">&#128161; Điểm Mấu Chốt</div>
+      <p>Nhận thức đi trước hành động. Trước khi giảm đường, hãy <strong>nhìn thấy đường</strong> trên từng nhãn thực phẩm bạn cầm trên tay. Tìm: &#8220;Added Sugars&#8221;, tên kết thúc bằng &#8220;-ose&#8221;, và bất kỳ loại &#8220;syrup&#8221; nào. Đó là bước bắt đầu, và thường là bước khó nhất.</p>
     </div>
 
-    <p style="margin-top:28px">Nhiều học viên H21 chia sẻ rằng dù đã biết lý thuyết từ lâu, nhưng chỉ khi có người đồng hành cùng phân tích thực đơn cụ thể của mình — họ mới thực sự "nhìn thấy" được đường đang ẩn ở đâu trong cuộc sống hàng ngày. Đôi khi, một mình không đủ — không phải vì thiếu ý chí, mà vì thiếu một góc nhìn từ bên ngoài, có nền tảng khoa học, đúng thời điểm.</p>
+    <p style="margin-top:28px">Nhiều học viên H21 chia sẻ rằng chỉ khi có người đồng hành cùng phân tích thực đơn cụ thể của mình &mdash; họ mới thực sự &#8220;nhìn thấy&#8221; được đường đang ẩn ở đâu trong cuộc sống hàng ngày. Đôi khi, một mình không đủ &mdash; không phải vì thiếu ý chí, mà vì thiếu một góc nhìn từ bên ngoài, có nền tảng khoa học.</p>
 
-    <div style="background:var(--forest);border-radius:14px;padding:28px 32px;margin-top:32px;text-align:center;">
-      <div style="font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--mint);margin-bottom:10px">Chương Trình H21 Coaching</div>
-      <h3 style="font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:white;margin-bottom:10px;line-height:1.35">Bạn muốn hiểu đúng hơn về dinh dưỡng?</h3>
-      <p style="font-size:14px;color:rgba(255,255,255,0.65);max-width:400px;margin:0 auto 22px;line-height:1.7">Tham gia cộng đồng H21 — nơi khoa học dinh dưỡng được dịch thành thói quen thực tế mỗi ngày.</p>
-      <a href="https://www.facebook.com/xanhlenbenhxuong/" target="_blank" style="display:inline-block;background:var(--mint);color:var(--forest);font-size:14px;font-weight:700;padding:12px 30px;border-radius:100px;text-decoration:none;transition:opacity .2s;">Đăng Ký Khóa Học H21 →</a>
-    </div>
+<div class="cta-box">
+  <div class="cta-eyebrow">Chương Trình H21 Coaching</div>
+  <h3 class="cta-title">Bạn muốn hiểu đúng hơn về dinh dưỡng?</h3>
+  <p class="cta-desc">Tham gia cộng đồng H21 &mdash; nơi khoa học dinh dưỡng được dịch thành thói quen thực tế mỗi ngày.</p>
+  <a href="https://www.facebook.com/xanhlenbenhxuong/" target="_blank" class="cta-btn">Đăng Ký Khóa Học H21 &#8594;</a>
+</div>
   </div>
-
-  <div class="article-footer">
-    <div class="footer-brand">
-      <strong>Thuy-Trinh Nguyen</strong> · Khoa Học Gia & Nhà Sáng Lập<br>
-      <strong>H21 - Cho Đời Mãi Xanh</strong> · <a href="https://www.h21chodoimaixanh.com">www.h21chodoimaixanh.com</a><br>
-      Mang khoa học từ phòng thí nghiệm đến căn bếp mỗi gia đình
-    </div>
+<div class="article-footer">
+  <div class="footer-brand">
+    <strong>Thuy-Trinh Nguyen</strong> &middot; Khoa Học Gia &amp; Nhà Sáng Lập<br>
+    <strong>H21 - Cho Đời Mãi Xanh</strong> &middot; <a href="https://www.h21chodoimaixanh.com">www.h21chodoimaixanh.com</a><br>
+    Mang khoa học từ phòng thí nghiệm đến căn bếp mỗi gia đình
   </div>
-
+</div>
 <footer class="site-footer">
-  <strong>H21 - Cho Đời Mãi Xanh</strong> · Khoa Học Gia Thuy-Trinh Nguyen<br>
-  <a href="https://blog.h21chodoimaixanh.com">blog.h21chodoimaixanh.com</a> · <a href="https://www.h21chodoimaixanh.com">www.h21chodoimaixanh.com</a><br>
+  <strong>H21 - Cho Đời Mãi Xanh</strong> &middot; Khoa Học Gia Thuy-Trinh Nguyen<br>
+  <a href="https://blog.h21chodoimaixanh.com">blog.h21chodoimaixanh.com</a> &middot; <a href="https://www.h21chodoimaixanh.com">www.h21chodoimaixanh.com</a><br>
   Nội dung chỉ dành cho mục đích giáo dục, không thay thế tư vấn y tế chuyên nghiệp.
 </footer>
 </body>
