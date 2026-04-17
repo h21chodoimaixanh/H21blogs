@@ -173,6 +173,63 @@ body{background:#ede9e3;font-family:'Lora',Georgia,serif;color:var(--ink);}
       <p>Khi đường không đi kèm chất xơ, nó vào máu trong vòng 15&ndash;30 phút, gây ra cơn tăng đường huyết đột ngột (glucose spike). Tuyến tụy phản ứng bằng cách tiết insulin. Sau khoảng 90 phút, đường huyết rơi xuống nhanh &mdash; và não bạn bắt đầu gửi tín hiệu đói, mệt, và <strong>thèm ngọt trở lại</strong>. Vòng lặp này lặp đi lặp lại nhiều lần trong ngày.</p>
     </div>
 
+    <!-- GLUCOSE SPIKE DIAGRAM -->
+    <div style="margin:24px 0;border-radius:12px;overflow:hidden;border:1px solid var(--border);background:#fff;padding:16px 8px 8px;">
+      <p style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--sage);margin:0 0 12px 12px;">📊 Vòng Lặp Đường Huyết Sau Bữa Ăn</p>
+      <svg width="100%" viewBox="0 0 680 310" role="img">
+        <title>Vòng lặp đường huyết sau khi ăn đường không có chất xơ</title>
+        <defs>
+          <marker id="arr2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+        </defs>
+        <!-- Background -->
+        <rect x="40" y="20" width="600" height="200" rx="10" fill="#f9f7f3" stroke="#e0d8cc" stroke-width="0.5"/>
+        <!-- Safe zone band -->
+        <rect x="40" y="100" width="600" height="60" fill="#d4edda" opacity="0.45"/>
+        <text x="52" y="124" font-size="11" fill="#4a7c59" opacity="0.85" font-family="'DM Sans',sans-serif">Mức bình thường</text>
+        <!-- Axes -->
+        <line x1="80" y1="220" x2="620" y2="220" stroke="#c0b8aa" stroke-width="0.5"/>
+        <line x1="80" y1="25" x2="80" y2="220" stroke="#c0b8aa" stroke-width="0.5"/>
+        <!-- Y labels -->
+        <text x="70" y="55"  font-size="11" fill="#7a7a7a" text-anchor="end" font-family="'DM Sans',sans-serif">Cao</text>
+        <text x="70" y="132" font-size="11" fill="#7a7a7a" text-anchor="end" font-family="'DM Sans',sans-serif">Bình thường</text>
+        <text x="70" y="200" font-size="11" fill="#7a7a7a" text-anchor="end" font-family="'DM Sans',sans-serif">Thấp</text>
+        <!-- Time labels -->
+        <text x="100" y="238" font-size="11" fill="#7a7a7a" text-anchor="middle" font-family="'DM Sans',sans-serif">0'</text>
+        <text x="220" y="238" font-size="11" fill="#7a7a7a" text-anchor="middle" font-family="'DM Sans',sans-serif">15–30 phút</text>
+        <text x="370" y="238" font-size="11" fill="#7a7a7a" text-anchor="middle" font-family="'DM Sans',sans-serif">~60 phút</text>
+        <text x="510" y="238" font-size="11" fill="#7a7a7a" text-anchor="middle" font-family="'DM Sans',sans-serif">~90 phút</text>
+        <!-- Glucose curve (amber) -->
+        <path d="M100,155 C130,155 170,48 220,42 C270,36 300,50 350,90 C400,130 430,185 510,195 C560,200 580,195 610,195"
+              fill="none" stroke="#c9a84c" stroke-width="2.5" stroke-linecap="round"/>
+        <!-- Insulin curve (green dashed) -->
+        <path d="M100,155 C140,155 190,100 250,65 C290,45 330,48 380,80 C420,108 450,155 510,170 C560,178 580,168 610,162"
+              fill="none" stroke="#4a7c59" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 3"/>
+        <!-- Spike annotation -->
+        <circle cx="220" cy="42" r="4" fill="#c9a84c"/>
+        <line x1="220" y1="38" x2="220" y2="22" stroke="#c9a84c" stroke-width="0.5" stroke-dasharray="3 2"/>
+        <text x="220" y="16" font-size="11" fill="#8b6914" font-weight="600" font-family="'DM Sans',sans-serif" text-anchor="middle">▲ Glucose spike</text>
+        <!-- Insulin annotation -->
+        <circle cx="320" cy="52" r="3.5" fill="#4a7c59"/>
+        <line x1="320" y1="48" x2="420" y2="28" stroke="#4a7c59" stroke-width="0.5" stroke-dasharray="3 2"/>
+        <text x="424" y="28" font-size="11" fill="#4a7c59" font-weight="600" font-family="'DM Sans',sans-serif">Insulin tăng</text>
+        <!-- Crash annotation -->
+        <circle cx="510" cy="195" r="4" fill="#d4705a"/>
+        <line x1="510" y1="191" x2="545" y2="173" stroke="#d4705a" stroke-width="0.5" stroke-dasharray="3 2"/>
+        <text x="549" y="173" font-size="11" fill="#d4705a" font-weight="600" font-family="'DM Sans',sans-serif">▼ Đường huyết rơi</text>
+        <!-- Craving loop -->
+        <path d="M590,195 C620,195 630,265 590,268 C555,270 120,270 100,267 C68,263 68,240 100,225"
+              fill="none" stroke="#d4705a" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arr2)"/>
+        <text x="340" y="284" font-size="11" fill="#d4705a" text-anchor="middle" font-weight="600" font-family="'DM Sans',sans-serif">→ Não báo: ĐÓI · MỆT · THÈM NGỌT → vòng lặp tiếp tục</text>
+        <!-- Legend -->
+        <line x1="90" y1="300" x2="115" y2="300" stroke="#c9a84c" stroke-width="2.5"/>
+        <text x="120" y="304" font-size="11" fill="#7a7a7a" font-family="'DM Sans',sans-serif">Đường huyết (glucose)</text>
+        <line x1="280" y1="300" x2="305" y2="300" stroke="#4a7c59" stroke-width="2" stroke-dasharray="5 3"/>
+        <text x="310" y="304" font-size="11" fill="#7a7a7a" font-family="'DM Sans',sans-serif">Insulin</text>
+      </svg>
+    </div>
+
     <h2>60 Cái Tên Của Đường &mdash; Đọc Nhãn Đúng Cách</h2>
     <p>Các nhà sản xuất thực phẩm được phép ghi đường dưới hơn 60 tên gọi hợp pháp khác nhau. Mục đích: để đường không xuất hiện ở vị trí đầu trong danh sách nguyên liệu &mdash; vì nguyên liệu luôn được liệt kê theo thứ tự từ <em>nhiều đến ít</em>. Khi chia nhỏ thành nhiều tên, mỗi tên có vẻ ít &mdash; nhưng cộng lại tổng vẫn rất cao.</p>
 
