@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ít hơn 5% người ăn đủ chất xơ mỗi ngày. Vai trò của fiber với ruột, não, cơn thèm ngọt -- và tại sao đậu là thực phẩm sống thọ số 1.">
+<title>Chất Xơ -- Dưỡng Chất Bị Lãng Quên Đang Thay Đổi Y Học — Blog H21</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --accent:#1D9E75;--accent-light:#E1F5EE;
+  --accent-mid:#0F6E56;--accent-dark:#04342C;
+  --forest:#1a3d2b;--sage:#4a7c59;--mint:#7eb89a;
+  --cream:#f7f3ec;--gold:#c9a84c;--gold-light:#fdf5e0;
+  --border:#e0d8cc;--mid:#3a3a3a;--light:#6b7280;--ink:#0f1f17;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#ede9e3;font-family:'Lora',Georgia,serif;color:var(--ink);}
+/* NAV */
+.site-nav{background:var(--forest);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(0,0,0,0.25);}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-logo-mark{width:34px;height:34px;background:var(--mint);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-family:sans-serif;}
+.nav-logo-name{font-size:14px;font-weight:600;color:white;font-family:'Be Vietnam Pro',sans-serif;}
+.nav-logo-tag{font-size:10px;color:rgba(255,255,255,0.5);margin-top:1px;font-family:'Be Vietnam Pro',sans-serif;}
+.nav-back{font-size:13px;color:rgba(255,255,255,0.75);text-decoration:none;font-weight:500;font-family:'Be Vietnam Pro',sans-serif;transition:color 0.2s;}
+.nav-back:hover{color:var(--mint);}
+/* HERO */
+.article-hero{background:linear-gradient(135deg,#04342C 0%,#0F6E56 55%,#1D9E75 100%);padding:48px 24px 40px;position:relative;overflow:hidden;}
+.article-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 30%,rgba(255,255,255,0.06) 0%,transparent 60%);}
+.hero-inner{max-width:720px;margin:0 auto;position:relative;z-index:1;}
+.cat-label{display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:14px;font-family:'Be Vietnam Pro',sans-serif;}
+.cat-label::before{content:'';display:inline-block;width:28px;height:1.5px;background:rgba(255,255,255,0.5);}
+.article-h1{font-family:'Playfair Display',serif;font-size:40px;font-weight:700;line-height:1.2;color:white;margin-bottom:16px;letter-spacing:-0.3px;}
+.article-h1 em{color:rgba(255,255,255,0.82);font-style:italic;}
+.article-deck{font-family:'Lora',serif;font-size:18px;line-height:1.7;color:rgba(255,255,255,0.78);font-style:italic;margin:0;}
+/* BYLINE */
+.byline-bar{background:white;border-bottom:1px solid var(--border);padding:14px 24px;}
+.byline-inner{max-width:720px;margin:0 auto;display:flex;align-items:center;gap:14px;}
+.byline-av{width:40px;height:40px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:white;font-weight:700;flex-shrink:0;font-family:'Be Vietnam Pro',sans-serif;}
+.byline-name{font-size:13.5px;font-weight:600;color:var(--ink);font-family:'Be Vietnam Pro',sans-serif;}
+.byline-role{font-size:11.5px;color:var(--light);margin-top:1px;font-family:'Be Vietnam Pro',sans-serif;}
+.byline-meta{margin-left:auto;text-align:right;}
+.byline-url{font-size:11.5px;color:var(--light);font-family:'Be Vietnam Pro',sans-serif;}
+.read-time{font-size:11px;color:var(--accent);font-weight:600;margin-top:2px;font-family:'Be Vietnam Pro',sans-serif;}
+/* ARTICLE WRAP */
+.article-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px;}
+/* HERO IMAGE */
+.hero-img{margin-bottom:36px;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.12);}
+.hero-img img{width:100%;display:block;}
+/* BODY */
+.article-body{font-family:'Lora',Georgia,serif;font-size:17px;line-height:1.9;color:var(--mid);}
+.article-body p{margin-bottom:22px;}
+.article-body strong{color:var(--ink);font-weight:700;}
+.article-body em{color:var(--accent-mid);font-style:italic;font-weight:600;}
+.article-body h2{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--ink);margin:40px 0 14px;line-height:1.3;}
+.article-body h3{font-family:'Be Vietnam Pro',sans-serif;font-size:16px;font-weight:700;color:var(--accent-dark);margin:26px 0 10px;text-transform:uppercase;letter-spacing:1px;}
+/* FACT STRIP */
+.fact-strip{display:grid;grid-template-columns:repeat(3,1fr);margin:32px 0;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:white;}
+.fact-item{padding:20px 16px;text-align:center;border-right:1px solid var(--border);}
+.fact-item:last-child{border-right:none;}
+.fact-num{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:var(--accent);line-height:1;}
+.fact-label{font-size:11.5px;color:var(--light);margin-top:6px;line-height:1.5;font-family:'Be Vietnam Pro',sans-serif;}
+/* SUGAR NAMES GRID */
+.sugar-names{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:18px 0;}
+.sugar-pill{background:white;border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:9px 12px;font-size:13px;color:var(--mid);font-family:'Be Vietnam Pro',sans-serif;}
+/* SCIENCE BOX */
+.science-box{background:var(--accent-light);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:0 12px 12px 0;padding:20px 24px;margin:28px 0;}
+.science-box .sb-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent-mid);margin-bottom:8px;font-family:'Be Vietnam Pro',sans-serif;}
+.science-box p{font-size:15px;color:var(--mid);margin:0;line-height:1.7;font-family:'Lora',serif;}
+.science-box strong{color:var(--accent-dark);}
+/* LABEL GUIDE */
+.label-guide{background:#fff;border:1px solid var(--border);border-left:4px solid var(--accent-mid);border-radius:0 12px 12px 0;padding:20px 24px;margin:28px 0;}
+.label-guide .lg-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent-mid);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
+.label-guide p{font-size:15px;color:var(--mid);margin:0;line-height:1.8;font-family:'Lora',serif;}
+/* PULL QUOTE */
+.pull-quote{margin:38px 0;padding:30px 36px;background:var(--accent-dark);border-radius:14px;color:white;text-align:center;position:relative;}
+.pull-quote::before{content:'"';font-family:'Playfair Display',serif;font-size:80px;line-height:0.5;color:rgba(255,255,255,0.1);position:absolute;top:26px;left:22px;}
+.pull-quote p{font-family:'Lora',serif;font-size:20px;line-height:1.65;color:rgba(255,255,255,0.93);font-style:italic;margin:0;}
+.pull-quote cite{display:block;margin-top:14px;font-size:11px;color:rgba(255,255,255,0.5);font-weight:600;letter-spacing:1.5px;text-transform:uppercase;font-style:normal;font-family:'Be Vietnam Pro',sans-serif;}
+/* TAKEAWAY */
+.takeaway{background:linear-gradient(135deg,var(--accent-dark),var(--accent-mid));border-radius:14px;padding:26px 30px;margin:36px 0 0;color:white;}
+.takeaway-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
+.takeaway p{font-size:16px;color:rgba(255,255,255,0.92);line-height:1.8;margin:0;font-family:'Lora',serif;}
+.takeaway strong{color:white;font-weight:700;}
+/* CTA */
+.cta-box{background:var(--forest);border-radius:14px;padding:30px 32px;margin-top:36px;text-align:center;}
+.cta-box .cta-eyebrow{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--mint);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
+.cta-box .cta-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:white;margin-bottom:10px;line-height:1.35;}
+.cta-box .cta-desc{font-size:14px;color:rgba(255,255,255,0.65);max-width:400px;margin:0 auto 22px;line-height:1.7;font-family:'Lora',serif;}
+.cta-btn{display:inline-block;background:var(--accent);color:white;font-size:14px;font-weight:600;padding:13px 32px;border-radius:100px;text-decoration:none;font-family:'Be Vietnam Pro',sans-serif;transition:opacity .2s;}
+.cta-btn:hover{opacity:0.88;}
+/* FOOTER */
+.article-footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--border);}
+.footer-brand{font-size:12.5px;color:var(--light);line-height:1.8;font-family:'Be Vietnam Pro',sans-serif;}
+.footer-brand strong{color:var(--forest);}
+.footer-brand a{color:var(--sage);text-decoration:none;}
+.site-footer{background:#0f1f17;padding:28px 40px;text-align:center;font-size:12px;color:rgba(255,255,255,0.4);line-height:1.8;font-family:'Be Vietnam Pro',sans-serif;}
+.site-footer a{color:var(--gold);text-decoration:none;}
+.site-footer strong{color:rgba(255,255,255,0.65);}
+@media(max-width:600px){
+  .article-h1{font-size:28px;}
+  .article-deck{font-size:16px;}
+  .fact-strip{grid-template-columns:1fr;}
+  .fact-item{border-right:none;border-bottom:1px solid var(--border);}
+  .fact-item:last-child{border-bottom:none;}
+  .sugar-names{grid-template-columns:1fr 1fr;}
+  .article-wrap{padding:32px 18px 60px;}
+  .site-nav{padding:12px 20px;}
+  .article-hero{padding:36px 18px 30px;}
+}
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">🌿</div>
+    <div>
+      <div class="nav-logo-name">H21 - Cho Đời Mãi Xanh</div>
+      <div class="nav-logo-tag">Khoa Học Gia Thuy-Trinh Nguyen</div>
+    </div>
+  </a>
+  <a href="index.html" class="nav-back">&#8592; Trở về Blog</a>
+</nav>
+<section class="article-hero">
+  <div class="hero-inner">
+    <div class="cat-label">Dinh Dưỡng &amp; Sức Khỏe Đường Ruột</div>
+    <h1 class="article-h1">Chất Xơ &mdash; Dưỡng Chất Bị<br><em>Lãng Quên</em> Đang Thay Đổi Y Học</h1>
+    <p class="article-deck">Ít hơn 5% người đạt đủ lượng chất xơ khuyến nghị mỗi ngày. Và đây có thể là lý do tại sao cơn thèm ngọt của bạn không bao giờ thật sự dứt.</p>
+  </div>
+</section>
+<div class="byline-bar">
+  <div class="byline-inner">
+    <div class="byline-av">TT</div>
+    <div>
+      <div class="byline-name">Thuy-Trinh Nguyen</div>
+      <div class="byline-role">Khoa Học Gia &middot; Nhà Sáng Lập H21 - Cho Đời Mãi Xanh</div>
+    </div>
+    <div class="byline-meta">
+      <div class="byline-url">www.h21chodoimaixanh.com</div>
+      <div class="read-time">&#9200; Đọc trong 5 phút</div>
+    </div>
+  </div>
+</div>
+
+<div class="article-wrap"><div class="hero-img"><img src="chat-xo-va-duong-ruot.png" alt="Chất Xơ & Sức Khỏe Đường Ruột -- H21 Cho Đời Mãi Xanh"></div>
+  <div class="article-body">
+
+    <p>Trong nhiều thập kỷ, dinh dưỡng học tập trung vào protein, carbohydrate, và chất béo. Chất xơ &mdash; một loại carbohydrate phức tạp mà cơ thể người không thể tiêu hóa &mdash; thường bị xem là thứ yếu, chỉ cần thiết cho &#8220;tiêu hóa tốt&#8221;.</p>
+    <p>Ngày nay, khoa học đã thay đổi hoàn toàn quan điểm đó. Chất xơ không chỉ là &#8220;cái chổi quét ruột&#8221; như người ta vẫn ví von. Nó là <strong>nguyên liệu để vi khuẩn ruột tạo ra các hợp chất chống viêm, điều tiết miễn dịch, và thậm chí ảnh hưởng đến tâm trạng và nhận thức</strong>.</p>
+
+    <div class="fact-strip">
+      <div class="fact-item">
+        <div class="fact-num">40g</div>
+        <div class="fact-label">fiber mỗi ngày &mdash; mức lý tưởng theo nhiều chuyên gia dinh dưỡng thực vật. WHO khuyến nghị tối thiểu 25g</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-num">16g</div>
+        <div class="fact-label">fiber trong 1 cup đậu lăng nấu chín &mdash; nguồn fiber cao nhất trong các thực phẩm phổ biến</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-num">&lt;5%</div>
+        <div class="fact-label">người Mỹ ăn đủ lượng fiber khuyến nghị mỗi ngày &mdash; dù fiber có trong hầu hết thực phẩm thực vật</div>
+      </div>
+    </div>
+
+    <h2>Hai Loại Chất Xơ &mdash; Hai Vai Trò Khác Nhau</h2>
+    <p><strong>Chất xơ hòa tan (Soluble fiber)</strong> &mdash; có trong yến mạch, đậu, táo, cam &mdash; hòa tan trong nước và tạo thành một chất gel nhớt trong ruột. Chất gel này làm chậm quá trình tiêu hóa, giúp ổn định đường huyết sau ăn, và là &#8220;thức ăn&#8221; ưa thích của vi khuẩn có lợi. Beta-glucan trong yến mạch &mdash; một dạng soluble fiber &mdash; đã được chứng minh làm giảm cholesterol LDL từ 5&ndash;10% chỉ sau 6 tuần tiêu thụ đều đặn.</p>
+    <p><strong>Chất xơ không hòa tan (Insoluble fiber)</strong> &mdash; có trong cám gạo, rau xanh, hạt nguyên &mdash; không hòa tan trong nước, hoạt động như &#8220;bàn chải&#8221; làm sạch ruột, thúc đẩy nhu động ruột đều đặn, và giúp loại thải chất thải ra khỏi cơ thể hiệu quả hơn. Cả hai loại đều cần thiết &mdash; và cả hai đều thiếu trong chế độ ăn hiện đại nhiều thực phẩm tinh chế.</p>
+
+    <svg viewBox="0 0 600 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;margin:8px 0 32px;" role="img" aria-label="So sánh chất xơ hòa tan và không hòa tan">
+      <!-- Left card: Soluble -->
+      <rect x="4" y="4" width="280" height="252" rx="12" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1.5"/>
+      <rect x="4" y="4" width="280" height="50" rx="12" fill="#1D9E75"/>
+      <rect x="4" y="42" width="280" height="12" fill="#1D9E75"/>
+      <text x="144" y="34" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12.5" font-weight="700" fill="white">Chất Xơ Hòa Tan</text>
+      <text x="144" y="82" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="34">🫙</text>
+      <text x="144" y="112" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#0F6E56" font-style="italic">Hòa tan &rarr; tạo gel &rarr; làm chậm tiêu hóa</text>
+      <line x1="24" y1="124" x2="264" y2="124" stroke="#1D9E75" stroke-width="0.8" stroke-dasharray="4,3"/>
+      <text x="32" y="146" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" fill="#04342C">&#10003;  Ổn định đường huyết sau ăn</text>
+      <text x="32" y="166" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" fill="#04342C">&#10003;  Nuôi vi khuẩn có lợi trong ruột</text>
+      <text x="32" y="186" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" fill="#04342C">&#10003;  Hạ cholesterol LDL</text>
+      <text x="32" y="206" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" fill="#04342C">&#10003;  No lâu hơn, ít thèm vặt</text>
+      <rect x="20" y="222" width="244" height="24" rx="6" fill="#1D9E75"/>
+      <text x="142" y="238" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" fill="white">Yến mạch · Đậu · Táo · Cam · Cà rốt</text>
+      <!-- Right card: Insoluble -->
+      <rect x="316" y="4" width="280" height="252" rx="12" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5"/>
+      <rect x="316" y="4" width="280" height="50" rx="12" fill="#0F6E56"/>
+      <rect x="316" y="42" width="280" height="12" fill="#0F6E56"/>
+      <text x="456" y="34" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12.5" font-weight="700" fill="white">Chất Xơ Không Hòa Tan</text>
+      <text x="456" y="82" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="34">🧹</text>
+      <text x="456" y="112" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#0F6E56" font-style="italic">Không hòa tan &rarr; &#8220;bàn chải&#8221; làm sạch ruột</text>
+      <line x1="336" y1="124" x2="576" y2="124" stroke="#0F6E56" stroke-width="0.8" stroke-dasharray="4,3"/>
+      <text x="344" y="146" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" fill="#04342C">&#10003;  Thúc đẩy nhu động ruột đều đặn</text>
+      <text x="344" y="166" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" fill="#04342C">&#10003;  Làm sạch đường tiêu hóa</text>
+      <text x="344" y="186" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" fill="#04342C">&#10003;  Loại thải chất thải hiệu quả</text>
+      <text x="344" y="206" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" fill="#04342C">&#10003;  Hỗ trợ tiêu hóa lành mạnh</text>
+      <rect x="332" y="222" width="244" height="24" rx="6" fill="#0F6E56"/>
+      <text x="454" y="238" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" fill="white">Cám gạo · Rau xanh · Hạt · Lúa mì nguyên cám</text>
+    </svg>
+    <h2>Từ Ruột Đến Não &mdash; Con Đường Butyrate</h2>
+    <p>Khi bạn ăn thực phẩm giàu chất xơ, vi khuẩn có lợi trong ruột già lên men chất xơ đó và tạo ra các axit béo chuỗi ngắn (short-chain fatty acids), đặc biệt là <em>butyrate</em>.</p>
+    <p>Butyrate là một axit béo chống viêm mạnh. Nó không chỉ nuôi dưỡng tế bào niêm mạc ruột mà còn đi vào máu, vượt qua hàng rào máu não, và tác động trực tiếp lên não &mdash; làm giảm viêm thần kinh, điều tiết cảm giác no, hỗ trợ tâm trạng, và theo một số nghiên cứu mới, có thể giảm nguy cơ rối loạn lo âu và trầm cảm.</p>
+
+    <svg viewBox="0 0 680 130" xmlns="http://www.w3.org/2000/svg" style="width:100%;margin:24px 0 8px;display:block;" role="img" aria-label="Sơ đồ con đường butyrate từ chất xơ đến não">
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto">
+          <path d="M0,0 L0,7 L8,3.5 Z" fill="#1D9E75"/>
+        </marker>
+      </defs>
+      <!-- Step 1 -->
+      <rect x="2" y="20" width="110" height="90" rx="10" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1.5"/>
+      <text x="57" y="52" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="22" fill="#0F6E56">🌿</text>
+      <text x="57" y="74" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#04342C">Chất Xơ</text>
+      <text x="57" y="89" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#0F6E56">từ đậu, rau</text>
+      <text x="57" y="102" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#0F6E56">ngũ cốc nguyên hạt</text>
+      <!-- Arrow 1 -->
+      <line x1="118" y1="65" x2="140" y2="65" stroke="#1D9E75" stroke-width="2" marker-end="url(#arr)"/>
+      <!-- Step 2 -->
+      <rect x="143" y="20" width="110" height="90" rx="10" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1.5"/>
+      <text x="198" y="52" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="22" fill="#0F6E56">🦠</text>
+      <text x="198" y="74" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#04342C">Vi Khuẩn Ruột</text>
+      <text x="198" y="89" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#0F6E56">lên men chất xơ</text>
+      <text x="198" y="102" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#0F6E56">trong ruột già</text>
+      <!-- Arrow 2 -->
+      <line x1="259" y1="65" x2="281" y2="65" stroke="#1D9E75" stroke-width="2" marker-end="url(#arr)"/>
+      <!-- Step 3 — Butyrate highlight -->
+      <rect x="284" y="10" width="110" height="110" rx="10" fill="#1D9E75" stroke="#0F6E56" stroke-width="1.5"/>
+      <text x="339" y="46" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="22" fill="white">⚡</text>
+      <text x="339" y="68" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12" font-weight="700" fill="white">Butyrate</text>
+      <text x="339" y="84" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="rgba(255,255,255,0.82)">axit béo</text>
+      <text x="339" y="98" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="rgba(255,255,255,0.82)">chống viêm</text>
+      <!-- Arrow 3 -->
+      <line x1="400" y1="65" x2="422" y2="65" stroke="#1D9E75" stroke-width="2" marker-end="url(#arr)"/>
+      <!-- Step 4 -->
+      <rect x="425" y="20" width="110" height="90" rx="10" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1.5"/>
+      <text x="480" y="52" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="22" fill="#0F6E56">🩸</text>
+      <text x="480" y="74" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#04342C">Vào Máu</text>
+      <text x="480" y="89" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#0F6E56">vượt hàng rào</text>
+      <text x="480" y="102" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#0F6E56">máu não</text>
+      <!-- Arrow 4 -->
+      <line x1="541" y1="65" x2="563" y2="65" stroke="#1D9E75" stroke-width="2" marker-end="url(#arr)"/>
+      <!-- Step 5 -->
+      <rect x="566" y="20" width="110" height="90" rx="10" fill="#04342C" stroke="#0F6E56" stroke-width="1.5"/>
+      <text x="621" y="52" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="22" fill="white">🧠</text>
+      <text x="621" y="74" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="white">Não Bộ</text>
+      <text x="621" y="89" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="rgba(255,255,255,0.75)">giảm viêm</text>
+      <text x="621" y="102" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="rgba(255,255,255,0.75)">điều tiết cảm giác no</text>
+    </svg>
+    <p style="font-size:13px;color:var(--light);text-align:center;margin-bottom:28px;font-family:'Be Vietnam Pro',sans-serif;font-style:italic">Con đường butyrate: từ chất xơ trong bữa ăn đến tác động lên não bộ</p>
+
+    <div class="label-guide">
+      <div class="lg-label">&#128161; Ví Dụ</div>
+      <p>Khi bạn ăn 1 tô yến mạch nguyên hạt buổi sáng thay vì bánh mì trắng, vi khuẩn ruột lên men chất xơ trong yến mạch và tạo ra butyrate &mdash; một axit béo vượt qua hàng rào máu não và <strong>giúp não gửi tín hiệu &#8220;đã no&#8221; sớm hơn và rõ hơn</strong>. Đó là lý do tại sao bữa sáng yến mạch có thể khiến bạn no đến 11&ndash;12 giờ trưa, trong khi bánh mì trắng chỉ no đến 9 giờ sáng.</p>
+    </div>
+
+    <div class="science-box">
+      <div class="sb-label">&#128300; Góc Khoa Học &mdash; Trục Ruột-Não</div>
+      <p>Dr. Michael Greger (NutritionFacts.org): Vi khuẩn đường ruột tạo ra butyrate từ chất xơ, chất này vượt qua hàng rào máu não và có thể <strong>điều tiết cảm giác thèm ăn, hỗ trợ giảm cân, và có tác động lên tâm trạng</strong>. Dr. Joel Fuhrman xác nhận thêm: khi ăn đậu và nấm thường xuyên, vi khuẩn ruột tạo ra biofilm bảo vệ niêm mạc ruột &mdash; làm chậm hấp thụ glucose và giảm glycemic load của <em>bữa ăn tiếp theo</em>. Hiện tượng này gọi là &#8220;second meal effect&#8221;.</p>
+    </div>
+
+    <h2>Tại Sao Thiếu Chất Xơ Khiến Bạn Thèm Ngọt Mãi Không Dừng</h2>
+    <p>Khi bạn ăn thực phẩm thiếu chất xơ &mdash; đặc biệt là đường và thực phẩm tinh chế &mdash; vi khuẩn có lợi trong ruột thiếu &#8220;thức ăn&#8221; để hoạt động. Chúng suy giảm. Vi khuẩn có hại chiếm ưu thế. Hệ quả? Tín hiệu từ trục ruột&ndash;não bị rối loạn.</p>
+    <p>Một trong những tín hiệu bị ảnh hưởng là <em>cảm giác no</em>. Khi ruột không hoạt động đúng, não nhận tín hiệu đói liên tục &mdash; dù bạn vừa ăn xong. Kết quả là bạn thèm ăn, đặc biệt là thức ăn ngọt và tinh chế, vì chúng cho não &#8220;phần thưởng&#8221; nhanh nhất.</p>
+    <p>Đây là vòng lặp tự duy trì: <strong>ít chất xơ &rarr; ruột yếu &rarr; não gửi tín hiệu thèm ăn &rarr; ăn thêm thực phẩm tinh chế &rarr; càng ít chất xơ hơn</strong>. Phá vỡ vòng lặp này không cần ý chí &mdash; nó cần chất xơ.</p>
+
+    <svg viewBox="0 0 400 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:400px;display:block;margin:20px auto 6px;" role="img" aria-label="Sơ đồ vòng lặp ít chất xơ gây thèm ngọt">
+      <defs>
+        <marker id="arrc" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto">
+          <path d="M0,0 L0,7 L8,3.5 Z" fill="#993C1D"/>
+        </marker>
+      </defs>
+      <!-- Top -->
+      <rect x="120" y="10" width="160" height="70" rx="10" fill="#FAECE7" stroke="#D85A30" stroke-width="1.5"/>
+      <text x="200" y="38" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="13" font-weight="700" fill="#4A1B0C">Ít Chất Xơ</text>
+      <text x="200" y="56" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" fill="#993C1D">trong bữa ăn hàng ngày</text>
+      <!-- Arrow top → right -->
+      <path d="M280,45 Q360,45 360,130" stroke="#993C1D" stroke-width="1.8" fill="none" marker-end="url(#arrc)"/>
+      <!-- Right -->
+      <rect x="260" y="135" width="130" height="70" rx="10" fill="#FAECE7" stroke="#D85A30" stroke-width="1.5"/>
+      <text x="325" y="163" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="13" font-weight="700" fill="#4A1B0C">Ruột Yếu</text>
+      <text x="325" y="181" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" fill="#993C1D">vi khuẩn tốt suy giảm</text>
+      <!-- Arrow right → bottom -->
+      <path d="M325,205 Q325,280 240,300" stroke="#993C1D" stroke-width="1.8" fill="none" marker-end="url(#arrc)"/>
+      <!-- Bottom -->
+      <rect x="80" y="285" width="160" height="70" rx="10" fill="#FAECE7" stroke="#D85A30" stroke-width="1.5"/>
+      <text x="160" y="308" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#4A1B0C">Não Gửi Tín Hiệu</text>
+      <text x="160" y="324" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#4A1B0C">Thèm Ăn</text>
+      <text x="160" y="342" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#993C1D">liên tục, dù vừa ăn xong</text>
+      <!-- Arrow bottom → left -->
+      <path d="M80,320 Q20,310 20,215" stroke="#993C1D" stroke-width="1.8" fill="none" marker-end="url(#arrc)"/>
+      <!-- Left -->
+      <rect x="10" y="135" width="140" height="70" rx="10" fill="#D85A30" stroke="#993C1D" stroke-width="1.5"/>
+      <text x="80" y="160" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12" font-weight="700" fill="white">Ăn Thực Phẩm</text>
+      <text x="80" y="176" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12" font-weight="700" fill="white">Tinh Chế</text>
+      <text x="80" y="194" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="rgba(255,255,255,0.82)">đường, bánh mì trắng...</text>
+      <!-- Arrow left → top -->
+      <path d="M80,135 Q80,45 120,45" stroke="#993C1D" stroke-width="1.8" fill="none" marker-end="url(#arrc)"/>
+      <!-- Center label -->
+      <text x="200" y="178" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#993C1D">Vòng Lặp</text>
+      <text x="200" y="194" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" fill="#D85A30">Tự Duy Trì</text>
+    </svg>
+    <p style="font-size:13px;color:var(--light);text-align:center;margin-bottom:28px;font-family:'Be Vietnam Pro',sans-serif;font-style:italic">Phá vỡ vòng lặp này không cần ý chí &mdash; chỉ cần thêm chất xơ vào bữa ăn</p>
+
+    <div class="pull-quote">
+      <p>Khi bạn nuôi vi khuẩn ruột đúng cách, chúng nuôi lại bạn. Đó là thỏa thuận mà cơ thể người đã duy trì qua hàng triệu năm tiến hóa.</p>
+      <cite>&mdash; H21 - Cho Đời Mãi Xanh</cite>
+    </div>
+
+    <h2>Đậu &mdash; Thực Phẩm Sống Thọ Được Khoa Học Xác Nhận</h2>
+    <p>Nghiên cứu Blue Zones của Dan Buettner &mdash; phân tích lối sống của các cộng đồng sống thọ nhất thế giới tại Okinawa (Nhật), Sardinia (Ý), Nicoya (Costa Rica), Ikaria (Hy Lạp), và Loma Linda (California) &mdash; chỉ ra một điểm chung đáng chú ý: <strong>đậu là thực phẩm được tiêu thụ hàng ngày tại tất cả 5 vùng này</strong>. Trung bình 1 cup đậu mỗi ngày.</p>
+    <p>Không phải vì đậu rẻ. Mà vì trong một chén đậu nhỏ, bạn có được cùng lúc ba thứ: <strong>protein để no lâu</strong>, <strong>chất xơ để nuôi vi khuẩn ruột có lợi</strong>, và <strong>phytonutrient để chống viêm tự nhiên</strong>. Ít loại thực phẩm nào khác có thể cung cấp cả ba cùng một lúc &mdash; với giá thành thấp và dễ chế biến như vậy. Đó chính là lý do đậu xuất hiện trong bữa ăn hàng ngày của mọi cộng đồng sống thọ nhất thế giới.</p>
+
+    <svg viewBox="0 0 600 230" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;margin:8px 0 32px;" role="img" aria-label="Ba lợi ích của đậu: protein, chất xơ, phytonutrient">
+      <defs>
+        <marker id="arrd" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+          <path d="M0,0 L0,7 L7,3.5 Z" fill="#1D9E75"/>
+        </marker>
+      </defs>
+      <!-- Center bowl -->
+      <circle cx="300" cy="115" r="62" fill="#1D9E75"/>
+      <text x="300" y="104" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="36">🫘</text>
+      <text x="300" y="128" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12" font-weight="700" fill="white">Một chén đậu</text>
+      <text x="300" y="146" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="rgba(255,255,255,0.78)">mỗi ngày</text>
+      <!-- Line → top-left -->
+      <line x1="248" y1="72" x2="172" y2="44" stroke="#1D9E75" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrd)"/>
+      <!-- Box 1: Protein -->
+      <rect x="8" y="8" width="158" height="76" rx="10" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1.5"/>
+      <text x="87" y="36" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="22">💪</text>
+      <text x="87" y="57" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12" font-weight="700" fill="#04342C">Protein</text>
+      <text x="87" y="73" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" fill="#0F6E56">no lâu, giữ cơ bắp</text>
+      <!-- Line → top-right -->
+      <line x1="352" y1="72" x2="428" y2="44" stroke="#1D9E75" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrd)"/>
+      <!-- Box 2: Chất xơ -->
+      <rect x="434" y="8" width="158" height="76" rx="10" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1.5"/>
+      <text x="513" y="36" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="22">🦠</text>
+      <text x="513" y="57" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12" font-weight="700" fill="#04342C">Chất Xơ</text>
+      <text x="513" y="73" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" fill="#0F6E56">nuôi vi khuẩn ruột tốt</text>
+      <!-- Line → bottom -->
+      <line x1="300" y1="177" x2="300" y2="196" stroke="#1D9E75" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrd)"/>
+      <!-- Box 3: Phytonutrient -->
+      <rect x="130" y="200" width="340" height="26" rx="8" fill="#04342C"/>
+      <text x="300" y="218" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" font-weight="700" fill="white">🌿 Phytonutrient &mdash; chống viêm tự nhiên</text>
+    </svg>
+    <p>Một điểm thực tiễn: bạn không cần nấu đậu phức tạp. Đậu đóng hộp (rửa sạch trước khi dùng) là lựa chọn nhanh và tiện lợi hoàn toàn. Thêm đậu vào salad, canh, hoặc dùng làm dip với rau tươi &mdash; đây là bước nhỏ nhất có thể thay đổi sức khỏe đường ruột của bạn trong 2&ndash;3 tuần.</p>
+
+    <div class="takeaway">
+      <div class="takeaway-label">&#128161; Điểm Mấu Chốt</div>
+      <p>Cơn thèm ngọt thường không phải dấu hiệu của &#8220;yếu ý chí&#8221; &mdash; mà là <strong>tín hiệu của ruột đang thiếu chất xơ</strong>. Bắt đầu từ đây: thêm nửa cup đậu vào bữa trưa. Thay bánh mì trắng buổi sáng bằng yến mạch nguyên hạt. Ăn trái cây nguyên miếng thay vì ép nước. Những thay đổi nhỏ này &mdash; duy trì đủ lâu &mdash; sẽ tạo ra sự thay đổi rõ ràng trong cơn thèm ngọt và năng lượng của bạn.</p>
+    </div>
+
+    <p style="margin-top:28px">Khoa học về microbiome &mdash; hệ vi khuẩn đường ruột &mdash; là một trong những lĩnh vực nghiên cứu phát triển nhanh nhất của y học thế kỷ 21. Chúng ta đang dần hiểu rằng ruột không chỉ là nơi tiêu hóa thức ăn &mdash; nó là &#8220;bộ não thứ hai&#8221; với hơn 100 triệu tế bào thần kinh, ảnh hưởng đến mọi thứ từ miễn dịch đến tâm trạng đến khả năng nhận thức. Và chất xơ là nguyên liệu cốt lõi để hệ thống đó hoạt động đúng.</p>
+
+<div class="cta-box">
+  <div class="cta-eyebrow">Chương Trình H21 Coaching</div>
+  <h3 class="cta-title">Bạn muốn hiểu đúng hơn về dinh dưỡng?</h3>
+  <p class="cta-desc">Tham gia cộng đồng H21 &mdash; nơi khoa học dinh dưỡng được dịch thành thói quen thực tế mỗi ngày.</p>
+  <a href="https://www.facebook.com/xanhlenbenhxuong/" target="_blank" class="cta-btn">Đăng Ký Khóa Học H21 &#8594;</a>
+</div>
+  </div>
+<div class="article-footer">
+  <div class="footer-brand">
+    <strong>Thuy-Trinh Nguyen</strong> &middot; Khoa Học Gia &amp; Nhà Sáng Lập<br>
+    <strong>H21 - Cho Đời Mãi Xanh</strong> &middot; <a href="https://www.h21chodoimaixanh.com">www.h21chodoimaixanh.com</a><br>
+    Mang khoa học từ phòng thí nghiệm đến căn bếp mỗi gia đình
+  </div>
+</div>
+<footer class="site-footer">
+  <strong>H21 - Cho Đời Mãi Xanh</strong> &middot; Khoa Học Gia Thuy-Trinh Nguyen<br>
+  <a href="https://blog.h21chodoimaixanh.com">blog.h21chodoimaixanh.com</a> &middot; <a href="https://www.h21chodoimaixanh.com">www.h21chodoimaixanh.com</a><br>
+  Nội dung chỉ dành cho mục đích giáo dục, không thay thế tư vấn y tế chuyên nghiệp.
+</footer>
+</body>
+</html>
