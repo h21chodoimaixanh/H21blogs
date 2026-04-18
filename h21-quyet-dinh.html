@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sức khỏe lâu dài không được tạo ra bởi quyết tâm bùng phát. Khoa học epigenetics, AGEs, thiết kế thói quen — và cách sống thọ từng ngày một.">
+<title>Mỗi Lần Ăn Uống Là Một Lần Bạn Đưa Ra Quyết Định — Blog H21</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --accent:#378ADD;--accent-light:#E6F1FB;
+  --accent-mid:#185FA5;--accent-dark:#042C53;
+  --forest:#1a3d2b;--sage:#4a7c59;--mint:#7eb89a;
+  --cream:#f7f3ec;--gold:#c9a84c;--gold-light:#fdf5e0;
+  --border:#e0d8cc;--mid:#3a3a3a;--light:#6b7280;--ink:#0f1f17;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#ede9e3;font-family:'Lora',Georgia,serif;color:var(--ink);}
+/* NAV */
+.site-nav{background:var(--forest);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(0,0,0,0.25);}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-logo-mark{width:34px;height:34px;background:var(--mint);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-family:sans-serif;}
+.nav-logo-name{font-size:14px;font-weight:600;color:white;font-family:'Be Vietnam Pro',sans-serif;}
+.nav-logo-tag{font-size:10px;color:rgba(255,255,255,0.5);margin-top:1px;font-family:'Be Vietnam Pro',sans-serif;}
+.nav-back{font-size:13px;color:rgba(255,255,255,0.75);text-decoration:none;font-weight:500;font-family:'Be Vietnam Pro',sans-serif;transition:color 0.2s;}
+.nav-back:hover{color:var(--mint);}
+/* HERO */
+.article-hero{background:linear-gradient(135deg,#042C53 0%,#185FA5 55%,#378ADD 100%);padding:48px 24px 40px;position:relative;overflow:hidden;}
+.article-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 30%,rgba(255,255,255,0.06) 0%,transparent 60%);}
+.hero-inner{max-width:720px;margin:0 auto;position:relative;z-index:1;}
+.cat-label{display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:14px;font-family:'Be Vietnam Pro',sans-serif;}
+.cat-label::before{content:'';display:inline-block;width:28px;height:1.5px;background:rgba(255,255,255,0.5);}
+.article-h1{font-family:'Playfair Display',serif;font-size:40px;font-weight:700;line-height:1.2;color:white;margin-bottom:16px;letter-spacing:-0.3px;}
+.article-h1 em{color:rgba(255,255,255,0.82);font-style:italic;}
+.article-deck{font-family:'Lora',serif;font-size:18px;line-height:1.7;color:rgba(255,255,255,0.78);font-style:italic;margin:0;}
+/* BYLINE */
+.byline-bar{background:white;border-bottom:1px solid var(--border);padding:14px 24px;}
+.byline-inner{max-width:720px;margin:0 auto;display:flex;align-items:center;gap:14px;}
+.byline-av{width:40px;height:40px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:white;font-weight:700;flex-shrink:0;font-family:'Be Vietnam Pro',sans-serif;}
+.byline-name{font-size:13.5px;font-weight:600;color:var(--ink);font-family:'Be Vietnam Pro',sans-serif;}
+.byline-role{font-size:11.5px;color:var(--light);margin-top:1px;font-family:'Be Vietnam Pro',sans-serif;}
+.byline-meta{margin-left:auto;text-align:right;}
+.byline-url{font-size:11.5px;color:var(--light);font-family:'Be Vietnam Pro',sans-serif;}
+.read-time{font-size:11px;color:var(--accent);font-weight:600;margin-top:2px;font-family:'Be Vietnam Pro',sans-serif;}
+/* ARTICLE WRAP */
+.article-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px;}
+/* HERO IMAGE */
+.hero-img{margin-bottom:36px;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.12);}
+.hero-img img{width:100%;display:block;}
+/* BODY */
+.article-body{font-family:'Lora',Georgia,serif;font-size:17px;line-height:1.9;color:var(--mid);}
+.article-body p{margin-bottom:22px;}
+.article-body strong{color:var(--ink);font-weight:700;}
+.article-body em{color:var(--accent-mid);font-style:italic;font-weight:600;}
+.article-body h2{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--ink);margin:40px 0 14px;line-height:1.3;}
+.article-body h3{font-family:'Be Vietnam Pro',sans-serif;font-size:16px;font-weight:700;color:var(--accent-dark);margin:26px 0 10px;text-transform:uppercase;letter-spacing:1px;}
+/* FACT STRIP */
+.fact-strip{display:grid;grid-template-columns:repeat(3,1fr);margin:32px 0;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:white;}
+.fact-item{padding:20px 16px;text-align:center;border-right:1px solid var(--border);}
+.fact-item:last-child{border-right:none;}
+.fact-num{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:var(--accent);line-height:1;}
+.fact-label{font-size:11.5px;color:var(--light);margin-top:6px;line-height:1.5;font-family:'Be Vietnam Pro',sans-serif;}
+/* SUGAR NAMES GRID */
+.sugar-names{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:18px 0;}
+.sugar-pill{background:white;border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:9px 12px;font-size:13px;color:var(--mid);font-family:'Be Vietnam Pro',sans-serif;}
+/* SCIENCE BOX */
+.science-box{background:var(--accent-light);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:0 12px 12px 0;padding:20px 24px;margin:28px 0;}
+.science-box .sb-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent-mid);margin-bottom:8px;font-family:'Be Vietnam Pro',sans-serif;}
+.science-box p{font-size:15px;color:var(--mid);margin:0;line-height:1.7;font-family:'Lora',serif;}
+.science-box strong{color:var(--accent-dark);}
+/* LABEL GUIDE */
+.label-guide{background:#fff;border:1px solid var(--border);border-left:4px solid var(--accent-mid);border-radius:0 12px 12px 0;padding:20px 24px;margin:28px 0;}
+.label-guide .lg-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent-mid);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
+.label-guide p{font-size:15px;color:var(--mid);margin:0;line-height:1.8;font-family:'Lora',serif;}
+/* PULL QUOTE */
+.pull-quote{margin:38px 0;padding:30px 36px;background:var(--accent-dark);border-radius:14px;color:white;text-align:center;position:relative;}
+.pull-quote::before{content:'"';font-family:'Playfair Display',serif;font-size:80px;line-height:0.5;color:rgba(255,255,255,0.1);position:absolute;top:26px;left:22px;}
+.pull-quote p{font-family:'Lora',serif;font-size:20px;line-height:1.65;color:rgba(255,255,255,0.93);font-style:italic;margin:0;}
+.pull-quote cite{display:block;margin-top:14px;font-size:11px;color:rgba(255,255,255,0.5);font-weight:600;letter-spacing:1.5px;text-transform:uppercase;font-style:normal;font-family:'Be Vietnam Pro',sans-serif;}
+/* TAKEAWAY */
+.takeaway{background:linear-gradient(135deg,var(--accent-dark),var(--accent-mid));border-radius:14px;padding:26px 30px;margin:36px 0 0;color:white;}
+.takeaway-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
+.takeaway p{font-size:16px;color:rgba(255,255,255,0.92);line-height:1.8;margin:0;font-family:'Lora',serif;}
+.takeaway strong{color:white;font-weight:700;}
+/* CTA */
+.cta-box{background:var(--forest);border-radius:14px;padding:30px 32px;margin-top:36px;text-align:center;}
+.cta-box .cta-eyebrow{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--mint);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
+.cta-box .cta-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:white;margin-bottom:10px;line-height:1.35;}
+.cta-box .cta-desc{font-size:14px;color:rgba(255,255,255,0.65);max-width:400px;margin:0 auto 22px;line-height:1.7;font-family:'Lora',serif;}
+.cta-btn{display:inline-block;background:var(--accent);color:white;font-size:14px;font-weight:600;padding:13px 32px;border-radius:100px;text-decoration:none;font-family:'Be Vietnam Pro',sans-serif;transition:opacity .2s;}
+.cta-btn:hover{opacity:0.88;}
+/* FOOTER */
+.article-footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--border);}
+.footer-brand{font-size:12.5px;color:var(--light);line-height:1.8;font-family:'Be Vietnam Pro',sans-serif;}
+.footer-brand strong{color:var(--forest);}
+.footer-brand a{color:var(--sage);text-decoration:none;}
+.site-footer{background:#0f1f17;padding:28px 40px;text-align:center;font-size:12px;color:rgba(255,255,255,0.4);line-height:1.8;font-family:'Be Vietnam Pro',sans-serif;}
+.site-footer a{color:var(--gold);text-decoration:none;}
+.site-footer strong{color:rgba(255,255,255,0.65);}
+@media(max-width:600px){
+  .article-h1{font-size:28px;}
+  .article-deck{font-size:16px;}
+  .fact-strip{grid-template-columns:1fr;}
+  .fact-item{border-right:none;border-bottom:1px solid var(--border);}
+  .fact-item:last-child{border-bottom:none;}
+  .sugar-names{grid-template-columns:1fr 1fr;}
+  .article-wrap{padding:32px 18px 60px;}
+  .site-nav{padding:12px 20px;}
+  .article-hero{padding:36px 18px 30px;}
+}
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">🌿</div>
+    <div>
+      <div class="nav-logo-name">H21 - Cho Đời Mãi Xanh</div>
+      <div class="nav-logo-tag">Khoa Học Gia Thuy-Trinh Nguyen</div>
+    </div>
+  </a>
+  <a href="index.html" class="nav-back">&#8592; Trở về Blog</a>
+</nav>
+<section class="article-hero">
+  <div class="hero-inner">
+    <div class="cat-label">Longevity &amp; Lối Sống</div>
+    <h1 class="article-h1">Mỗi Lần Ăn Uống Là Một Lần<br>Bạn Đưa Ra <em>Quyết Định</em></h1>
+    <p class="article-deck">Sức khỏe lâu dài không được tạo ra bởi những khoảnh khắc bùng phát quyết tâm. Nó được tạo ra bởi hàng nghìn quyết định nhỏ, lặp đi lặp lại, ngày qua ngày.</p>
+  </div>
+</section>
+<div class="byline-bar">
+  <div class="byline-inner">
+    <div class="byline-av">TT</div>
+    <div>
+      <div class="byline-name">Thuy-Trinh Nguyen</div>
+      <div class="byline-role">Khoa Học Gia &middot; Nhà Sáng Lập H21 - Cho Đời Mãi Xanh</div>
+    </div>
+    <div class="byline-meta">
+      <div class="byline-url">www.h21chodoimaixanh.com</div>
+      <div class="read-time">&#9200; Đọc trong 5 phút</div>
+    </div>
+  </div>
+</div>
+
+<div class="article-wrap"><div class="hero-img"><img src="longevity-moi-quyet-dinh.png" alt="Longevity — Mỗi Quyết Định Nhỏ · H21 Cho Đời Mãi Xanh"></div>
+  <div class="article-body">
+
+    <p>Có một câu hỏi tôi thường đặt ra khi bắt đầu làm việc với một cộng đồng mới: &#8220;Bạn muốn sống đến bao nhiêu tuổi?&#8221; Hầu hết mọi người trả lời ngay: 80, 90, thậm chí 100.</p>
+    <p>Câu hỏi tiếp theo mới thú vị hơn: &#8220;Bạn muốn <em>như thế nào</em> khi 80 tuổi?&#8221; Đây là lúc mọi người dừng lại. Vì sống thọ mà không có sức khỏe, không có năng lực, không có niềm vui &mdash; đó không phải điều ai mong muốn.</p>
+    <p>Longevity thực sự &mdash; sống thọ và sống khỏe &mdash; không phải là câu hỏi về số tuổi. Đó là câu hỏi về <strong>chất lượng của từng ngày</strong> dẫn đến tuổi tác đó. Và chất lượng đó được quyết định, phần lớn, bởi những gì bạn ăn và uống mỗi ngày.</p>
+
+    <div class="fact-strip">
+      <div class="fact-item">
+        <div class="fact-num">80%</div>
+        <div class="fact-label">bệnh mãn tính có thể phòng ngừa qua lối sống &mdash; tim mạch, tiểu đường type 2, nhiều loại ung thư (WHO)</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-num">1%</div>
+        <div class="fact-label">cải thiện mỗi ngày &mdash; sau 1 năm bạn tốt hơn 37 lần so với điểm xuất phát (lãi kép sức khỏe)</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-num">21&ndash;66</div>
+        <div class="fact-label">ngày để hành vi mới trở thành thói quen tự động &mdash; University College London, 2010</div>
+      </div>
+    </div>
+
+    <p>Ba con số này nói lên một điều: sức khỏe lâu dài không phải may mắn hay di truyền &mdash; nó là kết quả của những lựa chọn lặp đi lặp lại. <strong>80% bệnh mãn tính</strong> có thể phòng ngừa nếu chúng ta thay đổi đúng cách, đủ sớm. Mỗi cải thiện nhỏ <strong>1% mỗi ngày</strong> tích lũy thành kết quả lớn hơn nhiều so với bất kỳ thay đổi cực đoan ngắn hạn nào. Và điều tốt nhất: não bộ chỉ cần <strong>21 đến 66 ngày</strong> để biến một hành động mới thành thói quen tự động &mdash; sau đó bạn không cần ý chí nữa.</p>
+
+    <p>Đó cũng là lý do chương trình mang tên <strong style="color:#0F6E56;">H21</strong> của tôi thành lập &mdash; H cho <em>Health</em> (sức khỏe), và <strong style="color:#0F6E56;">21</strong> là con số tối thiểu mà khoa học xác nhận cần thiết để một hành động mới bắt đầu ăn sâu vào não bộ. Không phải mục tiêu hoàn hảo ngay từ đầu. Không phải thay đổi tất cả cùng lúc. Chỉ cần bắt đầu &mdash; và duy trì đủ <strong style="color:#0F6E56;">21</strong> ngày đầu tiên.</p>
+
+    <h2>Khoa Học Về Lão Hóa Sinh Học &mdash; Epigenetics</h2>
+    <p>Trong hai thập kỷ qua, nghiên cứu về <em>epigenetics</em> &mdash; khoa học nghiên cứu cách môi trường và lối sống ảnh hưởng đến biểu hiện gene &mdash; đã làm thay đổi căn bản cách chúng ta hiểu về lão hóa.</p>
+    <p>Điều quan trọng không chỉ là gene bạn thừa hưởng từ cha mẹ, mà là <strong>gene nào được &#8220;bật lên&#8221; và gene nào bị &#8220;tắt đi&#8221; bởi lối sống hàng ngày của bạn</strong>. Chế độ ăn giàu chất chống oxy hóa, chất xơ, và phytonutrient từ thực vật có thể &#8220;tắt&#8221; một số gene liên quan đến viêm mãn tính và phát triển tế bào ung thư. Ngược lại, chế độ ăn nhiều đường và thực phẩm siêu chế biến có thể &#8220;bật&#8221; các cơ chế thúc đẩy lão hóa sớm.</p>
+    <p>Nói cách khác: gene bạn có thể là một lá bài &mdash; nhưng <strong>lối sống của bạn quyết định bạn chơi lá bài đó như thế nào</strong>.</p>
+
+    <svg viewBox="0 0 580 210" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;margin:10px 0 28px;" role="img" aria-label="Epigenetics - lối sống bật tắt gene">
+      <!-- Background -->
+      <rect x="0" y="0" width="580" height="210" rx="12" fill="#185FA5"/>
+
+      <!-- Title -->
+      <text x="290" y="28" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="rgba(255,255,255,0.5)" letter-spacing="2">EPIGENETICS — CÔNG TẮC GENE</text>
+      <line x1="20" y1="36" x2="560" y2="36" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+
+      <!-- DNA icon left -->
+      <text x="62" y="122" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="52">🧬</text>
+      <text x="62" y="148" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">Gene của bạn</text>
+      <text x="62" y="162" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="rgba(255,255,255,0.35)">(không đổi)</text>
+
+      <!-- Arrow from DNA to switches -->
+      <line x1="100" y1="115" x2="128" y2="115" stroke="#378ADD" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <polygon points="128,110 138,115 128,120" fill="#378ADD"/>
+
+      <!-- Switch 1: ON — Lối sống tốt -->
+      <rect x="148" y="52" width="192" height="126" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+      <text x="244" y="76" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#90E8A8">Lối Sống Lành Mạnh</text>
+      <!-- Toggle ON -->
+      <rect x="172" y="86" width="144" height="30" rx="15" fill="#1D9E75"/>
+      <circle cx="298" cy="101" r="12" fill="white"/>
+      <text x="220" y="106" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" font-weight="700" fill="white">BẬT</text>
+      <!-- Benefits -->
+      <text x="164" y="134" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="rgba(255,255,255,0.75)">✓ Ăn thực vật · chất xơ · đậu</text>
+      <text x="164" y="151" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="rgba(255,255,255,0.75)">✓ Ngủ đủ · vận động đều đặn</text>
+      <text x="164" y="168" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#90E8A8">→ Gene bảo vệ được bật lên</text>
+
+      <!-- VS divider -->
+      <line x1="348" y1="52" x2="348" y2="178" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      <text x="350" y="120" font-family="'Be Vietnam Pro',sans-serif" font-size="11" fill="rgba(255,255,255,0.25)">vs</text>
+
+      <!-- Switch 2: OFF — Lối sống xấu -->
+      <rect x="362" y="52" width="196" height="126" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+      <text x="460" y="76" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#F5C4B3">Lối Sống Không Lành Mạnh</text>
+      <!-- Toggle OFF -->
+      <rect x="386" y="86" width="144" height="30" rx="15" fill="#993C1D"/>
+      <circle cx="400" cy="101" r="12" fill="white"/>
+      <text x="476" y="106" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" font-weight="700" fill="white">TẮT</text>
+      <!-- Risks -->
+      <text x="378" y="134" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="rgba(255,255,255,0.75)">✗ Nhiều đường · siêu chế biến</text>
+      <text x="378" y="151" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="rgba(255,255,255,0.75)">✗ Thiếu ngủ · ít vận động</text>
+      <text x="378" y="168" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#F5C4B3">→ Gene viêm được bật lên</text>
+
+      <!-- Bottom note -->
+      <text x="290" y="197" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="rgba(255,255,255,0.3)" font-style="italic">Cùng một bộ gene — lối sống khác nhau — kết quả sức khỏe hoàn toàn khác nhau</text>
+    </svg>
+
+    <div class="science-box">
+      <div class="sb-label">&#128300; AGEs &mdash; Cơ Chế Lão Hóa Do Đường</div>
+      <p>Advanced Glycation End-products (AGEs) là các hợp chất hình thành khi đường phản ứng với protein hoặc chất béo trong cơ thể &mdash; một quá trình gọi là <em>glycation</em>. AGEs tích lũy trong mô theo thời gian: chúng làm cứng collagen (khiến da nhăn và mạch máu kém đàn hồi), tổn thương mạch máu nhỏ, và thúc đẩy viêm mãn tính. <strong>Giảm đường tiêu thụ là một trong những cách trực tiếp nhất để làm chậm glycation và lão hóa sinh học.</strong></p>
+    </div>
+
+    <svg viewBox="0 0 580 120" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;margin:8px 0 28px;" role="img" aria-label="AGEs tích lũy gây lão hóa theo thời gian">
+      <defs>
+        <marker id="agearr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+          <path d="M0,0 L0,7 L7,3.5 Z" fill="#D85A30"/>
+        </marker>
+      </defs>
+      <!-- Step 1 -->
+      <rect x="2" y="15" width="118" height="90" rx="10" fill="#E6F1FB" stroke="#378ADD" stroke-width="1.5"/>
+      <text x="61" y="46" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="22">🍬</text>
+      <text x="61" y="67" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#042C53">Đường + Protein</text>
+      <text x="61" y="83" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="#185FA5">phản ứng glycation</text>
+      <!-- Arrow -->
+      <line x1="126" y1="60" x2="148" y2="60" stroke="#D85A30" stroke-width="1.8" marker-end="url(#agearr)"/>
+      <!-- Step 2 -->
+      <rect x="151" y="15" width="118" height="90" rx="10" fill="#FAECE7" stroke="#D85A30" stroke-width="1.5"/>
+      <text x="210" y="46" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="22">⚗️</text>
+      <text x="210" y="67" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#4A1B0C">AGEs</text>
+      <text x="210" y="83" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="#993C1D">tích lũy trong mô</text>
+      <!-- Arrow -->
+      <line x1="275" y1="60" x2="297" y2="60" stroke="#D85A30" stroke-width="1.8" marker-end="url(#agearr)"/>
+      <!-- Step 3 -->
+      <rect x="300" y="15" width="118" height="90" rx="10" fill="#FAECE7" stroke="#D85A30" stroke-width="1.5"/>
+      <text x="359" y="46" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="22">🩺</text>
+      <text x="359" y="64" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" font-weight="700" fill="#4A1B0C">Da nhăn · Mạch</text>
+      <text x="359" y="78" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" font-weight="700" fill="#4A1B0C">máu cứng · Viêm</text>
+      <!-- Arrow -->
+      <line x1="424" y1="60" x2="446" y2="60" stroke="#D85A30" stroke-width="1.8" marker-end="url(#agearr)"/>
+      <!-- Step 4 -->
+      <rect x="449" y="15" width="129" height="90" rx="10" fill="#D85A30"/>
+      <text x="514" y="46" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="22">📉</text>
+      <text x="514" y="67" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="white">Lão Hóa</text>
+      <text x="514" y="83" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="rgba(255,255,255,0.85)">Sinh Học Sớm</text>
+    </svg>
+
+    <h2>Tại Sao Quyết Định Nhỏ Quan Trọng Hơn Quyết Tâm Lớn</h2>
+    <p>Hầu hết chúng ta đã từng trải qua cảm giác này: khi người thân nhập viện vì bệnh tim hay tiểu đường, khi bác sĩ đưa ra một kết quả xét nghiệm đáng lo ngại, hoặc khi chứng kiến ai đó đang trẻ mà đột nhiên ngã bệnh nặng &mdash; ta thề với bản thân sẽ thay đổi. Ăn uống khác đi. Sống khác đi. Rồi sau vài tuần, mọi thứ dần dần trở lại như cũ.</p>
+    <p>Không phải vì ta yếu đuối. Mà vì <strong>thay đổi lớn không được tạo ra bởi quyết tâm lớn &mdash; nó được tạo ra bởi cách ta sắp xếp lại môi trường sống và thói quen hàng ngày</strong>.</p>
+    <p>Khi bạn không đặt đồ ngọt trên bàn làm việc, bạn không cần ý chí để không ăn chúng. Khi bạn chuẩn bị gạo lứt sẵn trong tủ lạnh vào chủ nhật, bạn không cần suy nghĩ nhiều về bữa tối cả tuần. Khi smoothie đã được chuẩn bị nguyên liệu tối hôm trước, bữa sáng lành mạnh không đòi hỏi thêm bất kỳ nỗ lực nào vào sáng hôm sau.</p>
+    <p>Đây là nền tảng tôi xây dựng hệ sinh thái H21: <strong>làm cho lựa chọn tốt trở nên dễ dàng hơn lựa chọn xấu</strong> &mdash; không phải bằng sức mạnh ý chí, mà bằng cách sắp xếp lại môi trường sống và thói quen hàng ngày.</p>
+
+    <div class="pull-quote">
+      <p>Mỗi lần ăn uống là một lần bạn đưa ra quyết định: nuôi bệnh hay chống bệnh. Không cần mỗi quyết định đều hoàn hảo &mdash; chỉ cần phần lớn trong số chúng đi đúng hướng.</p>
+      <cite>&mdash; H21 - Cho Đời Mãi Xanh</cite>
+    </div>
+
+    <h2>Bài Học Từ Blue Zones &mdash; Những Người Sống Thọ Nhất</h2>
+    <p>Trong tất cả các cộng đồng Blue Zones mà khoa học đã nghiên cứu &mdash; từ Okinawa đến Sardinia, từ Nicoya đến Ikaria &mdash; không có nơi nào có người dân ăn uống &#8220;cực đoan&#8221; hay kiêng khem khổ sở. Họ ăn thực phẩm thật, trồng gần nơi họ sống, qua ít bước chế biến, cùng những người họ yêu quý. Họ di chuyển tự nhiên, ngủ đủ giấc, và có cảm giác về mục đích sống.</p>
+    <p>Điểm chung không phải là một chế độ ăn kiêng cụ thể. Điểm chung là <em>lối sống nhất quán theo thời gian</em> &mdash; hàng trăm quyết định nhỏ đúng đắn, ngày qua ngày, năm qua năm.</p>
+
+    <svg viewBox="0 0 580 130" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;margin:12px 0 30px;" role="img" aria-label="Sức khỏe lâu dài tích lũy từ quyết định nhỏ">
+      <defs>
+        <marker id="bluarr" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto">
+          <path d="M0,0 L0,7 L8,3.5 Z" fill="#378ADD"/>
+        </marker>
+      </defs>
+      <!-- Timeline base -->
+      <rect x="0" y="0" width="580" height="130" rx="10" fill="#E6F1FB" stroke="#B5D4F4" stroke-width="1"/>
+      <line x1="40" y1="65" x2="540" y2="65" stroke="#378ADD" stroke-width="2" marker-end="url(#bluarr)"/>
+      <!-- Decision dots -->
+      <circle cx="80" cy="65" r="14" fill="#042C53"/>
+      <text x="80" y="70" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="14" fill="white">🥦</text>
+      <text x="80" y="90" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#185FA5">Bữa sáng</text>
+      <text x="80" y="102" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#185FA5">lành mạnh</text>
+
+      <circle cx="175" cy="65" r="14" fill="#042C53"/>
+      <text x="175" y="70" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="14" fill="white">🫘</text>
+      <text x="175" y="90" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#185FA5">Thêm đậu</text>
+      <text x="175" y="102" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#185FA5">vào bữa trưa</text>
+
+      <circle cx="270" cy="65" r="14" fill="#042C53"/>
+      <text x="270" y="70" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="14" fill="white">🌾</text>
+      <text x="270" y="90" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#185FA5">Đổi cơm</text>
+      <text x="270" y="102" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#185FA5">trắng → lứt</text>
+
+      <circle cx="365" cy="65" r="14" fill="#042C53"/>
+      <text x="365" y="70" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="14" fill="white">💧</text>
+      <text x="365" y="90" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#185FA5">Uống đủ</text>
+      <text x="365" y="102" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#185FA5">nước mỗi ngày</text>
+
+      <circle cx="460" cy="65" r="14" fill="#185FA5"/>
+      <text x="460" y="70" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="14" fill="white">😴</text>
+      <text x="460" y="90" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#185FA5">Ngủ đủ</text>
+      <text x="460" y="102" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#185FA5">7&ndash;8 tiếng</text>
+
+      <!-- Result -->
+      <rect x="508" y="38" width="62" height="54" rx="8" fill="#378ADD"/>
+      <text x="539" y="60" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" font-weight="700" fill="white">Sức Khỏe</text>
+      <text x="539" y="75" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" font-weight="700" fill="white">Lâu Dài</text>
+      <text x="539" y="88" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="16" fill="white">🌿</text>
+
+      <!-- Time label -->
+      <text x="40" y="22" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#185FA5" font-weight="700">Mỗi ngày &mdash; mỗi quyết định nhỏ &mdash; tích lũy theo thời gian</text>
+    </svg>
+
+    <h2>Longevity Không Phải Đích Đến &mdash; Đó Là Cách Đi</h2>
+    <p>Sức khỏe lâu dài không phải về việc đạt đến một trạng thái hoàn hảo. Nó là về việc xây dựng một cách sống mà bạn có thể duy trì &mdash; thậm chí yêu thích &mdash; trong 10 năm, 20 năm, 30 năm tới.</p>
+    <p><strong><em>Bắt đầu từ đâu không quan trọng bằng bắt đầu từ bao giờ.</em></strong> Và câu trả lời cho &#8220;bao giờ&#8221; luôn là: <strong>bữa ăn tiếp theo của bạn</strong>. Không cần thay đổi tất cả. Chỉ cần thay đổi một thứ &mdash; và giữ nó đủ lâu để nó trở thành một phần của con người bạn.</p>
+
+    <div class="label-guide">
+      <div class="lg-label">&#128161; 5 Bước Bắt Đầu Ngay Hôm Nay</div>
+      <p>
+        <strong>1.</strong> Đọc nhãn thực phẩm &mdash; tìm &#8220;Added Sugars&#8221; và các tên kết thúc bằng &#8220;-ose&#8221;<br><br>
+        <strong>2.</strong> Thêm ½ cup đậu vào 1 bữa mỗi ngày &mdash; bắt đầu với đậu đóng hộp<br><br>
+        <strong>3.</strong> Thay cơm trắng bằng gạo lứt (50/50 tuần đầu để làm quen)<br><br>
+        <strong>4.</strong> Ăn trái cây nguyên miếng thay vì ép nước &mdash; giữ nguyên chất xơ<br><br>
+        <strong>5.</strong> Ngủ đủ 7&ndash;8 tiếng &mdash; thiếu ngủ tăng cơn thèm ngọt lên đến 45% hôm sau
+      </p>
+    </div>
+
+    <p>Nếu bạn đã đọc đến đây, bạn đã có nền tảng khoa học để hiểu <em>tại sao</em> những thay đổi nhỏ lại quan trọng đến vậy. Không phải vì ai đó nói bạn nên làm. Mà vì bạn hiểu cơ chế đằng sau. Và đó là sự khác biệt giữa thay đổi bền vững và thay đổi chỉ kéo dài vài tuần.</p>
+
+    <div class="takeaway">
+      <div class="takeaway-label">&#128161; Điểm Mấu Chốt</div>
+      <p>Longevity không được tạo ra bởi chế độ ăn kiêng cực đoan hay quyết tâm bùng phát. Nó được tạo ra bởi <strong>hàng nghìn quyết định nhỏ đúng đắn, lặp lại ngày qua ngày</strong>. Gene bạn có thể là một lá bài &mdash; nhưng lối sống của bạn mới là cách bạn chơi lá bài đó. Và mỗi bữa ăn là một cơ hội để chơi tốt hơn một lần nữa.</p>
+    </div>
+
+<div class="cta-box">
+  <div class="cta-eyebrow">Chương Trình H21 Coaching</div>
+  <h3 class="cta-title">Bạn muốn hiểu đúng hơn về dinh dưỡng?</h3>
+  <p class="cta-desc">Tham gia cộng đồng H21 &mdash; nơi khoa học dinh dưỡng được dịch thành thói quen thực tế mỗi ngày.</p>
+  <a href="https://www.facebook.com/xanhlenbenhxuong/" target="_blank" class="cta-btn">Đăng Ký Khóa Học H21 &#8594;</a>
+</div>
+  </div>
+<div class="article-footer">
+  <div class="footer-brand">
+    <strong>Thuy-Trinh Nguyen</strong> &middot; Khoa Học Gia &amp; Nhà Sáng Lập<br>
+    <strong>H21 - Cho Đời Mãi Xanh</strong> &middot; <a href="https://www.h21chodoimaixanh.com">www.h21chodoimaixanh.com</a><br>
+    Mang khoa học từ phòng thí nghiệm đến căn bếp mỗi gia đình
+  </div>
+</div>
+<footer class="site-footer">
+  <strong>H21 - Cho Đời Mãi Xanh</strong> &middot; Khoa Học Gia Thuy-Trinh Nguyen<br>
+  <a href="https://blog.h21chodoimaixanh.com">blog.h21chodoimaixanh.com</a> &middot; <a href="https://www.h21chodoimaixanh.com">www.h21chodoimaixanh.com</a><br>
+  Nội dung chỉ dành cho mục đích giáo dục, không thay thế tư vấn y tế chuyên nghiệp.
+</footer>
+</body>
+</html>
