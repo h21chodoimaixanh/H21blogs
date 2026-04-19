@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adipokines & Ung Thư Vú — Khi Mô Mỡ Trở Thành Nội Tiết Tố | H21 Cho Đời Mãi Xanh</title>
+<meta name="description" content="Mô mỡ không phải kho chứa thụ động — là cơ quan nội tiết tiết ra hơn 20 hormone. Khoa học giải mã vai trò của leptin, adiponectin trong ung thư vú.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF6EF;
+  --ink:#1C1812;
+  --mid:#3A2E1F;
+  --light:#6B5742;
+  --accent:#8B7355;
+  --accent-dark:#4A3828;
+  --accent-mid:#6B5742;
+  --accent-light:#D8C7AC;
+  --border:#E8DCC4;
+  --blush:#F5EBD8;
+  --plum:#2A2018;
+  --rose:#C8A87F;
+  --mint:#A8C8B0;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Lora',serif;font-size:17px;line-height:1.75;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;}
+.site-nav{background:var(--plum);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(0,0,0,0.25);}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-logo-mark{width:34px;height:34px;background:var(--mint);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-family:sans-serif;}
+.nav-logo-name{font-size:14px;font-weight:600;color:white;font-family:'Be Vietnam Pro',sans-serif;}
+.nav-logo-tag{font-size:11px;color:rgba(255,255,255,0.6);margin-top:1px;font-family:'Be Vietnam Pro',sans-serif;letter-spacing:0.3px;}
+.nav-back{font-size:13px;color:rgba(255,255,255,0.75);text-decoration:none;font-weight:500;font-family:'Be Vietnam Pro',sans-serif;transition:color 0.2s;}
+.nav-back:hover{color:var(--rose);}
+.article-hero{background:linear-gradient(135deg,#2A2018 0%,#4A3828 45%,#8B7355 100%);padding:48px 24px 40px;position:relative;overflow:hidden;}
+.article-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 30%,rgba(255,255,255,0.06) 0%,transparent 60%);}
+.hero-inner{max-width:720px;margin:0 auto;position:relative;z-index:1;}
+.series-badge{display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.95);padding:6px 14px;border-radius:100px;font-family:'Be Vietnam Pro',sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;}
+.series-badge-dot{display:inline-block;width:6px;height:6px;background:#C8A87F;border-radius:50%;margin-right:6px;vertical-align:middle;}
+.article-h1{font-family:'Playfair Display',serif;font-size:38px;font-weight:700;line-height:1.2;color:white;margin-bottom:16px;letter-spacing:-0.5px;}
+.article-h1 em{font-style:italic;color:rgba(255,255,255,0.85);font-weight:400;}
+.article-deck{font-family:'Lora',serif;font-size:17px;line-height:1.7;color:rgba(255,255,255,0.85);font-style:italic;margin:0;}
+.article-deck em{color:rgba(255,255,255,0.95);font-weight:600;font-style:italic;}
+.byline-bar{background:white;border-bottom:1px solid var(--border);padding:14px 24px;}
+.byline-inner{max-width:720px;margin:0 auto;display:flex;align-items:center;gap:14px;}
+.byline-av{width:40px;height:40px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:white;font-weight:700;flex-shrink:0;font-family:'Be Vietnam Pro',sans-serif;}
+.byline-name{font-size:13.5px;font-weight:600;color:var(--ink);font-family:'Be Vietnam Pro',sans-serif;}
+.byline-role{font-size:11.5px;color:var(--light);margin-top:1px;font-family:'Be Vietnam Pro',sans-serif;}
+.byline-meta{margin-left:auto;text-align:right;}
+.byline-url{font-size:11.5px;color:var(--light);font-family:'Be Vietnam Pro',sans-serif;}
+.read-time{font-size:11px;color:var(--accent);font-weight:600;margin-top:2px;font-family:'Be Vietnam Pro',sans-serif;}
+.article-wrap{max-width:720px;margin:0 auto;padding:44px 24px 80px;}
+.hero-banner{margin:0 0 32px;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(74,56,40,0.15);border:1px solid var(--border);}
+.hero-banner img{width:100%;display:block;}
+.article-body{font-family:'Lora',serif;font-size:17px;line-height:1.85;color:var(--mid);}
+.article-body p{margin:0 0 20px;}
+.article-body strong{color:var(--ink);font-weight:600;}
+.article-body em{color:var(--accent);font-style:italic;font-weight:600;}
+.article-body h2{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--ink);margin:44px 0 14px;line-height:1.3;}
+.article-body h3{font-family:'Be Vietnam Pro',sans-serif;font-size:14px;font-weight:700;color:var(--accent-dark);margin:28px 0 10px;text-transform:uppercase;letter-spacing:1.5px;}
+.fact-strip{display:grid;grid-template-columns:repeat(3,1fr);margin:32px 0 18px;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:white;}
+.fact-item{padding:22px 16px;text-align:center;border-right:1px solid var(--border);}
+.fact-item:last-child{border-right:none;}
+.fact-num{font-family:'Playfair Display',serif;font-size:34px;font-weight:700;color:var(--accent);line-height:1;}
+.fact-label{font-size:11.5px;color:var(--light);margin-top:8px;line-height:1.5;font-family:'Be Vietnam Pro',sans-serif;}
+.fact-explain{background:var(--blush);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:14px 20px;margin:0 0 32px;font-family:'Lora',serif;font-size:14.5px;line-height:1.75;color:var(--mid);font-style:italic;}
+.fact-explain strong{color:var(--accent-dark);font-style:normal;}
+.personal-note{background:linear-gradient(135deg,#FDFAF2,#F5EFE1);border:1px solid var(--border);border-left:4px solid var(--accent-mid);border-radius:0 14px 14px 0;padding:22px 28px;margin:28px 0;font-family:'Lora',serif;font-style:italic;}
+.personal-note-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent-mid);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;font-style:normal;}
+.personal-note p{font-size:16px;line-height:1.8;color:var(--mid);margin:0;}
+.personal-note strong{color:var(--accent-dark);font-style:normal;}
+.science-box{background:var(--blush);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:0 12px 12px 0;padding:20px 24px;margin:24px 0;}
+.sb-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent-mid);margin-bottom:8px;font-family:'Be Vietnam Pro',sans-serif;}
+.science-box p{font-size:15px;color:var(--mid);margin:0 0 10px;line-height:1.75;font-family:'Lora',serif;}
+.science-box p:last-child{margin-bottom:0;}
+.science-box strong{color:var(--accent-dark);}
+.science-box em{color:var(--accent);}
+.study-card{background:white;border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:10px;padding:18px 22px;margin:14px 0;}
+.study-meta{font-family:'Be Vietnam Pro',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
+.study-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--accent-dark);margin-bottom:6px;line-height:1.35;}
+.study-result{font-family:'Lora',serif;font-size:14.5px;line-height:1.65;color:var(--mid);}
+.study-result strong{color:var(--accent-dark);}
+.diagram{margin:22px 0 6px;display:block;background:white;border:1px solid var(--border);border-radius:12px;padding:18px;}
+.diagram-caption{font-family:'Be Vietnam Pro',sans-serif;font-size:11.5px;color:var(--light);text-align:center;margin-top:-2px;margin-bottom:28px;font-style:italic;line-height:1.5;}
+.pull-quote{margin:38px 0;padding:30px 36px;background:var(--accent-dark);border-radius:14px;color:white;text-align:center;position:relative;}
+.pull-quote::before{content:'"';font-family:'Playfair Display',serif;font-size:80px;line-height:0.5;color:rgba(255,255,255,0.12);position:absolute;top:26px;left:22px;}
+.pull-quote p{font-family:'Lora',serif;font-size:19px;line-height:1.6;color:rgba(255,255,255,0.95);font-style:italic;margin:0 0 8px;}
+.pull-quote cite{font-family:'Be Vietnam Pro',sans-serif;font-size:12px;color:rgba(255,255,255,0.6);font-style:normal;letter-spacing:1.5px;text-transform:uppercase;}
+.qa-block{background:white;border:1px solid var(--border);border-radius:10px;padding:18px 22px;margin:14px 0;}
+.qa-q{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--accent-dark);margin-bottom:8px;line-height:1.35;}
+.qa-q::before{content:'H: ';color:var(--accent);}
+.qa-a{font-family:'Lora',serif;font-size:14.5px;line-height:1.75;color:var(--mid);}
+.qa-a::before{content:'Đ: ';font-family:'Be Vietnam Pro',sans-serif;font-weight:700;color:var(--accent);font-size:13px;letter-spacing:1px;}
+.qa-a strong{color:var(--accent-dark);}
+.qa-a em{color:var(--accent);}
+.info-table{width:100%;border-collapse:collapse;margin:22px 0 28px;background:white;border:1px solid var(--border);border-radius:12px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;}
+.info-table thead th{padding:14px 16px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--border);text-align:left;}
+.info-table thead th.ok{background:#3a5a44;color:white;}
+.info-table thead th.warn{background:#a85550;color:white;}
+.info-table td{padding:12px 16px;font-size:13.5px;line-height:1.65;color:var(--mid);border-bottom:1px solid var(--border);vertical-align:top;}
+.info-table td.ok{background:#f3f7f0;}
+.info-table td.warn{background:#fcf2ef;}
+.info-table tr:last-child td{border-bottom:none;}
+.info-table td strong{color:var(--accent-dark);}
+.info-table td.ok strong{color:#3a5a44;}
+.info-table td.warn strong{color:#8B3A4A;}
+.info-table td em{font-style:italic;color:var(--light);font-size:12.5px;}
+@media(max-width:600px){.info-table{font-size:12px;} .info-table td,.info-table th{padding:10px 12px;}}
+.soft-invitation{background:var(--blush);border:1px solid var(--border);border-radius:10px;padding:20px 26px;margin:28px 0;font-family:'Lora',serif;font-size:15.5px;line-height:1.8;color:var(--mid);font-style:italic;}
+.soft-invitation strong{color:var(--accent-dark);font-style:normal;font-weight:700;}
+.soft-invitation em{color:var(--accent);font-style:italic;}
+.takeaway{background:linear-gradient(135deg,var(--accent-dark),var(--accent));border-radius:14px;padding:28px 32px;margin:36px 0 0;color:white;}
+.takeaway-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
+.takeaway p{font-size:16px;color:rgba(255,255,255,0.95);line-height:1.8;margin:0 0 12px;font-family:'Lora',serif;}
+.takeaway p:last-child{margin-bottom:0;}
+.takeaway strong{color:white;font-weight:700;}
+.takeaway em{color:rgba(255,255,255,0.88);font-style:italic;}
+.cta-box{background:var(--plum);border-radius:14px;padding:30px 32px;margin-top:36px;text-align:center;}
+.cta-box .cta-eyebrow{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--rose);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
+.cta-box .cta-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:white;margin-bottom:10px;line-height:1.35;}
+.cta-box .cta-desc{font-size:14px;color:rgba(255,255,255,0.72);max-width:400px;margin:0 auto 22px;line-height:1.7;font-family:'Lora',serif;}
+.cta-btn{display:inline-block;background:var(--accent);color:white;font-size:14px;font-weight:600;padding:13px 32px;border-radius:100px;text-decoration:none;font-family:'Be Vietnam Pro',sans-serif;transition:opacity .2s;}
+.cta-btn:hover{opacity:0.88;}
+.article-footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--border);}
+.footer-brand{font-size:12.5px;color:var(--light);line-height:1.8;font-family:'Be Vietnam Pro',sans-serif;}
+.footer-brand strong{color:var(--accent-dark);}
+.footer-brand a{color:var(--accent);text-decoration:none;}
+.site-footer{background:var(--plum);padding:28px 40px;text-align:center;font-size:12px;color:rgba(255,255,255,0.45);line-height:1.8;font-family:'Be Vietnam Pro',sans-serif;}
+.site-footer a{color:var(--rose);text-decoration:none;}
+.site-footer strong{color:rgba(255,255,255,0.75);}
+@media(max-width:600px){
+  .article-h1{font-size:28px;}
+  .article-deck{font-size:15.5px;}
+  .fact-strip{grid-template-columns:1fr;}
+  .fact-item{border-right:none;border-bottom:1px solid var(--border);}
+  .fact-item:last-child{border-bottom:none;}
+  .article-wrap{padding:32px 18px 60px;}
+  .site-nav{padding:12px 20px;}
+  .article-hero{padding:36px 18px 30px;}
+}
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">🌿</div>
+    <div>
+      <div class="nav-logo-name">H21 - Cho Đời Mãi Xanh</div>
+      <div class="nav-logo-tag">Khoa Học Gia Thuy-Trinh Nguyen</div>
+    </div>
+  </a>
+  <a href="index.html" class="nav-back">&#8592; Trở về Blog</a>
+</nav>
+
+<section class="article-hero">
+  <div class="hero-inner">
+    <div class="series-badge"><span class="series-badge-dot"></span> 🎗️ Seri Ung Thư Vú · Cơ Chế 05/10</div>
+    <h1 class="article-h1">Adipokines &amp; Ung Thư Vú &mdash;<br><em>Khi Mô Mỡ Trở Thành Nội Tiết Tố</em></h1>
+    <p class="article-deck">Ít ai biết rằng mô mỡ không chỉ là &#8220;kho chứa calo&#8221; &mdash; nó là một cơ quan nội tiết thực sự, sản xuất hơn 20 loại hormone và cytokine ảnh hưởng trực tiếp đến nguy cơ ung thư vú. Bài viết giải mã vai trò của <em>adipokines</em> &mdash; các hormone từ mô mỡ &mdash; và vì sao giảm mỡ (đặc biệt mỡ nội tạng) là một trong những cách phòng ung thư vú hiệu quả nhất, đặc biệt sau tuổi mãn kinh.</p>
+  </div>
+</section>
+<div class="byline-bar">
+  <div class="byline-inner">
+    <div class="byline-av">TT</div>
+    <div>
+      <div class="byline-name">Thuy-Trinh Nguyen</div>
+      <div class="byline-role">Khoa Học Gia &middot; Nhà Sáng Lập H21 - Cho Đời Mãi Xanh</div>
+    </div>
+    <div class="byline-meta">
+      <div class="byline-url">www.h21chodoimaixanh.com</div>
+      <div class="read-time">&#9200; Đọc trong 12 phút</div>
+    </div>
+  </div>
+</div>
+
+<div class="article-wrap">
+  <div class="article-body">
+
+    <div class="hero-banner">
+      <img src="adipokines-mo-mo.jpg" alt="Adipokines & Ung Thư Vú — Khi Mô Mỡ Trở Thành Nội Tiết Tố cùng Khoa Học Gia Thuy-Trinh Nguyen">
+    </div>
+
+    <div class="personal-note">
+      <div class="personal-note-label">🌿 Điểm Khởi Đầu</div>
+      <p>Nhiều người nghĩ mô mỡ chỉ là &#8220;nơi chứa năng lượng dư thừa&#8221;. Thực tế, mô mỡ là một trong những <strong>cơ quan nội tiết lớn nhất cơ thể</strong> &mdash; tiết ra hơn 20 loại hormone ảnh hưởng đến viêm, chuyển hóa, và nguy cơ ung thư. Y Học Lối Sống Có Trách Nhiệm dạy tôi: giảm mỡ nội tạng không chỉ là vấn đề thẩm mỹ &mdash; đó là thay đổi hóa học toàn cơ thể.</p>
+    </div>
+
+    <div class="fact-strip">
+      <div class="fact-item">
+        <div class="fact-num">30-40%</div>
+        <div class="fact-label">tăng nguy cơ ung thư vú sau mãn kinh ở người béo phì (BMI &ge; 30)</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-num">2 lần</div>
+        <div class="fact-label">nguy cơ ung thư vú ở phụ nữ có adiponectin thấp nhất so với cao nhất</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-num">&gt; 20</div>
+        <div class="fact-label">số lượng hormone &amp; cytokine được mô mỡ tiết ra mỗi ngày</div>
+      </div>
+    </div>
+
+    <div class="fact-explain">
+      Ba con số đến từ các nghiên cứu meta-analysis lớn. Điểm chung: <strong>không phải cân nặng mà là loại mỡ và cân bằng các hormone từ mô mỡ</strong> quyết định nguy cơ &mdash; và tất cả đều có thể thay đổi qua chế độ ăn và vận động.
+    </div>
+
+    <h2>Phần 1 &middot; Adipokines Là Gì?</h2>
+
+    <p><strong>Adipokines</strong> là tên chung cho các hormone và cytokine do <em>mô mỡ (adipose tissue)</em> tiết ra. Trong nhiều thập kỷ, khoa học xem mô mỡ chỉ là &#8220;kho chứa calo thụ động&#8221;. Nhưng từ cuối thập niên 1990, các nghiên cứu đã chứng minh: mô mỡ là một <strong>cơ quan nội tiết thực sự</strong> &mdash; ngang hàng với tuyến giáp, tuyến thượng thận, hay buồng trứng về mức độ ảnh hưởng đến cơ thể.</p>
+
+    <p>Mô mỡ tiết ra hơn 20 loại adipokines khác nhau. Hai đại diện quan trọng nhất trong bối cảnh ung thư vú là:</p>
+
+    <svg class="diagram" viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mô mỡ tiết ra nhiều hormone adipokines">
+      <text x="340" y="26" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" font-weight="700" fill="#4A3828" letter-spacing="2">MÔ MỠ LÀ CƠ QUAN NỘI TIẾT — KHÔNG PHẢI KHO CHỨA THỤ ĐỘNG</text>
+
+      <!-- Central fat cell -->
+      <ellipse cx="340" cy="160" rx="90" ry="70" fill="#F5D99B" stroke="#8E5810" stroke-width="2.5"/>
+      <!-- Lipid droplets inside -->
+      <ellipse cx="315" cy="145" rx="22" ry="18" fill="#E5B870" stroke="#8E5810" stroke-width="1.5"/>
+      <ellipse cx="365" cy="150" rx="18" ry="14" fill="#E5B870" stroke="#8E5810" stroke-width="1.5"/>
+      <ellipse cx="330" cy="185" rx="20" ry="15" fill="#E5B870" stroke="#8E5810" stroke-width="1.5"/>
+      <!-- Highlights -->
+      <ellipse cx="305" cy="137" rx="6" ry="4" fill="rgba(255,240,200,0.7)"/>
+      <ellipse cx="360" cy="147" rx="5" ry="3" fill="rgba(255,240,200,0.7)"/>
+      <text x="340" y="225" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#8E5810">TẾ BÀO MỠ</text>
+
+      <!-- Hormones radiating out -->
+      <!-- Leptin (top-left, harmful) -->
+      <circle cx="130" cy="95" r="32" fill="#a85550" stroke="#8B3A4A" stroke-width="2"/>
+      <text x="130" y="92" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="white">LEPTIN</text>
+      <text x="130" y="106" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="8" fill="white" font-style="italic">gây hại</text>
+      <path d="M 255 135 L 160 110" stroke="#a85550" stroke-width="2.5" marker-end="url(#arrAd)"/>
+
+      <!-- TNF-α (top-right, harmful) -->
+      <circle cx="550" cy="95" r="32" fill="#a85550" stroke="#8B3A4A" stroke-width="2"/>
+      <text x="550" y="92" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="white">TNF-α</text>
+      <text x="550" y="106" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="8" fill="white" font-style="italic">gây viêm</text>
+      <path d="M 425 135 L 520 110" stroke="#a85550" stroke-width="2.5" marker-end="url(#arrAd)"/>
+
+      <!-- IL-6 (right, harmful) -->
+      <circle cx="600" cy="210" r="30" fill="#a85550" stroke="#8B3A4A" stroke-width="2"/>
+      <text x="600" y="207" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="white">IL-6</text>
+      <text x="600" y="221" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="8" fill="white" font-style="italic">viêm mạn</text>
+      <path d="M 430 185 L 575 205" stroke="#a85550" stroke-width="2.5" marker-end="url(#arrAd)"/>
+
+      <!-- Adiponectin (bottom-left, protective) -->
+      <circle cx="110" cy="235" r="36" fill="#5a7c5f" stroke="#3a5a44" stroke-width="2"/>
+      <text x="110" y="230" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" font-weight="700" fill="white">ADIPO-</text>
+      <text x="110" y="244" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" font-weight="700" fill="white">NECTIN</text>
+      <text x="110" y="257" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="8" fill="white" font-style="italic">bảo vệ</text>
+      <path d="M 260 200 L 145 225" stroke="#5a7c5f" stroke-width="2.5" marker-end="url(#arrAg)"/>
+
+      <!-- Resistin (bottom-right, harmful) -->
+      <circle cx="540" cy="270" r="30" fill="#a85550" stroke="#8B3A4A" stroke-width="2"/>
+      <text x="540" y="268" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" font-weight="700" fill="white">RESISTIN</text>
+      <text x="540" y="281" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="8" fill="white" font-style="italic">kháng insulin</text>
+      <path d="M 410 215 L 515 255" stroke="#a85550" stroke-width="2.5" marker-end="url(#arrAd)"/>
+
+      <defs>
+        <marker id="arrAd" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L0,7 L7,3.5 Z" fill="#a85550"/></marker>
+        <marker id="arrAg" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L0,7 L7,3.5 Z" fill="#5a7c5f"/></marker>
+      </defs>
+    </svg>
+    <div class="diagram-caption">Mô mỡ tiết ra ít nhất 5 adipokines quan trọng — 4 gây hại (đỏ) và 1 có lợi (xanh). Cân bằng giữa chúng quyết định sức khỏe chuyển hóa và nguy cơ ung thư.</div>
+
+    <div class="science-box">
+      <div class="sb-label">🔬 Điểm khoa học cốt lõi</div>
+      <p>Khi khối lượng mô mỡ tăng (đặc biệt là <strong>mỡ nội tạng quanh bụng</strong>), mô mỡ tiết ra <em>nhiều adipokines gây hại hơn</em> và <em>ít adipokines bảo vệ hơn</em>. Sự mất cân bằng này là nền tảng của viêm mạn tính, kháng insulin, và nhiều loại ung thư &mdash; đặc biệt ung thư vú sau mãn kinh.</p>
+    </div>
+
+    <h2>Phần 2 &middot; Leptin &mdash; Kẻ Gây Rối Số Một</h2>
+
+    <p><strong>Leptin</strong> là adipokine phổ biến nhất. Ở người bình thường, leptin điều hòa cảm giác no, báo cho não biết cơ thể đã đủ năng lượng. Nhưng khi mỡ dư thừa kéo dài, hai chuyện xảy ra: <em>leptin máu tăng cao mạn tính</em> và <em>não &#8220;điếc&#8221; với tín hiệu leptin</em> (kháng leptin). Khi não &#8220;điếc&#8221;, cơ thể <strong>vẫn thấy đói dù mỡ đã đầy ắp</strong> &mdash; nên cứ ăn, cứ tích mỡ. <em>Béo phì chính là kết quả của vòng xoáy này</em>.</p>
+
+    <svg class="diagram" viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vòng xoáy kháng leptin gây béo phì">
+      <text x="340" y="26" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" font-weight="700" fill="#8B3A4A" letter-spacing="2">VÒNG XOÁY KHÁNG LEPTIN &mdash; GỐC RỄ CỦA BÉO PHÌ</text>
+
+      <!-- Central problem label -->
+      <circle cx="340" cy="170" r="46" fill="#8B3A4A" opacity="0.95"/>
+      <text x="340" y="164" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="white">KHÁNG</text>
+      <text x="340" y="180" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="white">LEPTIN</text>
+
+      <!-- 4 nodes in circular layout -->
+      <!-- TOP: Mỡ thừa -->
+      <rect x="240" y="55" width="200" height="56" rx="10" fill="white" stroke="#a85550" stroke-width="1.8"/>
+      <text x="340" y="78" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#8B3A4A">1. Mỡ dư thừa tích tụ</text>
+      <text x="340" y="95" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="#3A2E1F">(đặc biệt mỡ nội tạng)</text>
+
+      <!-- RIGHT: Leptin cao -->
+      <rect x="475" y="142" width="185" height="56" rx="10" fill="white" stroke="#a85550" stroke-width="1.8"/>
+      <text x="567" y="165" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#8B3A4A">2. Leptin máu tăng</text>
+      <text x="567" y="182" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="#3A2E1F">cao mạn tính</text>
+
+      <!-- BOTTOM: Still hungry, eat more -->
+      <rect x="230" y="232" width="220" height="56" rx="10" fill="white" stroke="#a85550" stroke-width="1.8"/>
+      <text x="340" y="255" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#8B3A4A">3. Não &#8220;điếc&#8221; &mdash; vẫn thấy đói</text>
+      <text x="340" y="272" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="#3A2E1F">dù cơ thể đã đủ năng lượng</text>
+
+      <!-- LEFT: Ăn nhiều -->
+      <rect x="20" y="142" width="185" height="56" rx="10" fill="white" stroke="#a85550" stroke-width="1.8"/>
+      <text x="112" y="165" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#8B3A4A">4. Ăn nhiều hơn</text>
+      <text x="112" y="182" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="#3A2E1F">→ mỡ tích thêm</text>
+
+      <!-- CIRCULAR ARROWS between nodes (clockwise) -->
+      <!-- Top → Right (curved arrow) -->
+      <path d="M 445 95 Q 540 110 540 138" fill="none" stroke="#a85550" stroke-width="2.5" marker-end="url(#arrL1)"/>
+      <!-- Right → Bottom -->
+      <path d="M 540 200 Q 500 245 452 250" fill="none" stroke="#a85550" stroke-width="2.5" marker-end="url(#arrL1)"/>
+      <!-- Bottom → Left -->
+      <path d="M 230 255 Q 160 240 140 200" fill="none" stroke="#a85550" stroke-width="2.5" marker-end="url(#arrL1)"/>
+      <!-- Left → Top (closing the loop) -->
+      <path d="M 140 140 Q 160 95 235 90" fill="none" stroke="#a85550" stroke-width="2.5" marker-end="url(#arrL1)"/>
+
+      <!-- Bottom label -->
+      <text x="340" y="315" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#8B3A4A" font-weight="700" letter-spacing="1.5" font-style="italic">VÒNG XOÁY KHÉP KÍN &mdash; KHÔNG TỰ THOÁT NẾU KHÔNG CAN THIỆP</text>
+
+      <defs>
+        <marker id="arrL1" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L0,8 L8,4 Z" fill="#a85550"/></marker>
+      </defs>
+    </svg>
+    <div class="diagram-caption">Đây là lý do người thừa cân thường &#8220;luôn thấy đói&#8221; &mdash; không phải thiếu ý chí, mà là não không còn nghe được tín hiệu no. Cắt đường &amp; tinh bột tinh chế là cách phá vỡ vòng xoáy này.</div>
+
+    <p>Ngoài việc điều hòa cảm giác no, leptin còn có một &#8220;nhiệm vụ ẩn&#8221; mà ít ai biết: nó là <strong>hormone tăng trưởng</strong>. Leptin cao mạn tính kích hoạt cùng lúc 3 con đường dẫn đến ung thư vú:</p>
+
+    <svg class="diagram" viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Leptin kích hoạt 3 con đường dẫn đến ung thư vú">
+      <text x="360" y="26" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" font-weight="700" fill="#8B3A4A" letter-spacing="2">LEPTIN CAO KÍCH HOẠT 3 CƠ CHẾ THÚC ĐẨY UNG THƯ VÚ</text>
+
+      <!-- TOP: Source -->
+      <rect x="270" y="50" width="180" height="50" rx="12" fill="white" stroke="#8E5810" stroke-width="2"/>
+      <text x="360" y="72" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#8E5810">MÔ MỠ DƯ THỪA</text>
+      <text x="360" y="88" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#3A2E1F" font-style="italic">(đặc biệt mỡ nội tạng)</text>
+      <path d="M 360 104 L 360 125" stroke="#8E5810" stroke-width="2.5" marker-end="url(#arrAe)"/>
+
+      <!-- CENTER: Leptin -->
+      <circle cx="360" cy="160" r="35" fill="#a85550" stroke="#8B3A4A" stroke-width="2.5"/>
+      <text x="360" y="157" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12" font-weight="700" fill="white">LEPTIN</text>
+      <text x="360" y="170" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="rgba(255,255,255,0.9)" font-style="italic">cao mạn tính</text>
+
+      <!-- 3 arrows diverging -->
+      <path d="M 330 190 L 145 225" stroke="#a85550" stroke-width="2.5" marker-end="url(#arrAe)"/>
+      <path d="M 360 200 L 360 225" stroke="#a85550" stroke-width="2.5" marker-end="url(#arrAe)"/>
+      <path d="M 390 190 L 580 225" stroke="#a85550" stroke-width="2.5" marker-end="url(#arrAe)"/>
+
+      <!-- 3 effect nodes -->
+      <rect x="40" y="225" width="200" height="60" rx="10" fill="white" stroke="#a85550" stroke-width="1.5"/>
+      <text x="140" y="245" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#8B3A4A">Kích hoạt JAK/STAT</text>
+      <text x="140" y="262" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#3A2E1F">Phân bào tế bào vú tăng</text>
+      <text x="140" y="276" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#3A2E1F" font-style="italic">trực tiếp &amp; nhanh</text>
+
+      <rect x="265" y="225" width="190" height="60" rx="10" fill="white" stroke="#a85550" stroke-width="1.5"/>
+      <text x="360" y="245" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#8B3A4A">Tăng aromatase</text>
+      <text x="360" y="262" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#3A2E1F">Mô mỡ tự sản xuất</text>
+      <text x="360" y="276" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#3A2E1F" font-style="italic">estrogen dư thừa</text>
+
+      <rect x="480" y="225" width="200" height="60" rx="10" fill="white" stroke="#a85550" stroke-width="1.5"/>
+      <text x="580" y="245" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#8B3A4A">Kích tân mạch máu</text>
+      <text x="580" y="262" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#3A2E1F">VEGF tăng</text>
+      <text x="580" y="276" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#3A2E1F" font-style="italic">nuôi khối u</text>
+
+      <!-- 3 red arrows down to UT VÚ -->
+      <path d="M 140 292 L 140 320" stroke="#7a1d2a" stroke-width="3" marker-end="url(#arrAred)"/>
+      <path d="M 360 292 L 360 320" stroke="#7a1d2a" stroke-width="3" marker-end="url(#arrAred)"/>
+      <path d="M 580 292 L 580 320" stroke="#7a1d2a" stroke-width="3" marker-end="url(#arrAred)"/>
+
+      <!-- 3 UT VÚ pills -->
+      <rect x="65" y="325" width="150" height="40" rx="20" fill="#7a1d2a" stroke="#5a0e18" stroke-width="2"/>
+      <text x="140" y="350" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="900" fill="white" letter-spacing="1.5">UNG THƯ VÚ</text>
+      <rect x="285" y="325" width="150" height="40" rx="20" fill="#7a1d2a" stroke="#5a0e18" stroke-width="2"/>
+      <text x="360" y="350" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="900" fill="white" letter-spacing="1.5">UNG THƯ VÚ</text>
+      <rect x="505" y="325" width="150" height="40" rx="20" fill="#7a1d2a" stroke="#5a0e18" stroke-width="2"/>
+      <text x="580" y="350" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="900" fill="white" letter-spacing="1.5">UNG THƯ VÚ</text>
+
+      <defs>
+        <marker id="arrAe" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L0,7 L7,3.5 Z" fill="#a85550"/></marker>
+        <marker id="arrAred" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L0,7 L7,3.5 Z" fill="#7a1d2a"/></marker>
+      </defs>
+    </svg>
+    <div class="diagram-caption">Leptin cao mạn tính là một ví dụ điển hình về việc cùng một hormone tấn công nhiều cơ chế khác nhau — tất cả cùng thúc đẩy ung thư vú.</div>
+
+    <div class="science-box">
+      <div class="sb-label">🔬 Bằng chứng từ meta-analysis</div>
+      <p>Một meta-analysis tổng hợp 23 nghiên cứu (Gui et al., <em>Medicine</em> 2017) cho thấy: phụ nữ có mức leptin máu cao nhất có <strong>nguy cơ ung thư vú cao hơn 28-40%</strong> so với phụ nữ có leptin thấp nhất. Mối liên hệ mạnh nhất ở nhóm <em>sau mãn kinh</em> và đặc biệt ở người có BMI &ge; 25.</p>
+    </div>
+
+    <h2>Phần 3 &middot; Adiponectin &mdash; Người Hùng Ẩn Giấu</h2>
+
+    <p>Nếu leptin là &#8220;kẻ gây rối&#8221;, thì <strong>adiponectin</strong> là người hùng. Đây là adipokine duy nhất có đặc điểm đặc biệt: <em>mô mỡ càng nhiều thì adiponectin càng THẤP</em> &mdash; ngược lại hoàn toàn với các adipokines khác.</p>
+
+    <p>Adiponectin có 4 tác dụng bảo vệ quan trọng với mô vú:</p>
+
+    <svg class="diagram" viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Adiponectin bảo vệ qua 4 cơ chế">
+      <text x="340" y="26" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" font-weight="700" fill="#3a5a44" letter-spacing="2">ADIPONECTIN &mdash; 4 CƠ CHẾ BẢO VỆ TẾ BÀO VÚ</text>
+
+      <!-- Central adiponectin circle (green) -->
+      <circle cx="340" cy="170" r="55" fill="#5a7c5f" stroke="#3a5a44" stroke-width="2.5"/>
+      <text x="340" y="162" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12" font-weight="700" fill="white">ADIPO-</text>
+      <text x="340" y="178" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12" font-weight="700" fill="white">NECTIN</text>
+      <text x="340" y="192" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="rgba(255,255,255,0.9)" font-style="italic">cao = bảo vệ</text>
+
+      <!-- 4 mechanism nodes radiating out -->
+      <!-- TOP-LEFT: AMPK -->
+      <rect x="30" y="55" width="200" height="60" rx="10" fill="#eff4ed" stroke="#5a7c5f" stroke-width="1.8"/>
+      <text x="130" y="76" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#3a5a44">1. Ức chế phân bào</text>
+      <text x="130" y="92" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#4a5a4f">kích hoạt AMPK &mdash; làm</text>
+      <text x="130" y="105" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#4a5a4f">chậm tế bào tiền ung thư</text>
+      <path d="M 230 115 Q 270 135 290 155" fill="none" stroke="#5a7c5f" stroke-width="2.5" marker-end="url(#arrAd3)"/>
+
+      <!-- TOP-RIGHT: Anti-inflammation -->
+      <rect x="450" y="55" width="200" height="60" rx="10" fill="#eff4ed" stroke="#5a7c5f" stroke-width="1.8"/>
+      <text x="550" y="76" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#3a5a44">2. Kháng viêm mạnh</text>
+      <text x="550" y="92" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#4a5a4f">giảm TNF-&alpha;, IL-6 &mdash; cắt</text>
+      <text x="550" y="105" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#4a5a4f">môi trường nuôi ung thư</text>
+      <path d="M 450 115 Q 410 135 390 155" fill="none" stroke="#5a7c5f" stroke-width="2.5" marker-end="url(#arrAd3)"/>
+
+      <!-- BOTTOM-LEFT: Insulin sensitivity -->
+      <rect x="30" y="225" width="200" height="60" rx="10" fill="#eff4ed" stroke="#5a7c5f" stroke-width="1.8"/>
+      <text x="130" y="246" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#3a5a44">3. Tăng nhạy cảm insulin</text>
+      <text x="130" y="262" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#4a5a4f">cắt vòng xoáy insulin</text>
+      <text x="130" y="275" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#4a5a4f">&mdash; IGF-1 (xem Bài 4)</text>
+      <path d="M 230 225 Q 270 205 290 185" fill="none" stroke="#5a7c5f" stroke-width="2.5" marker-end="url(#arrAd3)"/>
+
+      <!-- BOTTOM-RIGHT: Anti-angiogenesis -->
+      <rect x="450" y="225" width="200" height="60" rx="10" fill="#eff4ed" stroke="#5a7c5f" stroke-width="1.8"/>
+      <text x="550" y="246" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#3a5a44">4. Ức chế tân mạch máu</text>
+      <text x="550" y="262" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#4a5a4f">cắt nguồn nuôi khối u</text>
+      <text x="550" y="275" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#4a5a4f">vi thể (xem Bài 3)</text>
+      <path d="M 450 225 Q 410 205 390 185" fill="none" stroke="#5a7c5f" stroke-width="2.5" marker-end="url(#arrAd3)"/>
+
+      <!-- Bottom label -->
+      <rect x="120" y="300" width="440" height="30" rx="15" fill="#3a5a44"/>
+      <text x="340" y="320" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="white" letter-spacing="1.2">✓ TẾ BÀO VÚ ĐƯỢC BẢO VỆ TRÊN NHIỀU MẶT TRẬN</text>
+
+      <defs>
+        <marker id="arrAd3" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L0,7 L7,3.5 Z" fill="#5a7c5f"/></marker>
+      </defs>
+    </svg>
+    <div class="diagram-caption">Adiponectin là adipokine duy nhất có 4 tác dụng bảo vệ cùng lúc. Đây là lý do giữ adiponectin cao là một trong những cách phòng ung thư vú hiệu quả nhất.</div>
+
+    <div class="science-box">
+      <div class="sb-label">🔬 Adiponectin thấp &amp; ung thư vú</div>
+      <p>Meta-analysis của Liu et al. (<em>Oncotarget</em> 2013) trên hơn 10,000 phụ nữ: người có adiponectin thấp nhất có <strong>nguy cơ ung thư vú tăng gấp 2 lần</strong> so với người có adiponectin cao nhất. Đặc biệt nổi bật ở <em>ung thư vú ER+ sau mãn kinh</em> &mdash; dạng phổ biến nhất.</p>
+    </div>
+
+    <h2>Phần 4 &middot; Bảng So Sánh · Leptin vs Adiponectin</h2>
+
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th class="warn">❌ LEPTIN &mdash; Kẻ Gây Rối</th>
+          <th class="ok">✅ ADIPONECTIN &mdash; Người Bảo Vệ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="warn"><strong>Tăng khi mỡ thừa</strong><br><em>càng béo càng nhiều</em></td>
+          <td class="ok"><strong>Giảm khi mỡ thừa</strong><br><em>càng béo càng ít &mdash; nghịch đảo</em></td>
+        </tr>
+        <tr>
+          <td class="warn"><strong>Thúc đẩy phân bào</strong> (JAK/STAT)<br><em>tế bào ung thư nhân lên nhanh hơn</em></td>
+          <td class="ok"><strong>Ức chế phân bào</strong> (AMPK)<br><em>làm chậm tăng trưởng tế bào bất thường</em></td>
+        </tr>
+        <tr>
+          <td class="warn"><strong>Gây viêm</strong> (tăng TNF-α, IL-6)<br><em>tạo môi trường thuận lợi cho ung thư</em></td>
+          <td class="ok"><strong>Kháng viêm</strong><br><em>giảm các cytokine gây viêm</em></td>
+        </tr>
+        <tr>
+          <td class="warn"><strong>Tăng aromatase</strong><br><em>mô mỡ tự sản xuất estrogen</em></td>
+          <td class="ok"><strong>Tăng nhạy cảm insulin</strong><br><em>giảm vòng xoáy insulin-IGF-1</em></td>
+        </tr>
+        <tr>
+          <td class="warn"><strong>Kích tân mạch máu</strong> (tăng VEGF)<br><em>nuôi khối u phát triển</em></td>
+          <td class="ok"><strong>Ức chế tân mạch máu</strong><br><em>cắt nguồn nuôi khối u vi thể</em></td>
+        </tr>
+        <tr>
+          <td class="warn"><strong>Meta-analysis:</strong> leptin cao → tăng <strong>28-40%</strong> UT VÚ sau mãn kinh</td>
+          <td class="ok"><strong>Meta-analysis:</strong> adiponectin thấp → tăng <strong>2 lần</strong> UT VÚ</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Điều quan trọng nhất: <strong>tỉ lệ leptin/adiponectin (L/A ratio)</strong> là chỉ số dự đoán nguy cơ ung thư vú mạnh hơn cả 2 chỉ số riêng lẻ. L/A cao = nguy cơ cao. L/A thấp = bảo vệ tốt. Và cả hai đều có thể thay đổi qua chế độ ăn và vận động.</p>
+
+    <h3>Bảng Ví Dụ · Tỉ Lệ L/A &amp; Mức Nguy Cơ</h3>
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th>Tỉ Lệ L/A</th>
+          <th>Thường Gặp Ở</th>
+          <th>Mức Nguy Cơ Ung Thư Vú</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ok"><strong>&lt; 0.5</strong></td>
+          <td class="ok">Người gầy khỏe mạnh, ăn thực vật nhiều, vận động đều</td>
+          <td class="ok"><span style="color:#3a5a44;font-weight:700;">✓ Thấp &mdash; được bảo vệ</span></td>
+        </tr>
+        <tr>
+          <td><strong>0.5 - 1.5</strong></td>
+          <td>Cân nặng bình thường, chế độ ăn hỗn hợp</td>
+          <td><span style="color:#8E5810;font-weight:700;">⚠ Trung bình</span></td>
+        </tr>
+        <tr>
+          <td class="warn"><strong>1.5 - 3.0</strong></td>
+          <td class="warn">Thừa cân, vòng bụng lớn, ăn nhiều đường/tinh bột tinh chế</td>
+          <td class="warn"><span style="color:#8B3A4A;font-weight:700;">✗ Cao &mdash; cần thay đổi</span></td>
+        </tr>
+        <tr>
+          <td class="warn"><strong>&gt; 3.0</strong></td>
+          <td class="warn">Béo phì, mỡ nội tạng cao, kháng insulin</td>
+          <td class="warn"><span style="color:#8B3A4A;font-weight:700;">✗ Rất cao &mdash; nguy hiểm</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:-12px;font-size:13.5px;color:var(--light);font-style:italic;">(Ghi chú: Ngưỡng tham khảo có thể khác nhau giữa các phòng xét nghiệm. Xét nghiệm fasting leptin + adiponectin cho kết quả chính xác nhất khi cần đánh giá cá nhân.)</p>
+
+    <h2>Phần 5 &middot; Mỡ Nội Tạng &mdash; &#8220;Kẻ Gây Rối&#8221; Lớn Nhất</h2>
+
+    <p>Không phải mọi loại mỡ đều giống nhau. Cơ thể có hai loại chính:</p>
+
+    <div class="science-box">
+      <div class="sb-label">⚠️ Mỡ nội tạng vs mỡ dưới da</div>
+      <p><strong>Mỡ dưới da</strong> (subcutaneous) &mdash; nằm ngay dưới da, ở đùi, mông, cánh tay. Tương đối &#8220;lành&#8221; về mặt chuyển hóa.</p>
+      <p><strong>Mỡ nội tạng</strong> (visceral) &mdash; tích quanh <em>gan, tụy, ruột</em>, bên trong khoang bụng. Đây là loại <strong>tiết nhiều leptin và cytokine gây viêm nhất</strong>, và ít adiponectin nhất. Vòng bụng là dấu hiệu rõ ràng nhất của mỡ nội tạng.</p>
+    </div>
+
+    <p>Đây là lý do tại sao <em>vòng bụng &gt; 88cm (ở phụ nữ) hoặc &gt; 102cm (ở nam)</em> là yếu tố nguy cơ quan trọng hơn cả BMI đơn thuần. Và cũng là lý do &#8220;TOFI&#8221; (Thin Outside, Fat Inside &mdash; gầy bên ngoài, mỡ bên trong) vẫn có thể có nguy cơ ung thư vú &mdash; như chúng ta đã nói ở Bài 4.</p>
+
+    <p style="font-family:'Playfair Display',serif;font-size:20px;font-style:italic;color:var(--accent-dark);text-align:center;padding:20px 24px;background:var(--blush);border-radius:10px;border-left:4px solid var(--accent);margin:24px 0;line-height:1.5;">&#8220;Vòng bụng càng lớn, vòng đời càng nhỏ.&#8221;</p>
+
+    <h2>Phần 6 &middot; Bằng Chứng Từ Can Thiệp Lâm Sàng</h2>
+
+    <div class="study-card">
+      <div class="study-meta">Women's Health Initiative · n &ge; 15,000 phụ nữ sau mãn kinh</div>
+      <div class="study-title">BMI và ung thư vú sau mãn kinh</div>
+      <div class="study-result">Nghiên cứu dài hạn trên hơn 15,000 phụ nữ sau mãn kinh cho thấy: phụ nữ có <strong>BMI &ge; 30 có nguy cơ ung thư vú tăng 30-40%</strong> so với phụ nữ có BMI &lt; 25. Quan trọng: <em>giảm cân có kiểm soát qua chế độ ăn và vận động làm giảm nguy cơ</em> &mdash; cho thấy mối liên hệ nhân quả, không chỉ tương quan.</div>
+    </div>
+
+    <div class="study-card">
+      <div class="study-meta">Harvard Pooling Project · 1.2 triệu phụ nữ, 7 nghiên cứu đoàn hệ</div>
+      <div class="study-title">Phân bố mỡ quan trọng hơn cân nặng</div>
+      <div class="study-result">Tổng hợp dữ liệu từ 7 nghiên cứu lớn: <strong>vòng bụng</strong> (dấu hiệu của mỡ nội tạng) là yếu tố dự báo ung thư vú mạnh hơn BMI đơn thuần. Phụ nữ có vòng bụng &gt; 88cm có nguy cơ cao hơn đáng kể &mdash; ngay cả khi BMI bình thường.</div>
+    </div>
+
+    <div class="study-card">
+      <div class="study-meta">PCRM Plant-Based Intervention · 8 tuần</div>
+      <div class="study-title">Ăn plant-based cải thiện adipokines nhanh</div>
+      <div class="study-result">Một nghiên cứu can thiệp 8 tuần trên phụ nữ bị ung thư vú cho thấy: chế độ ăn <em>whole-food plant-based</em> giảm <strong>leptin 16%</strong>, tăng <strong>adiponectin 14%</strong>, cải thiện L/A ratio đáng kể &mdash; ngay cả trước khi cân nặng thay đổi rõ rệt. Cho thấy: <em>chất lượng bữa ăn tác động trực tiếp lên adipokines, không phụ thuộc hoàn toàn vào giảm cân</em>.</div>
+    </div>
+
+    <div class="pull-quote">
+      <p>Mô mỡ không ngồi yên. Mỗi gram mỡ thừa đang gửi đi hàng nghìn tín hiệu mỗi phút &mdash; bữa ăn hôm nay quyết định tín hiệu đó là lành hay hại.</p>
+      <cite>— H21 Cho Đời Mãi Xanh</cite>
+    </div>
+
+    <h2>Phần 7 &middot; Thực Phẩm Điều Chỉnh Adipokines</h2>
+
+    <p>Tin tốt: adipokines cực kỳ &#8220;nhạy&#8221; với thay đổi chế độ ăn. Nghiên cứu cho thấy có thể cải thiện L/A ratio chỉ sau <strong>4-8 tuần</strong>:</p>
+
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th class="ok">✅ Giảm Leptin &middot; Tăng Adiponectin</th>
+          <th class="warn">❌ Tăng Leptin &middot; Giảm Adiponectin</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ok"><strong>Chất xơ cao</strong><br><em>đậu, đậu lăng, yến mạch, rau củ nguyên dạng &mdash; lên men ruột tạo SCFA, cải thiện adipokines</em></td>
+          <td class="warn"><strong>Đường &amp; tinh bột tinh chế</strong><br><em>tăng leptin, kháng leptin, giảm adiponectin</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Chất béo omega-3 thực vật</strong><br><em>hạt lanh, hạt chia, óc chó &mdash; tăng adiponectin trực tiếp</em></td>
+          <td class="warn"><strong>Chất béo bão hòa</strong><br><em>thịt đỏ, sản phẩm sữa, dầu dừa tinh luyện &mdash; tăng leptin, viêm mạn tính</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Rau họ cải &amp; rau lá xanh</strong><br><em>sulforaphane, magnesium &mdash; cải thiện L/A ratio</em></td>
+          <td class="warn"><strong>Thịt chế biến</strong><br><em>xúc xích, thịt xông khói, giăm bông &mdash; gây viêm trực tiếp</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Đậu nành nguyên dạng</strong><br><em>isoflavone cải thiện nhạy cảm insulin &amp; adipokine profile</em></td>
+          <td class="warn"><strong>Dầu công nghiệp &amp; trans fat</strong><br><em>bơ thực vật, đồ chiên, margarine &mdash; tăng viêm, giảm adiponectin</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Quả mọng &amp; trà xanh</strong><br><em>polyphenol &amp; EGCG cải thiện chuyển hóa mô mỡ</em></td>
+          <td class="warn"><strong>Rượu bia &amp; nước ngọt</strong><br><em>tích mỡ gan &amp; nội tạng, gây mất cân bằng adipokines</em></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="margin-top:20px;">Ngoài chế độ ăn, <strong>vận động đều đặn</strong> (đặc biệt cardio + sức bền kết hợp) đã được chứng minh cải thiện L/A ratio rõ rệt &mdash; <em>ngay cả khi không giảm cân</em>. Vận động làm mô mỡ &#8220;nói chuyện&#8221; khác đi.</p>
+
+    <h2>Phần 8 &middot; Những Câu Hỏi Thường Gặp</h2>
+
+    <div class="qa-block">
+      <div class="qa-q">BMI của tôi bình thường &mdash; có cần lo về adipokines không?</div>
+      <div class="qa-a"><strong>Có, vẫn cần quan tâm</strong>. Như đã nói ở Bài 4 về TOFI (Thin Outside, Fat Inside), người gầy vẫn có thể có mỡ nội tạng cao và mất cân bằng adipokines. Chỉ số đáng tin cậy hơn BMI: <em>vòng bụng &lt; 88cm (nữ) hoặc &lt; 102cm (nam)</em>, và xét nghiệm máu fasting insulin, adiponectin khi có điều kiện.</div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">Nếu tôi giảm cân, mất bao lâu để adipokines cải thiện?</div>
+      <div class="qa-a">Nhanh hơn bạn nghĩ. Nghiên cứu lâm sàng cho thấy: <em>chỉ trong 4-8 tuần</em> chuyển sang chế độ ăn thực vật nguyên dạng, leptin có thể giảm 10-20% và adiponectin tăng 10-15% &mdash; ngay cả trước khi cân nặng thay đổi nhiều. Điều này có nghĩa <strong>chất lượng bữa ăn tác động trực tiếp lên adipokines, không phụ thuộc hoàn toàn vào giảm cân</strong>.</div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">Tôi đã mãn kinh &mdash; có khác gì với người trẻ không?</div>
+      <div class="qa-a"><strong>Có, và đây là giai đoạn adipokines trở nên quan trọng hơn bao giờ hết</strong>. Sau mãn kinh, buồng trứng ngừng sản xuất estrogen &mdash; nhưng mô mỡ (đặc biệt mô mỡ nội tạng) <em>tiếp tục sản xuất estrogen qua enzyme aromatase</em>. Nghĩa là: càng nhiều mỡ sau mãn kinh, càng nhiều estrogen lưu hành, càng nhiều nguy cơ ung thư vú ER+. Đây là lý do giảm mỡ nội tạng sau 50 tuổi có tác dụng phòng ung thư vú đặc biệt mạnh.</div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">Vận động có giúp giảm leptin không nếu tôi không giảm cân?</div>
+      <div class="qa-a"><strong>Có</strong>. Đây là một phát hiện quan trọng của khoa học: vận động điều độ (150 phút/tuần cardio + 2 buổi tập sức bền) cải thiện L/A ratio <em>ngay cả khi cân nặng không đổi</em>. Vận động làm mô mỡ &#8220;thay đổi tính chất&#8221; &mdash; tiết ít leptin hơn, nhiều adiponectin hơn, và giảm viêm hệ thống.</div>
+    </div>
+
+    <div class="takeaway">
+      <div class="takeaway-label">&#128161; Điểm Mấu Chốt</div>
+      <p>Mô mỡ không phải một &#8220;kho chứa trơ&#8221; mà là một <strong>cơ quan nội tiết hoạt động 24/7</strong>, tiết ra hơn 20 loại hormone và cytokine. Khi mỡ thừa (đặc biệt mỡ nội tạng) tích lũy, cân bằng adipokines nghiêng hẳn về phía <em>gây hại</em>: leptin cao, adiponectin thấp, viêm mạn tính, kháng insulin &mdash; tất cả đều thúc đẩy ung thư vú, đặc biệt sau mãn kinh.</p>
+      <p>Tin tốt: đây là cơ chế <em>phản ứng rất nhanh với thay đổi bữa ăn</em>. Chỉ 4-8 tuần chuyển sang chế độ ăn giàu chất xơ, đạm thực vật, omega-3 có thể cải thiện rõ rệt adipokine profile &mdash; cả nam và nữ, trước và sau mãn kinh. Và nó không chỉ tác động đến ung thư vú: adipokines cũng liên quan đến <strong>ung thư đại tràng, ung thư tuyến tiền liệt, bệnh tim mạch, tiểu đường type 2, và sa sút trí tuệ</strong>. Một sự thay đổi &mdash; rất nhiều lợi ích cùng lúc.</p>
+    </div>
+
+    <div class="soft-invitation">
+      Trong những học viên tìm đến H21, ngoài nhóm đã được chẩn đoán ung thư, tôi đặc biệt thấy kết quả chuyển biến nhanh ở nhóm <em>thừa cân và đang ở giai đoạn tiền mãn kinh</em> &mdash; chỉ sau vài tuần ăn theo H21, cân nặng giảm, vòng bụng thu nhỏ, năng lượng và giấc ngủ cải thiện rõ rệt. Điều này hoàn toàn khớp với khoa học adipokines: <strong>mô mỡ phản ứng rất nhanh khi bữa ăn thay đổi</strong>.
+      <br><br>Nhưng tôi vẫn mong: giá như nhiều người còn khỏe mạnh hơn nữa đọc được và bắt đầu chuyển động từ hôm nay &mdash; khi chưa có triệu chứng, khi cơ thể còn nguyên vẹn. <strong>H21 là không gian chúng tôi xây dựng cho đúng mục đích đó.</strong>
+    </div>
+
+<div class="cta-box">
+  <div class="cta-eyebrow">Seri Ung Thư Vú · 10 Cơ Chế</div>
+  <h3 class="cta-title">Đây là Cơ Chế 05/10. Còn 5 cơ chế nữa để khám phá.</h3>
+  <p class="cta-desc">Tham gia cộng đồng H21 để theo dõi toàn bộ seri &mdash; nơi khoa học ung thư được dịch thành hành động cụ thể mỗi ngày.</p>
+  <a href="https://www.facebook.com/xanhlenbenhxuong/" target="_blank" class="cta-btn">Đăng Ký Khóa Học H21 &#8594;</a>
+</div>
+
+  </div>
+<div class="article-footer">
+  <div class="footer-brand">
+    <strong>Thuy-Trinh Nguyen</strong> &middot; Khoa Học Gia &amp; Nhà Sáng Lập<br>
+    <strong>H21 - Cho Đời Mãi Xanh</strong> &middot; <a href="https://www.h21chodoimaixanh.com">www.h21chodoimaixanh.com</a><br>
+    Mang khoa học từ phòng thí nghiệm đến căn bếp mỗi gia đình
+  </div>
+</div>
+</div>
+<footer class="site-footer">
+  <strong>H21 - Cho Đời Mãi Xanh</strong> &middot; Khoa Học Gia Thuy-Trinh Nguyen<br>
+  <a href="https://blog.h21chodoimaixanh.com">blog.h21chodoimaixanh.com</a> &middot; <a href="https://www.h21chodoimaixanh.com">www.h21chodoimaixanh.com</a><br>
+  Nội dung chỉ dành cho mục đích giáo dục, không thay thế tư vấn y tế chuyên nghiệp.
+</footer>
+</body>
+</html>
