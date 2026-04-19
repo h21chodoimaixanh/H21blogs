@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kháng insulin không chỉ là bước đầu của tiểu đường. Nó cũng là một trong những yếu tố thúc đẩy ung thư vú ít được nói đến nhất — và là một trong những yếu tố dễ đảo ngược nhất bằng thay đổi chế độ ăn.">
+<title>Kháng Insulin &amp; Ung Thư Vú — Cơ Chế 04/10 | Blog H21</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Amber/honey palette — Cơ chế 04: Kháng insulin */
+  --accent:#B8761A;--accent-light:#F8EDD5;
+  --accent-mid:#8E5810;--accent-dark:#5C380A;
+  --plum:#3A2405;--rose:#D4A865;--blush:#FBF5E8;
+  --ribbon:#C97A85;
+  --mint:#7eb89a;
+  --gold:#B8945C;--gold-light:#FAF3E5;
+  --border:#E8DCC6;--mid:#3A2E1F;--light:#786A52;--ink:#2A1F0E;
+  --myth:#a85550;--truth:#5a7c5f;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#FAF7F0;font-family:'Lora',Georgia,serif;color:var(--ink);}
+.site-nav{background:var(--plum);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(0,0,0,0.25);}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-logo-mark{width:34px;height:34px;background:var(--mint);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-family:sans-serif;}
+.nav-logo-name{font-size:14px;font-weight:600;color:white;font-family:'Be Vietnam Pro',sans-serif;}
+.nav-logo-tag{font-size:10px;color:rgba(255,255,255,0.55);margin-top:1px;font-family:'Be Vietnam Pro',sans-serif;}
+.nav-back{font-size:13px;color:rgba(255,255,255,0.75);text-decoration:none;font-weight:500;font-family:'Be Vietnam Pro',sans-serif;transition:color 0.2s;}
+.nav-back:hover{color:var(--rose);}
+.series-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.18);padding:6px 14px;border-radius:100px;font-size:10.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.92);font-family:'Be Vietnam Pro',sans-serif;margin-bottom:14px;}
+.series-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--rose);}
+.article-hero{background:linear-gradient(135deg,#3A2405 0%,#6B4410 45%,#B8761A 100%);padding:48px 24px 40px;position:relative;overflow:hidden;}
+.article-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 30%,rgba(255,255,255,0.06) 0%,transparent 60%);}
+.hero-inner{max-width:720px;margin:0 auto;position:relative;z-index:1;}
+.article-h1{font-family:'Playfair Display',serif;font-size:38px;font-weight:700;line-height:1.2;color:white;margin-bottom:16px;letter-spacing:-0.3px;}
+.article-h1 em{color:rgba(255,255,255,0.85);font-style:italic;}
+.article-deck{font-family:'Lora',serif;font-size:17px;line-height:1.7;color:rgba(255,255,255,0.85);font-style:italic;margin:0;}
+.byline-bar{background:white;border-bottom:1px solid var(--border);padding:14px 24px;}
+.byline-inner{max-width:720px;margin:0 auto;display:flex;align-items:center;gap:14px;}
+.byline-av{width:40px;height:40px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:white;font-weight:700;flex-shrink:0;font-family:'Be Vietnam Pro',sans-serif;}
+.byline-name{font-size:13.5px;font-weight:600;color:var(--ink);font-family:'Be Vietnam Pro',sans-serif;}
+.byline-role{font-size:11.5px;color:var(--light);margin-top:1px;font-family:'Be Vietnam Pro',sans-serif;}
+.byline-meta{margin-left:auto;text-align:right;}
+.byline-url{font-size:11.5px;color:var(--light);font-family:'Be Vietnam Pro',sans-serif;}
+.read-time{font-size:11px;color:var(--accent);font-weight:600;margin-top:2px;font-family:'Be Vietnam Pro',sans-serif;}
+.article-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px;}
+.hero-banner{margin:0 0 32px;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(92,56,10,0.15);border:1px solid var(--border);}
+.hero-banner img{width:100%;display:block;}
+.hero-banner-placeholder{background:linear-gradient(135deg,var(--accent-light),var(--blush));border:2px dashed var(--border);border-radius:12px;padding:40px 24px;text-align:center;margin:0 0 32px;font-family:'Be Vietnam Pro',sans-serif;color:var(--light);font-size:13px;line-height:1.6;}
+.hero-banner-placeholder strong{color:var(--accent-dark);display:block;font-size:14px;margin-bottom:6px;}
+.article-body{font-family:'Lora',Georgia,serif;font-size:17px;line-height:1.9;color:var(--mid);}
+.article-body p{margin-bottom:22px;}
+.article-body strong{color:var(--ink);font-weight:700;}
+.article-body em{color:var(--accent);font-style:italic;font-weight:600;}
+.article-body h2{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--ink);margin:44px 0 14px;line-height:1.3;}
+.article-body h3{font-family:'Be Vietnam Pro',sans-serif;font-size:14px;font-weight:700;color:var(--accent-dark);margin:28px 0 10px;text-transform:uppercase;letter-spacing:1.5px;}
+.fact-strip{display:grid;grid-template-columns:repeat(3,1fr);margin:32px 0 18px;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:white;}
+.fact-item{padding:22px 16px;text-align:center;border-right:1px solid var(--border);}
+.fact-item:last-child{border-right:none;}
+.fact-num{font-family:'Playfair Display',serif;font-size:34px;font-weight:700;color:var(--accent);line-height:1;}
+.fact-label{font-size:11.5px;color:var(--light);margin-top:8px;line-height:1.5;font-family:'Be Vietnam Pro',sans-serif;}
+.fact-explain{background:var(--blush);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:14px 20px;margin:0 0 32px;font-family:'Lora',serif;font-size:14.5px;line-height:1.75;color:var(--mid);font-style:italic;}
+.fact-explain strong{color:var(--accent-dark);font-style:normal;}
+.personal-note{background:linear-gradient(135deg,#FDFAF2,#F5EFE1);border:1px solid var(--border);border-left:4px solid var(--accent-mid);border-radius:0 14px 14px 0;padding:22px 28px;margin:28px 0;font-family:'Lora',serif;font-style:italic;}
+.personal-note-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent-mid);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;font-style:normal;}
+.personal-note p{font-size:16px;line-height:1.8;color:var(--mid);margin:0;}
+.personal-note strong{color:var(--accent-dark);font-style:normal;}
+.science-box{background:var(--blush);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:0 12px 12px 0;padding:20px 24px;margin:24px 0;}
+.sb-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent-mid);margin-bottom:8px;font-family:'Be Vietnam Pro',sans-serif;}
+.science-box p{font-size:15px;color:var(--mid);margin:0 0 10px;line-height:1.75;font-family:'Lora',serif;}
+.science-box p:last-child{margin-bottom:0;}
+.science-box strong{color:var(--accent-dark);}
+.science-box em{color:var(--accent);}
+.study-card{background:white;border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:10px;padding:18px 22px;margin:14px 0;}
+.study-meta{font-family:'Be Vietnam Pro',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
+.study-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--accent-dark);margin-bottom:6px;line-height:1.35;}
+.study-result{font-family:'Lora',serif;font-size:14.5px;line-height:1.65;color:var(--mid);}
+.study-result strong{color:var(--accent-dark);}
+.diagram{margin:22px 0 6px;display:block;background:white;border:1px solid var(--border);border-radius:12px;padding:18px;}
+.diagram-caption{font-family:'Be Vietnam Pro',sans-serif;font-size:11.5px;color:var(--light);text-align:center;margin-top:-2px;margin-bottom:28px;font-style:italic;line-height:1.5;}
+.pull-quote{margin:38px 0;padding:30px 36px;background:var(--accent-dark);border-radius:14px;color:white;text-align:center;position:relative;}
+.pull-quote::before{content:'"';font-family:'Playfair Display',serif;font-size:80px;line-height:0.5;color:rgba(255,255,255,0.12);position:absolute;top:26px;left:22px;}
+.pull-quote p{font-family:'Lora',serif;font-size:19px;line-height:1.6;color:rgba(255,255,255,0.95);font-style:italic;margin:0;}
+.pull-quote cite{display:block;margin-top:14px;font-size:11px;color:rgba(255,255,255,0.55);font-weight:600;letter-spacing:1.5px;text-transform:uppercase;font-style:normal;font-family:'Be Vietnam Pro',sans-serif;}
+.qa-block{background:white;border:1px solid var(--border);border-radius:10px;padding:18px 22px;margin:14px 0;}
+.qa-q{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--accent-dark);margin-bottom:8px;line-height:1.35;}
+.qa-q::before{content:'H: ';color:var(--accent);}
+.qa-a{font-family:'Lora',serif;font-size:14.5px;line-height:1.75;color:var(--mid);}
+.qa-a::before{content:'Đ: ';font-family:'Be Vietnam Pro',sans-serif;font-weight:700;color:var(--accent);font-size:13px;letter-spacing:1px;}
+.qa-a strong{color:var(--accent-dark);}
+.qa-a em{color:var(--accent);}
+.info-table{width:100%;border-collapse:collapse;margin:22px 0 28px;background:white;border:1px solid var(--border);border-radius:12px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;}
+.info-table thead th{padding:14px 16px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--border);text-align:left;}
+.info-table thead th.ok{background:#3a5a44;color:white;}
+.info-table thead th.warn{background:#a85550;color:white;}
+.info-table td{padding:12px 16px;font-size:13.5px;line-height:1.65;color:var(--mid);border-bottom:1px solid var(--border);vertical-align:top;}
+.info-table td.ok{background:#f3f7f0;}
+.info-table td.warn{background:#fcf2ef;}
+.info-table tr:last-child td{border-bottom:none;}
+.info-table td strong{color:var(--accent-dark);}
+.info-table td.ok strong{color:#3a5a44;}
+.info-table td.warn strong{color:#8B3A4A;}
+.info-table td em{font-style:italic;color:var(--light);font-size:12.5px;}
+@media(max-width:600px){.info-table{font-size:12px;} .info-table td,.info-table th{padding:10px 12px;}}
+.soft-invitation{background:var(--blush);border:1px solid var(--border);border-radius:10px;padding:20px 26px;margin:28px 0;font-family:'Lora',serif;font-size:15.5px;line-height:1.8;color:var(--mid);font-style:italic;}
+.soft-invitation strong{color:var(--accent-dark);font-style:normal;font-weight:700;}
+.soft-invitation em{color:var(--accent);font-style:italic;}
+.takeaway{background:linear-gradient(135deg,var(--accent-dark),var(--accent));border-radius:14px;padding:28px 32px;margin:36px 0 0;color:white;}
+.takeaway-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
+.takeaway p{font-size:16px;color:rgba(255,255,255,0.95);line-height:1.8;margin:0 0 12px;font-family:'Lora',serif;}
+.takeaway p:last-child{margin-bottom:0;}
+.takeaway strong{color:white;font-weight:700;}
+.takeaway em{color:rgba(255,255,255,0.88);font-style:italic;}
+.cta-box{background:var(--plum);border-radius:14px;padding:30px 32px;margin-top:36px;text-align:center;}
+.cta-box .cta-eyebrow{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--rose);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
+.cta-box .cta-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:white;margin-bottom:10px;line-height:1.35;}
+.cta-box .cta-desc{font-size:14px;color:rgba(255,255,255,0.72);max-width:400px;margin:0 auto 22px;line-height:1.7;font-family:'Lora',serif;}
+.cta-btn{display:inline-block;background:var(--accent);color:white;font-size:14px;font-weight:600;padding:13px 32px;border-radius:100px;text-decoration:none;font-family:'Be Vietnam Pro',sans-serif;transition:opacity .2s;}
+.cta-btn:hover{opacity:0.88;}
+.article-footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--border);}
+.footer-brand{font-size:12.5px;color:var(--light);line-height:1.8;font-family:'Be Vietnam Pro',sans-serif;}
+.footer-brand strong{color:var(--accent-dark);}
+.footer-brand a{color:var(--accent);text-decoration:none;}
+.site-footer{background:var(--plum);padding:28px 40px;text-align:center;font-size:12px;color:rgba(255,255,255,0.45);line-height:1.8;font-family:'Be Vietnam Pro',sans-serif;}
+.site-footer a{color:var(--rose);text-decoration:none;}
+.site-footer strong{color:rgba(255,255,255,0.75);}
+@media(max-width:600px){
+  .article-h1{font-size:28px;}
+  .article-deck{font-size:15.5px;}
+  .fact-strip{grid-template-columns:1fr;}
+  .fact-item{border-right:none;border-bottom:1px solid var(--border);}
+  .fact-item:last-child{border-bottom:none;}
+  .article-wrap{padding:32px 18px 60px;}
+  .site-nav{padding:12px 20px;}
+  .article-hero{padding:36px 18px 30px;}
+}
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">🌿</div>
+    <div>
+      <div class="nav-logo-name">H21 - Cho Đời Mãi Xanh</div>
+      <div class="nav-logo-tag">Khoa Học Gia Thuy-Trinh Nguyen</div>
+    </div>
+  </a>
+  <a href="index.html" class="nav-back">&#8592; Trở về Blog</a>
+</nav>
+<section class="article-hero">
+  <div class="hero-inner">
+    <div class="series-badge"><span class="series-badge-dot"></span> 🎗️ Seri Ung Thư Vú · Cơ Chế 04/10</div>
+    <h1 class="article-h1">Kháng Insulin &amp; Ung Thư Vú &mdash;<br><em>Cầu Nối Giữa Đường Huyết Và Khối U</em></h1>
+    <p class="article-deck">Kháng insulin không chỉ là bước đầu của tiểu đường. Nó cũng là một trong những yếu tố thúc đẩy ung thư vú ít được nói đến nhất &mdash; và là một trong những yếu tố <em>dễ đảo ngược nhất</em> bằng thay đổi chế độ ăn.</p>
+  </div>
+</section>
+<div class="byline-bar">
+  <div class="byline-inner">
+    <div class="byline-av">TT</div>
+    <div>
+      <div class="byline-name">Thuy-Trinh Nguyen</div>
+      <div class="byline-role">Khoa Học Gia &middot; Nhà Sáng Lập H21 - Cho Đời Mãi Xanh</div>
+    </div>
+    <div class="byline-meta">
+      <div class="byline-url">www.h21chodoimaixanh.com</div>
+      <div class="read-time">&#9200; Đọc trong 8 phút</div>
+    </div>
+  </div>
+</div>
+
+<div class="article-wrap">
+  <div class="article-body">
+
+    <div class="hero-banner">
+      <img src="khang-insulin.jpg" alt="Kháng Insulin & Ung Thư Vú — Cầu Nối Giữa Đường Huyết Và Khối U cùng Khoa Học Gia Thuy-Trinh Nguyen">
+    </div>
+
+    <div class="personal-note">
+      <div class="personal-note-label">🌿 Điểm Khởi Đầu</div>
+      <p>Nhiều người nghĩ rằng insulin chỉ là &#8220;chuyện của người tiểu đường&#8221;. Thực tế khoa học cho thấy: <strong>mức insulin cao mạn tính &mdash; ngay cả khi đường huyết còn bình thường &mdash; đang âm thầm gửi tín hiệu tăng trưởng cho tế bào vú suốt ngày đêm</strong>. Y Học Lối Sống Có Trách Nhiệm dạy tôi rằng đây là một trong những cơ chế dễ can thiệp nhất &mdash; không cần thuốc, chỉ cần thay đổi bữa ăn.</p>
+    </div>
+
+    <div class="fact-strip">
+      <div class="fact-item">
+        <div class="fact-num">33%</div>
+        <div class="fact-label">giảm insulin máu sau 8 tuần ăn plant-based (PCRM RCT 2024)</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-num">6.6%</div>
+        <div class="fact-label">giảm cân nặng trung bình · cải thiện kháng insulin rõ rệt</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-num">23%</div>
+        <div class="fact-label">giảm tái phát ung thư vú ở phụ nữ ăn ít chất béo (WINS, n≈10,000)</div>
+      </div>
+    </div>
+
+    <div class="fact-explain">
+      Ba con số đến từ các nghiên cứu lâm sàng với phụ nữ thật. Điểm chung: <strong>khi đường huyết và insulin giảm, các marker của ung thư vú cũng cải thiện đồng thời</strong> &mdash; cho thấy đây là hai hệ thống gắn kết chặt chẽ.
+    </div>
+
+    <h2>Phần 1 &middot; Insulin Hoạt Động Như Thế Nào?</h2>
+
+    <p><strong>Insulin</strong> là hormone do tuyến tụy tiết ra mỗi khi bạn ăn &mdash; đặc biệt khi ăn thực phẩm chứa carb tinh chế hoặc đường. Nhiệm vụ của nó: đưa đường từ máu vào tế bào để sử dụng hoặc dự trữ.</p>
+
+    <p>Ở người khỏe mạnh, tế bào phản ứng nhạy với tín hiệu insulin &mdash; chỉ cần một lượng nhỏ là đủ. Nhưng khi chế độ ăn thường xuyên có đường, tinh bột tinh chế, và chất béo bão hòa, tế bào dần <em>bị &#8220;điếc&#8221;</em> với tín hiệu insulin. Tuyến tụy phải tiết ra ngày càng nhiều để đạt hiệu quả cũ. <strong>Đây là &#8220;kháng insulin&#8221;</strong> &mdash; và insulin máu cao mạn tính là vấn đề.</p>
+
+    <svg class="diagram" viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="So sánh tế bào khỏe vs tế bào kháng insulin">
+      <text x="340" y="26" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" font-weight="700" fill="#8E5810" letter-spacing="2">KHI NÀO TẾ BÀO &#8220;ĐIẾC&#8221; VỚI INSULIN?</text>
+
+      <!-- LEFT: Healthy cell (sensitive to insulin) -->
+      <rect x="20" y="52" width="310" height="240" rx="14" fill="#eff4ed" stroke="#5a7c5f" stroke-width="1.5"/>
+      <text x="175" y="76" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#3e6e48" letter-spacing="1.5">TẾ BÀO NHẠY CẢM INSULIN</text>
+      <text x="175" y="92" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="#3e6e48" font-style="italic">(cơ thể khỏe mạnh)</text>
+
+      <!-- Pancreas icon left -->
+      <ellipse cx="70" cy="165" rx="28" ry="22" fill="#d4b88a" stroke="#8E5810" stroke-width="2"/>
+      <text x="70" y="200" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" font-weight="700" fill="#8E5810">Tuyến tụy</text>
+      <text x="70" y="212" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="8.5" fill="#5a7c5f" font-style="italic">1 giọt insulin</text>
+
+      <!-- Single insulin arrow -->
+      <path d="M 105 165 L 200 165" stroke="#5a7c5f" stroke-width="3" marker-end="url(#arrG4)"/>
+      <circle cx="155" cy="150" r="7" fill="#7fa087" stroke="#3e6e48" stroke-width="1.5"/>
+      <text x="155" y="140" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="8" fill="#3e6e48">insulin</text>
+
+      <!-- Cell body (open, receiving) -->
+      <ellipse cx="250" cy="165" rx="55" ry="50" fill="white" stroke="#5a7c5f" stroke-width="2.5"/>
+      <!-- Receptors (little notches) -->
+      <circle cx="207" cy="145" r="5" fill="#7fa087" stroke="#3e6e48" stroke-width="1"/>
+      <circle cx="210" cy="180" r="5" fill="#7fa087" stroke="#3e6e48" stroke-width="1"/>
+      <circle cx="250" cy="120" r="5" fill="#7fa087" stroke="#3e6e48" stroke-width="1"/>
+      <text x="250" y="170" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="18" fill="#3e6e48">✓</text>
+
+      <rect x="50" y="238" width="250" height="40" rx="8" fill="#5a7c5f"/>
+      <text x="175" y="256" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="white">✓ ÍT INSULIN ĐỦ TÁC DỤNG</text>
+      <text x="175" y="270" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="rgba(255,255,255,0.9)">Insulin máu thấp &middot; chuyển hóa khỏe</text>
+
+      <!-- RIGHT: Insulin resistant cell -->
+      <rect x="350" y="52" width="310" height="240" rx="14" fill="#fcf0ed" stroke="#a85550" stroke-width="1.5"/>
+      <text x="505" y="76" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#8B3A4A" letter-spacing="1.5">TẾ BÀO KHÁNG INSULIN</text>
+      <text x="505" y="92" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="#8B3A4A" font-style="italic">(đường &middot; tinh bột tinh chế &middot; chất béo bão hòa lâu năm)</text>
+
+      <!-- Pancreas pumping LOTS of insulin -->
+      <ellipse cx="400" cy="165" rx="28" ry="22" fill="#d4a580" stroke="#8B3A4A" stroke-width="2.5"/>
+      <text x="400" y="200" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" font-weight="700" fill="#8B3A4A">Tuyến tụy</text>
+      <text x="400" y="212" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="8.5" fill="#8B3A4A" font-style="italic">tiết NHIỀU insulin</text>
+
+      <!-- Multiple insulin arrows (flooding) -->
+      <path d="M 435 155 L 530 150" stroke="#a85550" stroke-width="2.5" marker-end="url(#arrR4)"/>
+      <path d="M 435 165 L 530 165" stroke="#a85550" stroke-width="2.5" marker-end="url(#arrR4)"/>
+      <path d="M 435 175 L 530 180" stroke="#a85550" stroke-width="2.5" marker-end="url(#arrR4)"/>
+      <path d="M 435 140 L 530 135" stroke="#a85550" stroke-width="2" marker-end="url(#arrR4)"/>
+      <path d="M 435 185 L 530 195" stroke="#a85550" stroke-width="2" marker-end="url(#arrR4)"/>
+      <circle cx="460" cy="145" r="5" fill="#c88080"/>
+      <circle cx="475" cy="175" r="5" fill="#c88080"/>
+      <circle cx="490" cy="160" r="5" fill="#c88080"/>
+      <circle cx="480" cy="140" r="5" fill="#c88080"/>
+
+      <!-- Cell body (BLOCKED receptors with X) -->
+      <ellipse cx="580" cy="165" rx="55" ry="50" fill="white" stroke="#a85550" stroke-width="2.5"/>
+      <!-- Blocked receptors -->
+      <g stroke="#a85550" stroke-width="2" fill="none">
+        <line x1="534" y1="141" x2="542" y2="149"/><line x1="542" y1="141" x2="534" y2="149"/>
+      </g>
+      <g stroke="#a85550" stroke-width="2" fill="none">
+        <line x1="534" y1="181" x2="542" y2="189"/><line x1="542" y1="181" x2="534" y2="189"/>
+      </g>
+      <g stroke="#a85550" stroke-width="2" fill="none">
+        <line x1="578" y1="115" x2="586" y2="123"/><line x1="586" y1="115" x2="578" y2="123"/>
+      </g>
+      <text x="580" y="172" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="20" fill="#a85550" font-weight="900">✕</text>
+
+      <rect x="380" y="238" width="250" height="40" rx="8" fill="#a85550"/>
+      <text x="505" y="256" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="white">✗ TẾ BÀO &#8220;ĐIẾC&#8221; &middot; TỤY &#8220;LÀM THÊM GIỜ&#8221;</text>
+      <text x="505" y="270" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="rgba(255,255,255,0.9)">Insulin máu cao mạn tính &middot; kích ung thư vú</text>
+
+      <defs>
+        <marker id="arrG4" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L0,8 L8,4 Z" fill="#5a7c5f"/></marker>
+        <marker id="arrR4" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L0,7 L7,3.5 Z" fill="#a85550"/></marker>
+      </defs>
+    </svg>
+    <div class="diagram-caption">Ở cơ thể khỏe, tuyến tụy chỉ cần một ít insulin là đủ. Khi tế bào &#8220;điếc&#8221; (kháng insulin), tụy phải làm việc quá sức — insulin máu cao mạn tính bắt đầu gây hại.</div>
+
+    <div class="science-box">
+      <div class="sb-label">🔬 Tại sao liên quan đến ung thư vú?</div>
+      <p>Insulin không chỉ vận chuyển đường. Nó cũng là <strong>hormone tăng trưởng mạnh</strong>, kích hoạt con đường IGF-1, PI3K/AKT/mTOR &mdash; những con đường chính mà tế bào ung thư dùng để <em>phân chia, phát triển, và tránh chết</em>. Insulin cao mạn tính còn giảm <em>sex hormone binding globulin</em> (SHBG), khiến estrogen tự do trong máu tăng lên &mdash; thêm tín hiệu nuôi ung thư vú phụ thuộc hormone.</p>
+    </div>
+
+    <h2>Phần 2 &middot; Vòng Xoáy &#8220;Đường - Insulin - Ung Thư&#8221;</h2>
+
+    <p>Hãy hình dung một vòng xoáy: bữa ăn nhiều đường/tinh bột tinh chế → đường huyết tăng vọt → insulin tiết nhiều → lâu dần kháng insulin → insulin máu cao mạn tính → kích thích tăng trưởng tế bào (cả lành và ung thư) → đồng thời tăng viêm, tích mỡ, mất cân bằng hormone → <em>tất cả đều là yếu tố nguy cơ ung thư vú</em>.</p>
+
+    <svg class="diagram" viewBox="0 0 720 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vòng xoáy đường - insulin - ung thư vú">
+      <!-- 1. TOP: Cause -->
+      <rect x="270" y="20" width="180" height="44" rx="8" fill="white" stroke="#B8761A" stroke-width="1.5"/>
+      <text x="360" y="40" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" font-weight="700" fill="#8E5810">Đường &amp; tinh bột tinh chế</text>
+      <text x="360" y="55" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#3A2E1F" font-style="italic">trong bữa ăn lâu năm</text>
+      <path d="M 360 66 L 360 88" stroke="#B8761A" stroke-width="2.5" marker-end="url(#arrA)"/>
+
+      <!-- 2. CENTER: Insulin cao (red circle) -->
+      <circle cx="360" cy="140" r="52" fill="#a85550" opacity="0.92"/>
+      <text x="360" y="136" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" font-weight="700" fill="white">INSULIN CAO</text>
+      <text x="360" y="150" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="rgba(255,255,255,0.92)" font-style="italic">mạn tính</text>
+
+      <!-- 3. THREE DOWNWARD ARROWS -->
+      <path d="M 325 185 L 140 220" stroke="#B8761A" stroke-width="2.2" marker-end="url(#arrA)"/>
+      <path d="M 360 194 L 360 220" stroke="#B8761A" stroke-width="2.2" marker-end="url(#arrA)"/>
+      <path d="M 395 185 L 580 220" stroke="#B8761A" stroke-width="2.2" marker-end="url(#arrA)"/>
+
+      <!-- 4. THREE EFFECT NODES -->
+      <!-- Left: Tích mỡ -->
+      <rect x="40" y="222" width="200" height="52" rx="8" fill="white" stroke="#B8761A" stroke-width="1.5"/>
+      <text x="140" y="244" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#8E5810">Tích mỡ &amp; béo phì</text>
+      <text x="140" y="260" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#3A2E1F">Mô mỡ tự sản xuất estrogen</text>
+
+      <!-- Center: Estrogen -->
+      <rect x="265" y="222" width="190" height="52" rx="8" fill="white" stroke="#B8761A" stroke-width="1.5"/>
+      <text x="360" y="244" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#8E5810">Estrogen tự do ↑</text>
+      <text x="360" y="260" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#3A2E1F">SHBG giảm · viêm tăng</text>
+
+      <!-- Right: IGF-1 -->
+      <rect x="480" y="222" width="200" height="52" rx="8" fill="white" stroke="#B8761A" stroke-width="1.5"/>
+      <text x="580" y="244" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#8E5810">Kích hoạt IGF-1 &amp; mTOR</text>
+      <text x="580" y="260" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#3A2E1F">Tín hiệu tăng trưởng tế bào</text>
+
+      <!-- 5. THREE RED ARROWS DOWN TO UT VÚ -->
+      <path d="M 140 280 L 140 315" stroke="#7a1d2a" stroke-width="3" marker-end="url(#arrRed)"/>
+      <path d="M 360 280 L 360 315" stroke="#7a1d2a" stroke-width="3" marker-end="url(#arrRed)"/>
+      <path d="M 580 280 L 580 315" stroke="#7a1d2a" stroke-width="3" marker-end="url(#arrRed)"/>
+
+      <!-- 6. THREE DARK RED "UNG THƯ VÚ" BADGES -->
+      <rect x="65" y="323" width="150" height="44" rx="22" fill="#7a1d2a" stroke="#5a0e18" stroke-width="2"/>
+      <text x="140" y="349" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12" font-weight="900" fill="white" letter-spacing="1.5">UNG THƯ VÚ</text>
+
+      <rect x="285" y="323" width="150" height="44" rx="22" fill="#7a1d2a" stroke="#5a0e18" stroke-width="2"/>
+      <text x="360" y="349" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12" font-weight="900" fill="white" letter-spacing="1.5">UNG THƯ VÚ</text>
+
+      <rect x="505" y="323" width="150" height="44" rx="22" fill="#7a1d2a" stroke="#5a0e18" stroke-width="2"/>
+      <text x="580" y="349" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12" font-weight="900" fill="white" letter-spacing="1.5">UNG THƯ VÚ</text>
+
+      <!-- 7. Convergence label at bottom -->
+      <text x="360" y="395" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#7a1d2a" font-weight="700" letter-spacing="1.5" font-style="italic">CẢ 3 CON ĐƯỜNG ĐỀU HỘI TỤ VỀ CÙNG MỘT ĐÍCH</text>
+
+      <defs>
+        <marker id="arrA" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 Z" fill="#B8761A"/></marker>
+        <marker id="arrRed" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L0,7 L7,3.5 Z" fill="#7a1d2a"/></marker>
+      </defs>
+    </svg>
+    <div class="diagram-caption">Insulin cao mạn tính kích hoạt cùng lúc 3 con đường — và <strong>cả 3 đều dẫn đến cùng một kết cục: ung thư vú</strong>. Đây là lý do tại sao cắt đường trong bữa ăn có hiệu ứng lan tỏa rộng đến nhiều cơ chế phòng ung thư.</div>
+
+    <h2>Phần 3 &middot; Bằng Chứng Từ Can Thiệp Lâm Sàng</h2>
+
+    <p>Đây là phần quan trọng nhất: <em>không chỉ là lý thuyết</em>. Các nhà khoa học đã thử thay đổi chế độ ăn của bệnh nhân ung thư vú và đo lường kết quả trực tiếp.</p>
+
+    <div class="study-card">
+      <div class="study-meta">PCRM Randomized Controlled Trial · Breast Cancer Research and Treatment 2024</div>
+      <div class="study-title">Ăn plant-based 8 tuần &mdash; ngay cả ở bệnh nhân ung thư vú di căn</div>
+      <div class="study-result">Dưới sự dẫn dắt của <strong>Physicians Committee for Responsible Medicine</strong> (Dr. Neal Barnard), 32 phụ nữ bị ung thư vú di căn được chia ngẫu nhiên thành 2 nhóm. Nhóm can thiệp ăn <em>whole-food plant-based</em> (WFPB) 8 tuần. Kết quả:
+      <br>• <strong>Insulin lúc đói giảm từ 16.8 → 11.2 uIU/L</strong> (giảm 33%, p&lt;0.01)
+      <br>• <strong>Kháng insulin giảm có ý nghĩa thống kê</strong>
+      <br>• Cân nặng giảm trung bình 6.6% (1&ndash;2 pound/tuần)
+      <br>• IGF-1 giảm · SHBG tăng · cholesterol cải thiện
+      <br><br>
+      Tất cả chỉ sau <strong>8 tuần</strong>, ngay cả khi bệnh nhân vẫn đang điều trị hóa chất.</div>
+    </div>
+
+    <div class="study-card">
+      <div class="study-meta">Women's Intervention Nutrition Study (WINS) · n≈10,000</div>
+      <div class="study-title">Chế độ ăn ít chất béo giảm tái phát 23%</div>
+      <div class="study-result">Nghiên cứu lâm sàng lớn trên gần 10,000 phụ nữ bị ung thư vú giai đoạn sớm cho thấy: người ăn chế độ <em>ít chất béo &amp; giàu thực vật</em> có <strong>nguy cơ tái phát giảm 23%</strong> và <strong>nguy cơ tử vong do ung thư vú giảm 17%</strong> so với chế độ ăn tiêu chuẩn. Một phần của cơ chế: cải thiện kháng insulin và giảm viêm.</div>
+    </div>
+
+    <div class="pull-quote">
+      <p>Đảo ngược kháng insulin không cần thuốc. Nó cần bữa ăn biết tôn trọng tuyến tụy.</p>
+      <cite>— H21 Cho Đời Mãi Xanh</cite>
+    </div>
+
+    <h2>Phần 4 &middot; Thực Phẩm Cải Thiện Nhạy Cảm Insulin</h2>
+
+    <p>Nghiên cứu cho thấy chế độ ăn dựa trên thực vật có thể <em>đảo ngược kháng insulin chỉ trong vài tuần</em>. Nguyên tắc rất đơn giản:</p>
+
+    <p>✅ <strong>Ưu tiên:</strong> Rau xanh, đậu, đậu lăng, đậu nành nguyên dạng, ngũ cốc nguyên hạt (yến mạch, quinoa, gạo lứt), quả mọng, các loại hạt, hạt lanh, hạt chia.</p>
+
+    <p>❌ <strong>Tránh tối đa:</strong> Đường (tất cả dạng &mdash; đường trắng, si-rô bắp, mật ong, đường &#8220;tự nhiên&#8221; trong nước ép), tinh bột tinh chế (bánh mì trắng, gạo trắng, bún, phở gạo trắng, mì), chất béo bão hòa (thịt đỏ, sản phẩm sữa động vật), thực phẩm siêu chế biến.</p>
+
+    <h3>Bảng Tóm Tắt · Thực Phẩm &amp; Insulin</h3>
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th class="ok">✅ Ưu tiên — giữ insulin ổn định</th>
+          <th class="warn">❌ Tránh tối đa — gây kháng insulin</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ok"><strong>Rau xanh &amp; rau họ cải</strong><br><em>bông cải xanh, cải xoăn, rau bina, cải thìa</em></td>
+          <td class="warn"><strong>Đường (tất cả các dạng)</strong><br><em>đường trắng, si-rô bắp, mật ong, đường &#8220;tự nhiên&#8221; trong nước ép, đường nâu</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Đậu, đậu lăng, đậu nành nguyên dạng</strong><br><em>đậu đen, đậu đỏ, đậu gà, đậu phụ</em></td>
+          <td class="warn"><strong>Tinh bột tinh chế</strong><br><em>bánh mì trắng, gạo trắng, bún, phở gạo trắng, mì, bánh ngọt</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Ngũ cốc nguyên hạt</strong><br><em>yến mạch, quinoa, gạo lứt, lúa mạch</em></td>
+          <td class="warn"><strong>Chất béo bão hòa từ động vật</strong><br><em>thịt đỏ, thịt chế biến, phô mai, bơ sữa động vật</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Quả mọng</strong> (ưu tiên nhất)<br><em>việt quất, mâm xôi, dâu &mdash; anthocyanin cải thiện nhạy cảm insulin</em></td>
+          <td class="warn"><strong>Thực phẩm siêu chế biến</strong><br><em>snack đóng gói, xúc xích, fast food, nước ngọt</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Các loại hạt &amp; hạt giàu omega-3</strong><br><em>hạnh nhân, óc chó, hạt điều, hạt lanh, hạt chia</em></td>
+          <td class="warn"><strong>Dầu công nghiệp &amp; chiên ngập dầu</strong><br><em>dầu ăn tái sử dụng, đồ chiên rán nhiều dầu</em></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="science-box">
+      <div class="sb-label">⚠️ Điểm quan trọng nhất</div>
+      <p><strong>Đường là kẻ thù số một</strong>. Trong tất cả bài viết của tôi, tôi luôn nhấn mạnh: <em>hạn chế &gt;90% đường thêm vào thực phẩm</em>. Đây không phải lời khuyên cực đoan &mdash; đó là tiêu chuẩn được hỗ trợ bởi tất cả nghiên cứu về ung thư vú, tiểu đường, tim mạch, và lão hóa. Đường làm tất cả những điều xấu nhất với insulin, và gần như không cung cấp dinh dưỡng nào bù lại.</p>
+    </div>
+
+    <h2>Phần 5 &middot; Những Câu Hỏi Thường Gặp</h2>
+
+    <div class="qa-block">
+      <div class="qa-q">Tôi không bị tiểu đường &mdash; vậy có cần lo về kháng insulin không?</div>
+      <div class="qa-a"><strong>Có</strong>. Kháng insulin bắt đầu âm thầm <em>nhiều năm trước khi đường huyết tăng</em> đủ để chẩn đoán tiểu đường. Nhiều phụ nữ có insulin lúc đói cao nhưng đường huyết vẫn &#8220;bình thường&#8221; &mdash; và đang gia tăng nguy cơ ung thư vú mà không biết. Xét nghiệm <em>fasting insulin</em> và <em>HOMA-IR</em> có thể phát hiện sớm, trước khi đường huyết lên hẳn.</div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">Trái cây có làm tăng insulin không? Tôi có nên tránh trái cây?</div>
+      <div class="qa-a">Câu trả lời ngắn: <strong>có ăn được, NHƯNG phải có giới hạn</strong>. Trái cây nguyên quả có chất xơ làm chậm hấp thu đường — nên không gây đột biến như nước ngọt hay đường tinh luyện. Tuy nhiên, điều này <em>không có nghĩa là ăn bao nhiêu cũng được</em>. Trái cây vẫn chứa đường tự nhiên (fructose) — ăn quá nhiều vẫn có thể làm tăng insulin và tích mỡ gan. Người đã có kháng insulin hoặc tiền tiểu đường cần kiểm soát chặt hơn, ưu tiên quả mọng (việt quất, mâm xôi, dâu) và tuyệt đối tránh nước ép trái cây.</div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">Tôi gầy &mdash; có cần lo về kháng insulin không?</div>
+      <div class="qa-a"><strong>Có &mdash; chắc chắn có</strong>. Đây là hiện tượng được gọi là <em>&#8220;TOFI&#8221;</em> (Thin Outside, Fat Inside &mdash; gầy bên ngoài, mỡ bên trong). Mỡ nội tạng tích quanh các cơ quan (gan, tụy, ruột) có thể gây kháng insulin ngay cả ở người có cân nặng &#8220;bình thường&#8221; hoặc gầy. Chế độ ăn nhiều đường, tinh bột tinh chế, dầu công nghiệp vẫn <strong>gây tổn thương chuyển hóa dù không thể hiện rõ ở cân</strong>. Nhiều người gầy kiểm tra thấy insulin lúc đói cao, HOMA-IR cao, gan nhiễm mỡ &mdash; nhưng vẫn tưởng mình &#8220;khỏe mạnh&#8221; vì không thừa cân. Xét nghiệm <em>fasting insulin</em> + <em>HOMA-IR</em> là cách duy nhất để biết chắc.</div>
+    </div>
+
+    <div class="takeaway">
+      <div class="takeaway-label">&#128161; Điểm Mấu Chốt</div>
+      <p>Kháng insulin không phải là &#8220;vấn đề của tương lai xa&#8221;. Nó đang âm thầm diễn ra trong hàng triệu người &mdash; <strong>cả nam và nữ</strong> &mdash; ngay bây giờ. Và nó là một trong những <strong>cơ chế được nghiên cứu nhiều nhất</strong> kết nối chế độ ăn với ung thư vú, ung thư đại tràng, ung thư tuyến tiền liệt, bệnh tim mạch, và sa sút trí tuệ.</p>
+      <p>Tin tốt: đây cũng là cơ chế <em>dễ đảo ngược nhất</em>. Nghiên cứu lâm sàng cho thấy chỉ sau <strong>8 tuần</strong> ăn thực vật toàn phần, insulin có thể giảm 33% &mdash; ngay cả ở bệnh nhân ung thư di căn đang điều trị. Không cần thuốc. Chỉ cần <strong>bữa ăn biết tôn trọng tuyến tụy</strong>: ít đường, nhiều chất xơ, protein thực vật, rau xanh phong phú.</p>
+    </div>
+
+    <div class="soft-invitation">
+      Giảm đường và chuyển sang chế độ ăn dựa trên thực vật nghe đơn giản trên giấy, nhưng thực tế thường vấp vào thói quen, văn hóa ăn uống, và thiếu công thức phù hợp. Nếu bạn muốn có người đồng hành &mdash; nơi khoa học được chuyển thành thực đơn và kế hoạch bữa ăn cụ thể &mdash; <strong>H21 là không gian chúng tôi xây dựng cho đúng mục đích đó</strong>.
+    </div>
+
+<div class="cta-box">
+  <div class="cta-eyebrow">Seri Ung Thư Vú · 10 Cơ Chế</div>
+  <h3 class="cta-title">Đây là Cơ Chế 04/10. Còn 6 cơ chế nữa để khám phá.</h3>
+  <p class="cta-desc">Tham gia cộng đồng H21 để theo dõi toàn bộ seri &mdash; nơi khoa học ung thư được dịch thành hành động cụ thể mỗi ngày.</p>
+  <a href="https://www.facebook.com/xanhlenbenhxuong/" target="_blank" class="cta-btn">Đăng Ký Khóa Học H21 &#8594;</a>
+</div>
+
+  </div>
+<div class="article-footer">
+  <div class="footer-brand">
+    <strong>Thuy-Trinh Nguyen</strong> &middot; Khoa Học Gia &amp; Nhà Sáng Lập<br>
+    <strong>H21 - Cho Đời Mãi Xanh</strong> &middot; <a href="https://www.h21chodoimaixanh.com">www.h21chodoimaixanh.com</a><br>
+    Mang khoa học từ phòng thí nghiệm đến căn bếp mỗi gia đình
+  </div>
+</div>
+</div>
+<footer class="site-footer">
+  <strong>H21 - Cho Đời Mãi Xanh</strong> &middot; Khoa Học Gia Thuy-Trinh Nguyen<br>
+  <a href="https://blog.h21chodoimaixanh.com">blog.h21chodoimaixanh.com</a> &middot; <a href="https://www.h21chodoimaixanh.com">www.h21chodoimaixanh.com</a><br>
+  Nội dung chỉ dành cho mục đích giáo dục, không thay thế tư vấn y tế chuyên nghiệp.
+</footer>
+</body>
+</html>
