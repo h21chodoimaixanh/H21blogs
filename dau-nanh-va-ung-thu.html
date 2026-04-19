@@ -57,8 +57,10 @@ body{background:#FAF7F0;font-family:'Lora',Georgia,serif;color:var(--ink);}
 .article-body p{margin-bottom:22px;}
 .article-body strong{color:var(--ink);font-weight:700;}
 .article-body em{color:var(--accent);font-style:italic;font-weight:600;}
-.article-body h2{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--ink);margin:44px 0 14px;line-height:1.3;}
+.article-body h2{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--ink);margin:44px 0 14px;line-height:1.3;scroll-margin-top:80px;}
 .article-body h3{font-family:'Be Vietnam Pro',sans-serif;font-size:14px;font-weight:700;color:var(--accent-dark);margin:28px 0 10px;text-transform:uppercase;letter-spacing:1.5px;}
+.toc-link{color:var(--accent-dark);text-decoration:none;border-bottom:1.5px dotted var(--accent);transition:all 0.2s;font-weight:700;}
+.toc-link:hover{border-bottom-style:solid;color:var(--accent);background:var(--blush);}
 /* FACT STRIP */
 .fact-strip{display:grid;grid-template-columns:repeat(3,1fr);margin:32px 0 18px;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:white;}
 .fact-item{padding:22px 16px;text-align:center;border-right:1px solid var(--border);}
@@ -137,6 +139,8 @@ body{background:#FAF7F0;font-family:'Lora',Georgia,serif;color:var(--ink);}
 .qa-a::before{content:'Đ: ';font-family:'Be Vietnam Pro',sans-serif;font-weight:700;color:var(--accent);font-size:13px;letter-spacing:1px;}
 .qa-a strong{color:var(--accent-dark);}
 .qa-a em{color:var(--accent);}
+.qa-verdict{display:inline-block;background:var(--truth);color:white;font-family:'Be Vietnam Pro',sans-serif;font-size:17px;font-weight:700;letter-spacing:1.5px;padding:10px 20px;border-radius:8px;margin:4px 0 14px;text-transform:uppercase;font-style:normal;box-shadow:0 2px 8px rgba(90,124,95,0.25);}
+.qa-verdict-info{display:inline-block;background:var(--accent-dark);color:white;font-family:'Be Vietnam Pro',sans-serif;font-size:17px;font-weight:700;letter-spacing:1.5px;padding:10px 20px;border-radius:8px;margin:4px 0 14px;text-transform:uppercase;font-style:normal;box-shadow:0 2px 8px rgba(20,48,42,0.25);}
 /* CHECKLIST */
 .checklist{background:linear-gradient(135deg,white,var(--blush));border:1px solid var(--border);border-radius:12px;padding:24px 28px;margin:32px 0;}
 .checklist-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--accent-dark);margin-bottom:4px;}
@@ -215,7 +219,7 @@ body{background:#FAF7F0;font-family:'Lora',Georgia,serif;color:var(--ink);}
     </div>
     <div class="byline-meta">
       <div class="byline-url">www.h21chodoimaixanh.com</div>
-      <div class="read-time">&#9200; Đọc trong 18 phút</div>
+      <div class="read-time">&#9200; Đọc trong 20 phút</div>
     </div>
   </div>
 </div>
@@ -224,7 +228,7 @@ body{background:#FAF7F0;font-family:'Lora',Georgia,serif;color:var(--ink);}
   <div class="article-body">
 
     <div class="hero-banner">
-      <img src="dau-nanh-banner.png" alt="Đậu Nành & Ung Thư Vú — Sự Thật Bị Hiểu Lầm Suốt 40 Năm cùng Khoa Học Gia Thuy-Trinh Nguyen">
+      <img src="dau-nanh-va-ung-thu-vu.jpg" alt="Đậu Nành & Ung Thư Vú — Sự Thật Bị Hiểu Lầm Suốt 40 Năm cùng Khoa Học Gia Thuy-Trinh Nguyen">
     </div>
 
     <div class="personal-note">
@@ -235,14 +239,14 @@ body{background:#FAF7F0;font-family:'Lora',Georgia,serif;color:var(--ink);}
     </div>
 
     <p>Nếu bạn đã từng được bác sĩ, chuyên gia dinh dưỡng, hoặc người thân dặn &#8220;đừng ăn đậu nành, sợ ung thư vú&#8221; &mdash; bài viết này dành cho bạn. Chúng ta sẽ cùng đi qua:</p>
-    <p>1. <strong>Huyền thoại đến từ đâu</strong> &mdash; và tại sao nó sai.<br>
-    2. <strong>Cơ chế khoa học thực sự</strong> &mdash; cách đậu nành hoạt động trong cơ thể người.<br>
-    3. <strong>Bằng chứng từ con người</strong> &mdash; các nghiên cứu lớn nhất, cập nhật nhất.<br>
-    4. <strong>Thí nghiệm thiên nhiên</strong> &mdash; phụ nữ châu Á di cư qua các thế hệ.<br>
-    5. <strong>Quan điểm hiện nay</strong> của American Cancer Society, AICR, ASCO.<br>
-    6. <strong>Loại đậu nành nào</strong> &mdash; nguyên dạng, chế biến, hay viên bổ sung.<br>
-    7. <strong>Những câu hỏi thường gặp</strong> &mdash; tamoxifen, đàn ông, tuyến giáp, GMO, liều lượng.<br>
-    8. <strong>Áp dụng vào bữa ăn hằng ngày</strong> &mdash; 7 cách đơn giản để ăn đủ đậu nành.</p>
+    <p>1. <a href="#phan-1" class="toc-link">Huyền thoại đến từ đâu</a> &mdash; và tại sao nó sai.<br>
+    2. <a href="#phan-2" class="toc-link">Cơ chế khoa học thực sự</a> &mdash; cách đậu nành hoạt động trong cơ thể người.<br>
+    3. <a href="#phan-3" class="toc-link">Bằng chứng từ con người</a> &mdash; các nghiên cứu lớn nhất, cập nhật nhất.<br>
+    4. <a href="#phan-4" class="toc-link">Thí nghiệm thiên nhiên</a> &mdash; phụ nữ châu Á di cư qua các thế hệ.<br>
+    5. <a href="#phan-5" class="toc-link">Quan điểm hiện nay</a> của American Cancer Society, AICR, ASCO.<br>
+    6. <a href="#phan-6" class="toc-link">Loại đậu nành nào</a> &mdash; nguyên dạng, chế biến, hay viên bổ sung.<br>
+    7. <a href="#phan-7" class="toc-link">Những câu hỏi thường gặp</a> &mdash; tamoxifen, ung thư vú, tuyến giáp, u xơ tử cung.<br>
+    8. <a href="#phan-8" class="toc-link">Áp dụng vào bữa ăn hằng ngày</a> &mdash; 7 cách đơn giản để ăn đủ đậu nành.</p>
 
     <div class="fact-strip">
       <div class="fact-item">
@@ -263,7 +267,7 @@ body{background:#FAF7F0;font-family:'Lora',Georgia,serif;color:var(--ink);}
       Ba con số này đến từ <strong>ba nghiên cứu lớn khác nhau</strong>, nhưng cùng kể một câu chuyện: phụ nữ ăn nhiều đậu nành có tỷ lệ mắc, tái phát, và tử vong do ung thư vú đều giảm đáng kể. <strong>Con số 58% đặc biệt quan trọng</strong> &mdash; nó cho thấy thời điểm tiếp xúc càng sớm (từ tuổi thơ), lợi ích càng lớn. Đây là một trong những tác dụng bảo vệ mạnh nhất của bất kỳ thực phẩm nào mà khoa học từng đo được.
     </div>
 
-    <h2>Phần 1 &middot; Huyền Thoại Đến Từ Đâu?</h2>
+    <h2 id="phan-1">Phần 1 &middot; Huyền Thoại Đến Từ Đâu?</h2>
 
     <p>Đầu những năm 1990, các nhà khoa học phát hiện ra rằng đậu nành chứa một nhóm hợp chất gọi là <em>isoflavone</em> &mdash; nổi bật nhất là <em>genistein</em> và <em>daidzein</em>. Khi đưa vào ống nghiệm hoặc tiêm cho chuột với liều lượng cao, các chất này có thể gắn vào thụ thể estrogen, và người ta gọi chúng là <em>phytoestrogen</em> (estrogen thực vật).</p>
     
@@ -288,7 +292,7 @@ body{background:#FAF7F0;font-family:'Lora',Georgia,serif;color:var(--ink);}
 
     <p>Tuy nhiên, một khi một khuyến cáo y khoa đã được đưa ra, nó cần rất nhiều năm và rất nhiều bằng chứng để bị đảo ngược. Và trong thời gian đó, hàng triệu phụ nữ đã bỏ lỡ một thực phẩm có thể bảo vệ mạng sống họ.</p>
 
-    <h2>Phần 2 &middot; Khoa Học Thực Sự: Isoflavone Là Một SERM Tự Nhiên</h2>
+    <h2 id="phan-2">Phần 2 &middot; Khoa Học Thực Sự: Isoflavone Là Một SERM Tự Nhiên</h2>
 
     <h3>Hai Loại Thụ Thể Estrogen &mdash; Alpha &amp; Beta</h3>
     <p>Cơ thể người có hai loại thụ thể estrogen, và chúng có tác dụng <em>đối nghịch</em> nhau trong mô vú. Hình dưới đây minh họa cách chúng hoạt động:</p>
@@ -465,7 +469,7 @@ body{background:#FAF7F0;font-family:'Lora',Georgia,serif;color:var(--ink);}
       </div>
     </div>
 
-    <h2>Phần 3 &middot; Bằng Chứng Từ Con Người</h2>
+    <h2 id="phan-3">Phần 3 &middot; Bằng Chứng Từ Con Người</h2>
 
     <p>Đây là phần quan trọng nhất. Thay vì nghiên cứu ống nghiệm hay chuột &mdash; các nghiên cứu dưới đây đều dựa trên <strong>phụ nữ thật, trong đời sống thực</strong>, theo dõi nhiều năm.</p>
 
@@ -498,7 +502,7 @@ body{background:#FAF7F0;font-family:'Lora',Georgia,serif;color:var(--ink);}
       <cite>— TS. BS. Kristi Funk, tác giả sách &#8220;Breasts: The Owner's Manual&#8221;</cite>
     </div>
 
-    <h2>Phần 4 &middot; &#8220;Thí Nghiệm Thiên Nhiên&#8221; &mdash; Phụ Nữ Á Di Cư</h2>
+    <h2 id="phan-4">Phần 4 &middot; &#8220;Thí Nghiệm Thiên Nhiên&#8221; &mdash; Phụ Nữ Á Di Cư</h2>
 
     <p>Bằng chứng thuyết phục nhất có lẽ đến từ một &#8220;thí nghiệm thiên nhiên&#8221; khổng lồ: nghiên cứu phụ nữ châu Á di cư sang Mỹ qua nhiều thế hệ.</p>
 
@@ -533,7 +537,7 @@ body{background:#FAF7F0;font-family:'Lora',Georgia,serif;color:var(--ink);}
 
     <p>Khi phụ nữ châu Á di cư sang Mỹ, tỷ lệ ung thư vú của họ tăng dần qua các thế hệ, đến thế hệ thứ ba đã ngang bằng phụ nữ Mỹ da trắng. Vì gen không thể thay đổi nhanh như vậy, kết luận khoa học là: <strong>yếu tố bảo vệ nằm ở chế độ ăn và lối sống truyền thống &mdash; trong đó đậu nành là cấu phần quan trọng</strong>.</p>
 
-    <h2>Phần 5 &middot; Các Tổ Chức Y Khoa Lớn Nói Gì Hiện Nay?</h2>
+    <h2 id="phan-5">Phần 5 &middot; Các Tổ Chức Y Khoa Lớn Nói Gì Hiện Nay?</h2>
 
     <p>Đến năm 2024&ndash;2025, <strong>toàn bộ các tổ chức ung thư hàng đầu thế giới</strong> đã xác nhận: đậu nành nguyên dạng an toàn, và có thể bảo vệ. Đây là các tuyên bố chính thức:</p>
 
@@ -563,7 +567,7 @@ body{background:#FAF7F0;font-family:'Lora',Georgia,serif;color:var(--ink);}
 
     <p>Lưu ý: <strong>cả ba tổ chức đều nói đậu nành là an toàn cho người đã từng bị ung thư vú</strong> &mdash; chính là nhóm mà trước đây được khuyên nên tránh. Đây là một sự đảo ngược khuyến cáo lớn trong y học hiện đại.</p>
 
-    <h2>Phần 6 &middot; Quan Trọng: Loại Đậu Nành Nào?</h2>
+    <h2 id="phan-6">Phần 6 &middot; Quan Trọng: Loại Đậu Nành Nào?</h2>
 
     <p>Tất cả nghiên cứu đầu trên đều dựa trên <strong>đậu nành nguyên dạng hoặc chế biến truyền thống</strong> &mdash; không phải viên bổ sung isoflavone. Đây là sự khác biệt quan trọng.</p>
 
@@ -601,31 +605,50 @@ body{background:#FAF7F0;font-family:'Lora',Georgia,serif;color:var(--ink);}
 
     <p><strong>Quy tắc tuyệt đối của tôi: nguyên dạng tự nhiên là ưu tiên hàng đầu.</strong> Càng gần đậu nành ở trạng thái tự nhiên, lợi ích khoa học càng rõ ràng. Mọi bước chế biến xa rời tự nhiên &mdash; thêm đường, tinh chế, phân lập đạm &mdash; đều làm giảm hoặc <em>triệt tiêu</em> tác dụng bảo vệ.</p>
 
-    <h2>Phần 7 &middot; Những Câu Hỏi Thường Gặp</h2>
+    <h2 id="phan-7">Phần 7 &middot; Những Câu Hỏi Thường Gặp</h2>
 
     <div class="qa-block">
       <div class="qa-q">Tôi đang dùng tamoxifen. Ăn đậu nành có an toàn không?</div>
-      <div class="qa-a">An toàn. Nghiên cứu lớn nhất đến nay (Shu et al., JAMA 2009) cho thấy đậu nành <strong>không cản trở tác dụng tamoxifen</strong> &mdash; ngược lại, một số dữ liệu sơ bộ còn cho thấy đậu nành <em>bổ trợ</em> tamoxifen. Lo ngại cũ dựa trên nghiên cứu chuột, không áp dụng cho người.</div>
+      <div class="qa-a"><span class="qa-verdict">✓ AN TOÀN &amp; BỔ TRỢ</span><br>Nghiên cứu lớn nhất đến nay (Shu et al., JAMA 2009) cho thấy đậu nành <strong>không cản trở tác dụng tamoxifen</strong> &mdash; ngược lại, một số dữ liệu sơ bộ còn cho thấy đậu nành <em>bổ trợ</em> tamoxifen. Lo ngại cũ dựa trên nghiên cứu chuột, không áp dụng cho người.</div>
     </div>
 
     <div class="qa-block">
       <div class="qa-q">Đàn ông ăn đậu nành có bị &#8220;nữ hóa&#8221; hay mọc ngực không?</div>
-      <div class="qa-a">Không. Đây là một trong những huyền thoại sai nhất. <strong>Hiện tượng nam giới mọc ngực (gynecomastia) chủ yếu do mỡ dư thừa, không phải do đậu nành.</strong> Cơ chế: mô mỡ thừa chứa enzyme <em>aromatase</em>, enzyme này chuyển testosterone thành estrogen. Càng nhiều mỡ, càng nhiều estrogen, ngực nam càng phát triển. Giảm mỡ, không phải tránh đậu nành, mới là giải pháp. Các meta-analysis lớn xác nhận đậu nành ở liều tiêu thụ bình thường <strong>không ảnh hưởng testosterone, tinh trùng, hay kích thước ngực nam giới</strong>.</div>
+      <div class="qa-a"><span class="qa-verdict">✓ KHÔNG GÂY "NỮ HÓA"</span><br>Đây là một trong những huyền thoại sai nhất. <strong>Hiện tượng nam giới mọc ngực (gynecomastia) chủ yếu do mỡ dư thừa, không phải do đậu nành.</strong> Cơ chế: mô mỡ thừa chứa enzyme <em>aromatase</em>, enzyme này chuyển testosterone thành estrogen. Càng nhiều mỡ, càng nhiều estrogen, ngực nam càng phát triển. Giảm mỡ, không phải tránh đậu nành, mới là giải pháp. Các meta-analysis lớn xác nhận đậu nành ở liều tiêu thụ bình thường <strong>không ảnh hưởng testosterone, tinh trùng, hay kích thước ngực nam giới</strong>.</div>
     </div>
 
     <div class="qa-block">
       <div class="qa-q">Đậu nành có gây rối loạn tuyến giáp không?</div>
-      <div class="qa-a">Ở người có tuyến giáp bình thường và iốt đầy đủ: <strong>không</strong>. Đậu nành có thể ảnh hưởng đến hấp thu thuốc tuyến giáp (levothyroxine) &mdash; nếu đang uống thuốc này, hãy uống cách bữa đậu nành ít nhất 4 tiếng.</div>
+      <div class="qa-a"><span class="qa-verdict">✓ KHÔNG GÂY RỐI LOẠN</span><br>Ở người có tuyến giáp bình thường và iốt đầy đủ: <strong>không gây rối loạn</strong>. Đậu nành có thể ảnh hưởng đến hấp thu thuốc tuyến giáp (levothyroxine) &mdash; nếu đang uống thuốc này, hãy uống cách bữa đậu nành ít nhất 4 tiếng.</div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">Tôi bị u xơ tử cung hoặc u nang buồng trứng &mdash; có được ăn đậu nành không?</div>
+      <div class="qa-a"><span class="qa-verdict">✓ ĂN ĐƯỢC ĐẬU NÀNH</span><br>Với đậu nành <strong>nguyên dạng</strong> ở liều khẩu phần thông thường. Đây là lo ngại tôi gặp thường xuyên ở phụ nữ châu Á &mdash; và khoa học mới nhất đã trả lời khá rõ:
+      <br><br>
+      <strong>• Tổng quan lâm sàng 2025</strong> (<em>Nutrition and Uterine Fibroids: Clinical Impact and Emerging Therapeutic Perspectives</em>, Journal of Clinical Medicine): chế độ ăn giàu rau quả, trà xanh, và đạm thực vật <em>có tác dụng bảo vệ</em>; ngược lại, <strong>thịt đỏ, chất béo bão hòa, và rượu</strong> mới là yếu tố làm tăng nguy cơ u xơ tử cung.
+      <br>
+      <strong>• Dr. Michael Greger (NutritionFacts, 2024)</strong> tổng hợp nghiên cứu: phụ nữ ăn thực vật có <em>mức estrogen trong máu thấp hơn</em> &mdash; vì chất xơ giúp cơ thể đào thải estrogen dư thừa qua đường tiêu hóa. Đây là cơ chế bảo vệ cho cả ung thư vú và u xơ.
+      <br>
+      <strong>• Chiến lược LIFE UP 2024</strong> (<em>Lifestyle Interventions, Food modifications, Environmental practices for UF Prevention</em>): rau họ cải (bông cải xanh, súp lơ) chứa indole giúp cân bằng estrogen; genistein từ đậu nành kích hoạt <em>con đường tự hủy tế bào u xơ</em> trong nghiên cứu.
+      <br><br>
+      <strong>Lý do sinh học:</strong> Như đã giải thích ở Phần 2, isoflavone đậu nành là <em>SERM tự nhiên</em> &mdash; ưu tiên gắn vào thụ thể estrogen beta (ức chế), không phải alpha (kích thích). Ở mô tử cung, tác dụng này trung tính hoặc có lợi &mdash; không giống estrogen của cơ thể.
+      <br><br>
+      <strong>Dr. Dean Ornish</strong> &mdash; người tiên phong Y Học Lối Sống &mdash; đã chứng minh nguyên tắc quan trọng: chế độ ăn thực vật toàn phần làm <em>giảm estrogen tổng thể trong máu</em>, qua đó giảm kích thích nuôi các khối u phụ thuộc hormone (bao gồm u xơ tử cung và ung thư vú).
+      <br><br>
+      <strong>Điều cần tránh:</strong> Viên bổ sung isoflavone liều cao (không phải thực phẩm), và đậu nành có đường. Đường mới là yếu tố thúc đẩy tăng trưởng u &mdash; qua insulin và viêm &mdash; mạnh hơn nhiều so với isoflavone.
+      <br><br>
+      <em>Lưu ý:</em> Nếu u xơ lớn hoặc có triệu chứng nặng, hãy trao đổi với bác sĩ sản phụ khoa của bạn về toàn bộ chế độ ăn và kế hoạch điều trị.</div>
     </div>
 
     <div class="qa-block">
       <div class="qa-q">Đậu nành biến đổi gen (GMO) có vấn đề không?</div>
-      <div class="qa-a">Đây là vấn đề về <em>quy trình trồng</em>, không phải về bản chất đậu nành. Hầu hết đậu nành thương mại trên thị trường toàn cầu &mdash; bao gồm cả ở châu Á &mdash; hiện nay là GMO. Nếu có thể, <strong>hãy chọn đậu nành hữu cơ hoặc có chứng nhận &#8220;non-GMO&#8221;</strong>. Đậu phụ, sữa đậu nành, miso, tempeh có chứng nhận hữu cơ là lựa chọn tốt nhất.</div>
+      <div class="qa-a"><span class="qa-verdict-info">⚡ CHỌN HỮU CƠ NẾU CÓ THỂ</span><br>Đây là vấn đề về <em>quy trình trồng</em>, không phải về bản chất đậu nành. Hầu hết đậu nành thương mại trên thị trường toàn cầu &mdash; bao gồm cả ở châu Á &mdash; hiện nay là GMO. Nếu có thể, <strong>hãy chọn đậu nành hữu cơ hoặc có chứng nhận &#8220;non-GMO&#8221;</strong>. Đậu phụ, sữa đậu nành, miso, tempeh có chứng nhận hữu cơ là lựa chọn tốt nhất.</div>
     </div>
 
     <div class="qa-block">
       <div class="qa-q">Ăn bao nhiêu đậu nành mỗi ngày là đủ?</div>
-      <div class="qa-a"><strong>1&ndash;2 khẩu phần tiêu chuẩn mỗi ngày</strong> là mức được AICR khuyến cáo để hưởng lợi ích phòng bệnh. TS. BS. Michael Greger &mdash; tác giả sách <em>How Not to Die</em> &mdash; cho biết mức tiêu thụ trong nghiên cứu dài hạn của phụ nữ châu Á cho thấy <strong>3&ndash;5 khẩu phần/ngày hoàn toàn an toàn</strong>.
+      <div class="qa-a"><span class="qa-verdict-info">⚡ 1&ndash;2 KHẨU PHẦN MỖI NGÀY</span><br><strong>1&ndash;2 khẩu phần tiêu chuẩn mỗi ngày</strong> là mức được AICR khuyến cáo để hưởng lợi ích phòng bệnh. TS. BS. Michael Greger &mdash; tác giả sách <em>How Not to Die</em> &mdash; cho biết mức tiêu thụ trong nghiên cứu dài hạn của phụ nữ châu Á cho thấy <strong>3&ndash;5 khẩu phần/ngày hoàn toàn an toàn</strong>.
       <br><br>
       <strong>Một khẩu phần = khoảng 1/2 chén (80&ndash;130g) đậu nấu chín</strong> &mdash; tương đương:
       <br>• 1/2 chén đậu phụ (~80g)
@@ -635,7 +658,7 @@ body{background:#FAF7F0;font-family:'Lora',Georgia,serif;color:var(--ink);}
       <br>• 1 muỗng canh miso</div>
     </div>
 
-    <h2>Phần 8 &middot; Áp Dụng Vào Bữa Ăn Hằng Ngày</h2>
+    <h2 id="phan-8">Phần 8 &middot; Áp Dụng Vào Bữa Ăn Hằng Ngày</h2>
 
     <p>Đậu nành có mặt ở hầu hết nền ẩm thực truyền thống châu Á &mdash; từ đậu phụ ở Trung Quốc, đến tempeh ở Indonesia, natto và miso ở Nhật. Đây là một kho thực phẩm đa dạng mà bất kỳ ai cũng có thể kết hợp vào bữa ăn hằng ngày.</p>
 
