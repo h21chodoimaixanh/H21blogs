@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="IGF-1 là hormone tăng trưởng giúp trẻ em phát triển. Nhưng ở người lớn, dư thừa IGF-1 thúc đẩy cả tế bào ung thư. Khoa học đã rõ: đạm động vật làm tăng IGF-1, đạm thực vật thì không.">
+<title>IGF-1 &amp; Đạm Động Vật — Cơ Chế 02/10 Ung Thư Vú | Blog H21</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Terracotta/warm earth palette — Cơ chế 02: IGF-1 & Đạm động vật */
+  --accent:#A05236;--accent-light:#F5E8DF;
+  --accent-mid:#7A3E28;--accent-dark:#4A2518;
+  --plum:#2E1810;--rose:#C4836B;--blush:#FAF2EC;
+  --ribbon:#C97A85;
+  --mint:#7eb89a;
+  --gold:#B8945C;--gold-light:#FAF3E5;
+  --border:#E8DDD0;--mid:#3A2A22;--light:#786860;--ink:#2A1810;
+  --myth:#a85550;--truth:#5a7c5f;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#FAF7F0;font-family:'Lora',Georgia,serif;color:var(--ink);}
+.site-nav{background:var(--plum);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(0,0,0,0.25);}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-logo-mark{width:34px;height:34px;background:var(--mint);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-family:sans-serif;}
+.nav-logo-name{font-size:14px;font-weight:600;color:white;font-family:'Be Vietnam Pro',sans-serif;}
+.nav-logo-tag{font-size:10px;color:rgba(255,255,255,0.55);margin-top:1px;font-family:'Be Vietnam Pro',sans-serif;}
+.nav-back{font-size:13px;color:rgba(255,255,255,0.75);text-decoration:none;font-weight:500;font-family:'Be Vietnam Pro',sans-serif;transition:color 0.2s;}
+.nav-back:hover{color:var(--rose);}
+.series-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.18);padding:6px 14px;border-radius:100px;font-size:10.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.92);font-family:'Be Vietnam Pro',sans-serif;margin-bottom:14px;}
+.series-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--rose);}
+.article-hero{background:linear-gradient(135deg,#2E1810 0%,#5A2E20 45%,#A05236 100%);padding:48px 24px 40px;position:relative;overflow:hidden;}
+.article-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 30%,rgba(255,255,255,0.06) 0%,transparent 60%);}
+.hero-inner{max-width:720px;margin:0 auto;position:relative;z-index:1;}
+.article-h1{font-family:'Playfair Display',serif;font-size:38px;font-weight:700;line-height:1.2;color:white;margin-bottom:16px;letter-spacing:-0.3px;}
+.article-h1 em{color:rgba(255,255,255,0.85);font-style:italic;}
+.article-deck{font-family:'Lora',serif;font-size:17px;line-height:1.7;color:rgba(255,255,255,0.85);font-style:italic;margin:0;}
+.byline-bar{background:white;border-bottom:1px solid var(--border);padding:14px 24px;}
+.byline-inner{max-width:720px;margin:0 auto;display:flex;align-items:center;gap:14px;}
+.byline-av{width:40px;height:40px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:white;font-weight:700;flex-shrink:0;font-family:'Be Vietnam Pro',sans-serif;}
+.byline-name{font-size:13.5px;font-weight:600;color:var(--ink);font-family:'Be Vietnam Pro',sans-serif;}
+.byline-role{font-size:11.5px;color:var(--light);margin-top:1px;font-family:'Be Vietnam Pro',sans-serif;}
+.byline-meta{margin-left:auto;text-align:right;}
+.byline-url{font-size:11.5px;color:var(--light);font-family:'Be Vietnam Pro',sans-serif;}
+.read-time{font-size:11px;color:var(--accent);font-weight:600;margin-top:2px;font-family:'Be Vietnam Pro',sans-serif;}
+.article-wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px;}
+.hero-banner{margin:0 0 32px;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(20,48,42,0.12);border:1px solid var(--border);}
+.hero-banner img{width:100%;display:block;}
+.hero-banner-placeholder{background:linear-gradient(135deg,var(--accent-light),var(--blush));border:2px dashed var(--border);border-radius:12px;padding:40px 24px;text-align:center;margin:0 0 32px;font-family:'Be Vietnam Pro',sans-serif;color:var(--light);font-size:13px;line-height:1.6;}
+.hero-banner-placeholder strong{color:var(--accent-dark);display:block;font-size:14px;margin-bottom:6px;}
+.article-body{font-family:'Lora',Georgia,serif;font-size:17px;line-height:1.9;color:var(--mid);}
+.article-body p{margin-bottom:22px;}
+.article-body strong{color:var(--ink);font-weight:700;}
+.article-body em{color:var(--accent);font-style:italic;font-weight:600;}
+.article-body h2{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--ink);margin:44px 0 14px;line-height:1.3;}
+.article-body h3{font-family:'Be Vietnam Pro',sans-serif;font-size:14px;font-weight:700;color:var(--accent-dark);margin:28px 0 10px;text-transform:uppercase;letter-spacing:1.5px;}
+.fact-strip{display:grid;grid-template-columns:repeat(3,1fr);margin:32px 0 18px;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:white;}
+.fact-item{padding:22px 16px;text-align:center;border-right:1px solid var(--border);}
+.fact-item:last-child{border-right:none;}
+.fact-num{font-family:'Playfair Display',serif;font-size:34px;font-weight:700;color:var(--accent);line-height:1;}
+.fact-label{font-size:11.5px;color:var(--light);margin-top:8px;line-height:1.5;font-family:'Be Vietnam Pro',sans-serif;}
+.fact-explain{background:var(--blush);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:14px 20px;margin:0 0 32px;font-family:'Lora',serif;font-size:14.5px;line-height:1.75;color:var(--mid);font-style:italic;}
+.fact-explain strong{color:var(--accent-dark);font-style:normal;}
+.personal-note{background:linear-gradient(135deg,#FDFAF2,#F5EFE1);border:1px solid var(--border);border-left:4px solid var(--accent-mid);border-radius:0 14px 14px 0;padding:22px 28px;margin:28px 0;font-family:'Lora',serif;font-style:italic;}
+.personal-note-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent-mid);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;font-style:normal;}
+.personal-note p{font-size:16px;line-height:1.8;color:var(--mid);margin:0;}
+.personal-note strong{color:var(--accent-dark);font-style:normal;}
+.science-box{background:var(--blush);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:0 12px 12px 0;padding:20px 24px;margin:24px 0;}
+.sb-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent-mid);margin-bottom:8px;font-family:'Be Vietnam Pro',sans-serif;}
+.science-box p{font-size:15px;color:var(--mid);margin:0 0 10px;line-height:1.75;font-family:'Lora',serif;}
+.science-box p:last-child{margin-bottom:0;}
+.science-box strong{color:var(--accent-dark);}
+.science-box em{color:var(--accent);}
+.study-card{background:white;border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:10px;padding:18px 22px;margin:14px 0;}
+.study-meta{font-family:'Be Vietnam Pro',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
+.study-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--accent-dark);margin-bottom:6px;line-height:1.35;}
+.study-result{font-family:'Lora',serif;font-size:14.5px;line-height:1.65;color:var(--mid);}
+.study-result strong{color:var(--accent-dark);}
+.diagram{margin:22px 0 6px;display:block;background:white;border:1px solid var(--border);border-radius:12px;padding:18px;}
+.diagram-caption{font-family:'Be Vietnam Pro',sans-serif;font-size:11.5px;color:var(--light);text-align:center;margin-top:-2px;margin-bottom:28px;font-style:italic;line-height:1.5;}
+.pull-quote{margin:38px 0;padding:30px 36px;background:var(--accent-dark);border-radius:14px;color:white;text-align:center;position:relative;}
+.pull-quote::before{content:'"';font-family:'Playfair Display',serif;font-size:80px;line-height:0.5;color:rgba(255,255,255,0.12);position:absolute;top:26px;left:22px;}
+.pull-quote p{font-family:'Lora',serif;font-size:19px;line-height:1.6;color:rgba(255,255,255,0.95);font-style:italic;margin:0;}
+.qa-block{background:white;border:1px solid var(--border);border-radius:10px;padding:18px 22px;margin:14px 0;}
+.qa-q{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--accent-dark);margin-bottom:8px;line-height:1.35;}
+.qa-q::before{content:'H: ';color:var(--accent);}
+.qa-a{font-family:'Lora',serif;font-size:14.5px;line-height:1.75;color:var(--mid);}
+.qa-a::before{content:'Đ: ';font-family:'Be Vietnam Pro',sans-serif;font-weight:700;color:var(--accent);font-size:13px;letter-spacing:1px;}
+.qa-a strong{color:var(--accent-dark);}
+.qa-a em{color:var(--accent);}
+.info-table{width:100%;border-collapse:collapse;margin:22px 0 28px;background:white;border:1px solid var(--border);border-radius:12px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;}
+.info-table thead{background:var(--accent-dark);}
+.info-table th{padding:14px 16px;text-align:left;font-size:12px;font-weight:700;color:white;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--border);}
+.info-table td{padding:14px 16px;font-size:13.5px;line-height:1.65;color:var(--mid);border-bottom:1px solid var(--border);vertical-align:top;}
+.info-table tr:last-child td{border-bottom:none;}
+.info-table tr:nth-child(even){background:var(--blush);}
+.info-table td strong{color:var(--accent-dark);}
+.info-table .ok{color:#3e6e48;font-weight:700;}
+.info-table .warn{color:#a85550;font-weight:700;}
+@media(max-width:600px){.info-table{font-size:12px;} .info-table th,.info-table td{padding:10px 12px;}}
+.soft-invitation{background:var(--blush);border:1px solid var(--border);border-radius:10px;padding:20px 26px;margin:28px 0;font-family:'Lora',serif;font-size:15.5px;line-height:1.8;color:var(--mid);font-style:italic;}
+.soft-invitation strong{color:var(--accent-dark);font-style:normal;font-weight:700;}
+.soft-invitation em{color:var(--accent);font-style:italic;}
+.takeaway{background:linear-gradient(135deg,var(--accent-dark),var(--accent));border-radius:14px;padding:28px 32px;margin:36px 0 0;color:white;}
+.takeaway-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
+.takeaway p{font-size:16px;color:rgba(255,255,255,0.95);line-height:1.8;margin:0 0 12px;font-family:'Lora',serif;}
+.takeaway p:last-child{margin-bottom:0;}
+.takeaway strong{color:white;font-weight:700;}
+.takeaway em{color:rgba(255,255,255,0.88);font-style:italic;}
+.cta-box{background:var(--plum);border-radius:14px;padding:30px 32px;margin-top:36px;text-align:center;}
+.cta-box .cta-eyebrow{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--rose);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
+.cta-box .cta-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:white;margin-bottom:10px;line-height:1.35;}
+.cta-box .cta-desc{font-size:14px;color:rgba(255,255,255,0.72);max-width:400px;margin:0 auto 22px;line-height:1.7;font-family:'Lora',serif;}
+.cta-btn{display:inline-block;background:var(--accent);color:white;font-size:14px;font-weight:600;padding:13px 32px;border-radius:100px;text-decoration:none;font-family:'Be Vietnam Pro',sans-serif;transition:opacity .2s;}
+.cta-btn:hover{opacity:0.88;}
+.article-footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--border);}
+.footer-brand{font-size:12.5px;color:var(--light);line-height:1.8;font-family:'Be Vietnam Pro',sans-serif;}
+.footer-brand strong{color:var(--accent-dark);}
+.footer-brand a{color:var(--accent);text-decoration:none;}
+.site-footer{background:var(--plum);padding:28px 40px;text-align:center;font-size:12px;color:rgba(255,255,255,0.45);line-height:1.8;font-family:'Be Vietnam Pro',sans-serif;}
+.site-footer a{color:var(--rose);text-decoration:none;}
+.site-footer strong{color:rgba(255,255,255,0.75);}
+@media(max-width:600px){
+  .article-h1{font-size:28px;}
+  .article-deck{font-size:15.5px;}
+  .fact-strip{grid-template-columns:1fr;}
+  .fact-item{border-right:none;border-bottom:1px solid var(--border);}
+  .fact-item:last-child{border-bottom:none;}
+  .article-wrap{padding:32px 18px 60px;}
+  .site-nav{padding:12px 20px;}
+  .article-hero{padding:36px 18px 30px;}
+}
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">🌿</div>
+    <div>
+      <div class="nav-logo-name">H21 - Cho Đời Mãi Xanh</div>
+      <div class="nav-logo-tag">Khoa Học Gia Thuy-Trinh Nguyen</div>
+    </div>
+  </a>
+  <a href="index.html" class="nav-back">&#8592; Trở về Blog</a>
+</nav>
+<section class="article-hero">
+  <div class="hero-inner">
+    <div class="series-badge"><span class="series-badge-dot"></span> 🎗️ Seri Ung Thư Vú · Cơ Chế 02/10</div>
+    <h1 class="article-h1">IGF-1 &amp; Đạm Động Vật &mdash;<br><em>Tại Sao Người Lớn Không Cần Tín Hiệu Tăng Trưởng</em></h1>
+    <p class="article-deck">IGF-1 giúp trẻ em lớn lên &mdash; đó là điều tốt. Nhưng ở người lớn, hormone tăng trưởng này thúc đẩy mọi tế bào phân chia, kể cả tế bào ung thư. Khoa học đã rõ: đạm động vật làm tăng IGF-1, đạm thực vật thì không.</p>
+  </div>
+</section>
+<div class="byline-bar">
+  <div class="byline-inner">
+    <div class="byline-av">TT</div>
+    <div>
+      <div class="byline-name">Thuy-Trinh Nguyen</div>
+      <div class="byline-role">Khoa Học Gia &middot; Nhà Sáng Lập H21 - Cho Đời Mãi Xanh</div>
+    </div>
+    <div class="byline-meta">
+      <div class="byline-url">www.h21chodoimaixanh.com</div>
+      <div class="read-time">&#9200; Đọc trong 6 phút</div>
+    </div>
+  </div>
+</div>
+
+<div class="article-wrap">
+  <div class="article-body">
+
+    <div class="hero-banner">
+      <img src="igf1-va-dam-dong-vat.jpg" alt="IGF-1 & Đạm Động Vật — Tại Sao Người Lớn Không Cần Tín Hiệu Tăng Trưởng cùng Khoa Học Gia Thuy-Trinh Nguyen">
+    </div>
+
+    <div class="personal-note">
+      <div class="personal-note-label">🌿 Điểm Khởi Đầu</div>
+      <p>Hồi còn làm trong ngành dược phẩm, tôi từng xem &#8220;đạm&#8221; là &#8220;đạm&#8221; &mdash; miễn đủ gram mỗi ngày là được. Y Học Lối Sống Có Trách Nhiệm đã dạy tôi một bài học quan trọng: <strong>nguồn đạm quan trọng không kém số lượng đạm</strong>. Và trong bối cảnh phòng ngừa ung thư vú, đây có thể là một trong những thay đổi có tác động lớn nhất.</p>
+    </div>
+
+    <div class="fact-strip">
+      <div class="fact-item">
+        <div class="fact-num">75%</div>
+        <div class="fact-label">tăng tỷ lệ tử vong ở người 50-65 tuổi ăn nhiều đạm động vật (Levine, Cell Metabolism 2014)</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-num">4 lần</div>
+        <div class="fact-label">tăng nguy cơ tử vong do ung thư trong cùng nhóm &mdash; gấp 4 lần người ăn ít</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-num">0</div>
+        <div class="fact-label">mức tăng nguy cơ khi đạm đến từ <em>nguồn thực vật</em> &mdash; hiệu ứng biến mất</div>
+      </div>
+    </div>
+
+    <div class="fact-explain">
+      Ba con số trên đến từ một nghiên cứu đột phá: theo dõi <strong>6,381 người lớn tại Mỹ trong 18 năm</strong>. Điểm then chốt: khi đạm đến từ <strong>thực vật</strong> thay vì động vật, toàn bộ hiệu ứng tăng tử vong và ung thư đều <em>biến mất</em>. Không phải đạm nào cũng như nhau.
+    </div>
+
+    <h2>Phần 1 &middot; IGF-1 Là Gì?</h2>
+
+    <p><strong>IGF-1</strong> (Insulin-like Growth Factor 1) là một hormone tăng trưởng mà gan sản xuất khi nhận tín hiệu từ não. Ở trẻ em và thanh thiếu niên, IGF-1 giúp cơ thể cao lớn, phát triển cơ bắp, xương, và các cơ quan &mdash; <em>đây là điều tốt và cần thiết</em>.</p>
+
+    <p>Vấn đề bắt đầu ở người lớn. Sau tuổi 30, cơ thể không còn cần &#8220;lệnh tăng trưởng&#8221; liên tục. Nhưng nếu IGF-1 vẫn cao, hormone này sẽ thúc đẩy <strong>mọi tế bào phân chia</strong> &mdash; kể cả những tế bào bất thường đang trên đường trở thành ung thư.</p>
+
+    <svg class="diagram" viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="IGF-1 có hai mặt theo độ tuổi">
+      <text x="340" y="28" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12" font-weight="700" fill="#8B3A4A" letter-spacing="2">IGF-1: CÙNG MỘT HORMONE, HAI HỆ QUẢ TRÁI NGƯỢC THEO ĐỘ TUỔI</text>
+
+      <!-- LEFT: Children (beneficial zone) -->
+      <rect x="10" y="52" width="310" height="232" rx="14" fill="#eff4ed" stroke="#5a7c5f" stroke-width="1.5"/>
+      <text x="165" y="78" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#3e6e48" letter-spacing="1.5">TRẺ EM &amp; THANH THIẾU NIÊN</text>
+      <text x="165" y="96" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#3e6e48" font-style="italic">0 - 20 tuổi</text>
+      
+      <!-- Growing child icon -->
+      <circle cx="165" cy="135" r="18" fill="#7fa087" stroke="#3e6e48" stroke-width="2"/>
+      <rect x="150" y="155" width="30" height="40" rx="4" fill="#7fa087" stroke="#3e6e48" stroke-width="2"/>
+      <line x1="155" y1="200" x2="145" y2="220" stroke="#3e6e48" stroke-width="3" stroke-linecap="round"/>
+      <line x1="175" y1="200" x2="185" y2="220" stroke="#3e6e48" stroke-width="3" stroke-linecap="round"/>
+      <!-- Up arrow showing growth -->
+      <path d="M 115 180 L 115 140 M 108 150 L 115 140 L 122 150" stroke="#3e6e48" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="90" y="175" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#3e6e48" font-weight="700">LỚN</text>
+      
+      <rect x="40" y="232" width="250" height="40" rx="6" fill="#5a7c5f"/>
+      <text x="165" y="250" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="white">✓ IGF-1 CAO = CẦN THIẾT</text>
+      <text x="165" y="264" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="white">Cao lớn, xương chắc, cơ phát triển</text>
+
+      <!-- RIGHT: Adults (harmful zone when IGF-1 high) -->
+      <rect x="360" y="52" width="310" height="232" rx="14" fill="#fcf0ed" stroke="#a85550" stroke-width="1.5"/>
+      <text x="515" y="78" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#8B3A4A" letter-spacing="1.5">NGƯỜI LỚN</text>
+      <text x="515" y="96" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#8B3A4A" font-style="italic">30+ tuổi</text>
+      
+      <!-- Adult figure with cells dividing -->
+      <circle cx="515" cy="135" r="20" fill="#c88080" stroke="#8B3A4A" stroke-width="2"/>
+      <rect x="498" y="157" width="34" height="42" rx="4" fill="#c88080" stroke="#8B3A4A" stroke-width="2"/>
+      <line x1="503" y1="203" x2="498" y2="222" stroke="#8B3A4A" stroke-width="3" stroke-linecap="round"/>
+      <line x1="527" y1="203" x2="532" y2="222" stroke="#8B3A4A" stroke-width="3" stroke-linecap="round"/>
+      <!-- Abnormal cells multiplying -->
+      <circle cx="575" cy="125" r="6" fill="#a85550" opacity="0.85"/>
+      <circle cx="590" cy="140" r="5" fill="#a85550" opacity="0.75"/>
+      <circle cx="580" cy="155" r="7" fill="#a85550" opacity="0.9"/>
+      <circle cx="595" cy="125" r="4" fill="#a85550" opacity="0.7"/>
+      <text x="570" y="180" font-family="'Be Vietnam Pro',sans-serif" font-size="8.5" fill="#8B3A4A" font-weight="700">Phân bào</text>
+      <text x="570" y="192" font-family="'Be Vietnam Pro',sans-serif" font-size="8.5" fill="#8B3A4A" font-weight="700">bất thường</text>
+      
+      <rect x="390" y="232" width="250" height="40" rx="6" fill="#a85550"/>
+      <text x="515" y="250" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="white">✗ IGF-1 CAO = NGUY CƠ</text>
+      <text x="515" y="264" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="white">Kích thích tế bào ung thư phát triển</text>
+    </svg>
+    <div class="diagram-caption">Ở trẻ em, IGF-1 cao là dấu hiệu tốt. Ở người lớn, IGF-1 cao kéo dài là yếu tố nguy cơ — đặc biệt với ung thư vú.</div>
+
+    <div class="science-box">
+      <div class="sb-label">🔬 Liên hệ với ung thư vú</div>
+      <p>Meta-analysis lớn trên hơn <strong>430,000 phụ nữ</strong> (Annals of Oncology, 2020) xác nhận: phụ nữ có mức IGF-1 máu cao nhất có nguy cơ ung thư vú <strong>cao hơn 25-40%</strong> so với phụ nữ có IGF-1 thấp nhất. Mối liên hệ này tồn tại ở cả ung thư vú ER+ và các dạng phụ thuộc hormone khác.</p>
+    </div>
+
+    <h3>Bảng Tóm Tắt · IGF-1 Theo Giai Đoạn Sống</h3>
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th>Giai đoạn</th>
+          <th>Mức IGF-1</th>
+          <th>Hiệu quả</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Trẻ em &amp; thanh thiếu niên</strong><br><span style="font-size:11.5px;color:var(--light);">(0 - 20 tuổi)</span></td>
+          <td>Cao tự nhiên</td>
+          <td><span class="ok">✓ Có lợi</span><br>Cao lớn, phát triển cơ, xương chắc khỏe</td>
+        </tr>
+        <tr>
+          <td><strong>Người lớn · Chế độ ăn cân bằng</strong><br><span style="font-size:11.5px;color:var(--light);">(30+ tuổi, đạm thực vật chủ đạo)</span></td>
+          <td>Ở mức sinh lý<br>(thấp - vừa)</td>
+          <td><span class="ok">✓ An toàn</span><br>Duy trì cơ bắp, tế bào ổn định, tuổi thọ cao</td>
+        </tr>
+        <tr>
+          <td><strong>Người lớn · Đạm động vật dư thừa</strong><br><span style="font-size:11.5px;color:var(--light);">(30+ tuổi, nhiều thịt/sữa/phô mai)</span></td>
+          <td>Cao bất thường</td>
+          <td><span class="warn">✗ Nguy cơ</span><br>Kích thích phân bào bất thường → tăng nguy cơ ung thư vú 25-40%</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Phần 2 &middot; Đạm Động Vật vs Đạm Thực Vật</h2>
+
+    <p>Khi bạn ăn đạm <strong>động vật</strong> &mdash; thịt đỏ, thịt gà, cá, trứng, và đặc biệt là sản phẩm sữa &mdash; cấu hình amino acid (giàu leucine, methionine) gửi tín hiệu mạnh qua gan, kích hoạt con đường <em>mTOR</em> và sản xuất IGF-1. Đây là con đường &#8220;tăng trưởng&#8221; mà tế bào ung thư khai thác.</p>
+
+    <p>Ngược lại, đạm <strong>thực vật</strong> &mdash; đậu, đậu lăng, đậu nành, đậu phụ, các loại hạt, ngũ cốc nguyên hạt &mdash; có cấu hình amino acid khác, kèm chất xơ và phytonutrient. Kết quả: IGF-1 không tăng vọt, tín hiệu tăng trưởng giữ ở mức tự nhiên.</p>
+
+    <svg class="diagram" viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="So sánh con đường IGF-1 từ đạm động vật vs đạm thực vật">
+      <!-- LEFT: Animal protein path -->
+      <rect x="10" y="20" width="310" height="220" rx="14" fill="#fcf0ed" stroke="#a85550" stroke-width="1.5"/>
+      <text x="165" y="48" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#a85550" letter-spacing="1.5">ĐẠM ĐỘNG VẬT</text>
+      <text x="165" y="66" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#a85550" font-style="italic">Thịt · Gà · Cá · Trứng · Sữa</text>
+      <rect x="60" y="84" width="210" height="30" rx="6" fill="white" stroke="#a85550" stroke-width="1"/>
+      <text x="165" y="103" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" fill="#8B3A4A">Amino acid (nhiều leucine)</text>
+      <line x1="165" y1="118" x2="165" y2="132" stroke="#a85550" stroke-width="2" marker-end="url(#arrR2)"/>
+      <rect x="60" y="134" width="210" height="30" rx="6" fill="white" stroke="#a85550" stroke-width="1"/>
+      <text x="165" y="153" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" fill="#8B3A4A">Kích hoạt mTOR &amp; gan</text>
+      <line x1="165" y1="168" x2="165" y2="182" stroke="#a85550" stroke-width="2" marker-end="url(#arrR2)"/>
+      <rect x="60" y="184" width="210" height="36" rx="6" fill="#a85550"/>
+      <text x="165" y="200" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="white">⬆️ IGF-1 CAO</text>
+      <text x="165" y="214" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="white">Tín hiệu tăng trưởng tế bào</text>
+
+      <!-- RIGHT: Plant protein path -->
+      <rect x="360" y="20" width="310" height="220" rx="14" fill="#eff4ed" stroke="#5a7c5f" stroke-width="1.5"/>
+      <text x="515" y="48" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#5a7c5f" letter-spacing="1.5">ĐẠM THỰC VẬT</text>
+      <text x="515" y="66" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#3e5642" font-style="italic">Đậu · Đậu lăng · Đậu phụ · Hạt · Ngũ cốc</text>
+      <rect x="410" y="84" width="210" height="30" rx="6" fill="white" stroke="#5a7c5f" stroke-width="1"/>
+      <text x="515" y="103" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" fill="#3e5642">Amino acid cân bằng + chất xơ</text>
+      <line x1="515" y1="118" x2="515" y2="132" stroke="#5a7c5f" stroke-width="2" marker-end="url(#arrG2)"/>
+      <rect x="410" y="134" width="210" height="30" rx="6" fill="white" stroke="#5a7c5f" stroke-width="1"/>
+      <text x="515" y="153" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" fill="#3e5642">mTOR giữ ở mức sinh lý</text>
+      <line x1="515" y1="168" x2="515" y2="182" stroke="#5a7c5f" stroke-width="2" marker-end="url(#arrG2)"/>
+      <rect x="410" y="184" width="210" height="36" rx="6" fill="#5a7c5f"/>
+      <text x="515" y="200" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="white">✓ IGF-1 TỰ NHIÊN</text>
+      <text x="515" y="214" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="white">Nuôi cơ, không kích ung thư</text>
+
+      <defs>
+        <marker id="arrR2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 Z" fill="#a85550"/></marker>
+        <marker id="arrG2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 Z" fill="#5a7c5f"/></marker>
+      </defs>
+    </svg>
+    <div class="diagram-caption">Cùng lượng đạm, hai nguồn khác nhau tạo ra hai tín hiệu hoàn toàn khác biệt trong cơ thể.</div>
+
+    <h2>Phần 3 &middot; Nghiên Cứu Đột Phá</h2>
+
+    <div class="study-card">
+      <div class="study-meta">Levine et al., Cell Metabolism 2014 · n=6,381 người Mỹ · theo dõi 18 năm</div>
+      <div class="study-title">Bước ngoặt trong hiểu biết về đạm &amp; ung thư</div>
+      <div class="study-result">Ở nhóm tuổi 50-65, người ăn nhiều đạm động vật có <strong>tỷ lệ tử vong mọi nguyên nhân tăng 75%</strong> và <strong>nguy cơ tử vong do ung thư tăng 4 lần</strong> so với người ăn ít. Điểm ấn tượng nhất: khi đạm đến từ nguồn thực vật, <strong>các hiệu ứng bất lợi này biến mất hoặc gần như biến mất</strong>. Nghiên cứu xác nhận bằng thí nghiệm trên chuột: đạm động vật (nhưng không phải đạm đậu nành) kích thích khối u vú và u hắc tố phát triển.</div>
+    </div>
+
+    <div class="pull-quote">
+      <p>Cùng 30g đạm, từ đậu lăng hay từ thịt bò &mdash; cơ thể bạn nhận được hai tín hiệu hoàn toàn khác nhau.</p>
+    </div>
+
+    <h2>Phần 4 &middot; Những Câu Hỏi Thường Gặp</h2>
+
+    <div class="qa-block">
+      <div class="qa-q">Tôi có đủ đạm nếu ăn chủ yếu thực vật?</div>
+      <div class="qa-a">Hoàn toàn có thể. <strong>Đậu, đậu lăng, đậu nành, đậu phụ, hạt, quinoa, ngũ cốc nguyên hạt</strong> đều là nguồn đạm chất lượng cao. Một chén đậu lăng nấu chín = 18g đạm; 1/2 chén đậu phụ = 10g; 2 muỗng canh bơ hạnh nhân = 7g. Người lớn cần khoảng 0.8&ndash;1g đạm mỗi kg cân nặng mỗi ngày &mdash; dễ đạt được hoàn toàn từ thực vật.</div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">Sữa bò có làm tăng IGF-1 không?</div>
+      <div class="qa-a">Có, khá mạnh. Protein sữa (casein và whey) là một trong những <strong>nguồn kích IGF-1 mạnh nhất trong chế độ ăn</strong>. Điều này có logic sinh học: sữa bò được thiết kế để giúp bê con tăng trưởng <em>gấp đôi khối lượng trong 1 tháng</em>. Lựa chọn thay thế thân thiện: sữa đậu nành không đường, sữa hạnh nhân không đường, sữa yến mạch không đường.</div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">Thế trẻ em uống sữa hạt thay sữa bò thì làm sao lớn được? Quan niệm &#8220;baby sinh ra là phải uống sữa bò&#8221; vẫn chưa xóa được.</div>
+      <div class="qa-a">Đây là một trong những huyền thoại dinh dưỡng kéo dài nhất của thế kỷ 20. Sự thật khoa học: <strong>trẻ em hoàn toàn có thể phát triển bình thường không cần sữa bò</strong> — với điều kiện chế độ ăn đủ dinh dưỡng.
+
+<br><br><strong>1. Theo độ tuổi (khuyến cáo của American Academy of Pediatrics):</strong>
+<br>&bull; <strong>Dưới 1 tuổi:</strong> Sữa mẹ là tối ưu. Nếu không thể thì dùng sữa công thức (formula). <em>KHÔNG dùng sữa bò nguyên chất hay sữa hạt làm nguồn chính</em> — AAP khuyến cáo rõ vì gây thiếu sắt và quá tải thận ở trẻ sơ sinh.
+<br>&bull; <strong>Trên 1 tuổi:</strong> Sữa hạt fortified (đậu nành, hạnh nhân, yến mạch có thêm calcium + vitamin D) có thể thay thế sữa bò hoàn toàn.
+
+<br><br><strong>2. Bằng chứng khoa học chính thống:</strong>
+<br>&bull; <strong>Academy of Nutrition and Dietetics (2016)</strong> — Position Paper: <em>&#8220;Chế độ ăn thực vật được lên kế hoạch phù hợp đáp ứng đầy đủ dinh dưỡng cho mọi giai đoạn sống, bao gồm mang thai, sơ sinh, trẻ em, và thanh thiếu niên.&#8221;</em>
+<br>&bull; <strong>Dr. David Ludwig (Harvard, JAMA Pediatrics 2013):</strong> <em>&#8220;Sữa bò không phải là thành phần thiết yếu trong chế độ ăn trẻ em. Nước lọc và thực phẩm đa dạng đủ dinh dưỡng là đủ.&#8221;</em>
+<br>&bull; <strong>WHO &amp; NIH:</strong> 65-75% dân số thế giới không dung nạp lactose — dấu hiệu sinh học cho thấy con người <em>không được &#8220;thiết kế&#8221; sinh học</em> để uống sữa bò suốt đời.
+
+<br><br><strong>3. Bằng chứng từ văn hóa &amp; lịch sử:</strong>
+<br>Hàng triệu trẻ em châu Á (Việt Nam, Nhật Bản, Trung Quốc) truyền thống không uống sữa bò qua nhiều thế hệ &mdash; vẫn phát triển chiều cao và trí tuệ bình thường. Chiều cao trung bình của người Nhật hiện nay ngang hoặc cao hơn nhiều nước phương Tây có truyền thống uống sữa bò.
+
+<br><br><strong>4. Điều trẻ thực sự cần (không phải &#8220;sữa bò&#8221;):</strong>
+<br>&bull; <strong>Calcium</strong> &rarr; sữa đậu nành fortified, đậu phụ calcium-set, rau xanh đậm (cải xoăn, bông cải)
+<br>&bull; <strong>Vitamin D</strong> &rarr; sữa hạt fortified + phơi nắng 15 phút/ngày
+<br>&bull; <strong>Protein</strong> &rarr; đậu, đậu lăng, đậu phụ, các loại hạt
+<br>&bull; <strong>Omega-3</strong> &rarr; hạt lanh xay, hạt chia, hạt óc chó
+<br>&bull; <strong>B12</strong> &rarr; sữa hạt fortified hoặc viên uống bổ sung
+
+<br><br><em>Tóm lại: trẻ cần <strong>chất dinh dưỡng</strong>, không phải &#8220;sữa bò&#8221; như một thực phẩm bắt buộc. Khi cha mẹ hiểu điều này, sữa hạt fortified + bữa ăn đa dạng hoàn toàn đủ cho trẻ lớn lên khỏe mạnh.</em></div>
+    </div>
+
+    <div class="takeaway">
+      <div class="takeaway-label">&#128161; Điểm Mấu Chốt</div>
+      <p>Trong suốt thế kỷ 20, &#8220;đạm&#8221; được coi là vua của các chất dinh dưỡng &mdash; càng nhiều càng tốt. Y Học Lối Sống Có Trách Nhiệm vẽ lại bức tranh: <strong>nguồn đạm quan trọng không kém số lượng đạm</strong>.</p>
+      <p>Ở người lớn, đạm động vật dư thừa gửi tín hiệu tăng trưởng mà cơ thể đã qua giai đoạn cần. Đạm thực vật &mdash; từ đậu, đậu lăng, đậu nành, các loại hạt, ngũ cốc nguyên hạt &mdash; <em>nuôi cơ bắp mà không kích thích ung thư phát triển</em>. Đó là khác biệt một bữa ăn có thể tạo ra.</p>
+    </div>
+
+    <div class="soft-invitation">
+      Thay đổi nguồn đạm không có nghĩa là phải bỏ thịt hoàn toàn. Nó có thể bắt đầu từ một bữa trong tuần, rồi dần mở rộng. Nếu bạn muốn có người đồng hành trong hành trình này &mdash; nơi những nguyên tắc khoa học được chuyển thành thực đơn và thói quen thực tế &mdash; <strong>H21 là không gian chúng tôi xây dựng cho đúng mục đích đó</strong>.
+    </div>
+
+<div class="cta-box">
+  <div class="cta-eyebrow">Seri Ung Thư Vú · 10 Cơ Chế</div>
+  <h3 class="cta-title">Đây là Cơ Chế 02/10. Còn 8 cơ chế nữa để khám phá.</h3>
+  <p class="cta-desc">Tham gia cộng đồng H21 để theo dõi toàn bộ seri &mdash; nơi khoa học ung thư được dịch thành hành động cụ thể mỗi ngày.</p>
+  <a href="https://www.facebook.com/xanhlenbenhxuong/" target="_blank" class="cta-btn">Đăng Ký Khóa Học H21 &#8594;</a>
+</div>
+
+  </div>
+<div class="article-footer">
+  <div class="footer-brand">
+    <strong>Thuy-Trinh Nguyen</strong> &middot; Khoa Học Gia &amp; Nhà Sáng Lập<br>
+    <strong>H21 - Cho Đời Mãi Xanh</strong> &middot; <a href="https://www.h21chodoimaixanh.com">www.h21chodoimaixanh.com</a><br>
+    Mang khoa học từ phòng thí nghiệm đến căn bếp mỗi gia đình
+  </div>
+</div>
+</div>
+<footer class="site-footer">
+  <strong>H21 - Cho Đời Mãi Xanh</strong> &middot; Khoa Học Gia Thuy-Trinh Nguyen<br>
+  <a href="https://blog.h21chodoimaixanh.com">blog.h21chodoimaixanh.com</a> &middot; <a href="https://www.h21chodoimaixanh.com">www.h21chodoimaixanh.com</a><br>
+  Nội dung chỉ dành cho mục đích giáo dục, không thay thế tư vấn y tế chuyên nghiệp.
+</footer>
+</body>
+</html>
