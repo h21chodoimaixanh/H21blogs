@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hệ Vi Sinh Đường Ruột & Ung Thư Vú — Estrobolome & Cân Bằng Nội Tiết | H21 Cho Đời Mãi Xanh</title>
+<meta name="description" content="100 nghìn tỷ vi khuẩn trong ruột ảnh hưởng trực tiếp đến nồng độ estrogen và nguy cơ ung thư vú. Khoa học giải mã Estrobolome và vai trò của chế độ ăn thực vật.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F9F7;
+  --ink:#0A1C1C;
+  --mid:#1F3A3A;
+  --light:#4A6E6E;
+  --accent:#2E7F7F;
+  --accent-dark:#1E5555;
+  --accent-mid:#4A8B8B;
+  --accent-light:#A8D0D0;
+  --border:#D4E5E3;
+  --blush:#E8F2EF;
+  --plum:#0A2828;
+  --rose:#8FC6BB;
+  --mint:#A8C8B0;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Lora',serif;font-size:17px;line-height:1.75;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;}
+.site-nav{background:var(--plum);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(0,0,0,0.25);}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-logo-mark{width:34px;height:34px;background:var(--mint);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-family:sans-serif;}
+.nav-logo-name{font-size:14px;font-weight:600;color:white;font-family:'Be Vietnam Pro',sans-serif;}
+.nav-logo-tag{font-size:11px;color:rgba(255,255,255,0.6);margin-top:1px;font-family:'Be Vietnam Pro',sans-serif;letter-spacing:0.3px;}
+.nav-back{font-size:13px;color:rgba(255,255,255,0.75);text-decoration:none;font-weight:500;font-family:'Be Vietnam Pro',sans-serif;transition:color 0.2s;}
+.nav-back:hover{color:var(--rose);}
+.article-hero{background:linear-gradient(135deg,#0A2828 0%,#1E5555 45%,#2E7F7F 100%);padding:48px 24px 40px;position:relative;overflow:hidden;}
+.article-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 30%,rgba(255,255,255,0.06) 0%,transparent 60%);}
+.hero-inner{max-width:720px;margin:0 auto;position:relative;z-index:1;}
+.series-badge{display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.95);padding:6px 14px;border-radius:100px;font-family:'Be Vietnam Pro',sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;}
+.series-badge-dot{display:inline-block;width:6px;height:6px;background:#C8A87F;border-radius:50%;margin-right:6px;vertical-align:middle;}
+.article-h1{font-family:'Playfair Display',serif;font-size:38px;font-weight:700;line-height:1.2;color:white;margin-bottom:16px;letter-spacing:-0.5px;}
+.article-h1 em{font-style:italic;color:rgba(255,255,255,0.85);font-weight:400;}
+.article-deck{font-family:'Lora',serif;font-size:17px;line-height:1.7;color:rgba(255,255,255,0.85);font-style:italic;margin:0;}
+.article-deck em{color:rgba(255,255,255,0.95);font-weight:600;font-style:italic;}
+.byline-bar{background:white;border-bottom:1px solid var(--border);padding:14px 24px;}
+.byline-inner{max-width:720px;margin:0 auto;display:flex;align-items:center;gap:14px;}
+.byline-av{width:40px;height:40px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:white;font-weight:700;flex-shrink:0;font-family:'Be Vietnam Pro',sans-serif;}
+.byline-name{font-size:13.5px;font-weight:600;color:var(--ink);font-family:'Be Vietnam Pro',sans-serif;}
+.byline-role{font-size:11.5px;color:var(--light);margin-top:1px;font-family:'Be Vietnam Pro',sans-serif;}
+.byline-meta{margin-left:auto;text-align:right;}
+.byline-url{font-size:11.5px;color:var(--light);font-family:'Be Vietnam Pro',sans-serif;}
+.read-time{font-size:11px;color:var(--accent);font-weight:600;margin-top:2px;font-family:'Be Vietnam Pro',sans-serif;}
+.article-wrap{max-width:720px;margin:0 auto;padding:44px 24px 80px;}
+.hero-banner{margin:0 0 32px;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(30,85,85,0.15);border:1px solid var(--border);}
+.hero-banner img{width:100%;display:block;}
+.article-body{font-family:'Lora',serif;font-size:17px;line-height:1.85;color:var(--mid);}
+.article-body p{margin:0 0 20px;}
+.article-body strong{color:var(--ink);font-weight:600;}
+.article-body em{color:var(--accent);font-style:italic;font-weight:600;}
+.article-body h2{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--ink);margin:44px 0 14px;line-height:1.3;}
+.article-body h3{font-family:'Be Vietnam Pro',sans-serif;font-size:14px;font-weight:700;color:var(--accent-dark);margin:28px 0 10px;text-transform:uppercase;letter-spacing:1.5px;}
+.fact-strip{display:grid;grid-template-columns:repeat(3,1fr);margin:32px 0 18px;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:white;}
+.fact-item{padding:22px 16px;text-align:center;border-right:1px solid var(--border);}
+.fact-item:last-child{border-right:none;}
+.fact-num{font-family:'Playfair Display',serif;font-size:34px;font-weight:700;color:var(--accent);line-height:1;}
+.fact-label{font-size:11.5px;color:var(--light);margin-top:8px;line-height:1.5;font-family:'Be Vietnam Pro',sans-serif;}
+.fact-explain{background:var(--blush);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:14px 20px;margin:0 0 32px;font-family:'Lora',serif;font-size:14.5px;line-height:1.75;color:var(--mid);font-style:italic;}
+.fact-explain strong{color:var(--accent-dark);font-style:normal;}
+.personal-note{background:linear-gradient(135deg,#FDFBF4,#F0F5EE);border:1px solid var(--border);border-left:4px solid var(--accent-mid);border-radius:0 14px 14px 0;padding:22px 28px;margin:28px 0;font-family:'Lora',serif;font-style:italic;}
+.personal-note-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent-mid);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;font-style:normal;}
+.personal-note p{font-size:16px;line-height:1.8;color:var(--mid);margin:0;}
+.personal-note strong{color:var(--accent-dark);font-style:normal;}
+.science-box{background:var(--blush);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:0 12px 12px 0;padding:20px 24px;margin:24px 0;}
+.sb-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent-mid);margin-bottom:8px;font-family:'Be Vietnam Pro',sans-serif;}
+.science-box p{font-size:15px;color:var(--mid);margin:0 0 10px;line-height:1.75;font-family:'Lora',serif;}
+.science-box p:last-child{margin-bottom:0;}
+.science-box strong{color:var(--accent-dark);}
+.science-box em{color:var(--accent);}
+.study-card{background:white;border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:10px;padding:18px 22px;margin:14px 0;}
+.study-meta{font-family:'Be Vietnam Pro',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
+.study-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--accent-dark);margin-bottom:6px;line-height:1.35;}
+.study-result{font-family:'Lora',serif;font-size:14.5px;line-height:1.65;color:var(--mid);}
+.study-result strong{color:var(--accent-dark);}
+.diagram{margin:22px 0 6px;display:block;background:white;border:1px solid var(--border);border-radius:12px;padding:18px;}
+.diagram-caption{font-family:'Be Vietnam Pro',sans-serif;font-size:11.5px;color:var(--light);text-align:center;margin-top:-2px;margin-bottom:28px;font-style:italic;line-height:1.5;}
+.pull-quote{margin:38px 0;padding:30px 36px;background:var(--accent-dark);border-radius:14px;color:white;text-align:center;position:relative;}
+.pull-quote::before{content:'"';font-family:'Playfair Display',serif;font-size:80px;line-height:0.5;color:rgba(255,255,255,0.12);position:absolute;top:26px;left:22px;}
+.pull-quote p{font-family:'Lora',serif;font-size:19px;line-height:1.6;color:rgba(255,255,255,0.95);font-style:italic;margin:0 0 8px;}
+.pull-quote cite{font-family:'Be Vietnam Pro',sans-serif;font-size:12px;color:rgba(255,255,255,0.6);font-style:normal;letter-spacing:1.5px;text-transform:uppercase;}
+.qa-block{background:white;border:1px solid var(--border);border-radius:10px;padding:18px 22px;margin:14px 0;}
+.qa-q{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--accent-dark);margin-bottom:8px;line-height:1.35;}
+.qa-q::before{content:'H: ';color:var(--accent);}
+.qa-a{font-family:'Lora',serif;font-size:14.5px;line-height:1.75;color:var(--mid);}
+.qa-a::before{content:'Đ: ';font-family:'Be Vietnam Pro',sans-serif;font-weight:700;color:var(--accent);font-size:13px;letter-spacing:1px;}
+.qa-a strong{color:var(--accent-dark);}
+.qa-a em{color:var(--accent);}
+.info-table{width:100%;border-collapse:collapse;margin:22px 0 28px;background:white;border:1px solid var(--border);border-radius:12px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;}
+.info-table thead th{padding:14px 16px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--border);text-align:left;}
+.info-table thead th.ok{background:#3a5a44;color:white;}
+.info-table thead th.warn{background:#a85550;color:white;}
+.info-table td{padding:12px 16px;font-size:13.5px;line-height:1.65;color:var(--mid);border-bottom:1px solid var(--border);vertical-align:top;}
+.info-table td.ok{background:#f3f7f0;}
+.info-table td.warn{background:#fcf2ef;}
+.info-table tr:last-child td{border-bottom:none;}
+.info-table td strong{color:var(--accent-dark);}
+.info-table td.ok strong{color:#3a5a44;}
+.info-table td.warn strong{color:#8B3A4A;}
+.info-table td em{font-style:italic;color:var(--light);font-size:12.5px;}
+@media(max-width:600px){.info-table{font-size:12px;} .info-table td,.info-table th{padding:10px 12px;}}
+.soft-invitation{background:var(--blush);border:1px solid var(--border);border-radius:10px;padding:20px 26px;margin:28px 0;font-family:'Lora',serif;font-size:15.5px;line-height:1.8;color:var(--mid);font-style:italic;}
+.soft-invitation strong{color:var(--accent-dark);font-style:normal;font-weight:700;}
+.soft-invitation em{color:var(--accent);font-style:italic;}
+.takeaway{background:linear-gradient(135deg,var(--accent-dark),var(--accent));border-radius:14px;padding:28px 32px;margin:36px 0 0;color:white;}
+.takeaway-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
+.takeaway p{font-size:16px;color:rgba(255,255,255,0.95);line-height:1.8;margin:0 0 12px;font-family:'Lora',serif;}
+.takeaway p:last-child{margin-bottom:0;}
+.takeaway strong{color:white;font-weight:700;}
+.takeaway em{color:rgba(255,255,255,0.88);font-style:italic;}
+.cta-box{background:var(--plum);border-radius:14px;padding:30px 32px;margin-top:36px;text-align:center;}
+.cta-box .cta-eyebrow{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--rose);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
+.cta-box .cta-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:white;margin-bottom:10px;line-height:1.35;}
+.cta-box .cta-desc{font-size:14px;color:rgba(255,255,255,0.72);max-width:400px;margin:0 auto 22px;line-height:1.7;font-family:'Lora',serif;}
+.cta-btn{display:inline-block;background:var(--accent);color:white;font-size:14px;font-weight:600;padding:13px 32px;border-radius:100px;text-decoration:none;font-family:'Be Vietnam Pro',sans-serif;transition:opacity .2s;}
+.cta-btn:hover{opacity:0.88;}
+.article-footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--border);}
+.footer-brand{font-size:12.5px;color:var(--light);line-height:1.8;font-family:'Be Vietnam Pro',sans-serif;}
+.footer-brand strong{color:var(--accent-dark);}
+.footer-brand a{color:var(--accent);text-decoration:none;}
+.site-footer{background:var(--plum);padding:28px 40px;text-align:center;font-size:12px;color:rgba(255,255,255,0.45);line-height:1.8;font-family:'Be Vietnam Pro',sans-serif;}
+.site-footer a{color:var(--rose);text-decoration:none;}
+.site-footer strong{color:rgba(255,255,255,0.75);}
+@media(max-width:600px){
+  .article-h1{font-size:28px;}
+  .article-deck{font-size:15.5px;}
+  .fact-strip{grid-template-columns:1fr;}
+  .fact-item{border-right:none;border-bottom:1px solid var(--border);}
+  .fact-item:last-child{border-bottom:none;}
+  .article-wrap{padding:32px 18px 60px;}
+  .site-nav{padding:12px 20px;}
+  .article-hero{padding:36px 18px 30px;}
+}
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">🌿</div>
+    <div>
+      <div class="nav-logo-name">H21 - Cho Đời Mãi Xanh</div>
+      <div class="nav-logo-tag">Khoa Học Gia Thuy-Trinh Nguyen</div>
+    </div>
+  </a>
+  <a href="index.html" class="nav-back">&#8592; Trở về Blog</a>
+</nav>
+
+<section class="article-hero">
+  <div class="hero-inner">
+    <div class="series-badge"><span class="series-badge-dot"></span> 🎗️ Seri Ung Thư Vú · Cơ Chế 06/10</div>
+    <h1 class="article-h1">Hệ Vi Sinh Đường Ruột &amp; Ung Thư Vú &mdash;<br><em>Estrobolome &amp; Cân Bằng Nội Tiết</em></h1>
+    <p class="article-deck">100 nghìn tỷ vi khuẩn trong ruột không chỉ giúp tiêu hóa. Chúng quyết định bao nhiêu estrogen được đào thải ra ngoài, và bao nhiêu quay lại lưu hành trong cơ thể &mdash; ảnh hưởng trực tiếp đến nguy cơ ung thư vú. Bài viết giải mã <em>estrobolome</em> &mdash; hệ vi sinh chuyên xử lý hormone &mdash; và vì sao chế độ ăn giàu chất xơ thực vật là chìa khóa giữ cân bằng hormone tự nhiên.</p>
+  </div>
+</section>
+<div class="byline-bar">
+  <div class="byline-inner">
+    <div class="byline-av">TT</div>
+    <div>
+      <div class="byline-name">Thuy-Trinh Nguyen</div>
+      <div class="byline-role">Khoa Học Gia &middot; Nhà Sáng Lập H21 - Cho Đời Mãi Xanh</div>
+    </div>
+    <div class="byline-meta">
+      <div class="byline-url">www.h21chodoimaixanh.com</div>
+      <div class="read-time">&#9200; Đọc trong 13 phút</div>
+    </div>
+  </div>
+</div>
+
+<div class="article-wrap">
+  <div class="article-body">
+
+    <div class="hero-banner">
+      <img src="vi-sinh-duong-ruot.jpg" alt="Hệ Vi Sinh Đường Ruột & Ung Thư Vú — Estrobolome & Cân Bằng Nội Tiết cùng Khoa Học Gia Thuy-Trinh Nguyen">
+    </div>
+
+    <div class="personal-note">
+      <div class="personal-note-label">🌿 Điểm Khởi Đầu</div>
+      <p>Nhiều người xem ruột chỉ là nơi tiêu hóa thức ăn. Nhưng khoa học hiện đại đã chỉ ra một điều đáng kinh ngạc: <strong>có hẳn một hệ vi sinh chuyên xử lý estrogen trong ruột chúng ta</strong> &mdash; quyết định bao nhiêu estrogen được đào thải ra ngoài mỗi ngày, bao nhiêu quay lại lưu hành. Nó tên là <em>estrobolome</em>, và nó phản ứng cực nhanh với bữa ăn của bạn &mdash; đây là một trong những phát hiện quan trọng nhất của khoa học nội tiết thập kỷ 2010.</p>
+    </div>
+
+    <div class="fact-strip">
+      <div class="fact-item">
+        <div class="fact-num">100 nghìn tỷ</div>
+        <div class="fact-label">vi khuẩn sống trong ruột bạn &mdash; nhiều gấp 10 lần tế bào cơ thể</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-num">~2 kg</div>
+        <div class="fact-label">trọng lượng của hệ vi sinh &mdash; ngang một cơ quan nội tạng</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-num">24-48 giờ</div>
+        <div class="fact-label">là thời gian hệ vi sinh bắt đầu thay đổi khi bạn đổi bữa ăn</div>
+      </div>
+    </div>
+
+    <div class="fact-explain">
+      Ba con số cho thấy quy mô và sự nhạy cảm của hệ vi sinh. Điểm đặc biệt: <strong>đây là một trong số ít yếu tố nguy cơ ung thư vú phản hồi chỉ sau vài ngày thay đổi chế độ ăn</strong> &mdash; nhanh hơn cả giảm cân hay cải thiện chỉ số máu.</p>
+    </div>
+
+    <h2>Phần 1 &middot; Hệ Vi Sinh Đường Ruột Là Gì?</h2>
+
+    <p>Trong ruột già của bạn (chủ yếu là đại tràng) có một <strong>cộng đồng vi sinh khổng lồ</strong>: khoảng <em>100 nghìn tỷ vi khuẩn thuộc hơn 1,000 loài khác nhau</em>, cùng với nấm, virus, và các vi sinh vật khác. Tổng khối lượng lên đến 1-2kg &mdash; ngang với một cơ quan nội tạng.</p>
+
+    <p>Khoa học hiện đại gọi hệ vi sinh này là <em>&#8220;cơ quan thứ hai&#8221;</em> của cơ thể, vì nó đảm nhiệm <strong>5 chức năng sinh học quan trọng</strong> diễn ra song song mỗi ngày:</p>
+
+    <p><strong>1. Tiêu hóa</strong> &mdash; Vi khuẩn đường ruột <em>lên men chất xơ</em> mà cơ thể không tự tiêu hóa được (đặc biệt chất xơ từ rau, đậu, ngũ cốc nguyên hạt). Quá trình lên men này tạo ra <em>SCFA</em> (short-chain fatty acids) &mdash; axit béo chuỗi ngắn nuôi dưỡng tế bào niêm mạc ruột và có tác dụng kháng viêm.</p>
+
+    <p><strong>2. Nội tiết</strong> &mdash; Đây là chức năng liên quan <em>trực tiếp đến ung thư vú</em>. Một nhóm vi khuẩn chuyên biệt điều hòa chuyển hóa estrogen, quyết định bao nhiêu estrogen được đào thải ra ngoài và bao nhiêu quay lại lưu hành trong máu. Sẽ nói chi tiết ở Phần 2.</p>
+
+    <p><strong>3. Miễn dịch</strong> &mdash; Đáng kinh ngạc: <em>khoảng 70% tế bào miễn dịch của cơ thể nằm quanh đường ruột</em>. Hệ vi sinh khỏe mạnh &#8220;huấn luyện&#8221; hệ miễn dịch nhận diện đâu là tác nhân gây hại, đâu là vô hại &mdash; nền tảng để phòng cả nhiễm khuẩn lẫn tế bào ung thư sớm.</p>
+
+    <p><strong>4. Trục Não-Ruột</strong> &mdash; Vi khuẩn đường ruột sản xuất neurotransmitter (GABA, serotonin tiền chất) ảnh hưởng đến <em>tâm trạng, giấc ngủ, và căng thẳng</em>. Đây là lý do stress mạn tính vừa gây rối loạn tiêu hóa, vừa làm mất cân bằng hệ vi sinh.</p>
+
+    <p><strong>5. Tổng hợp vitamin</strong> &mdash; Vi khuẩn tổng hợp nhiều vitamin và enzyme quan trọng mà cơ thể không tự tạo đủ: <em>vitamin B12, vitamin K, folate, biotin</em>, cùng hàng trăm enzyme khác hỗ trợ chuyển hóa.</p>
+
+    <p>Biểu đồ dưới đây tóm tắt 5 chức năng này:</p>
+
+    <svg class="diagram" viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hệ vi sinh đường ruột - cơ quan đa chức năng">
+      <text x="360" y="28" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" font-weight="700" fill="#1E5555" letter-spacing="2">HỆ VI SINH &mdash; CƠ QUAN ĐA CHỨC NĂNG TRONG RUỘT</text>
+
+      <!-- Central gut circle -->
+      <circle cx="360" cy="190" r="80" fill="#2E7F7F" stroke="#1E5555" stroke-width="3"/>
+      <!-- Bacteria dots inside -->
+      <circle cx="335" cy="170" r="7" fill="#A8D0D0"/>
+      <circle cx="385" cy="175" r="6" fill="#8FC6BB"/>
+      <circle cx="350" cy="200" r="8" fill="#A8D0D0"/>
+      <circle cx="380" cy="205" r="5" fill="#8FC6BB"/>
+      <circle cx="330" cy="215" r="6" fill="#A8D0D0"/>
+      <!-- Text INSIDE the circle (white on teal) -->
+      <text x="360" y="186" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="13" font-weight="700" fill="white">ĐƯỜNG RUỘT</text>
+      <text x="360" y="205" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="rgba(255,255,255,0.9)" font-style="italic">100 nghìn tỷ</text>
+      <text x="360" y="222" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="rgba(255,255,255,0.9)" font-style="italic">vi khuẩn</text>
+
+      <!-- 5 function boxes positioned around with CLEAN straight arrows -->
+      <!-- Gut circle: cx=360, cy=190, r=80 -->
+      <!-- Arrows flow FROM center OUT to 5 function boxes -->
+      
+      <!-- TOP-LEFT: Tiêu hóa -->
+      <rect x="30" y="65" width="200" height="56" rx="10" fill="#E8F2EF" stroke="#4A8B8B" stroke-width="2"/>
+      <text x="130" y="86" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12" font-weight="700" fill="#1E5555">🍽️ Tiêu hóa</text>
+      <text x="130" y="106" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="#4A6E6E">Lên men chất xơ, tạo SCFA</text>
+      <!-- Arrow FROM top-left of circle (at 135°) TO right edge of box -->
+      <g>
+        <line x1="303.4" y1="133.4" x2="230" y2="121" stroke="#4A8B8B" stroke-width="2.5"/>
+        <polygon points="230,121 241.1,119.6 237.9,129.1" fill="#4A8B8B"/>
+      </g>
+
+      <!-- TOP-RIGHT: Nội tiết -->
+      <rect x="490" y="65" width="200" height="56" rx="10" fill="#E8F2EF" stroke="#4A8B8B" stroke-width="2"/>
+      <text x="590" y="86" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12" font-weight="700" fill="#1E5555">💫 Nội tiết</text>
+      <text x="590" y="106" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="#4A6E6E">Điều hòa estrogen, hormone</text>
+      <!-- Arrow FROM top-right of circle (at 45°) TO left edge of box -->
+      <g>
+        <line x1="416.6" y1="133.4" x2="490" y2="121" stroke="#4A8B8B" stroke-width="2.5"/>
+        <polygon points="490,121 478.9,119.6 482.1,129.1" fill="#4A8B8B"/>
+      </g>
+
+      <!-- MIDDLE-LEFT: Miễn dịch -->
+      <rect x="30" y="162" width="200" height="56" rx="10" fill="#E8F2EF" stroke="#4A8B8B" stroke-width="2"/>
+      <text x="130" y="183" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12" font-weight="700" fill="#1E5555">🛡️ Miễn dịch (70%!)</text>
+      <text x="130" y="203" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="#4A6E6E">chống viêm &amp; nhiễm khuẩn</text>
+      <!-- Arrow FROM left edge of circle TO right edge of box (horizontal, pointing LEFT) -->
+      <line x1="280" y1="190" x2="230" y2="190" stroke="#4A8B8B" stroke-width="2.5"/>
+      <polygon points="230,190 240,185 240,195" fill="#4A8B8B"/>
+
+      <!-- MIDDLE-RIGHT: Não-Ruột -->
+      <rect x="490" y="162" width="200" height="56" rx="10" fill="#E8F2EF" stroke="#4A8B8B" stroke-width="2"/>
+      <text x="590" y="183" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12" font-weight="700" fill="#1E5555">🧠 Trục Não-Ruột</text>
+      <text x="590" y="203" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="#4A6E6E">tâm trạng, giấc ngủ</text>
+      <!-- Arrow FROM right edge of circle TO left edge of box (horizontal, pointing RIGHT) -->
+      <line x1="440" y1="190" x2="490" y2="190" stroke="#4A8B8B" stroke-width="2.5"/>
+      <polygon points="490,190 480,185 480,195" fill="#4A8B8B"/>
+
+      <!-- BOTTOM: Tổng hợp vitamin -->
+      <rect x="230" y="295" width="260" height="56" rx="10" fill="#E8F2EF" stroke="#4A8B8B" stroke-width="2"/>
+      <text x="360" y="316" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12" font-weight="700" fill="#1E5555">💊 Tổng hợp vitamin</text>
+      <text x="360" y="336" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="#4A6E6E">B12, K, folate &amp; nhiều enzyme</text>
+      <!-- Arrow FROM bottom of circle TO top of box (vertical, pointing DOWN) -->
+      <line x1="360" y1="272" x2="360" y2="295" stroke="#4A8B8B" stroke-width="2.5"/>
+      <polygon points="360,295 355,285 365,285" fill="#4A8B8B"/>
+    </svg>
+    <div class="diagram-caption">5 chức năng trên đều phụ thuộc vào <strong>thành phần và sự đa dạng</strong> của hệ vi sinh — và cả 5 đều có thể cải thiện qua chế độ ăn.</div>
+
+    <div class="science-box">
+      <div class="sb-label">🔬 Điểm đặc biệt</div>
+      <p>Trong số 5 chức năng trên, có một chức năng <em>đặc biệt quan trọng với ung thư vú</em>: <strong>điều hòa estrogen</strong>. Các nhà khoa học đặt tên riêng cho nhóm vi khuẩn chuyên xử lý estrogen là <em>&#8220;Estrobolome&#8221;</em> &mdash; và đây là phát hiện đột phá của thập kỷ 2010 trong lĩnh vực nội tiết &amp; ung thư vú.</p>
+    </div>
+
+    <h2>Phần 2 &middot; Estrobolome &mdash; Kết Nối Đặc Biệt Với Ung Thư Vú</h2>
+
+    <p><strong>Estrobolome</strong> là thuật ngữ được đưa ra bởi Plottel &amp; Blaser (2011) để chỉ <em>tập hợp các vi khuẩn đường ruột có khả năng chuyển hóa estrogen</em>. Khái niệm này đã thay đổi hoàn toàn cách khoa học nhìn về nội tiết và ung thư vú.</p>
+
+    <p>Để hiểu estrobolome, trước hết cần biết cách cơ thể xử lý estrogen. Gan liên tục xử lý estrogen dư thừa, gắn nhãn chúng (qua quá trình <em>liên hợp glucuronide</em>) để chuẩn bị đào thải qua mật &rarr; ruột &rarr; phân. Nhưng có một &#8220;lỗ hổng&#8221;:</p>
+
+    <svg class="diagram" viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estrobolome - hai kịch bản đối lập">
+      <text x="360" y="26" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" font-weight="700" fill="#1E5555" letter-spacing="2">ESTROBOLOME QUYẾT ĐỊNH BAO NHIÊU ESTROGEN QUAY LẠI CƠ THỂ</text>
+
+      <!-- LEFT PANEL: Healthy estrobolome -->
+      <rect x="20" y="50" width="330" height="335" rx="14" fill="#E8F2EF" stroke="#2E7F7F" stroke-width="2"/>
+      <text x="185" y="76" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#1E5555" letter-spacing="1.5">HỆ VI SINH KHỎE MẠNH</text>
+      <text x="185" y="94" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#2E7F7F" font-style="italic">(ăn nhiều chất xơ thực vật)</text>
+
+      <!-- Liver -->
+      <rect x="60" y="112" width="250" height="42" rx="8" fill="white" stroke="#2E7F7F" stroke-width="1.5"/>
+      <text x="185" y="128" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" font-weight="700" fill="#1E5555">Gan gắn nhãn estrogen</text>
+      <text x="185" y="143" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="8.5" fill="#4A6E6E">(liên hợp glucuronide) → ruột</text>
+      <path d="M 185 157 L 185 178" stroke="#2E7F7F" stroke-width="2" marker-end="url(#arrGutG)"/>
+
+      <!-- Estrobolome low β-glucuronidase -->
+      <rect x="60" y="180" width="250" height="42" rx="8" fill="white" stroke="#2E7F7F" stroke-width="1.5"/>
+      <text x="185" y="196" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" font-weight="700" fill="#1E5555">Vi khuẩn &#8220;tốt&#8221; chiếm đa số</text>
+      <text x="185" y="211" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="8.5" fill="#4A6E6E">β-glucuronidase THẤP</text>
+      <path d="M 185 225 L 185 246" stroke="#2E7F7F" stroke-width="2" marker-end="url(#arrGutG)"/>
+
+      <!-- Result: estrogen excreted -->
+      <rect x="60" y="248" width="250" height="42" rx="8" fill="white" stroke="#2E7F7F" stroke-width="1.5"/>
+      <text x="185" y="264" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" font-weight="700" fill="#1E5555">Estrogen giữ nguyên nhãn</text>
+      <text x="185" y="279" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="8.5" fill="#4A6E6E">→ đào thải ra ngoài qua phân</text>
+
+      <!-- Outcome -->
+      <rect x="45" y="315" width="280" height="48" rx="10" fill="#3a5a44"/>
+      <text x="185" y="337" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="white">✓ ESTROGEN CÂN BẰNG</text>
+      <text x="185" y="353" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="rgba(255,255,255,0.9)">Nguy cơ ung thư vú thấp</text>
+
+      <!-- RIGHT PANEL: Dysbiotic estrobolome -->
+      <rect x="370" y="50" width="330" height="335" rx="14" fill="#FCF0ED" stroke="#A85550" stroke-width="2"/>
+      <text x="535" y="76" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#8B3A4A" letter-spacing="1.5">HỆ VI SINH MẤT CÂN BẰNG</text>
+      <text x="535" y="94" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#8B3A4A" font-style="italic">(ăn nhiều đường, thịt đỏ, ít chất xơ)</text>
+
+      <!-- Liver same -->
+      <rect x="410" y="112" width="250" height="42" rx="8" fill="white" stroke="#A85550" stroke-width="1.5"/>
+      <text x="535" y="128" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" font-weight="700" fill="#8B3A4A">Gan gắn nhãn estrogen</text>
+      <text x="535" y="143" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="8.5" fill="#4A6E6E">(liên hợp glucuronide) → ruột</text>
+      <path d="M 535 157 L 535 178" stroke="#A85550" stroke-width="2" marker-end="url(#arrGutR)"/>
+
+      <!-- Dysbiosis high β-glucuronidase -->
+      <rect x="410" y="180" width="250" height="42" rx="8" fill="white" stroke="#A85550" stroke-width="1.5"/>
+      <text x="535" y="196" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" font-weight="700" fill="#8B3A4A">Vi khuẩn &#8220;xấu&#8221; phát triển</text>
+      <text x="535" y="211" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="8.5" fill="#4A6E6E">β-glucuronidase CAO ⚠️</text>
+      <path d="M 535 225 L 535 246" stroke="#A85550" stroke-width="2" marker-end="url(#arrGutR)"/>
+
+      <!-- Result: estrogen reactivated -->
+      <rect x="410" y="248" width="250" height="42" rx="8" fill="white" stroke="#A85550" stroke-width="1.5"/>
+      <text x="535" y="264" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" font-weight="700" fill="#8B3A4A">Enzyme &#8220;xé nhãn&#8221; estrogen</text>
+      <text x="535" y="279" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="8.5" fill="#4A6E6E">→ hấp thu lại vào máu</text>
+
+      <!-- Outcome bad -->
+      <rect x="395" y="315" width="280" height="48" rx="10" fill="#7a1d2a"/>
+      <text x="535" y="337" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="white">✗ ESTROGEN DƯ THỪA</text>
+      <text x="535" y="353" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="rgba(255,255,255,0.9)">Nguy cơ ung thư vú tăng</text>
+
+      <defs>
+        <marker id="arrGutG" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 Z" fill="#2E7F7F"/></marker>
+        <marker id="arrGutR" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 Z" fill="#A85550"/></marker>
+      </defs>
+    </svg>
+    <div class="diagram-caption">Enzyme β-glucuronidase từ vi khuẩn đường ruột là &#8220;công tắc&#8221; quyết định estrogen được đào thải hay quay lại lưu hành — và đây là điểm mà chế độ ăn có thể can thiệp trực tiếp.</div>
+
+    <div class="science-box">
+      <div class="sb-label">🔬 Bằng chứng khoa học</div>
+      <p><strong>Goedert et al., JNCI 2015</strong> — nghiên cứu trên phụ nữ sau mãn kinh cho thấy: bệnh nhân ung thư vú có hệ vi sinh đường ruột <em>khác biệt rõ rệt</em> so với phụ nữ khỏe mạnh — độ đa dạng vi khuẩn thấp hơn, các loài sinh β-glucuronidase nhiều hơn.</p>
+      <p><strong>Kwa et al., JNCI 2016</strong> — review tổng hợp xác nhận: estrobolome mất cân bằng là <strong>yếu tố nguy cơ độc lập</strong> của ung thư vú — ngay cả sau khi loại trừ các yếu tố khác như BMI, tuổi, di truyền.</p>
+    </div>
+
+    <h2>Phần 3 &middot; Ba Vai Trò Của Hệ Vi Sinh Trong Phòng Ung Thư Vú</h2>
+
+    <p>Ngoài estrobolome, hệ vi sinh còn bảo vệ cơ thể khỏi ung thư qua nhiều cơ chế khác &mdash; tất cả đều hoạt động đồng thời:</p>
+
+    <svg class="diagram" viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ba cơ chế bảo vệ của hệ vi sinh khỏe mạnh">
+      <text x="340" y="26" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" font-weight="700" fill="#1E5555" letter-spacing="2">HỆ VI SINH KHỎE &mdash; 3 CƠ CHẾ BẢO VỆ KHỎI UNG THƯ VÚ</text>
+
+      <!-- Central healthy gut -->
+      <circle cx="340" cy="170" r="55" fill="#2E7F7F" stroke="#1E5555" stroke-width="2.5"/>
+      <text x="340" y="164" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="white">VI SINH</text>
+      <text x="340" y="180" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="white">KHỎE MẠNH</text>
+      <text x="340" y="196" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="rgba(255,255,255,0.9)" font-style="italic">đa dạng vi khuẩn</text>
+
+      <!-- 3 protection nodes -->
+      <!-- Central circle: cx=340, cy=170, r=55 -->
+      
+      <!-- LEFT: Estrobolome -->
+      <rect x="20" y="90" width="200" height="80" rx="12" fill="#E8F2EF" stroke="#2E7F7F" stroke-width="1.8"/>
+      <text x="120" y="113" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#1E5555">1. ESTROBOLOME</text>
+      <text x="120" y="133" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="#4A6E6E">Điều hòa estrogen</text>
+      <text x="120" y="148" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="#4A6E6E">đào thải đúng mức</text>
+      <text x="120" y="163" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#4A8B8B" font-style="italic">→ giảm ung thư vú ER+</text>
+      <!-- Arrow FROM center TO left box (pointing LEFT) -->
+      <line x1="287" y1="160" x2="225" y2="145" stroke="#2E7F7F" stroke-width="2.5"/>
+      <polygon points="225,145 236,141 234,151" fill="#2E7F7F"/>
+
+      <!-- RIGHT: SCFA -->
+      <rect x="460" y="90" width="200" height="80" rx="12" fill="#E8F2EF" stroke="#2E7F7F" stroke-width="1.8"/>
+      <text x="560" y="113" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#1E5555">2. SCFA &amp; BUTYRATE</text>
+      <text x="560" y="133" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="#4A6E6E">Vi khuẩn lên men chất xơ</text>
+      <text x="560" y="148" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="#4A6E6E">tạo axit béo chuỗi ngắn</text>
+      <text x="560" y="163" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#4A8B8B" font-style="italic">→ kháng viêm, kháng u</text>
+      <!-- Arrow FROM center TO right box (pointing RIGHT) -->
+      <line x1="393" y1="160" x2="455" y2="145" stroke="#2E7F7F" stroke-width="2.5"/>
+      <polygon points="455,145 444,141 446,151" fill="#2E7F7F"/>
+
+      <!-- BOTTOM: Immunity -->
+      <rect x="220" y="250" width="240" height="70" rx="12" fill="#E8F2EF" stroke="#2E7F7F" stroke-width="1.8"/>
+      <text x="340" y="272" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#1E5555">3. HỆ MIỄN DỊCH</text>
+      <text x="340" y="291" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="#4A6E6E">70% tế bào miễn dịch nằm quanh ruột</text>
+      <text x="340" y="308" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#4A8B8B" font-style="italic">→ nhận diện &amp; loại bỏ tế bào ung thư sớm</text>
+      <!-- Arrow FROM center TO bottom box (pointing DOWN) -->
+      <line x1="340" y1="225" x2="340" y2="247" stroke="#2E7F7F" stroke-width="2.5"/>
+      <polygon points="340,247 335,239 345,239" fill="#2E7F7F"/>
+    </svg>
+    <div class="diagram-caption">Một hệ vi sinh khỏe mạnh bảo vệ bạn trên 3 mặt trận cùng lúc — và cả 3 đều phụ thuộc vào <strong>chất xơ thực vật</strong> trong bữa ăn hàng ngày.</div>
+
+    <h2>Phần 4 &middot; Vi Khuẩn Tốt vs Vi Khuẩn Xấu</h2>
+
+    <p>Không phải tất cả vi khuẩn đều như nhau. Một số &#8220;người bạn&#8221; bảo vệ, một số khác khi phát triển quá mức lại gây hại:</p>
+
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th class="ok">✅ VI KHUẨN CÓ LỢI</th>
+          <th class="warn">❌ VI KHUẨN KHI MẤT CÂN BẰNG</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ok"><strong>Bifidobacterium</strong><br><em>sinh SCFA, cải thiện miễn dịch, ức chế vi khuẩn xấu</em></td>
+          <td class="warn"><strong>Clostridia (một số loài)</strong><br><em>tạo β-glucuronidase cao → tăng estrogen lưu hành</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Lactobacillus</strong><br><em>kháng viêm, có trong thực phẩm lên men</em></td>
+          <td class="warn"><strong>Bacteroides fragilis độc</strong><br><em>sinh độc tố, liên quan đến UT đại tràng &amp; vú</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Akkermansia muciniphila</strong><br><em>bảo vệ lớp nhầy ruột, ngăn &#8220;rò rỉ ruột&#8221;</em></td>
+          <td class="warn"><strong>Escherichia coli độc</strong><br><em>phát triển khi thiếu chất xơ, tạo môi trường viêm</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Faecalibacterium prausnitzii</strong><br><em>sinh butyrate mạnh, kháng viêm toàn thân</em></td>
+          <td class="warn"><strong>Enterobacter (quá mức)</strong><br><em>sản xuất lipopolysaccharide (LPS) gây viêm mạn</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Ruminococcus</strong><br><em>lên men chất xơ khó tiêu, tạo đa dạng sinh học</em></td>
+          <td class="warn"><strong>Desulfovibrio</strong><br><em>tạo H2S, gây tổn hại niêm mạc ruột khi phát triển quá</em></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Điểm quan trọng: <strong>không phải loài nào cũng hoàn toàn &#8220;tốt&#8221; hay &#8220;xấu&#8221;</strong>. Vấn đề là <em>cân bằng</em> và <em>đa dạng</em>. Hệ vi sinh khỏe mạnh có ~1,000 loài khác nhau cùng tồn tại &mdash; ăn uống đa dạng tạo ra sự cân bằng đa dạng này.</p>
+
+    <div class="pull-quote">
+      <p>Bạn không ăn một mình &mdash; bạn ăn cho 100 nghìn tỷ vi khuẩn đang sống cùng bạn. Mỗi bữa ăn là cơ hội để nuôi &#8220;đồng minh&#8221;, hoặc nuôi &#8220;kẻ phá hoại&#8221;.</p>
+      <cite>— H21 Cho Đời Mãi Xanh</cite>
+    </div>
+
+    <h2>Phần 5 &middot; Bằng Chứng Từ Nghiên Cứu Lâm Sàng</h2>
+
+    <div class="study-card">
+      <div class="study-meta">Goedert et al., JNCI 2015 · n≈100 phụ nữ sau mãn kinh</div>
+      <div class="study-title">Bệnh nhân ung thư vú có hệ vi sinh ruột khác biệt</div>
+      <div class="study-result">Nghiên cứu đầu tiên so sánh trực tiếp hệ vi sinh ruột giữa phụ nữ ung thư vú và nhóm đối chứng khỏe mạnh (cùng độ tuổi, BMI). Kết quả: <strong>bệnh nhân ung thư vú có độ đa dạng vi khuẩn thấp hơn đáng kể</strong>, và nhiều loài sinh enzyme β-glucuronidase hơn. Đây là bằng chứng trực tiếp cho mối liên hệ estrobolome → ung thư vú.</div>
+    </div>
+
+    <div class="study-card">
+      <div class="study-meta">David et al., Nature 2014 · Nghiên cứu can thiệp chế độ ăn</div>
+      <div class="study-title">Chế độ ăn thay đổi hệ vi sinh chỉ sau 24 giờ</div>
+      <div class="study-result">Các tình nguyện viên được yêu cầu đổi sang chế độ ăn <em>thuần thực vật</em> hoặc <em>thuần động vật</em> trong 5 ngày. Kết quả: <strong>hệ vi sinh bắt đầu thay đổi rõ rệt chỉ sau 24-48 giờ</strong>. Chế độ thực vật làm tăng vi khuẩn sinh SCFA/butyrate; chế độ động vật làm tăng vi khuẩn kháng mật acid và vi khuẩn gây viêm. Tốc độ phản hồi nhanh hơn bất kỳ yếu tố sinh học nào khác.</div>
+    </div>
+
+    <div class="study-card">
+      <div class="study-meta">Zhu et al., Clinical Cancer Research 2020 · Meta-analysis</div>
+      <div class="study-title">Ăn chất xơ cao → giảm 8-10% nguy cơ ung thư vú</div>
+      <div class="study-result">Meta-analysis tổng hợp 20+ nghiên cứu cohort cho thấy: mỗi <strong>10g chất xơ thêm vào bữa ăn mỗi ngày</strong> (khoảng 1 chén đậu hoặc 2 trái táo) <em>giảm 4-5% nguy cơ ung thư vú</em>. Ở người ăn 30+ gam chất xơ/ngày (gấp đôi lượng trung bình của người Mỹ), nguy cơ giảm 8-10% so với người ăn ít chất xơ.</div>
+    </div>
+
+    <h2>Phần 6 &middot; Thực Phẩm Nuôi Dưỡng Hệ Vi Sinh Khỏe Mạnh</h2>
+
+    <p>Chế độ ăn là yếu tố <em>mạnh nhất</em> ảnh hưởng đến hệ vi sinh — mạnh hơn cả di truyền. Nguyên tắc rất đơn giản: <strong>ăn đa dạng thực vật, ưu tiên thực phẩm lên men, hạn chế đường &amp; thịt chế biến</strong>.</p>
+
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th class="ok">✅ NUÔI &#8220;VI KHUẨN TỐT&#8221;</th>
+          <th class="warn">❌ NUÔI &#8220;VI KHUẨN XẤU&#8221;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ok"><strong>Prebiotic &mdash; thức ăn cho vi khuẩn tốt</strong><br><em>đậu, đậu lăng, hành, tỏi, hẹ tây, măng tây, chuối xanh, yến mạch</em></td>
+          <td class="warn"><strong>Đường &amp; tinh bột tinh chế</strong><br><em>nước ngọt, bánh kẹo, bánh mì trắng → nuôi vi khuẩn xấu, candida</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Probiotic &mdash; thực phẩm lên men</strong><br><em>tempeh, miso, natto, dưa muối, kimchi (không phẩm màu), kefir</em></td>
+          <td class="warn"><strong>Thịt đỏ &amp; thịt chế biến</strong><br><em>tạo TMAO và H2S, nuôi vi khuẩn gây viêm, tổn hại niêm mạc</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Polyphenol &mdash; kháng oxy hóa thực vật</strong><br><em>quả mọng, trà xanh, ca cao nguyên chất, nghệ, lựu, nho đỏ</em></td>
+          <td class="warn"><strong>Đường hóa học (artificial sweeteners)</strong><br><em>aspartame, sucralose → phá vỡ hệ vi sinh ngay cả khi không calorie</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Rau đắng &amp; rau họ cải</strong><br><em>bông cải xanh, cải xoăn, cải thìa, rau diếp xoắn &mdash; nuôi vi khuẩn kháng viêm</em></td>
+          <td class="warn"><strong>Chất béo bão hòa cao (sữa, bơ động vật)</strong><br><em>thay đổi thành phần bile acid → vi khuẩn kháng mật phát triển</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Hạt &amp; chất béo lành</strong><br><em>hạt lanh, hạt chia, óc chó, dầu ô liu &mdash; hỗ trợ lớp nhầy ruột</em></td>
+          <td class="warn"><strong>Rượu bia &amp; thuốc kháng sinh lạm dụng</strong><br><em>giết vi khuẩn tốt lẫn xấu, khó phục hồi cân bằng</em></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Quy tắc vàng: 30 loài thực vật/tuần</h3>
+    <p>Nghiên cứu <strong>American Gut Project</strong> (Đại học California San Diego) cho thấy: người ăn <em>từ 30 loại thực vật khác nhau mỗi tuần</em> có hệ vi sinh đa dạng gấp đôi người ăn dưới 10 loại. Cách dễ nhất: <em>mỗi ngày thêm một loại rau, đậu, hoặc hạt mới vào bữa ăn</em>.</p>
+
+    <h2>Phần 7 &middot; Những Câu Hỏi Thường Gặp</h2>
+
+    <div class="qa-block">
+      <div class="qa-q">Kháng sinh có phá hủy hệ vi sinh không?</div>
+      <div class="qa-a"><strong>Có &mdash; và hậu quả có thể kéo dài</strong>. Một đợt kháng sinh phổ rộng 7-10 ngày có thể <em>giết 30-50% số loài vi khuẩn</em> trong ruột. Một số loài phục hồi trong vài tuần, nhưng <em>có thể mất 6-12 tháng</em> để hệ vi sinh trở về gần như ban đầu &mdash; và đôi khi không bao giờ hoàn toàn phục hồi. <strong>Nguyên tắc: chỉ dùng kháng sinh khi thật sự cần thiết, theo chỉ định bác sĩ</strong>. Sau đợt kháng sinh, ăn nhiều rau củ đa dạng, thực phẩm lên men trong ít nhất 2-3 tháng để hỗ trợ phục hồi.</div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">Stress có ảnh hưởng đến hệ vi sinh không?</div>
+      <div class="qa-a"><strong>Có &mdash; qua &#8220;trục não-ruột&#8221;</strong>. Stress mạn tính làm <em>tăng cortisol</em>, làm mỏng lớp nhầy bảo vệ ruột, tạo điều kiện cho vi khuẩn gây viêm phát triển. Ngược lại, vi khuẩn &#8220;tốt&#8221; còn sản xuất neurotransmitter (như GABA, serotonin tiền chất) ảnh hưởng đến tâm trạng. Đây là lý do: <em>ngủ đủ 7-8 tiếng, thiền, đi bộ trong thiên nhiên</em> không chỉ giúp tinh thần &mdash; mà còn trực tiếp nuôi dưỡng hệ vi sinh khỏe mạnh.</div>
+    </div>
+
+    <div class="takeaway">
+      <div class="takeaway-label">&#128161; Điểm Mấu Chốt</div>
+      <p>Hệ vi sinh đường ruột không phải một &#8220;phần đi kèm&#8221; của cơ thể &mdash; nó là <strong>một cơ quan độc lập</strong> với trọng lượng ngang gan, điều hòa nội tiết, miễn dịch, và <em>trực tiếp quyết định bao nhiêu estrogen quay lại lưu hành trong máu mỗi ngày</em>. Đây là một trong những mắt xích quan trọng nhất &mdash; và ít được nói đến nhất &mdash; giữa chế độ ăn và ung thư vú.</p>
+      <p>Tin tốt: hệ vi sinh là <em>cơ chế phản hồi nhanh nhất</em> với bữa ăn &mdash; thay đổi bắt đầu chỉ sau 24-48 giờ. Và nó không chỉ tác động đến ung thư vú: <strong>ung thư đại tràng, ung thư tuyến tiền liệt, bệnh tim mạch, tiểu đường type 2, trầm cảm, và sa sút trí tuệ</strong> &mdash; tất cả đều liên quan chặt chẽ đến cân bằng vi sinh đường ruột. Một thay đổi &mdash; rất nhiều lợi ích cùng lúc, cho cả nam và nữ, mọi lứa tuổi.</p>
+    </div>
+
+    <div class="soft-invitation">
+      H21 là môi trường nơi chúng tôi thực hành triết lý <em>&#8220;thức ăn là thuốc, và thuốc chính là thức ăn&#8221;</em> &mdash; nguyên lý y học nền tảng từ Hippocrates hơn 2,400 năm trước, nay được khoa học hiện đại xác nhận qua nghiên cứu hệ vi sinh đường ruột. Mỗi bữa ăn lành mạnh trong chương trình H21 không chỉ nuôi cơ thể &mdash; mà còn là <strong>cơ hội nuôi dưỡng 100 nghìn tỷ vi khuẩn &#8220;đồng minh&#8221;</strong>, giúp phục hồi cân bằng estrobolome, giảm viêm, và tăng đa dạng sinh học đường ruột.
+      <br><br>Đây là lý do nhiều học viên H21 thấy <em>cải thiện rõ rệt chỉ sau vài tuần</em> &mdash; không phải nhờ &#8220;phép màu&#8221;, mà vì hệ vi sinh là cơ chế phản hồi nhanh nhất của cơ thể với chế độ ăn. <strong>Bữa ăn hôm nay là lựa chọn thầm lặng nhưng quyết định của ngày mai.</strong>
+    </div>
+
+<div class="cta-box">
+  <div class="cta-eyebrow">Seri Ung Thư Vú · 10 Cơ Chế</div>
+  <h3 class="cta-title">Đây là Cơ Chế 06/10. Còn 4 cơ chế nữa để khám phá.</h3>
+  <p class="cta-desc">Tham gia cộng đồng H21 để theo dõi toàn bộ seri &mdash; nơi khoa học ung thư được dịch thành hành động cụ thể mỗi ngày.</p>
+  <a href="https://www.facebook.com/xanhlenbenhxuong/" target="_blank" class="cta-btn">Đăng Ký Khóa Học H21 &#8594;</a>
+</div>
+
+  </div>
+<div class="article-footer">
+  <div class="footer-brand">
+    <strong>Thuy-Trinh Nguyen</strong> &middot; Khoa Học Gia &amp; Nhà Sáng Lập<br>
+    <strong>H21 - Cho Đời Mãi Xanh</strong> &middot; <a href="https://www.h21chodoimaixanh.com">www.h21chodoimaixanh.com</a><br>
+    Mang khoa học từ phòng thí nghiệm đến căn bếp mỗi gia đình
+  </div>
+</div>
+</div>
+<footer class="site-footer">
+  <strong>H21 - Cho Đời Mãi Xanh</strong> &middot; Khoa Học Gia Thuy-Trinh Nguyen<br>
+  <a href="https://blog.h21chodoimaixanh.com">blog.h21chodoimaixanh.com</a> &middot; <a href="https://www.h21chodoimaixanh.com">www.h21chodoimaixanh.com</a><br>
+  Nội dung chỉ dành cho mục đích giáo dục, không thay thế tư vấn y tế chuyên nghiệp.
+</footer>
+</body>
+</html>
