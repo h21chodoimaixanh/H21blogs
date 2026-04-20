@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stress Oxy Hóa & Ung Thư Vú — Gốc Tự Do, DNA và Cơ Chế Kháng Oxy Hóa Tự Nhiên | H21 Cho Đời Mãi Xanh</title>
+<meta name="description" content="Stress oxy hóa là cơ chế nền tảng đằng sau hàng nghìn đột biến DNA mỗi ngày. Khoa học giải mã vai trò của gốc tự do trong ung thư vú và chiến lược phòng ngừa qua chế độ ăn.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F5F6FA;
+  --ink:#0C1230;
+  --mid:#1F2850;
+  --light:#4A5680;
+  --accent:#3A4880;
+  --accent-dark:#252C5A;
+  --accent-mid:#5663A0;
+  --accent-light:#A8B0D0;
+  --border:#D8DCEC;
+  --blush:#EAEEF6;
+  --plum:#0C1230;
+  --rose:#B8A87F;
+  --mint:#A8C8B0;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Lora',serif;font-size:17px;line-height:1.75;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;}
+.site-nav{background:var(--plum);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(0,0,0,0.25);}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-logo-mark{width:34px;height:34px;background:var(--mint);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-family:sans-serif;}
+.nav-logo-name{font-size:14px;font-weight:600;color:white;font-family:'Be Vietnam Pro',sans-serif;}
+.nav-logo-tag{font-size:11px;color:rgba(255,255,255,0.6);margin-top:1px;font-family:'Be Vietnam Pro',sans-serif;letter-spacing:0.3px;}
+.nav-back{font-size:13px;color:rgba(255,255,255,0.75);text-decoration:none;font-weight:500;font-family:'Be Vietnam Pro',sans-serif;transition:color 0.2s;}
+.nav-back:hover{color:var(--rose);}
+.article-hero{background:linear-gradient(135deg,#0C1230 0%,#252C5A 45%,#3A4880 100%);padding:48px 24px 40px;position:relative;overflow:hidden;}
+.article-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 30%,rgba(255,255,255,0.06) 0%,transparent 60%);}
+.hero-inner{max-width:720px;margin:0 auto;position:relative;z-index:1;}
+.series-badge{display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.95);padding:6px 14px;border-radius:100px;font-family:'Be Vietnam Pro',sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;}
+.series-badge-dot{display:inline-block;width:6px;height:6px;background:#B8A87F;border-radius:50%;margin-right:6px;vertical-align:middle;}
+.article-h1{font-family:'Playfair Display',serif;font-size:38px;font-weight:700;line-height:1.2;color:white;margin-bottom:16px;letter-spacing:-0.5px;}
+.article-h1 em{font-style:italic;color:rgba(255,255,255,0.85);font-weight:400;}
+.article-deck{font-family:'Lora',serif;font-size:17px;line-height:1.7;color:rgba(255,255,255,0.85);font-style:italic;margin:0;}
+.article-deck em{color:rgba(255,255,255,0.95);font-weight:600;font-style:italic;}
+.byline-bar{background:white;border-bottom:1px solid var(--border);padding:14px 24px;}
+.byline-inner{max-width:720px;margin:0 auto;display:flex;align-items:center;gap:14px;}
+.byline-av{width:40px;height:40px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:white;font-weight:700;flex-shrink:0;font-family:'Be Vietnam Pro',sans-serif;}
+.byline-name{font-size:13.5px;font-weight:600;color:var(--ink);font-family:'Be Vietnam Pro',sans-serif;}
+.byline-role{font-size:11.5px;color:var(--light);margin-top:1px;font-family:'Be Vietnam Pro',sans-serif;}
+.byline-meta{margin-left:auto;text-align:right;}
+.byline-url{font-size:11.5px;color:var(--light);font-family:'Be Vietnam Pro',sans-serif;}
+.read-time{font-size:11px;color:var(--accent);font-weight:600;margin-top:2px;font-family:'Be Vietnam Pro',sans-serif;}
+.article-wrap{max-width:720px;margin:0 auto;padding:44px 24px 80px;}
+.hero-banner{margin:0 0 32px;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(37,44,90,0.15);border:1px solid var(--border);}
+.hero-banner img{width:100%;display:block;}
+.article-body{font-family:'Lora',serif;font-size:17px;line-height:1.85;color:var(--mid);}
+.article-body p{margin:0 0 20px;}
+.article-body p.bullet{padding-left:32px;margin-bottom:14px;position:relative;}
+.article-body p.bullet + p.bullet{margin-top:0;}
+.article-body strong{color:var(--ink);font-weight:600;}
+.article-body em{color:var(--accent);font-style:italic;font-weight:600;}
+.article-body a{color:var(--accent);text-decoration:underline;}
+.article-body h2{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--ink);margin:44px 0 14px;line-height:1.3;}
+.article-body h3{font-family:'Be Vietnam Pro',sans-serif;font-size:14px;font-weight:700;color:var(--accent-dark);margin:28px 0 10px;text-transform:uppercase;letter-spacing:1.5px;}
+.fact-strip{display:grid;grid-template-columns:repeat(3,1fr);margin:32px 0 18px;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:white;}
+.fact-item{padding:22px 16px;text-align:center;border-right:1px solid var(--border);}
+.fact-item:last-child{border-right:none;}
+.fact-num{font-family:'Playfair Display',serif;font-size:34px;font-weight:700;color:var(--accent);line-height:1;}
+.fact-label{font-size:11.5px;color:var(--light);margin-top:8px;line-height:1.5;font-family:'Be Vietnam Pro',sans-serif;}
+.fact-explain{background:var(--blush);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:14px 20px;margin:0 0 32px;font-family:'Lora',serif;font-size:14.5px;line-height:1.75;color:var(--mid);font-style:italic;}
+.fact-explain strong{color:var(--accent-dark);font-style:normal;}
+.personal-note{background:linear-gradient(135deg,#FDFBF4,#EFEEF5);border:1px solid var(--border);border-left:4px solid var(--accent-mid);border-radius:0 14px 14px 0;padding:22px 28px;margin:28px 0;font-family:'Lora',serif;font-style:italic;}
+.personal-note-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent-mid);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;font-style:normal;}
+.personal-note p{font-size:16px;line-height:1.8;color:var(--mid);margin:0;}
+.personal-note strong{color:var(--accent-dark);font-style:normal;}
+.science-box{background:var(--blush);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:0 12px 12px 0;padding:20px 24px;margin:24px 0;}
+.sb-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent-mid);margin-bottom:8px;font-family:'Be Vietnam Pro',sans-serif;}
+.science-box p{font-size:15px;color:var(--mid);margin:0 0 10px;line-height:1.75;font-family:'Lora',serif;}
+.science-box p:last-child{margin-bottom:0;}
+.science-box strong{color:var(--accent-dark);}
+.science-box em{color:var(--accent);}
+.study-card{background:white;border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:10px;padding:18px 22px;margin:14px 0;}
+.study-meta{font-family:'Be Vietnam Pro',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
+.study-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--accent-dark);margin-bottom:6px;line-height:1.35;}
+.study-result{font-family:'Lora',serif;font-size:14.5px;line-height:1.65;color:var(--mid);}
+.study-result strong{color:var(--accent-dark);}
+.diagram{margin:22px 0 6px;display:block;background:white;border:1px solid var(--border);border-radius:12px;padding:18px;}
+.diagram-caption{font-family:'Be Vietnam Pro',sans-serif;font-size:11.5px;color:var(--light);text-align:center;margin-top:-2px;margin-bottom:28px;font-style:italic;line-height:1.5;}
+.pull-quote{margin:38px 0;padding:30px 36px;background:var(--accent-dark);border-radius:14px;color:white;text-align:center;position:relative;}
+.pull-quote::before{content:'"';font-family:'Playfair Display',serif;font-size:80px;line-height:0.5;color:rgba(255,255,255,0.12);position:absolute;top:26px;left:22px;}
+.pull-quote p{font-family:'Lora',serif;font-size:19px;line-height:1.6;color:rgba(255,255,255,0.95);font-style:italic;margin:0 0 8px;}
+.pull-quote strong{color:#F5D99B;font-weight:700;font-style:normal;}
+.pull-quote cite{font-family:'Be Vietnam Pro',sans-serif;font-size:12px;color:rgba(255,255,255,0.6);font-style:normal;letter-spacing:1.5px;text-transform:uppercase;}
+.qa-block{background:white;border:1px solid var(--border);border-radius:10px;padding:18px 22px;margin:14px 0;}
+.qa-q{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--accent-dark);margin-bottom:8px;line-height:1.35;}
+.qa-q::before{content:'H: ';color:var(--accent);}
+.qa-a{font-family:'Lora',serif;font-size:14.5px;line-height:1.75;color:var(--mid);}
+.qa-a::before{content:'Đ: ';font-family:'Be Vietnam Pro',sans-serif;font-weight:700;color:var(--accent);font-size:13px;letter-spacing:1px;}
+.qa-a strong{color:var(--accent-dark);}
+.qa-a em{color:var(--accent);}
+.info-table{width:100%;table-layout:fixed;border-collapse:collapse;margin:22px 0 28px;background:white;border:1px solid var(--border);border-radius:12px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;}
+.info-table th,.info-table td{width:50%;}
+.info-table thead th{padding:14px 16px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--border);text-align:left;}
+.info-table thead th.ok{background:#3a5a44;color:white;}
+.info-table thead th.warn{background:#a85550;color:white;}
+.info-table td{padding:12px 16px;font-size:13.5px;line-height:1.65;color:var(--mid);border-bottom:1px solid var(--border);vertical-align:top;}
+.info-table td.ok{background:#f3f7f0;}
+.info-table td.warn{background:#fcf2ef;}
+.info-table tr:last-child td{border-bottom:none;}
+.info-table td strong{color:var(--accent-dark);}
+.info-table td.ok strong{color:#3a5a44;}
+.info-table td.warn strong{color:#8B3A4A;}
+.info-table td em{font-style:italic;color:var(--light);font-size:12.5px;}
+@media(max-width:600px){.info-table{font-size:12px;} .info-table td,.info-table th{padding:10px 12px;}}
+.soft-invitation{background:var(--blush);border:1px solid var(--border);border-radius:10px;padding:20px 26px;margin:28px 0;font-family:'Lora',serif;font-size:15.5px;line-height:1.8;color:var(--mid);font-style:italic;}
+.soft-invitation strong{color:var(--accent-dark);font-style:normal;font-weight:700;}
+.soft-invitation em{color:var(--accent);font-style:italic;}
+.takeaway{background:linear-gradient(135deg,var(--accent-dark),var(--accent));border-radius:14px;padding:28px 32px;margin:36px 0 0;color:white;}
+.takeaway-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
+.takeaway p{font-size:16px;color:rgba(255,255,255,0.95);line-height:1.8;margin:0 0 12px;font-family:'Lora',serif;}
+.takeaway p:last-child{margin-bottom:0;}
+.takeaway strong{color:white;font-weight:700;}
+.takeaway em{color:rgba(255,255,255,0.88);font-style:italic;}
+.cta-box{background:var(--plum);border-radius:14px;padding:30px 32px;margin-top:36px;text-align:center;}
+.cta-box .cta-eyebrow{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--rose);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
+.cta-box .cta-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:white;margin-bottom:10px;line-height:1.35;}
+.cta-box .cta-desc{font-size:14px;color:rgba(255,255,255,0.72);max-width:400px;margin:0 auto 22px;line-height:1.7;font-family:'Lora',serif;}
+.cta-btn{display:inline-block;background:var(--rose);color:var(--plum);font-size:14px;font-weight:700;padding:13px 32px;border-radius:100px;text-decoration:none;font-family:'Be Vietnam Pro',sans-serif;transition:opacity .2s;}
+.cta-btn:hover{opacity:0.88;}
+.article-footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--border);}
+.footer-brand{font-size:12.5px;color:var(--light);line-height:1.8;font-family:'Be Vietnam Pro',sans-serif;}
+.footer-brand strong{color:var(--accent-dark);}
+.footer-brand a{color:var(--accent);text-decoration:none;}
+.site-footer{background:var(--plum);padding:28px 40px;text-align:center;font-size:12px;color:rgba(255,255,255,0.45);line-height:1.8;font-family:'Be Vietnam Pro',sans-serif;}
+.site-footer a{color:var(--rose);text-decoration:none;}
+.site-footer strong{color:rgba(255,255,255,0.75);}
+@media(max-width:600px){
+  .article-h1{font-size:28px;}
+  .article-deck{font-size:15.5px;}
+  .fact-strip{grid-template-columns:1fr;}
+  .fact-item{border-right:none;border-bottom:1px solid var(--border);}
+  .fact-item:last-child{border-bottom:none;}
+  .article-wrap{padding:32px 18px 60px;}
+  .site-nav{padding:12px 20px;}
+  .article-hero{padding:36px 18px 30px;}
+}
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">🌿</div>
+    <div>
+      <div class="nav-logo-name">H21 - Cho Đời Mãi Xanh</div>
+      <div class="nav-logo-tag">Khoa Học Gia Thuy-Trinh Nguyen</div>
+    </div>
+  </a>
+  <a href="index.html" class="nav-back">&#8592; Trở về Blog</a>
+</nav>
+
+<section class="article-hero">
+  <div class="hero-inner">
+    <div class="series-badge"><span class="series-badge-dot"></span> 🎗️ Seri Ung Thư Vú · Cơ Chế 07/10</div>
+    <h1 class="article-h1">Stress Oxy Hóa &amp; Ung Thư Vú &mdash;<br><em>Gốc Tự Do, DNA &amp; Kháng Oxy Hóa Tự Nhiên</em></h1>
+    <p class="article-deck">Mỗi tế bào trong cơ thể bạn đang phải &#8220;đỡ&#8221; hàng chục nghìn &#8220;viên đạn vi mô&#8221; mỗi ngày &mdash; những <em>gốc tự do</em> có khả năng làm tổn thương DNA và khởi phát đột biến. Bài viết giải mã vai trò của stress oxy hóa trong ung thư vú, và vì sao polyphenol thực vật là hệ phòng thủ tự nhiên mạnh nhất của cơ thể.</p>
+  </div>
+</section>
+<div class="byline-bar">
+  <div class="byline-inner">
+    <div class="byline-av">TT</div>
+    <div>
+      <div class="byline-name">Thuy-Trinh Nguyen</div>
+      <div class="byline-role">Khoa Học Gia &middot; Nhà Sáng Lập H21 - Cho Đời Mãi Xanh</div>
+    </div>
+    <div class="byline-meta">
+      <div class="byline-url">www.h21chodoimaixanh.com</div>
+      <div class="read-time">&#9200; Đọc trong 8 phút</div>
+    </div>
+  </div>
+</div>
+
+<div class="article-wrap">
+  <div class="article-body">
+
+    <div class="hero-banner">
+      <img src="stress-oxy-hoa.jpg" alt="Stress Oxy Hóa & Ung Thư Vú — Gốc Tự Do, DNA và Kháng Oxy Hóa Tự Nhiên cùng Khoa Học Gia Thuy-Trinh Nguyen">
+    </div>
+
+    <div class="personal-note">
+      <div class="personal-note-label">🌿 Điểm Khởi Đầu</div>
+      <p>Nhiều người biết đến &#8220;chất kháng oxy hóa&#8221; như một thuật ngữ marketing trên bao bì thực phẩm. Nhưng phía sau thuật ngữ đó là <strong>một trong những cơ chế quan trọng nhất quyết định tế bào lành hay ung thư</strong>. Mỗi ngày, DNA của bạn bị tấn công hàng chục nghìn lần bởi <em>gốc tự do</em> &mdash; và cơ thể có cả một hệ thống tinh vi để sửa chữa những tổn thương này. Khi hệ thống đó quá tải, ung thư bắt đầu.</p>
+    </div>
+
+    <div class="fact-strip">
+      <div class="fact-item">
+        <div class="fact-num">10,000+</div>
+        <div class="fact-label">lần DNA bị tấn công bởi gốc tự do mỗi ngày trong mỗi tế bào</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-num">~30%</div>
+        <div class="fact-label">các trường hợp ung thư được cho là liên quan đến stress oxy hóa mạn tính</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-num">8-10 lần</div>
+        <div class="fact-label">khả năng kháng oxy hóa cao hơn khi ăn chế độ nhiều thực vật nguyên dạng</div>
+      </div>
+    </div>
+
+    <div class="fact-explain">
+      Ba con số cho thấy quy mô của vấn đề &mdash; và sức mạnh của giải pháp. Điểm quan trọng cần hiểu: <strong>cơ thể không bị bệnh vì có gốc tự do, mà bị bệnh khi &#8220;quân phá hoại&#8221; nhiều hơn &#8220;quân bảo vệ&#8221;</strong>. Giống như một ngôi nhà có mối mọt &mdash; không phải cứ có mối là sập, mà là khi mối sinh sản nhanh hơn khả năng xử lý của chủ nhà. Và <em>thứ bạn ăn mỗi ngày chính là &#8220;quân bảo vệ&#8221; chính</em> &mdash; quyết định trực tiếp ai sẽ thắng trận chiến bên trong cơ thể bạn.
+    </div>
+
+    <h2>Phần 1 &middot; Gốc Tự Do &amp; Stress Oxy Hóa Là Gì?</h2>
+
+    <p>Hãy bắt đầu bằng câu hỏi quen thuộc: <strong>tại sao quả táo cắt ra thì bị thâm? Tại sao sắt để ngoài mưa bị rỉ?</strong> Đó là <em>oxy hóa</em> &mdash; oxy trong không khí &#8220;ăn mòn&#8221; các chất khác. Điều tương tự xảy ra <em>bên trong cơ thể bạn</em> ở cấp độ vi mô. Tác nhân là <strong>gốc tự do</strong> &mdash; những &#8220;tia lửa nhỏ&#8221; liên tục bắn ra, có thể làm hỏng tế bào và <strong>tổn thương DNA</strong> (bản thiết kế sự sống). Khi DNA bị hỏng nhiều, tế bào có thể hóa thành ung thư.</p>
+
+    <div class="science-box">
+      <div class="sb-label">🔬 Mẹo Nhỏ Từ Bếp Chứng Minh Oxy Hóa</div>
+      <p>Vậy tại sao cơ thể chưa &#8220;rỉ sét&#8221;? Vì cơ thể có <strong>hệ bảo vệ</strong> hoạt động 24/7. Hãy nghĩ về mẹo nội trợ quen thuộc: <em>vắt chanh lên miếng táo vừa cắt để không bị thâm</em>. Vitamin C trong chanh chính là <strong>kháng oxy hóa tự nhiên</strong>. Điều tương tự xảy ra bên trong cơ thể khi bạn ăn thực phẩm giàu vitamin C và các chất kháng oxy hóa khác.</p>
+    </div>
+
+    <p>Gốc tự do sinh ra từ 2 nguồn: <strong>từ bên trong</strong> (không tránh được &mdash; mỗi khi tế bào đốt thức ăn tạo năng lượng, giống <em>động cơ xe đốt xăng thải khói</em>), và <strong>từ bên ngoài</strong> (kiểm soát được) &mdash; khói thuốc, ô nhiễm, nắng gắt, rượu bia, <em>thịt nướng cháy, dầu chiên đi chiên lại, đồ ăn đóng gói sẵn</em>, và cả <strong>stress tâm lý kéo dài</strong>.</p>
+
+    <p>Vậy khi nào sinh bệnh? <strong>Stress oxy hóa</strong> xảy ra khi <em>gốc tự do nhiều hơn khả năng xử lý của cơ thể</em>, kéo dài nhiều năm &mdash; giống như <em>ngôi nhà có mối mọt: không phải cứ có mối là sập, mà khi mối sinh sản nhanh hơn chủ nhà có thể xử lý</em>. Và <em>thứ bạn ăn mỗi ngày</em> quyết định ai sẽ thắng trận chiến này.</p>
+
+    <svg class="diagram" viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cán cân giữa gốc tự do và hệ kháng oxy hóa">
+      <text x="360" y="28" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" font-weight="700" fill="#252C5A" letter-spacing="2">STRESS OXY HÓA = MẤT CÂN BẰNG GIỮA 2 LỰC LƯỢNG</text>
+
+      <!-- LEFT: Gốc tự do (aggressors) -->
+      <rect x="30" y="65" width="260" height="180" rx="14" fill="#FCF0ED" stroke="#A85550" stroke-width="2"/>
+      <text x="160" y="92" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12" font-weight="700" fill="#8B3A4A" letter-spacing="1.5">GỐC TỰ DO</text>
+      <text x="160" y="108" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#8B3A4A" font-style="italic">&#8220;quân phá hoại&#8221;</text>
+
+      <circle cx="80" cy="140" r="8" fill="#A85550"/>
+      <circle cx="125" cy="155" r="6" fill="#A85550"/>
+      <circle cx="170" cy="138" r="7" fill="#A85550"/>
+      <circle cx="215" cy="150" r="8" fill="#A85550"/>
+      <circle cx="105" cy="175" r="7" fill="#A85550"/>
+      <circle cx="155" cy="182" r="6" fill="#A85550"/>
+      <circle cx="200" cy="175" r="8" fill="#A85550"/>
+      <circle cx="240" cy="180" r="6" fill="#A85550"/>
+
+      <text x="160" y="215" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="#4A5680">• Tế bào đốt năng lượng</text>
+      <text x="160" y="230" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="#4A5680">• Khói · ô nhiễm · UV · stress</text>
+
+      <line x1="295" y1="155" x2="425" y2="155" stroke="#252C5A" stroke-width="3" stroke-linecap="round"/>
+      <polygon points="360,155 350,185 370,185" fill="#252C5A"/>
+      <rect x="345" y="185" width="30" height="35" fill="#252C5A"/>
+      <text x="360" y="240" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" font-weight="700" fill="#252C5A">CÂN BẰNG</text>
+      <text x="360" y="256" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#5663A0" font-style="italic">(cân bằng động)</text>
+
+      <rect x="430" y="65" width="260" height="180" rx="14" fill="#EFF4ED" stroke="#5A7C5F" stroke-width="2"/>
+      <text x="560" y="92" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12" font-weight="700" fill="#3a5a44" letter-spacing="1.5">KHÁNG OXY HÓA</text>
+      <text x="560" y="108" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#3a5a44" font-style="italic">&#8220;quân bảo vệ&#8221;</text>
+
+      <g transform="translate(480,130)"><path d="M 0 0 L 20 8 L 20 30 C 20 40 10 48 10 48 C 10 48 0 40 0 30 L 0 8 Z" fill="#5A7C5F"/></g>
+      <g transform="translate(535,130)"><path d="M 0 0 L 20 8 L 20 30 C 20 40 10 48 10 48 C 10 48 0 40 0 30 L 0 8 Z" fill="#5A7C5F"/></g>
+      <g transform="translate(590,130)"><path d="M 0 0 L 20 8 L 20 30 C 20 40 10 48 10 48 C 10 48 0 40 0 30 L 0 8 Z" fill="#5A7C5F"/></g>
+      <g transform="translate(645,130)"><path d="M 0 0 L 20 8 L 20 30 C 20 40 10 48 10 48 C 10 48 0 40 0 30 L 0 8 Z" fill="#5A7C5F"/></g>
+
+      <text x="560" y="215" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="#4A5680">• Hệ phòng thủ của cơ thể</text>
+      <text x="560" y="230" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9.5" fill="#4A5680">• Vitamin &amp; chất từ thực vật</text>
+
+      <rect x="60" y="280" width="600" height="40" rx="10" fill="#3A4880"/>
+      <text x="360" y="305" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="white" letter-spacing="1.2">KHI CÁN CÂN MẤT THĂNG BẰNG → TỔN THƯƠNG TÍCH LŨY → UNG THƯ</text>
+    </svg>
+    <div class="diagram-caption">Cơ thể luôn có hai lực lượng hoạt động song song: gốc tự do phá hủy và kháng oxy hóa bảo vệ. Sức khỏe nằm ở sự cân bằng — không phải ở việc triệt tiêu hoàn toàn gốc tự do.</div>
+
+    <h2>Phần 2 &middot; Stress Oxy Hóa Gây Ung Thư Vú Như Thế Nào?</h2>
+
+    <p>Tế bào vú <em>đặc biệt nhạy cảm</em> với stress oxy hóa vì phải xử lý chu kỳ hormone liên tục, và mô vú có nhiều tế bào mỡ &mdash; <em>nơi các độc tố dễ tích lũy</em> và tiếp tục sinh gốc tự do. Stress oxy hóa gây ung thư vú qua <strong>3 cơ chế chính</strong>:</p>
+
+    <p class="bullet"><strong>1. Hỏng DNA &mdash; &#8220;bản thiết kế sự sống&#8221;</strong> &mdash; DNA giống như <em>cuốn sách hướng dẫn</em> chi tiết cách tế bào hoạt động. Khi gốc tự do &#8220;bắn&#8221; vào DNA, nó có thể làm <strong>đứt, nối lộn, hoặc đổi chữ</strong> trong sách &mdash; như <em>trang sách bị mất chữ</em>. Nếu lỗi rơi vào những gen quan trọng như <em>TP53, BRCA1, BRCA2</em> (các gen có nhiệm vụ <strong>ngăn tế bào trở thành ung thư</strong>), tế bào có thể bắt đầu hóa ác.</p>
+
+    <p class="bullet"><strong>2. Hỏng &#8220;nhà máy điện&#8221; của tế bào</strong> &mdash; Bên trong mỗi tế bào có <em>ty thể</em> &mdash; &#8220;nhà máy điện&#8221; đốt thức ăn tạo năng lượng. Nhưng như mọi nhà máy, nó cũng thải &#8220;khói&#8221; (gốc tự do). Khi ty thể bị chính khói của mình làm hỏng, nó thải càng nhiều khói hơn &mdash; giống <em>chiếc xe cũ thải khói đen làm hỏng chính động cơ</em>. Tế bào ung thư vú thường có ty thể rối loạn, duy trì trạng thái &#8220;rỉ sét&#8221; liên tục.</p>
+
+    <p class="bullet"><strong>3. Estrogen bị chệch đường thành chất độc</strong> &mdash; Bình thường gan xử lý estrogen dư an toàn rồi đào thải ra. Trong môi trường stress oxy hóa cao, quá trình bị chệch &mdash; tạo ra <em>estrogen quinone</em>, chất gắn vào DNA như <strong>vết mực vĩnh viễn trên trang sách</strong>. Chữ bị che, tế bào đọc sai, đột biến bắt đầu. Đây là cơ chế quan trọng nhất của ung thư vú liên quan hormone.</p>
+
+    <svg class="diagram" viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="3 cơ chế stress oxy hóa gây ung thư vú">
+      <text x="360" y="28" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" font-weight="700" fill="#8B3A4A" letter-spacing="2">STRESS OXY HÓA &mdash; 3 ĐƯỜNG DẪN ĐẾN UNG THƯ VÚ</text>
+
+      <!-- TOP: Source -->
+      <rect x="270" y="55" width="180" height="50" rx="12" fill="white" stroke="#252C5A" stroke-width="2"/>
+      <text x="360" y="77" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#252C5A">STRESS OXY HÓA</text>
+      <text x="360" y="93" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#4A5680" font-style="italic">ROS quá tải mạn tính</text>
+      
+      <!-- Arrow down -->
+      <line x1="360" y1="108" x2="360" y2="130" stroke="#252C5A" stroke-width="2.5"/>
+      <polygon points="360,130 355,120 365,120" fill="#252C5A"/>
+
+      <!-- CENTER: Circle representing free radicals/ROS -->
+      <circle cx="360" cy="170" r="38" fill="#A85550" stroke="#8B3A4A" stroke-width="2.5"/>
+      <text x="360" y="168" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="white">GỐC</text>
+      <text x="360" y="183" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="white">TỰ DO</text>
+
+      <!-- 3 diverging arrows to effects -->
+      <line x1="328" y1="196" x2="145" y2="230" stroke="#A85550" stroke-width="2.5"/>
+      <polygon points="145,230 157,227 152,237" fill="#A85550"/>
+      <line x1="360" y1="208" x2="360" y2="230" stroke="#A85550" stroke-width="2.5"/>
+      <polygon points="360,230 355,220 365,220" fill="#A85550"/>
+      <line x1="392" y1="196" x2="580" y2="230" stroke="#A85550" stroke-width="2.5"/>
+      <polygon points="580,230 568,227 573,237" fill="#A85550"/>
+
+      <!-- 3 mechanism boxes -->
+      <rect x="40" y="232" width="210" height="65" rx="10" fill="white" stroke="#A85550" stroke-width="1.8"/>
+      <text x="145" y="253" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#8B3A4A">1. Đột biến DNA</text>
+      <text x="145" y="270" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#1F2850">Hỏng gen TP53, BRCA1/2</text>
+      <text x="145" y="285" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#1F2850" font-style="italic">gen ức chế khối u</text>
+
+      <rect x="255" y="232" width="210" height="65" rx="10" fill="white" stroke="#A85550" stroke-width="1.8"/>
+      <text x="360" y="253" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#8B3A4A">2. Tổn thương ty thể</text>
+      <text x="360" y="270" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#1F2850">Vòng xoáy tạo ROS</text>
+      <text x="360" y="285" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#1F2850" font-style="italic">ngày càng nhiều hơn</text>
+
+      <rect x="470" y="232" width="210" height="65" rx="10" fill="white" stroke="#A85550" stroke-width="1.8"/>
+      <text x="575" y="253" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#8B3A4A">3. Estrogen quinone</text>
+      <text x="575" y="270" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#1F2850">DNA adducts</text>
+      <text x="575" y="285" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#1F2850" font-style="italic">gắn độc tố vào DNA</text>
+
+      <!-- 3 red arrows down to UT VÚ -->
+      <line x1="145" y1="303" x2="145" y2="335" stroke="#7a1d2a" stroke-width="3"/>
+      <polygon points="145,335 140,325 150,325" fill="#7a1d2a"/>
+      <line x1="360" y1="303" x2="360" y2="335" stroke="#7a1d2a" stroke-width="3"/>
+      <polygon points="360,335 355,325 365,325" fill="#7a1d2a"/>
+      <line x1="575" y1="303" x2="575" y2="335" stroke="#7a1d2a" stroke-width="3"/>
+      <polygon points="575,335 570,325 580,325" fill="#7a1d2a"/>
+
+      <!-- 3 UT VÚ pills -->
+      <rect x="70" y="340" width="150" height="42" rx="21" fill="#7a1d2a" stroke="#5a0e18" stroke-width="2"/>
+      <text x="145" y="366" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="900" fill="white" letter-spacing="1.5">UNG THƯ VÚ</text>
+      <rect x="285" y="340" width="150" height="42" rx="21" fill="#7a1d2a" stroke="#5a0e18" stroke-width="2"/>
+      <text x="360" y="366" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="900" fill="white" letter-spacing="1.5">UNG THƯ VÚ</text>
+      <rect x="500" y="340" width="150" height="42" rx="21" fill="#7a1d2a" stroke="#5a0e18" stroke-width="2"/>
+      <text x="575" y="366" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="900" fill="white" letter-spacing="1.5">UNG THƯ VÚ</text>
+    </svg>
+    <div class="diagram-caption">Stress oxy hóa là một trong những cơ chế <strong>sâu nhất và sớm nhất</strong> trong quá trình hình thành ung thư vú — bắt đầu từ cấp độ phân tử, trước khi có bất kỳ triệu chứng nào.</div>
+
+    <h2>Phần 3 &middot; Hệ Kháng Oxy Hóa Tự Nhiên Của Cơ Thể</h2>
+
+    <p>Cơ thể không &#8220;bó tay&#8221; trước gốc tự do. Chúng ta có một hệ thống bảo vệ 2 tầng &mdash; giống <em>ngôi nhà có cả hệ thống báo cháy tự động bên trong, lẫn đội cứu hỏa bên ngoài</em>.</p>
+
+    <h3>Tầng 1: &#8220;Lính gác nội bộ&#8221; &mdash; cơ thể tự sản xuất</h3>
+
+    <p>Ba &#8220;lính gác&#8221; chính cơ thể tự tạo ra:</p>
+
+    <p class="bullet">&bull; <strong>SOD</strong> &mdash; &#8220;<em>lính tuyến đầu</em>&#8221;, chặn gốc tự do nguy hiểm nhất ngay khi xuất hiện. Cần <em>kẽm, đồng, mangan</em> (có trong đậu, hạt, ngũ cốc nguyên cám).</p>
+
+    <p class="bullet">&bull; <strong>Catalase</strong> &mdash; &#8220;<em>người dọn dẹp</em>&#8221;, biến chất độc thành nước thường đào thải qua mồ hôi, nước tiểu. Cần <em>sắt</em> (đậu lăng, rau bó xôi).</p>
+
+    <p class="bullet">&bull; <strong>Glutathione (GSH)</strong> &mdash; tên quen thuộc trong giới làm đẹp &#8220;<em>trắng da, chống lão hóa</em>&#8221;. Khoa học gọi là <em>&#8220;kháng oxy hóa chủ&#8221;</em> của cơ thể &mdash; có trong mọi tế bào, đặc biệt ở gan.</p>
+
+    <div class="science-box">
+      <div class="sb-label">🔬 Điều Ít Người Biết Về Glutathione</div>
+      <p>Uống viên glutathione thường <em>không hiệu quả</em> như quảng cáo &mdash; dạ dày phá hủy phần lớn trước khi nó vào máu. Cách tốt hơn: <strong>cho cơ thể nguyên liệu để tự sản xuất</strong> &mdash; các loại <em>rau họ cải</em> (bông cải xanh, cải xoăn, cải Brussels), <em>tỏi, hành, bơ, măng tây</em>. Đây là những thực phẩm giàu lưu huỳnh tự nhiên.</p>
+    </div>
+
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th class="ok">🛡️ &#8220;LÍNH GÁC&#8221; NỘI BỘ</th>
+          <th class="ok">🍽️ NGUYÊN LIỆU NUÔI DƯỠNG</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ok"><strong>SOD</strong><br><em>&#8220;lính tuyến đầu&#8221; &mdash; chặn gốc tự do nguy hiểm nhất ngay khi xuất hiện</em></td>
+          <td class="ok">Cần <strong>kẽm, đồng, mangan</strong><br><em>đậu, hạt bí ngô, ngũ cốc nguyên cám</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Catalase</strong><br><em>&#8220;người dọn dẹp&#8221; &mdash; biến chất độc thành nước đào thải qua mồ hôi, nước tiểu</em></td>
+          <td class="ok">Cần <strong>sắt</strong><br><em>đậu lăng, rau bó xôi, ngũ cốc nguyên hạt</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Glutathione (GSH)</strong><br><em>&#8220;kháng oxy hóa chủ&#8221; &mdash; giải độc gan, có trong mọi tế bào</em></td>
+          <td class="ok">Cần <strong>lưu huỳnh tự nhiên</strong><br><em>rau họ cải, tỏi, hành, bơ, măng tây</em></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Tầng 2: &#8220;Viện trợ từ bên ngoài&#8221; &mdash; từ thực phẩm</h3>
+
+    <p>Đây là tầng chúng ta kiểm soát qua bữa ăn:</p>
+
+    <p class="bullet">&bull; <strong>Vitamin C</strong> &mdash; <em>ổi chứa vitamin C gấp 4 lần cam</em>, ớt chuông đỏ gấp 3 lần. Khác: kiwi, dâu, bông cải xanh.</p>
+
+    <p class="bullet">&bull; <strong>Vitamin E</strong> &mdash; bảo vệ màng tế bào. Nguồn tốt: hạt hướng dương, hạnh nhân, bơ, dầu ô liu nguyên chất &mdash; <em>không phải dầu ăn công nghiệp tinh luyện</em>.</p>
+
+    <p class="bullet">&bull; <strong>Carotenoid</strong> &mdash; chất tạo màu đỏ, cam, vàng đậm. Cà chua chín (đặc biệt <em>nấu với chút dầu</em> mới hấp thu tốt), cà rốt, khoai lang, bí đỏ, rau lá xanh đậm.</p>
+
+    <p class="bullet">&bull; <strong>Polyphenol</strong> &mdash; nhóm mạnh nhất với hơn 8,000 hợp chất. Có trong việt quất, trà xanh, nghệ, ca cao đen, lựu, bông cải tím. Quy tắc vàng: <em>càng đắng, càng chát, càng đậm màu thì càng nhiều polyphenol</em>.</p>
+
+    <div class="science-box">
+      <div class="sb-label">🔬 Vì Sao Polyphenol Đặc Biệt Quan Trọng?</div>
+      <p>Polyphenol không chỉ trung hòa gốc tự do trực tiếp &mdash; nó còn <strong>kích hoạt chính đội lính gác nội bộ của cơ thể</strong> qua một &#8220;công tắc chủ&#8221; gọi là <em>Nrf2</em>, giống như <em>bật sáng toàn bộ ngôi nhà cùng một lúc</em>, bật &#8220;chế độ bảo vệ&#8221; cho hơn 200 gen cùng lúc. Đây là lý do ăn việt quất, trà xanh, nghệ có tác động <strong>mạnh hơn nhiều so với uống viên kháng oxy hóa tổng hợp</strong>.</p>
+    </div>
+
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th class="ok">🌿 KHÁNG OXY HÓA TỪ THỰC PHẨM</th>
+          <th class="ok">🍽️ NGUỒN THỰC PHẨM TỐT NHẤT</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ok"><strong>Vitamin C</strong><br><em>hoạt động trong máu &amp; dịch tế bào</em></td>
+          <td class="ok"><em>ổi (gấp 4 lần cam), ớt chuông đỏ, kiwi, dâu, bông cải xanh, đu đủ</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Vitamin E</strong><br><em>bảo vệ màng tế bào</em></td>
+          <td class="ok"><em>hạt hướng dương, hạnh nhân, bơ, dầu ô liu nguyên chất</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Carotenoid</strong><br><em>chất tạo màu đỏ, cam, vàng đậm</em></td>
+          <td class="ok"><em>cà chua chín (nấu với dầu), cà rốt, khoai lang, bí đỏ, rau lá xanh đậm</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Polyphenol</strong><br><em>&#8220;càng đắng, càng chát, càng đậm màu&#8221;</em></td>
+          <td class="ok"><em>việt quất, trà xanh, nghệ, ca cao đen, lựu, bông cải tím</em></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Phần 4 &middot; Thực Phẩm Giàu Kháng Oxy Hóa</h2>
+
+    <p>Các nhà khoa học đo khả năng kháng oxy hóa của thực phẩm bằng chỉ số <em>ORAC</em> &mdash; <em>càng cao càng mạnh trong việc &#8220;dập&#8221; gốc tự do</em>. Dưới đây là những &#8220;ngôi sao&#8221; và &#8220;kẻ thù&#8221; trong chế độ ăn hàng ngày:</p>
+
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th class="ok">✅ THỰC PHẨM GIÀU KHÁNG OXY HÓA</th>
+          <th class="warn">❌ THỰC PHẨM GÂY STRESS OXY HÓA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ok"><strong>Quả mọng tím/đen</strong><br><em>việt quất, mâm xôi đen, dâu rừng, lựu &mdash; chất chống gốc tự do mạnh nhất</em></td>
+          <td class="warn"><strong>Thịt nướng cháy &amp; thịt chế biến</strong><br><em>phần đen cháy tạo chất gây đột biến DNA</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Rau họ cải</strong><br><em>bông cải xanh, cải xoăn, cải thìa &mdash; kích hoạt &#8220;công tắc Nrf2&#8221; trong tế bào</em></td>
+          <td class="warn"><strong>Dầu chiên đi chiên lại</strong><br><em>tạo hợp chất oxy hóa tấn công DNA trực tiếp</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Trà xanh &amp; trà matcha</strong><br><em>chứa EGCG &mdash; một trong những kháng oxy hóa mạnh nhất được biết</em></td>
+          <td class="warn"><strong>Rượu bia</strong><br><em>chuyển hóa thành chất gây ung thư được WHO xếp loại 1</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Gia vị &amp; thảo mộc</strong><br><em>nghệ, quế, đinh hương, oregano &mdash; ORAC cực cao trên mỗi gam</em></td>
+          <td class="warn"><strong>Thực phẩm siêu chế biến</strong><br><em>snack công nghiệp, đồ ăn nhanh &mdash; phụ gia &amp; dầu xấu</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Hạt &amp; hạt giống</strong><br><em>óc chó, hạnh nhân, hạt lanh, hạt chia &mdash; vitamin E &amp; polyphenol</em></td>
+          <td class="warn"><strong>Đường &amp; tinh bột tinh chế</strong><br><em>đường huyết cao kéo dài &rarr; sinh gốc tự do liên tục</em></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Quy tắc đơn giản: &#8220;Ăn theo cầu vồng&#8221;</h3>
+    <p>Ăn đủ <em>6 màu mỗi ngày</em> là cách dễ nhất: <strong>đỏ</strong> (cà chua, dâu), <strong>cam</strong> (cà rốt, bí đỏ), <strong>vàng</strong> (nghệ, ớt chuông vàng), <strong>xanh lá</strong> (rau cải, bông cải), <strong>xanh tím</strong> (việt quất, bắp cải tím), <strong>trắng/nâu</strong> (tỏi, hành, nấm).</p>
+
+    <h2>Phần 5 &middot; Bằng Chứng Từ Nghiên Cứu Lâm Sàng</h2>
+
+    <div class="study-card">
+      <div class="study-meta">Bolca et al., British Journal of Nutrition 2010 &middot; n=100</div>
+      <div class="study-title">Polyphenol đi thẳng vào mô vú</div>
+      <div class="study-result">Phụ nữ trước phẫu thuật ung thư vú ăn thực phẩm giàu polyphenol trong 5 ngày. Kết quả: các chất kháng oxy hóa <strong>được phát hiện trực tiếp trong mô vú phẫu thuật</strong> &mdash; bằng chứng rằng thực phẩm chúng ta ăn thực sự đi đến mô đích để bảo vệ.</div>
+    </div>
+
+    <div class="study-card">
+      <div class="study-meta">Fung et al., AJE 2013 &middot; n≈84,000 phụ nữ</div>
+      <div class="study-title">Ăn nhiều kháng oxy hóa &rarr; giảm 19% nguy cơ ung thư vú</div>
+      <div class="study-result">Nghiên cứu Nurses&apos; Health Study trên gần 84,000 phụ nữ: nhóm ăn nhiều thực phẩm giàu kháng oxy hóa có <strong>nguy cơ ung thư vú thấp hơn 19%</strong>. Đặc biệt rõ ở dạng ER-negative &mdash; dạng khó điều trị.</div>
+    </div>
+
+    <div class="pull-quote">
+      <p>Táo thâm ta bỏ. Sắt rỉ ta sơn. Nhưng cơ thể đang &#8220;rỉ sét&#8221; thầm lặng từ bên trong &mdash; ta không thấy, nên không bảo vệ. Bữa ăn hôm nay chính là <strong>lớp sơn chống rỉ</strong> cho tế bào của bạn.</p>
+      <cite>— H21 Cho Đời Mãi Xanh</cite>
+    </div>
+
+    <div class="takeaway">
+      <div class="takeaway-label">&#128161; Điểm Mấu Chốt</div>
+      <p>Stress oxy hóa là một trong những <strong>cơ chế sâu nhất và sớm nhất</strong> của ung thư &mdash; bắt đầu từ cấp độ phân tử, trước khi có triệu chứng. DNA của bạn bị tấn công hơn 10,000 lần mỗi ngày &mdash; và khả năng sửa chữa phụ thuộc trực tiếp vào <em>những gì bạn ăn</em>.</p>
+      <p>Tin tốt: hệ kháng oxy hóa của cơ thể <em>đáp ứng rất nhanh</em> với chế độ ăn giàu thực vật màu đậm &mdash; chỉ <strong>vài ngày</strong> đã có cải thiện rõ. Và lợi ích không chỉ là ung thư vú: <strong>ung thư đại tràng, phổi, tuyến tiền liệt, bệnh tim, Alzheimer, Parkinson, đục thủy tinh thể, lão hóa da</strong> đều liên quan. Một thay đổi, rất nhiều lợi ích &mdash; cho cả nam và nữ, mọi lứa tuổi.</p>
+    </div>
+
+    <div class="soft-invitation">
+      Nhìn vào bữa ăn hôm nay của bạn &mdash; nó có bao nhiêu màu sắc? Nếu chỉ có trắng (cơm), nâu (thịt), và một ít xanh (rau bên cạnh), thì <em>&#8220;quân bảo vệ&#8221; của bạn đang rất thiếu quân số</em>. Mỗi màu thực vật là một loại &#8220;đạn&#8221; chống gốc tự do khác nhau &mdash; và cơ thể cần tất cả. Bắt đầu đơn giản: <strong>tuần này, thêm một quả mọng (việt quất, dâu, mâm xôi) vào bữa sáng, và một nhúm nghệ hoặc quế vào món nấu</strong>. Hai thay đổi nhỏ này đã cung cấp hàng trăm hợp chất kháng oxy hóa mới cho DNA của bạn.
+      <br><br>Ở H21, chúng tôi hướng dẫn học viên xây dựng <em>&#8220;đĩa cầu vồng&#8221;</em> &mdash; không phải chế độ ăn kiêng khắt khe, mà là thói quen nhìn đĩa ăn và tự hỏi: <em>hôm nay đã đủ 6 màu chưa?</em> Đây là cách đơn giản nhất để mỗi bữa ăn trở thành một liều &#8220;thuốc phòng&#8221; thực sự.
+    </div>
+
+<div class="cta-box">
+  <div class="cta-eyebrow">Seri Ung Thư Vú · 10 Cơ Chế</div>
+  <h3 class="cta-title">Đây là Cơ Chế 07/10. Còn 3 cơ chế nữa để khám phá.</h3>
+  <p class="cta-desc">Tham gia cộng đồng H21 để theo dõi toàn bộ seri &mdash; nơi khoa học ung thư được dịch thành hành động cụ thể mỗi ngày.</p>
+  <a href="https://www.facebook.com/xanhlenbenhxuong/" target="_blank" class="cta-btn">Đăng Ký Khóa Học H21 &#8594;</a>
+</div>
+
+  </div>
+<div class="article-footer">
+  <div class="footer-brand">
+    <strong>Thuy-Trinh Nguyen</strong> &middot; Khoa Học Gia &amp; Nhà Sáng Lập<br>
+    <strong>H21 - Cho Đời Mãi Xanh</strong> &middot; <a href="https://www.h21chodoimaixanh.com">www.h21chodoimaixanh.com</a><br>
+    Mang khoa học từ phòng thí nghiệm đến căn bếp mỗi gia đình
+  </div>
+</div>
+</div>
+<footer class="site-footer">
+  <strong>H21 - Cho Đời Mãi Xanh</strong> &middot; Khoa Học Gia Thuy-Trinh Nguyen<br>
+  <a href="https://blog.h21chodoimaixanh.com">blog.h21chodoimaixanh.com</a> &middot; <a href="https://www.h21chodoimaixanh.com">www.h21chodoimaixanh.com</a><br>
+  Nội dung chỉ dành cho mục đích giáo dục, không thay thế tư vấn y tế chuyên nghiệp.
+</footer>
+</body>
+</html>
