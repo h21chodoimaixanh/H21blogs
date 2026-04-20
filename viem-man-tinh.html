@@ -68,7 +68,7 @@ body{font-family:'Lora',serif;font-size:17px;line-height:1.75;color:var(--ink);b
 .article-body h2{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--ink);margin:44px 0 14px;line-height:1.3;}
 .article-body h3{font-family:'Be Vietnam Pro',sans-serif;font-size:14px;font-weight:700;color:var(--accent-dark);margin:28px 0 10px;text-transform:uppercase;letter-spacing:1.5px;}
 .fact-strip{display:grid;grid-template-columns:repeat(3,1fr);margin:32px 0 18px;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:white;}
-.fact-item{padding:22px 16px;text-align:center;border-right:1px solid var(--border);}
+.fact-item{padding:22px 16px;border-right:1px solid var(--border);}
 .fact-item:last-child{border-right:none;}
 .fact-num{font-family:'Playfair Display',serif;font-size:34px;font-weight:700;color:var(--accent);line-height:1;}
 .fact-label{font-size:11.5px;color:var(--light);margin-top:8px;line-height:1.5;font-family:'Be Vietnam Pro',sans-serif;}
@@ -95,8 +95,8 @@ body{font-family:'Lora',serif;font-size:17px;line-height:1.75;color:var(--ink);b
 .study-result{font-family:'Lora',serif;font-size:14.5px;line-height:1.65;color:var(--mid);}
 .study-result strong{color:var(--accent-dark);}
 .diagram{margin:22px 0 6px;display:block;background:white;border:1px solid var(--border);border-radius:12px;padding:18px;}
-.diagram-caption{font-family:'Be Vietnam Pro',sans-serif;font-size:11.5px;color:var(--light);text-align:center;margin-top:-2px;margin-bottom:28px;font-style:italic;line-height:1.5;}
-.pull-quote{margin:38px 0;padding:30px 36px;background:var(--accent-dark);border-radius:14px;color:white;text-align:center;position:relative;}
+.diagram-caption{font-family:'Be Vietnam Pro',sans-serif;font-size:11.5px;color:var(--light);margin-top:-2px;margin-bottom:28px;font-style:italic;line-height:1.5;}
+.pull-quote{margin:38px 0;padding:30px 36px;background:var(--accent-dark);border-radius:14px;color:white;position:relative;}
 .pull-quote::before{content:'"';font-family:'Playfair Display',serif;font-size:80px;line-height:0.5;color:rgba(255,255,255,0.12);position:absolute;top:26px;left:22px;}
 .pull-quote p{font-family:'Lora',serif;font-size:19px;line-height:1.6;color:rgba(255,255,255,0.95);font-style:italic;margin:0 0 8px;}
 .pull-quote cite{font-family:'Be Vietnam Pro',sans-serif;font-size:12px;color:rgba(255,255,255,0.6);font-style:normal;letter-spacing:1.5px;text-transform:uppercase;}
@@ -123,7 +123,7 @@ body{font-family:'Lora',serif;font-size:17px;line-height:1.75;color:var(--ink);b
 .takeaway p:last-child{margin-bottom:0;}
 .takeaway strong{color:white;font-weight:700;}
 .takeaway em{color:rgba(255,255,255,0.88);font-style:italic;}
-.cta-box{background:var(--plum);border-radius:14px;padding:30px 32px;margin-top:36px;text-align:center;}
+.cta-box{background:var(--plum);border-radius:14px;padding:30px 32px;margin-top:36px;}
 .cta-box .cta-eyebrow{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--rose);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
 .cta-box .cta-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:white;margin-bottom:10px;line-height:1.35;}
 .cta-box .cta-desc{font-size:14px;color:rgba(255,255,255,0.72);max-width:400px;margin:0 auto 22px;line-height:1.7;font-family:'Lora',serif;}
@@ -133,7 +133,7 @@ body{font-family:'Lora',serif;font-size:17px;line-height:1.75;color:var(--ink);b
 .footer-brand{font-size:12.5px;color:var(--light);line-height:1.8;font-family:'Be Vietnam Pro',sans-serif;}
 .footer-brand strong{color:var(--accent-dark);}
 .footer-brand a{color:var(--accent);text-decoration:none;}
-.site-footer{background:var(--plum);padding:28px 40px;text-align:center;font-size:12px;color:rgba(255,255,255,0.45);line-height:1.8;font-family:'Be Vietnam Pro',sans-serif;}
+.site-footer{background:var(--plum);padding:28px 40px;font-size:12px;color:rgba(255,255,255,0.45);line-height:1.8;font-family:'Be Vietnam Pro',sans-serif;}
 .site-footer a{color:var(--rose);text-decoration:none;}
 .site-footer strong{color:rgba(255,255,255,0.75);}
 @media(max-width:600px){
@@ -314,10 +314,29 @@ body{font-family:'Lora',serif;font-size:17px;line-height:1.75;color:var(--ink);b
 
     <div class="science-box">
       <div class="sb-label">🔬 Xét Nghiệm &#8220;Nhiệt Kế&#8221; Đo Viêm Mạn Tính</div>
-      <p class="bullet"><strong>hs-CRP</strong> (high-sensitivity C-Reactive Protein) &mdash; xét nghiệm phổ biến nhất, giá rẻ, có ở hầu hết phòng khám. Đây như <em>&#8220;nhiệt kế&#8221; đo mức độ cháy âm ỉ trong cơ thể</em>. Các mốc cần nhớ:</p>
-      <p class="bullet sub"><em>Dưới 1 mg/L</em>: nguy cơ thấp &mdash; cơ thể bình yên.</p>
-      <p class="bullet sub"><em>1-3 mg/L</em>: nguy cơ trung bình &mdash; cần chú ý.</p>
-      <p class="bullet sub"><em>Trên 3 mg/L</em>: nguy cơ cao &mdash; có viêm mạn tính đáng kể.</p>
+      <p class="bullet"><strong>hs-CRP</strong> (high-sensitivity C-Reactive Protein) &mdash; xét nghiệm phổ biến nhất, giá rẻ, có ở hầu hết phòng khám. Đây như <em>&#8220;nhiệt kế&#8221; đo mức độ cháy âm ỉ trong cơ thể</em>:</p>
+      <table style="width:90%;border-collapse:collapse;margin:10px auto 14px;font-size:14px;text-align:left;">
+        <thead>
+          <tr>
+            <th style="background:rgba(0,0,0,.12);padding:8px 12px;font-weight:700;color:var(--accent-dark);border-radius:6px 0 0 0;">Mức hs-CRP</th>
+            <th style="background:rgba(0,0,0,.12);padding:8px 12px;font-weight:700;color:var(--accent-dark);border-radius:0 6px 0 0;">Ý nghĩa</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(0,0,0,.08);">
+            <td style="padding:8px 12px;font-weight:600;color:#2e7d32;">Dưới 1 mg/L</td>
+            <td style="padding:8px 12px;color:var(--mid);">✅ Nguy cơ thấp — cơ thể bình yên</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(0,0,0,.08);background:rgba(0,0,0,.03);">
+            <td style="padding:8px 12px;font-weight:600;color:#f57c00;">1 – 3 mg/L</td>
+            <td style="padding:8px 12px;color:var(--mid);">⚡ Nguy cơ trung bình — cần chú ý</td>
+          </tr>
+          <tr>
+            <td style="padding:8px 12px;font-weight:600;color:#c62828;">Trên 3 mg/L</td>
+            <td style="padding:8px 12px;color:var(--mid);">⚠️ Nguy cơ cao — có viêm mạn tính đáng kể</td>
+          </tr>
+        </tbody>
+      </table>
       <p class="bullet"><strong>Fibrinogen, Ferritin, IL-6</strong> &mdash; các chỉ số khác bác sĩ có thể cho làm để có bức tranh đầy đủ hơn.</p>
     </div>
 
@@ -400,12 +419,14 @@ body{font-family:'Lora',serif;font-size:17px;line-height:1.75;color:var(--ink);b
       H21 là môi trường nơi chúng tôi thực hành triết lý <em>&#8220;thức ăn là thuốc, và thuốc chính là thức ăn&#8221;</em> &mdash; nguyên lý y học từ Hippocrates hơn 2,400 năm trước. Mỗi bữa ăn kháng viêm trong chương trình H21 là <strong>một ngụm nước dập ngọn lửa âm ỉ</strong> trong cơ thể &mdash; cung cấp curcumin từ nghệ, omega-3 từ hạt lanh, polyphenol từ quả mọng, và hàng trăm hợp chất kháng viêm khác hoạt động phối hợp. Đây là lý do nhiều học viên H21 báo cáo sự cải thiện rõ rệt về <em>đau khớp, mệt mỏi mạn tính, khó ngủ, và sương mù não</em> chỉ sau vài tuần &mdash; những dấu hiệu cho thấy viêm đã bắt đầu dịu xuống. <strong>Bữa ăn hôm nay là lựa chọn thầm lặng nhưng quyết định của ngày mai.</strong>
     </div>
 
-<div class="cta-box">
-  <div class="cta-eyebrow">Seri Ung Thư Vú · 10 Cơ Chế</div>
-  <h3 class="cta-title">Đây là Cơ Chế 08/10. Còn 2 cơ chế nữa để khám phá.</h3>
-  <p class="cta-desc">Tham gia cộng đồng H21 để theo dõi toàn bộ seri &mdash; nơi khoa học ung thư được dịch thành hành động cụ thể mỗi ngày.</p>
-  <a href="https://www.facebook.com/xanhlenbenhxuong/" target="_blank" class="cta-btn">Đăng Ký Khóa Học H21 &#8594;</a>
-</div>
+    <div class="cta-box" style="text-align:center;">
+      <div class="cta-eyebrow">Seri Ung Thư Vú · 10 Cơ Chế</div>
+      <h3 class="cta-title">Đây là Cơ Chế 08/10. Còn 2 cơ chế nữa để khám phá.</h3>
+      <p class="cta-desc">Tham gia cộng đồng H21 để theo dõi toàn bộ seri &mdash; nơi khoa học ung thư được dịch thành hành động cụ thể mỗi ngày.</p>
+      <a href="https://www.facebook.com/xanhlenbenhxuong/" target="_blank" class="cta-btn">Đăng Ký Khóa Học H21 →</a>
+    </div>
+
+  </div><!-- /article-body -->
 
   </div>
 <div class="article-footer">
