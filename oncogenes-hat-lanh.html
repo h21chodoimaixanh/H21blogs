@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oncogenes & Hạt Lanh — Khi Gen Bình Thường Bị "Đạp Ga" Thành Ung Thư | H21 Cho Đời Mãi Xanh</title>
+<meta name="description" content="Oncogenes không phải 'gen xấu' bẩm sinh — chúng là gen tốt bị 'đạp ga quá tay' thành xấu. Khoa học giải mã HER2, MYC, và cách lignan trong hạt lanh 'kéo phanh' khối u vú.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F5F8;
+  --ink:#17202D;
+  --mid:#2E3A4F;
+  --light:#6B7A92;
+  --accent:#4A5C78;
+  --accent-dark:#2E3D55;
+  --accent-mid:#6B7C96;
+  --accent-light:#B5C2D4;
+  --border:#D6DCE4;
+  --blush:#E8EDF3;
+  --plum:#17202D;
+  --rose:#A5B4C8;
+  --mint:#A8C8B0;
+  --gold:#C4975A;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Lora',serif;font-size:17px;line-height:1.75;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;}
+.site-nav{background:var(--plum);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(0,0,0,0.25);}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-logo-mark{width:34px;height:34px;background:var(--mint);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-family:sans-serif;}
+.nav-logo-name{font-size:14px;font-weight:600;color:white;font-family:'Be Vietnam Pro',sans-serif;}
+.nav-logo-tag{font-size:11px;color:rgba(255,255,255,0.6);margin-top:1px;font-family:'Be Vietnam Pro',sans-serif;letter-spacing:0.3px;}
+.nav-back{font-size:13px;color:rgba(255,255,255,0.75);text-decoration:none;font-weight:500;font-family:'Be Vietnam Pro',sans-serif;transition:color 0.2s;}
+.nav-back:hover{color:var(--rose);}
+.article-hero{background:linear-gradient(135deg,#17202D 0%,#2E3D55 45%,#4A5C78 100%);padding:48px 24px 40px;position:relative;overflow:hidden;}
+.article-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 30%,rgba(255,255,255,0.06) 0%,transparent 60%);}
+.hero-inner{max-width:720px;margin:0 auto;position:relative;z-index:1;}
+.series-badge{display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.95);padding:6px 14px;border-radius:100px;font-family:'Be Vietnam Pro',sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;}
+.series-badge-dot{display:inline-block;width:6px;height:6px;background:#A5B4C8;border-radius:50%;margin-right:6px;vertical-align:middle;}
+.article-h1{font-family:'Playfair Display',serif;font-size:38px;font-weight:700;line-height:1.2;color:white;margin-bottom:16px;letter-spacing:-0.5px;}
+.article-h1 em{font-style:italic;color:rgba(255,255,255,0.85);font-weight:400;}
+.article-deck{font-family:'Lora',serif;font-size:17px;line-height:1.7;color:rgba(255,255,255,0.85);font-style:italic;margin:0;}
+.article-deck em{color:rgba(255,255,255,0.95);font-weight:600;font-style:italic;}
+.byline-bar{background:white;border-bottom:1px solid var(--border);padding:14px 24px;}
+.byline-inner{max-width:720px;margin:0 auto;display:flex;align-items:center;gap:14px;}
+.byline-av{width:40px;height:40px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:white;font-weight:700;flex-shrink:0;font-family:'Be Vietnam Pro',sans-serif;}
+.byline-name{font-size:13.5px;font-weight:600;color:var(--ink);font-family:'Be Vietnam Pro',sans-serif;}
+.byline-role{font-size:11.5px;color:var(--light);margin-top:1px;font-family:'Be Vietnam Pro',sans-serif;}
+.byline-meta{margin-left:auto;text-align:right;}
+.byline-url{font-size:11.5px;color:var(--light);font-family:'Be Vietnam Pro',sans-serif;}
+.read-time{font-size:11px;color:var(--accent);font-weight:600;margin-top:2px;font-family:'Be Vietnam Pro',sans-serif;}
+.article-wrap{max-width:720px;margin:0 auto;padding:44px 24px 80px;}
+.hero-banner{margin:0 0 32px;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(46,61,85,0.18);border:1px solid var(--border);}
+.hero-banner img{width:100%;display:block;}
+.article-body{font-family:'Lora',serif;font-size:17px;line-height:1.85;color:var(--mid);}
+.article-body p{margin:0 0 20px;}
+.article-body p.bullet{padding-left:24px;margin-bottom:14px;position:relative;}
+.article-body p.bullet::before{content:'•';position:absolute;left:8px;color:var(--accent);font-weight:bold;}
+.article-body p.bullet + p.bullet{margin-top:0;}
+.article-body ol.num-list{list-style:none;counter-reset:numitem;padding-left:0;margin:0 0 20px;}
+.article-body ol.num-list li{padding-left:32px;margin-bottom:14px;position:relative;counter-increment:numitem;}
+.article-body ol.num-list li::before{content:counter(numitem) '.';position:absolute;left:4px;color:var(--accent);font-weight:700;}
+.article-body strong{color:var(--ink);font-weight:600;}
+.article-body em{color:var(--accent);font-style:italic;font-weight:600;}
+.article-body a{color:var(--accent);text-decoration:underline;}
+.article-body h2{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--ink);margin:44px 0 14px;line-height:1.3;}
+.article-body h3{font-family:'Be Vietnam Pro',sans-serif;font-size:14px;font-weight:700;color:var(--accent-dark);margin:28px 0 10px;text-transform:uppercase;letter-spacing:1.5px;}
+.fact-strip{display:grid;grid-template-columns:repeat(3,1fr);margin:32px 0 18px;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:white;}
+.fact-item{padding:22px 16px;text-align:center;border-right:1px solid var(--border);}
+.fact-item:last-child{border-right:none;}
+.fact-num{font-family:'Playfair Display',serif;font-size:34px;font-weight:700;color:var(--accent);line-height:1;}
+.fact-label{font-size:11.5px;color:var(--light);margin-top:8px;line-height:1.5;font-family:'Be Vietnam Pro',sans-serif;}
+.fact-explain{background:var(--blush);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:14px 20px;margin:0 0 32px;font-family:'Lora',serif;font-size:14.5px;line-height:1.75;color:var(--mid);font-style:italic;}
+.fact-explain strong{color:var(--accent-dark);font-style:normal;}
+.personal-note{background:linear-gradient(135deg,#FAFBFD,#E8EDF3);border:1px solid var(--border);border-left:4px solid var(--accent-mid);border-radius:0 14px 14px 0;padding:22px 28px;margin:28px 0;font-family:'Lora',serif;font-style:italic;}
+.personal-note-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent-mid);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;font-style:normal;}
+.personal-note p{font-size:16px;line-height:1.8;color:var(--mid);margin:0;}
+.personal-note strong{color:var(--accent-dark);font-style:normal;}
+.science-box{background:var(--blush);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:0 12px 12px 0;padding:20px 24px;margin:24px 0;}
+.sb-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent-mid);margin-bottom:8px;font-family:'Be Vietnam Pro',sans-serif;}
+.science-box p{font-size:15px;color:var(--mid);margin:0 0 10px;line-height:1.75;font-family:'Lora',serif;}
+.science-box p:last-child{margin-bottom:0;}
+.science-box p.bullet{padding-left:20px;margin-bottom:10px;position:relative;}
+.science-box p.bullet::before{content:'•';position:absolute;left:4px;color:var(--accent);font-weight:bold;}
+.science-box p.bullet.sub{padding-left:40px;}
+.science-box p.bullet.sub::before{left:24px;}
+.science-box p.bullet + p.bullet{margin-top:0;}
+.science-box strong{color:var(--accent-dark);}
+.science-box em{color:var(--accent);}
+.study-card{background:white;border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:10px;padding:18px 22px;margin:14px 0;}
+.study-meta{font-family:'Be Vietnam Pro',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
+.study-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--accent-dark);margin-bottom:6px;line-height:1.35;}
+.study-result{font-family:'Lora',serif;font-size:14.5px;line-height:1.65;color:var(--mid);}
+.study-result strong{color:var(--accent-dark);}
+.diagram{margin:22px 0 6px;display:block;background:white;border:1px solid var(--border);border-radius:12px;padding:18px;}
+.diagram-caption{font-family:'Be Vietnam Pro',sans-serif;font-size:11.5px;color:var(--light);text-align:center;margin-top:-2px;margin-bottom:28px;font-style:italic;line-height:1.5;}
+.pull-quote{margin:38px 0;padding:30px 36px;background:var(--accent-dark);border-radius:14px;color:white;text-align:center;position:relative;}
+.pull-quote::before{content:'"';font-family:'Playfair Display',serif;font-size:80px;line-height:0.5;color:rgba(255,255,255,0.12);position:absolute;top:26px;left:22px;}
+.pull-quote p{font-family:'Lora',serif;font-size:19px;line-height:1.6;color:rgba(255,255,255,0.95);font-style:italic;margin:0 0 8px;}
+.pull-quote cite{font-family:'Be Vietnam Pro',sans-serif;font-size:12px;color:rgba(255,255,255,0.6);font-style:normal;letter-spacing:1.5px;text-transform:uppercase;}
+.info-table{width:100%;table-layout:fixed;border-collapse:collapse;margin:22px 0 28px;background:white;border:1px solid var(--border);border-radius:12px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;}
+.info-table th,.info-table td{width:50%;}
+.info-table thead th{padding:14px 16px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--border);text-align:left;}
+.info-table thead th.ok{background:#3a5a44;color:white;}
+.info-table thead th.warn{background:#a85550;color:white;}
+.info-table td{padding:12px 16px;font-size:13.5px;line-height:1.65;color:var(--mid);border-bottom:1px solid var(--border);vertical-align:top;}
+.info-table td.ok{background:#f3f7f0;}
+.info-table td.warn{background:#fcf2ef;}
+.info-table tr:last-child td{border-bottom:none;}
+.info-table td strong{color:var(--accent-dark);}
+.info-table td.ok strong{color:#3a5a44;}
+.info-table td.warn strong{color:#8B3A4A;}
+.info-table td em{font-style:italic;color:var(--light);font-size:12.5px;}
+@media(max-width:600px){.info-table{font-size:12px;} .info-table td,.info-table th{padding:10px 12px;}}
+.soft-invitation{background:var(--blush);border:1px solid var(--border);border-radius:10px;padding:20px 26px;margin:28px 0;font-family:'Lora',serif;font-size:15.5px;line-height:1.8;color:var(--mid);font-style:italic;}
+.soft-invitation strong{color:var(--accent-dark);font-style:normal;font-weight:700;}
+.soft-invitation em{color:var(--accent);font-style:italic;}
+.takeaway{background:linear-gradient(135deg,var(--accent-dark),var(--accent));border-radius:14px;padding:28px 32px;margin:36px 0 0;color:white;}
+.takeaway-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
+.takeaway p{font-size:16px;color:rgba(255,255,255,0.95);line-height:1.8;margin:0 0 12px;font-family:'Lora',serif;}
+.takeaway p:last-child{margin-bottom:0;}
+.takeaway strong{color:white;font-weight:700;}
+.takeaway em{color:rgba(255,255,255,0.88);font-style:italic;}
+.series-complete{background:linear-gradient(135deg,var(--gold),#A87938);border-radius:14px;padding:26px 30px;margin:28px 0;text-align:center;color:white;}
+.series-complete-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.85);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
+.series-complete-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:white;margin-bottom:8px;}
+.series-complete-desc{font-size:14px;color:rgba(255,255,255,0.9);line-height:1.7;font-family:'Lora',serif;font-style:italic;}
+.cta-box{background:var(--plum);border-radius:14px;padding:30px 32px;margin-top:36px;text-align:center;}
+.cta-box .cta-eyebrow{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--rose);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
+.cta-box .cta-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:white;margin-bottom:10px;line-height:1.35;}
+.cta-box .cta-desc{font-size:14px;color:rgba(255,255,255,0.72);max-width:400px;margin:0 auto 22px;line-height:1.7;font-family:'Lora',serif;}
+.cta-btn{display:inline-block;background:var(--mint);color:#1A3A28;font-size:14px;font-weight:700;padding:13px 32px;border-radius:100px;text-decoration:none;font-family:'Be Vietnam Pro',sans-serif;transition:opacity .2s,transform .2s;box-shadow:0 2px 12px rgba(168,200,176,0.25);}
+.cta-btn:hover{opacity:0.92;transform:translateY(-1px);}
+.article-footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--border);}
+.footer-brand{font-size:12.5px;color:var(--light);line-height:1.8;font-family:'Be Vietnam Pro',sans-serif;}
+.footer-brand strong{color:var(--accent-dark);}
+.footer-brand a{color:var(--accent);text-decoration:none;}
+.site-footer{background:var(--plum);padding:28px 40px;text-align:center;font-size:12px;color:rgba(255,255,255,0.45);line-height:1.8;font-family:'Be Vietnam Pro',sans-serif;}
+.site-footer a{color:var(--rose);text-decoration:none;}
+.site-footer strong{color:rgba(255,255,255,0.75);}
+@media(max-width:600px){
+  .article-h1{font-size:28px;}
+  .article-deck{font-size:15.5px;}
+  .fact-strip{grid-template-columns:1fr;}
+  .fact-item{border-right:none;border-bottom:1px solid var(--border);}
+  .fact-item:last-child{border-bottom:none;}
+  .article-wrap{padding:32px 18px 60px;}
+  .site-nav{padding:12px 20px;}
+  .article-hero{padding:36px 18px 30px;}
+}
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">🌿</div>
+    <div>
+      <div class="nav-logo-name">H21 - Cho Đời Mãi Xanh</div>
+      <div class="nav-logo-tag">Khoa Học Gia Thuy-Trinh Nguyen</div>
+    </div>
+  </a>
+  <a href="index.html" class="nav-back">&#8592; Trở về Blog</a>
+</nav>
+
+<section class="article-hero">
+  <div class="hero-inner">
+    <div class="series-badge"><span class="series-badge-dot"></span> 🎗️ Seri Ung Thư Vú · Cơ Chế 10/10 · BÀI CUỐI</div>
+    <h1 class="article-h1">Oncogenes &amp; Hạt Lanh &mdash;<br><em>Khi Gen Bình Thường Bị &#8220;Đạp Ga&#8221; Thành Ung Thư</em></h1>
+    <p class="article-deck">Trái với gen ức chế khối u (&#8220;đội phanh&#8221; đã nói ở <a href="gen-uc-che-khoi-u.html" style="color:rgba(255,255,255,0.95);">Bài 9</a>), cơ thể còn có những <em>gen &#8220;chân ga&#8221;</em> &mdash; gen thúc đẩy tế bào phân chia để cơ thể lớn lên, sửa chữa vết thương. Bình thường chúng tốt. Nhưng khi bị &#8220;đạp quá mạnh&#8221; không dừng được &mdash; chúng biến thành <em>oncogenes</em> và gây ung thư. Bài cuối của seri: giải mã HER2, MYC, và cách <strong>lignan trong hạt lanh</strong> trở thành một trong những thực phẩm được nghiên cứu nhiều nhất cho việc &#8220;kéo phanh&#8221; khối u vú.</p>
+  </div>
+</section>
+<div class="byline-bar">
+  <div class="byline-inner">
+    <div class="byline-av">TT</div>
+    <div>
+      <div class="byline-name">Thuy-Trinh Nguyen</div>
+      <div class="byline-role">Khoa Học Gia &middot; Nhà Sáng Lập H21 - Cho Đời Mãi Xanh</div>
+    </div>
+    <div class="byline-meta">
+      <div class="byline-url">www.h21chodoimaixanh.com</div>
+      <div class="read-time">&#9200; Đọc trong 8 phút</div>
+    </div>
+  </div>
+</div>
+
+<div class="article-wrap">
+  <div class="article-body">
+
+    <div class="hero-banner">
+      <img src="oncogenes-hat-lanh.jpg" alt="Oncogenes & Hạt Lanh — Khi Gen Bình Thường Bị Đạp Ga Thành Ung Thư cùng Khoa Học Gia Thuy-Trinh Nguyen">
+    </div>
+
+    <div class="personal-note">
+      <div class="personal-note-label">🌿 Điểm Khởi Đầu</div>
+      <p>Nhiều bạn nghe chữ <em>&#8220;oncogene&#8221;</em> thì nghĩ đây là &#8220;gen ung thư&#8221; &mdash; sinh ra đã xấu. Thực ra không phải. Oncogenes <strong>bẩm sinh là gen tốt</strong>, có nhiệm vụ giúp tế bào phát triển, sửa chữa vết thương, lớn lên bình thường. Vấn đề là khi chúng bị &#8220;đạp ga quá tay&#8221; &mdash; hoạt động mạnh hơn bình thường hàng chục, hàng trăm lần &mdash; thì mới trở thành nguy hiểm. Đây là bài cuối cùng trong seri 10 cơ chế ung thư vú, và cũng là bài đầy hy vọng: vì nó cho thấy <em>mỗi bữa ăn đều là một cơ hội kéo phanh</em>.</p>
+    </div>
+
+    <div class="fact-strip">
+      <div class="fact-item">
+        <div class="fact-num">20-25%</div>
+        <div class="fact-label">ung thư vú có &#8220;đạp ga quá mạnh&#8221; trên oncogene HER2</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-num">30-70%</div>
+        <div class="fact-label">ung thư vú có oncogene MYC hoạt động quá mức</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-num">33%</div>
+        <div class="fact-label">giảm nguy cơ tái phát ung thư vú ở nhóm ăn hạt lanh đều đặn</div>
+      </div>
+    </div>
+
+    <div class="fact-explain">
+      Ba con số cho thấy tầm quan trọng của oncogenes trong ung thư vú &mdash; và sức mạnh đáng kinh ngạc của một loại hạt nhỏ bé. <strong>Hạt lanh là một trong những thực phẩm được nghiên cứu nhiều nhất</strong> trong lĩnh vực dinh dưỡng chống ung thư, với hơn 2.000 bài báo khoa học đã được công bố. Đây không phải &#8220;thần dược&#8221; &mdash; đây là một hạt nhỏ chứa <em>lignan</em>, một hợp chất thực vật có tác động cực kỳ chuyên biệt lên ung thư vú.
+    </div>
+
+    <h2>Phần 1 &middot; Oncogenes &mdash; &#8220;Chân Ga&#8221; Của Tế Bào</h2>
+
+    <p>Hãy tưởng tượng mỗi tế bào trong cơ thể bạn như <em>một chiếc xe</em>. Để xe chạy bình thường, cần cả <strong>chân ga và chân phanh</strong> hoạt động hài hòa:</p>
+
+    <p class="bullet"><strong>Chân ga</strong> = Oncogenes (gen thúc đẩy phân chia tế bào) &mdash; giúp cơ thể lớn lên, sửa chữa vết thương, tạo ra máu mới mỗi ngày.</p>
+
+    <p class="bullet"><strong>Chân phanh</strong> = Gen ức chế khối u (đã nói ở <a href="gen-uc-che-khoi-u.html">Bài 9</a>) &mdash; giữ cho tế bào không phân chia quá mức.</p>
+
+    <p>Vấn đề xảy ra khi <strong>chân ga bị kẹt</strong> &mdash; đạp mãi, không nhả. Tế bào phân chia liên tục, không dừng lại được, và khối u hình thành. Đây là bản chất của <em>oncogene</em> &mdash; không phải là gen xấu bẩm sinh, mà là <strong>gen tốt bị &#8220;đạp quá tay&#8221;</strong>.</p>
+
+    <div class="science-box">
+      <div class="sb-label">🔬 Ví Dụ: Chiếc Xe Đi Đường Dốc</div>
+      <p>Hãy hình dung một chiếc xe đang đi trên đường:</p>
+      <p class="bullet"><strong>Xe bình thường</strong> &mdash; tài xế đạp ga khi cần chạy, nhả ga khi muốn chậm, đạp phanh khi cần dừng. Xe đi an toàn, đúng tốc độ.</p>
+      <p class="bullet"><strong>Xe mất kiểm soát</strong> &mdash; chân ga bị kẹt (oncogene hoạt động quá mạnh), và chân phanh đã hỏng (gen ức chế khối u bị đột biến). Xe lao xuống dốc không phanh, ngày càng nhanh, không ai có thể dừng lại.</p>
+      <p>Ung thư là hậu quả của <strong>cả hai vấn đề xảy ra cùng lúc</strong>: chân ga kẹt + chân phanh hỏng. Nhưng tin tốt là: <em>thực phẩm có thể tác động đến cả hai</em>.</p>
+    </div>
+
+    <svg class="diagram" viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Xe bình thường vs Xe mất kiểm soát">
+      <text x="360" y="28" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" font-weight="700" fill="#2E3D55" letter-spacing="2">TẾ BÀO = MỘT CHIẾC XE</text>
+
+      <!-- LEFT: Xe bình thường (green) -->
+      <rect x="40" y="55" width="300" height="260" rx="14" fill="#EFF4ED" stroke="#3a5a44" stroke-width="2.5"/>
+      <text x="190" y="80" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="13" font-weight="700" fill="#3a5a44">XE BÌNH THƯỜNG</text>
+      <text x="190" y="100" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#2a4434" font-style="italic">&#8220;tế bào khỏe mạnh&#8221;</text>
+      
+      <!-- Car body -->
+      <rect x="110" y="125" width="160" height="50" rx="8" fill="#3a5a44" stroke="#2a4434" stroke-width="2"/>
+      <rect x="135" y="110" width="110" height="30" rx="6" fill="#3a5a44" stroke="#2a4434" stroke-width="2"/>
+      <circle cx="135" cy="180" r="11" fill="#1f2a2f" stroke="#000" stroke-width="1"/>
+      <circle cx="245" cy="180" r="11" fill="#1f2a2f" stroke="#000" stroke-width="1"/>
+      
+      <!-- Labels -->
+      <text x="190" y="215" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="600" fill="#3a5a44">Chân ga: có kiểm soát</text>
+      <text x="190" y="233" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="600" fill="#3a5a44">Chân phanh: hoạt động</text>
+      <text x="190" y="267" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#3a5a44">↓</text>
+      <rect x="75" y="278" width="230" height="30" rx="15" fill="#3a5a44" stroke="#2a4434" stroke-width="2"/>
+      <text x="190" y="298" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="800" fill="white">PHÁT TRIỂN BÌNH THƯỜNG</text>
+
+      <!-- RIGHT: Xe mất kiểm soát (red) -->
+      <rect x="380" y="55" width="300" height="260" rx="14" fill="#FCF0ED" stroke="#8B3A4A" stroke-width="2.5"/>
+      <text x="530" y="80" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="13" font-weight="700" fill="#8B3A4A">XE MẤT KIỂM SOÁT</text>
+      <text x="530" y="100" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#7a1d2a" font-style="italic">&#8220;tế bào ung thư&#8221;</text>
+      
+      <!-- Car body tilted (lao xuống dốc) -->
+      <g transform="rotate(12 530 155)">
+        <rect x="450" y="125" width="160" height="50" rx="8" fill="#8B3A4A" stroke="#5a0e18" stroke-width="2"/>
+        <rect x="475" y="110" width="110" height="30" rx="6" fill="#8B3A4A" stroke="#5a0e18" stroke-width="2"/>
+        <circle cx="475" cy="180" r="11" fill="#1f2a2f" stroke="#000" stroke-width="1"/>
+        <circle cx="585" cy="180" r="11" fill="#1f2a2f" stroke="#000" stroke-width="1"/>
+      </g>
+      <!-- Speed lines -->
+      <line x1="420" y1="130" x2="440" y2="130" stroke="#8B3A4A" stroke-width="2"/>
+      <line x1="420" y1="150" x2="445" y2="150" stroke="#8B3A4A" stroke-width="2"/>
+      <line x1="420" y1="170" x2="440" y2="170" stroke="#8B3A4A" stroke-width="2"/>
+      
+      <!-- Labels -->
+      <text x="530" y="215" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="600" fill="#8B3A4A">Chân ga: KẸT</text>
+      <text x="530" y="233" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="600" fill="#8B3A4A">Chân phanh: HỎNG</text>
+      <text x="530" y="267" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#8B3A4A">↓</text>
+      <rect x="415" y="278" width="230" height="30" rx="15" fill="#7a1d2a" stroke="#5a0e18" stroke-width="2"/>
+      <text x="530" y="298" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="800" fill="white">UNG THƯ HÌNH THÀNH</text>
+    </svg>
+    <div class="diagram-caption">Ung thư = chân ga kẹt (oncogene đạp quá mạnh) + chân phanh hỏng (gen ức chế khối u mất tác dụng) — cả hai vấn đề xảy ra cùng lúc.</div>
+
+    <p>Có hàng trăm oncogenes đã được phát hiện, nhưng với ung thư vú, <strong>2 cái tên quan trọng nhất</strong> là:</p>
+
+    <p class="bullet"><strong>HER2</strong> (Human Epidermal growth factor Receptor 2) &mdash; một &#8220;ăng-ten&#8221; trên bề mặt tế bào. Bình thường, mỗi tế bào có <em>2 bản sao</em> HER2. Trong 20-25% ung thư vú, số bản sao tăng lên <strong>40-100 bản</strong> &mdash; &#8220;ăng-ten&#8221; nhận tín hiệu phân chia quá mạnh, tế bào phân chia không ngừng.</p>
+
+    <p class="bullet"><strong>MYC</strong> &mdash; một &#8220;công tắc trung tâm&#8221; điều khiển hàng nghìn gen khác. Khi MYC hoạt động quá mức (trong 30-70% ung thư vú), nó <em>kích hoạt đồng loạt</em> nhiều gen thúc đẩy phân chia tế bào cùng lúc.</p>
+
+    <svg class="diagram" viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="HER2 vs MYC - hai oncogene chính trong ung thư vú">
+      <text x="360" y="28" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" font-weight="700" fill="#2E3D55" letter-spacing="2">HER2 &amp; MYC &mdash; 2 ONCOGENE CHÍNH TRONG UT VÚ</text>
+
+      <!-- LEFT: HER2 panel -->
+      <rect x="40" y="55" width="300" height="260" rx="14" fill="white" stroke="#4A5C78" stroke-width="2.5"/>
+      <text x="190" y="82" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="16" font-weight="800" fill="#2E3D55">HER2</text>
+      <text x="190" y="100" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#6B7A92" font-style="italic">&#8220;ăng-ten&#8221; trên bề mặt tế bào</text>
+
+      <!-- Normal cell: few antennas -->
+      <text x="110" y="130" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" font-weight="700" fill="#3a5a44">Bình thường</text>
+      <circle cx="110" cy="170" r="28" fill="#EFF4ED" stroke="#3a5a44" stroke-width="2"/>
+      <!-- 2 antennas -->
+      <line x1="95" y1="148" x2="88" y2="138" stroke="#3a5a44" stroke-width="2"/>
+      <circle cx="88" cy="138" r="3" fill="#3a5a44"/>
+      <line x1="125" y1="148" x2="132" y2="138" stroke="#3a5a44" stroke-width="2"/>
+      <circle cx="132" cy="138" r="3" fill="#3a5a44"/>
+      <text x="110" y="215" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#2E3D55">2 bản sao</text>
+
+      <!-- Cancer cell: many antennas -->
+      <text x="270" y="130" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" font-weight="700" fill="#8B3A4A">UT vú</text>
+      <circle cx="270" cy="170" r="28" fill="#FCF0ED" stroke="#8B3A4A" stroke-width="2"/>
+      <!-- Many antennas -->
+      <line x1="255" y1="148" x2="248" y2="136" stroke="#8B3A4A" stroke-width="2"/>
+      <circle cx="248" cy="136" r="3" fill="#8B3A4A"/>
+      <line x1="265" y1="144" x2="260" y2="130" stroke="#8B3A4A" stroke-width="2"/>
+      <circle cx="260" cy="130" r="3" fill="#8B3A4A"/>
+      <line x1="275" y1="144" x2="280" y2="130" stroke="#8B3A4A" stroke-width="2"/>
+      <circle cx="280" cy="130" r="3" fill="#8B3A4A"/>
+      <line x1="285" y1="148" x2="292" y2="136" stroke="#8B3A4A" stroke-width="2"/>
+      <circle cx="292" cy="136" r="3" fill="#8B3A4A"/>
+      <line x1="242" y1="170" x2="228" y2="170" stroke="#8B3A4A" stroke-width="2"/>
+      <circle cx="228" cy="170" r="3" fill="#8B3A4A"/>
+      <line x1="298" y1="170" x2="312" y2="170" stroke="#8B3A4A" stroke-width="2"/>
+      <circle cx="312" cy="170" r="3" fill="#8B3A4A"/>
+      <line x1="255" y1="192" x2="248" y2="204" stroke="#8B3A4A" stroke-width="2"/>
+      <circle cx="248" cy="204" r="3" fill="#8B3A4A"/>
+      <line x1="285" y1="192" x2="292" y2="204" stroke="#8B3A4A" stroke-width="2"/>
+      <circle cx="292" cy="204" r="3" fill="#8B3A4A"/>
+      <text x="270" y="215" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#8B3A4A" font-weight="700">40-100 bản</text>
+
+      <!-- Bottom explanation -->
+      <text x="190" y="250" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" fill="#2E3D55">Càng nhiều &#8220;ăng-ten&#8221;</text>
+      <text x="190" y="268" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" fill="#2E3D55">→ tế bào phân chia càng mạnh</text>
+      <rect x="85" y="280" width="210" height="28" rx="14" fill="#4A5C78"/>
+      <text x="190" y="299" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="800" fill="white">20-25% UT VÚ</text>
+
+      <!-- RIGHT: MYC panel -->
+      <rect x="380" y="55" width="300" height="260" rx="14" fill="white" stroke="#4A5C78" stroke-width="2.5"/>
+      <text x="530" y="82" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="16" font-weight="800" fill="#2E3D55">MYC</text>
+      <text x="530" y="100" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" fill="#6B7A92" font-style="italic">&#8220;công tắc trung tâm&#8221;</text>
+
+      <!-- Central MYC switch -->
+      <circle cx="530" cy="170" r="30" fill="#4A5C78" stroke="#2E3D55" stroke-width="2"/>
+      <text x="530" y="176" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="13" font-weight="800" fill="white">MYC</text>
+      
+      <!-- Rays to multiple gene nodes (fan-out) -->
+      <line x1="510" y1="150" x2="460" y2="130" stroke="#4A5C78" stroke-width="2"/>
+      <circle cx="455" cy="128" r="8" fill="#B5C2D4" stroke="#4A5C78" stroke-width="1.5"/>
+      <line x1="520" y1="142" x2="495" y2="115" stroke="#4A5C78" stroke-width="2"/>
+      <circle cx="492" cy="112" r="8" fill="#B5C2D4" stroke="#4A5C78" stroke-width="1.5"/>
+      <line x1="530" y1="140" x2="530" y2="110" stroke="#4A5C78" stroke-width="2"/>
+      <circle cx="530" cy="107" r="8" fill="#B5C2D4" stroke="#4A5C78" stroke-width="1.5"/>
+      <line x1="540" y1="142" x2="565" y2="115" stroke="#4A5C78" stroke-width="2"/>
+      <circle cx="568" cy="112" r="8" fill="#B5C2D4" stroke="#4A5C78" stroke-width="1.5"/>
+      <line x1="550" y1="150" x2="600" y2="130" stroke="#4A5C78" stroke-width="2"/>
+      <circle cx="605" cy="128" r="8" fill="#B5C2D4" stroke="#4A5C78" stroke-width="1.5"/>
+      
+      <line x1="505" y1="180" x2="460" y2="195" stroke="#4A5C78" stroke-width="2"/>
+      <circle cx="455" cy="197" r="8" fill="#B5C2D4" stroke="#4A5C78" stroke-width="1.5"/>
+      <line x1="555" y1="180" x2="600" y2="195" stroke="#4A5C78" stroke-width="2"/>
+      <circle cx="605" cy="197" r="8" fill="#B5C2D4" stroke="#4A5C78" stroke-width="1.5"/>
+      
+      <line x1="515" y1="198" x2="490" y2="222" stroke="#4A5C78" stroke-width="2"/>
+      <circle cx="487" cy="225" r="8" fill="#B5C2D4" stroke="#4A5C78" stroke-width="1.5"/>
+      <line x1="545" y1="198" x2="570" y2="222" stroke="#4A5C78" stroke-width="2"/>
+      <circle cx="573" cy="225" r="8" fill="#B5C2D4" stroke="#4A5C78" stroke-width="1.5"/>
+
+      <!-- Bottom explanation -->
+      <text x="530" y="250" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" fill="#2E3D55">Một công tắc bật</text>
+      <text x="530" y="268" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" fill="#2E3D55">→ hàng nghìn gen cùng hoạt động</text>
+      <rect x="425" y="280" width="210" height="28" rx="14" fill="#4A5C78"/>
+      <text x="530" y="299" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="800" fill="white">30-70% UT VÚ</text>
+    </svg>
+    <div class="diagram-caption">HER2 tăng "ăng-ten" nhận tín hiệu — MYC bật đồng loạt hàng nghìn gen phân chia. Hai cơ chế khác nhau, cùng dẫn đến một hậu quả: tế bào ung thư phân chia không ngừng.</div>
+
+    <h2>Phần 2 &middot; Oncogenes Gây Ung Thư Vú Như Thế Nào?</h2>
+
+    <p>Khi oncogenes bị &#8220;đạp ga&#8221; quá mạnh, chúng gây ung thư vú qua <strong>3 cơ chế đồng thời</strong>:</p>
+
+    <ol class="num-list">
+      <li><strong>Tăng tốc độ phân chia tế bào</strong> &mdash; Bình thường tế bào vú phân chia khi cần (ví dụ: trong thai kỳ, cho con bú). Khi HER2 hoặc MYC bị đạp ga, tế bào <em>phân chia liên tục không lý do</em> &mdash; giống như <em>một dây chuyền sản xuất chạy 24/7 không nghỉ</em>, tạo ra số lượng tế bào thừa.</li>
+      <li><strong>Ngăn tế bào tự hủy (kháng apoptosis)</strong> &mdash; Bình thường, tế bào có lỗi sẽ <em>tự hủy</em> (xem <a href="gen-uc-che-khoi-u.html">Bài 9</a>). Nhưng oncogenes kích hoạt quá mạnh <strong>ngăn chặn tín hiệu tự hủy</strong> &mdash; tế bào xấu không chết, tiếp tục sống và sinh sôi. Giống như <em>một nhân viên lười biếng nhưng không thể bị sa thải</em>.</li>
+      <li><strong>Thúc đẩy tạo mạch máu mới cho khối u</strong> &mdash; Khối u cần máu để lớn lên. Oncogenes kích hoạt VEGF &mdash; một tín hiệu &#8220;gọi mạch máu&#8221;, giúp khối u <em>tự xây đường cung cấp dinh dưỡng</em> cho chính nó (đã nói ở <a href="tan-mach-mau.html">Bài 3 về Tân Mạch Máu</a>). Giống như <em>một công trình xây dựng trái phép tự kéo điện, nước, đường vào chỗ của nó</em>.</li>
+    </ol>
+
+    <svg class="diagram" viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="3 cơ chế oncogenes gây UT vú">
+      <text x="360" y="28" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" font-weight="700" fill="#2E3D55" letter-spacing="2">ONCOGENES &mdash; 3 ĐƯỜNG DẪN ĐẾN UT VÚ</text>
+
+      <!-- TOP: Source -->
+      <rect x="260" y="55" width="200" height="50" rx="12" fill="white" stroke="#2E3D55" stroke-width="2"/>
+      <text x="360" y="77" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#2E3D55">HER2 / MYC ĐẠP GA</text>
+      <text x="360" y="93" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#2E3A4F" font-style="italic">&#8220;chân ga bị kẹt&#8221;</text>
+
+      <!-- Arrow down -->
+      <line x1="360" y1="108" x2="360" y2="130" stroke="#2E3D55" stroke-width="2.5"/>
+      <polygon points="360,130 355,120 365,120" fill="#2E3D55"/>
+
+      <!-- CENTER: Signal circle -->
+      <circle cx="360" cy="170" r="40" fill="#4A5C78" stroke="#2E3D55" stroke-width="2.5"/>
+      <text x="360" y="167" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" font-weight="700" fill="white">TÍN HIỆU</text>
+      <text x="360" y="182" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" font-weight="700" fill="white">ONCOGENE</text>
+      <text x="360" y="197" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="8" fill="rgba(255,255,255,0.9)" font-style="italic">quá mức</text>
+
+      <!-- 3 diverging arrows -->
+      <line x1="326" y1="196" x2="145" y2="230" stroke="#4A5C78" stroke-width="2.5"/>
+      <polygon points="145,230 157,227 152,237" fill="#4A5C78"/>
+      <line x1="360" y1="210" x2="360" y2="230" stroke="#4A5C78" stroke-width="2.5"/>
+      <polygon points="360,230 355,220 365,220" fill="#4A5C78"/>
+      <line x1="394" y1="196" x2="580" y2="230" stroke="#4A5C78" stroke-width="2.5"/>
+      <polygon points="580,230 568,227 573,237" fill="#4A5C78"/>
+
+      <!-- 3 mechanism boxes -->
+      <rect x="40" y="232" width="210" height="72" rx="10" fill="white" stroke="#4A5C78" stroke-width="1.8"/>
+      <text x="145" y="253" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#2E3D55">1. Phân Chia Liên Tục</text>
+      <text x="145" y="273" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#17202D">Dây chuyền 24/7</text>
+      <text x="145" y="290" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#17202D" font-style="italic">không nghỉ, không lý do</text>
+
+      <rect x="255" y="232" width="210" height="72" rx="10" fill="white" stroke="#4A5C78" stroke-width="1.8"/>
+      <text x="360" y="253" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#2E3D55">2. Kháng Tự Hủy</text>
+      <text x="360" y="273" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#17202D">Tế bào xấu không chết</text>
+      <text x="360" y="290" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#17202D" font-style="italic">&#8220;không thể sa thải&#8221;</text>
+
+      <rect x="470" y="232" width="210" height="72" rx="10" fill="white" stroke="#4A5C78" stroke-width="1.8"/>
+      <text x="575" y="253" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#2E3D55">3. Gọi Mạch Máu</text>
+      <text x="575" y="273" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#17202D">Kích hoạt VEGF</text>
+      <text x="575" y="290" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#17202D" font-style="italic">khối u tự nuôi mình</text>
+
+      <!-- 3 red arrows down -->
+      <line x1="145" y1="310" x2="145" y2="340" stroke="#7a1d2a" stroke-width="3"/>
+      <polygon points="145,340 140,330 150,330" fill="#7a1d2a"/>
+      <line x1="360" y1="310" x2="360" y2="340" stroke="#7a1d2a" stroke-width="3"/>
+      <polygon points="360,340 355,330 365,330" fill="#7a1d2a"/>
+      <line x1="575" y1="310" x2="575" y2="340" stroke="#7a1d2a" stroke-width="3"/>
+      <polygon points="575,340 570,330 580,330" fill="#7a1d2a"/>
+
+      <!-- 3 UT VÚ pills -->
+      <rect x="70" y="345" width="150" height="42" rx="21" fill="#7a1d2a" stroke="#5a0e18" stroke-width="2"/>
+      <text x="145" y="371" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="900" fill="white" letter-spacing="1.5">UNG THƯ VÚ</text>
+      <rect x="285" y="345" width="150" height="42" rx="21" fill="#7a1d2a" stroke="#5a0e18" stroke-width="2"/>
+      <text x="360" y="371" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="900" fill="white" letter-spacing="1.5">UNG THƯ VÚ</text>
+      <rect x="500" y="345" width="150" height="42" rx="21" fill="#7a1d2a" stroke="#5a0e18" stroke-width="2"/>
+      <text x="575" y="371" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="900" fill="white" letter-spacing="1.5">UNG THƯ VÚ</text>
+    </svg>
+    <div class="diagram-caption">Ba cơ chế xảy ra đồng thời — phân chia liên tục, không tự hủy, tự tạo mạch máu — biến một tế bào bình thường thành khối u ác tính.</div>
+
+    <h2>Phần 3 &middot; Hạt Lanh &mdash; Một Trong Những Thực Phẩm Chống Ung Thư Vú Mạnh Nhất</h2>
+
+    <p>Hạt lanh (flaxseed) là một loại hạt nhỏ, màu nâu hoặc vàng, lớn hơn hạt mè một chút. Điều làm hạt lanh đặc biệt là nó chứa <strong>lượng lignan cao nhất</strong> trong tất cả thực phẩm &mdash; gấp 75-800 lần so với các loại hạt, rau, quả khác.</p>
+
+    <div class="science-box">
+      <div class="sb-label">🔬 Lignan &mdash; &#8220;Chất Gõ Cửa&#8221; Của Oncogenes</div>
+      <p>Lignan là một nhóm hợp chất thực vật được gọi là <em>phytoestrogen</em> &mdash; có cấu trúc hơi giống hormone estrogen của cơ thể. Khi bạn ăn hạt lanh, lignan được vi sinh đường ruột chuyển hóa thành 2 chất mạnh hơn: <strong>enterolactone và enterodiol</strong>. Hai chất này có 4 tác động quan trọng:</p>
+      <p class="bullet"><strong>Giảm hoạt động của HER2</strong> &mdash; &#8220;tắt bớt ăng-ten&#8221; trên tế bào vú.</p>
+      <p class="bullet"><strong>Ức chế MYC</strong> &mdash; giảm tín hiệu &#8220;công tắc trung tâm&#8221; thúc đẩy phân chia.</p>
+      <p class="bullet"><strong>Chặn estrogen mạnh</strong> &mdash; ngăn estrogen nội sinh kết nối với thụ thể gây tăng trưởng khối u.</p>
+      <p class="bullet"><strong>Khôi phục khả năng tự hủy của tế bào xấu</strong> &mdash; &#8220;thả phanh apoptosis&#8221; bị oncogenes chặn.</p>
+    </div>
+
+    <svg class="diagram" viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lignan từ hạt lanh tác động 4 mục tiêu">
+      <text x="360" y="28" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" font-weight="700" fill="#2E3D55" letter-spacing="2">LIGNAN &mdash; 4 TÁC ĐỘNG KÉO PHANH KHỐI U VÚ</text>
+
+      <!-- TOP: Flaxseed source -->
+      <rect x="280" y="55" width="160" height="58" rx="12" fill="#F3E5C8" stroke="#C4975A" stroke-width="3"/>
+      <text x="360" y="78" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#7A5A28">HẠT LANH XAY</text>
+      <text x="360" y="95" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#7A5A28" font-style="italic">2 muỗng canh / ngày</text>
+      <text x="360" y="108" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#C4975A">🌾🌾🌾</text>
+
+      <!-- Arrow down -->
+      <line x1="360" y1="117" x2="360" y2="138" stroke="#C4975A" stroke-width="2.5"/>
+      <polygon points="360,138 355,128 365,128" fill="#C4975A"/>
+
+      <!-- Gut conversion -->
+      <rect x="230" y="142" width="260" height="36" rx="18" fill="#F3E5C8" stroke="#C4975A" stroke-width="2"/>
+      <text x="360" y="158" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#7A5A28">Vi sinh ruột chuyển hóa thành</text>
+      <text x="360" y="172" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" font-weight="700" fill="#7A5A28">Enterolactone · Enterodiol</text>
+
+      <!-- 4 diverging arrows to 4 targets -->
+      <!-- 4 arrows from enterolactone pill to 4 targets (evenly spaced) -->
+      <line x1="290" y1="170" x2="95" y2="215" stroke="#4A5C78" stroke-width="2.5"/>
+      <polygon points="95,215 107,211 103,222" fill="#4A5C78"/>
+      <line x1="335" y1="180" x2="265" y2="215" stroke="#4A5C78" stroke-width="2.5"/>
+      <polygon points="265,215 273,211 273,222" fill="#4A5C78"/>
+      <line x1="385" y1="180" x2="455" y2="215" stroke="#4A5C78" stroke-width="2.5"/>
+      <polygon points="455,215 447,211 447,222" fill="#4A5C78"/>
+      <line x1="430" y1="170" x2="625" y2="215" stroke="#4A5C78" stroke-width="2.5"/>
+      <polygon points="625,215 613,211 617,222" fill="#4A5C78"/>
+
+      <!-- 4 target boxes - all equal size 160px wide -->
+      <rect x="15" y="218" width="160" height="90" rx="12" fill="white" stroke="#4A5C78" stroke-width="2"/>
+      <text x="95" y="239" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#2E3D55">1. GIẢM HER2</text>
+      <text x="95" y="259" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#17202D">&#8220;tắt bớt ăng-ten&#8221;</text>
+      <text x="95" y="275" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#17202D" font-style="italic">trên tế bào vú</text>
+      <text x="95" y="298" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="16">📡</text>
+
+      <rect x="185" y="218" width="160" height="90" rx="12" fill="white" stroke="#4A5C78" stroke-width="2"/>
+      <text x="265" y="239" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#2E3D55">2. ỨC CHẾ MYC</text>
+      <text x="265" y="259" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#17202D">giảm tín hiệu</text>
+      <text x="265" y="275" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#17202D" font-style="italic">&#8220;công tắc trung tâm&#8221;</text>
+      <text x="265" y="298" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="16">🔌</text>
+
+      <rect x="375" y="218" width="160" height="90" rx="12" fill="white" stroke="#4A5C78" stroke-width="2"/>
+      <text x="455" y="239" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#2E3D55">3. CHẶN ESTROGEN</text>
+      <text x="455" y="259" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#17202D">ngăn kết nối</text>
+      <text x="455" y="275" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#17202D" font-style="italic">thụ thể tăng trưởng</text>
+      <text x="455" y="298" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="16">🚫</text>
+
+      <rect x="545" y="218" width="160" height="90" rx="12" fill="white" stroke="#4A5C78" stroke-width="2"/>
+      <text x="625" y="239" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#2E3D55">4. THẢ PHANH TỰ HỦY</text>
+      <text x="625" y="259" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#17202D">khôi phục apoptosis</text>
+      <text x="625" y="275" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#17202D" font-style="italic">tế bào xấu được loại bỏ</text>
+      <text x="625" y="298" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="16">🍎</text>
+
+      <!-- Bottom result pill -->
+      <line x1="360" y1="312" x2="360" y2="330" stroke="#3a5a44" stroke-width="3"/>
+      <polygon points="360,330 355,320 365,320" fill="#3a5a44"/>
+      <rect x="200" y="335" width="320" height="38" rx="19" fill="#3a5a44" stroke="#2a4434" stroke-width="2"/>
+      <text x="360" y="359" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12" font-weight="900" fill="white" letter-spacing="1.2">KHỐI U CHẬM PHÁT TRIỂN</text>
+    </svg>
+    <div class="diagram-caption">Lignan hoạt động như một "đội quân 4 mũi tiến công" — tắt ăng-ten HER2, cắt tín hiệu MYC, chặn estrogen, thả phanh tự hủy — đồng thời trên cùng một tế bào.</div>
+
+    <p>Đây là lý do hạt lanh được <strong>nghiên cứu nhiều đến vậy</strong> trong ung thư vú &mdash; nó tác động đồng thời lên nhiều mắt xích. Và quan trọng nhất, nó là <em>thực phẩm</em>, không phải thuốc &mdash; ai cũng có thể đưa vào bữa ăn hàng ngày.</p>
+
+    <h2>Phần 4 &middot; Cách Dùng Hạt Lanh Đúng Cách</h2>
+
+    <p>Hạt lanh tưởng đơn giản nhưng có <strong>3 nguyên tắc quan trọng</strong> để phát huy tối đa tác dụng:</p>
+
+    <ol class="num-list">
+      <li><strong>PHẢI xay thành bột ngay trước khi dùng</strong> &mdash; Hạt lanh nguyên hạt đi qua ruột mà <em>không tiêu hóa được</em>, cơ thể không hấp thụ được lignan. Xay bằng máy xay gia vị hoặc máy xay sinh tố trong 10 giây là đủ. Không mua bột xay sẵn đóng gói vì lignan bị oxy hóa nhanh sau khi xay.</li>
+      <li><strong>Liều khoa học khuyến cáo: 2 muỗng canh (20g) mỗi ngày</strong> &mdash; Đây là liều được sử dụng trong hầu hết các nghiên cứu lâm sàng. Có thể chia 2 lần trong ngày.</li>
+      <li><strong>Bảo quản trong tủ lạnh</strong> &mdash; Dầu trong hạt lanh dễ oxy hóa. Hạt nguyên để tủ lạnh giữ được 6 tháng; bột đã xay chỉ giữ được 1-2 ngày.</li>
+    </ol>
+
+    <p>Cách đơn giản nhất để đưa hạt lanh vào bữa ăn hàng ngày:</p>
+
+    <p class="bullet">Rắc <strong>bột hạt lanh</strong> lên bột yến mạch buổi sáng, sinh tố, hoặc cháo.</p>
+
+    <p class="bullet">Thêm vào canh, súp sau khi đã nấu chín (không nấu trực tiếp &mdash; nhiệt độ cao phá hủy lignan).</p>
+
+    <p class="bullet">Trộn vào salad hoặc rắc lên rau củ nướng trước khi ăn.</p>
+
+    <p class="bullet">Kết hợp với <em>đậu nành nguyên dạng</em> (đã nói ở <a href="dau-nanh-va-ung-thu.html">Bài 1</a>) để có tác dụng kép &mdash; cả hai đều chứa phytoestrogen nhưng theo cách khác nhau, bổ trợ lẫn nhau.</p>
+
+    <h2>Phần 5 &middot; Bằng Chứng Từ Nghiên Cứu Lâm Sàng</h2>
+
+    <div class="study-card">
+      <div class="study-meta">Thompson et al., Clinical Cancer Research 2005 &middot; RCT</div>
+      <div class="study-title">Hạt lanh làm chậm tốc độ phát triển khối u vú</div>
+      <div class="study-result">Nghiên cứu RCT trên 32 phụ nữ mới được chẩn đoán ung thư vú: nhóm ăn <em>25g hạt lanh xay/ngày</em> trong 32 ngày trước phẫu thuật có <strong>giảm rõ rệt dấu hiệu tăng trưởng khối u</strong> (giảm Ki-67) và <em>tăng tín hiệu tự hủy tế bào ung thư</em> so với nhóm giả dược.</div>
+    </div>
+
+    <div class="study-card">
+      <div class="study-meta">Lowcock et al., Cancer Causes &amp; Control 2013 &middot; n=6,000+</div>
+      <div class="study-title">Ăn hạt lanh đều giảm 18% nguy cơ ung thư vú</div>
+      <div class="study-result">Nghiên cứu trên hơn 6,000 phụ nữ Canada: nhóm ăn hạt lanh hoặc bánh mì có hạt lanh đều đặn có <strong>giảm 18% nguy cơ ung thư vú</strong> so với nhóm không ăn. Hiệu quả rõ rệt nhất ở phụ nữ sau mãn kinh.</div>
+    </div>
+
+    <div class="study-card">
+      <div class="study-meta">McCann et al., Cancer Causes &amp; Control 2014 &middot; Meta-analysis</div>
+      <div class="study-title">Tiêu thụ lignan giảm 33% nguy cơ tái phát</div>
+      <div class="study-result">Tổng hợp 11 nghiên cứu trên phụ nữ đã bị ung thư vú: nhóm có lượng lignan trong máu cao nhất có <strong>giảm 33% nguy cơ tái phát và tử vong do ung thư vú</strong>. Đây là một trong những tác dụng mạnh nhất của một thực phẩm đơn lẻ trong dinh dưỡng chống ung thư.</div>
+    </div>
+
+    <div class="pull-quote">
+      <p>Một muỗng hạt lanh xay mỗi sáng &mdash; đó không phải &#8220;bí kíp thần kỳ&#8221;. Đó là khoa học: một chất gõ cửa tế bào vú, nhẹ nhàng tắt bớt chân ga, giữ lại phanh. Mỗi ngày, từng chút một.</p>
+      <cite>— H21 Cho Đời Mãi Xanh</cite>
+    </div>
+
+    <div class="series-complete">
+      <div class="series-complete-label">🎗️ Seri 10 Cơ Chế · Hoàn Thành</div>
+      <div class="series-complete-title">Bạn vừa hoàn thành toàn bộ seri Ung Thư Vú</div>
+      <div class="series-complete-desc">Từ đậu nành, IGF-1, tân mạch máu, kháng insulin, adipokines, vi sinh ruột, stress oxy hóa, viêm mạn tính, gen ức chế khối u, đến oncogenes &mdash; bạn đã có bức tranh <em>hoàn chỉnh</em> về các cơ chế phân tử dẫn đến ung thư vú và cách lối sống tác động lên từng cơ chế.</div>
+    </div>
+
+    <div class="takeaway">
+      <div class="takeaway-label">&#128161; Điểm Mấu Chốt Bài 10 &amp; Toàn Seri</div>
+      <p>Oncogenes <strong>không phải gen xấu bẩm sinh</strong> &mdash; chúng là gen tốt bị &#8220;đạp ga quá tay&#8221;. HER2 và MYC là 2 oncogene quan trọng nhất trong ung thư vú &mdash; chúng thúc đẩy tế bào phân chia không ngừng, ngăn tự hủy, và gọi mạch máu cho khối u.</p>
+      <p>Hạt lanh là <em>một trong những thực phẩm được nghiên cứu nhiều nhất</em> trong dinh dưỡng chống ung thư vú &mdash; vì <strong>lignan</strong> trong nó tác động đồng thời lên HER2, MYC, estrogen, và apoptosis. Chỉ cần <em>2 muỗng canh bột hạt lanh xay tươi mỗi ngày</em> là đã cung cấp đủ lượng lignan được chứng minh có tác dụng trong nghiên cứu lâm sàng.</p>
+      <p>Và thông điệp lớn nhất của toàn seri: <strong>không có cơ chế ung thư nào là &#8220;không thể tác động&#8221;</strong>. Mỗi bữa ăn, mỗi giờ ngủ, mỗi bước chân đều là một cơ hội kéo phanh, tắt chân ga, đánh thức gen bảo vệ. Bạn không cần trở thành chuyên gia &mdash; bạn chỉ cần bắt đầu.</p>
+    </div>
+
+    <div class="soft-invitation">
+      H21 là môi trường nơi chúng tôi thực hành triết lý <em>&#8220;thức ăn là thuốc, và thuốc chính là thức ăn&#8221;</em> &mdash; nguyên lý y học từ Hippocrates hơn 2,400 năm trước. Qua 10 bài seri này, bạn đã thấy <strong>mỗi bữa ăn là một hành động khoa học</strong> &mdash; tác động cụ thể lên phân tử, lên gen, lên tế bào. Không có thần dược, không có phép màu &mdash; chỉ có <em>kiến thức</em> và <em>hành động đều đặn mỗi ngày</em>. Đây là lý do học viên H21 không chỉ &#8220;ăn rau nhiều hơn&#8221; &mdash; họ hiểu <strong>tại sao từng loại rau có tác dụng gì, kết hợp thế nào, với liều lượng nào</strong>. Kiến thức biến việc ăn uống từ &#8220;thói quen&#8221; thành <em>công cụ chủ động bảo vệ sức khỏe</em>. <strong>Mỗi muỗng hạt lanh, mỗi chén đậu nành, mỗi bát canh nghệ &mdash; đều là một lời cam kết với chính bản thân mình.</strong>
+    </div>
+
+<div class="cta-box">
+  <div class="cta-eyebrow">Seri Ung Thư Vú · 10 Cơ Chế · Hoàn Thành</div>
+  <h3 class="cta-title">Bạn đã hoàn thành seri. Giờ là lúc biến kiến thức thành hành động.</h3>
+  <p class="cta-desc">Tham gia cộng đồng H21 để chuyển từ &#8220;đọc&#8221; sang &#8220;sống&#8221; với khoa học lối sống &mdash; cùng hàng trăm học viên khác.</p>
+  <a href="https://www.facebook.com/xanhlenbenhxuong/" target="_blank" class="cta-btn">Đăng Ký Khóa Học H21 &#8594;</a>
+</div>
+
+  </div>
+<div class="article-footer">
+  <div class="footer-brand">
+    <strong>Thuy-Trinh Nguyen</strong> &middot; Khoa Học Gia &amp; Nhà Sáng Lập<br>
+    <strong>H21 - Cho Đời Mãi Xanh</strong> &middot; <a href="https://www.h21chodoimaixanh.com">www.h21chodoimaixanh.com</a><br>
+    Mang khoa học từ phòng thí nghiệm đến căn bếp mỗi gia đình
+  </div>
+</div>
+</div>
+<footer class="site-footer">
+  <strong>H21 - Cho Đời Mãi Xanh</strong> &middot; Khoa Học Gia Thuy-Trinh Nguyen<br>
+  <a href="https://blog.h21chodoimaixanh.com">blog.h21chodoimaixanh.com</a> &middot; <a href="https://www.h21chodoimaixanh.com">www.h21chodoimaixanh.com</a><br>
+  Nội dung chỉ dành cho mục đích giáo dục, không thay thế tư vấn y tế chuyên nghiệp.
+</footer>
+</body>
+</html>
