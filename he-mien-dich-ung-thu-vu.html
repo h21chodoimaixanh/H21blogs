@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hệ Miễn Dịch & Ung Thư Vú — Đội Quân Phát Hiện Sớm | H21 Cho Đời Mãi Xanh</title>
+<meta name="description" content="Trong cơ thể bạn có một đội quân thầm lặng tuần tra 24/7 để tìm và tiêu diệt tế bào ung thư trước khi chúng kịp lớn. Khoa học giải mã tế bào NK, T CD8+, và cách thực phẩm đánh thức hệ miễn dịch.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F5F8F3;
+  --ink:#1A2818;
+  --mid:#2F4A2C;
+  --light:#6B8268;
+  --accent:#5A7854;
+  --accent-dark:#3A5236;
+  --accent-mid:#7A9674;
+  --accent-light:#BACCAF;
+  --border:#D6E0CF;
+  --blush:#E8EFE3;
+  --plum:#1A2818;
+  --rose:#B0C4A5;
+  --mint:#A8C8B0;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Lora',serif;font-size:17px;line-height:1.75;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;}
+.site-nav{background:var(--plum);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(0,0,0,0.25);}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-logo-mark{width:34px;height:34px;background:var(--mint);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-family:sans-serif;}
+.nav-logo-name{font-size:14px;font-weight:600;color:white;font-family:'Be Vietnam Pro',sans-serif;}
+.nav-logo-tag{font-size:11px;color:rgba(255,255,255,0.6);margin-top:1px;font-family:'Be Vietnam Pro',sans-serif;letter-spacing:0.3px;}
+.nav-back{font-size:13px;color:rgba(255,255,255,0.75);text-decoration:none;font-weight:500;font-family:'Be Vietnam Pro',sans-serif;transition:color 0.2s;}
+.nav-back:hover{color:var(--rose);}
+.article-hero{background:linear-gradient(135deg,#1A2818 0%,#3A5236 45%,#5A7854 100%);padding:48px 24px 40px;position:relative;overflow:hidden;}
+.article-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 30%,rgba(255,255,255,0.06) 0%,transparent 60%);}
+.hero-inner{max-width:720px;margin:0 auto;position:relative;z-index:1;}
+.series-badge{display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.95);padding:6px 14px;border-radius:100px;font-family:'Be Vietnam Pro',sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px;}
+.series-badge-dot{display:inline-block;width:6px;height:6px;background:#B0C4A5;border-radius:50%;margin-right:6px;vertical-align:middle;}
+.article-h1{font-family:'Playfair Display',serif;font-size:38px;font-weight:700;line-height:1.2;color:white;margin-bottom:16px;letter-spacing:-0.5px;}
+.article-h1 em{font-style:italic;color:rgba(255,255,255,0.85);font-weight:400;}
+.article-deck{font-family:'Lora',serif;font-size:17px;line-height:1.7;color:rgba(255,255,255,0.85);font-style:italic;margin:0;}
+.article-deck em{color:rgba(255,255,255,0.95);font-weight:600;font-style:italic;}
+.byline-bar{background:white;border-bottom:1px solid var(--border);padding:14px 24px;}
+.byline-inner{max-width:720px;margin:0 auto;display:flex;align-items:center;gap:14px;}
+.byline-av{width:40px;height:40px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:white;font-weight:700;flex-shrink:0;font-family:'Be Vietnam Pro',sans-serif;}
+.byline-name{font-size:13.5px;font-weight:600;color:var(--ink);font-family:'Be Vietnam Pro',sans-serif;}
+.byline-role{font-size:11.5px;color:var(--light);margin-top:1px;font-family:'Be Vietnam Pro',sans-serif;}
+.byline-meta{margin-left:auto;text-align:right;}
+.byline-url{font-size:11.5px;color:var(--light);font-family:'Be Vietnam Pro',sans-serif;}
+.read-time{font-size:11px;color:var(--accent);font-weight:600;margin-top:2px;font-family:'Be Vietnam Pro',sans-serif;}
+.article-wrap{max-width:720px;margin:0 auto;padding:44px 24px 80px;}
+.hero-banner{margin:0 0 32px;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(58,82,54,0.18);border:1px solid var(--border);}
+.hero-banner img{width:100%;display:block;}
+.article-body{font-family:'Lora',serif;font-size:17px;line-height:1.85;color:var(--mid);}
+.article-body p{margin:0 0 20px;}
+.article-body p.bullet{padding-left:24px;margin-bottom:14px;position:relative;}
+.article-body p.bullet::before{content:'•';position:absolute;left:8px;color:var(--accent);font-weight:bold;}
+.article-body p.bullet + p.bullet{margin-top:0;}
+.article-body ol.num-list{list-style:none;counter-reset:numitem;padding-left:0;margin:0 0 20px;}
+.article-body ol.num-list li{padding-left:32px;margin-bottom:14px;position:relative;counter-increment:numitem;}
+.article-body ol.num-list li::before{content:counter(numitem) '.';position:absolute;left:4px;color:var(--accent);font-weight:700;}
+.article-body strong{color:var(--ink);font-weight:600;}
+.article-body em{color:var(--accent);font-style:italic;font-weight:600;}
+.article-body a{color:var(--accent);text-decoration:underline;}
+.article-body h2{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--ink);margin:44px 0 14px;line-height:1.3;}
+.article-body h3{font-family:'Be Vietnam Pro',sans-serif;font-size:14px;font-weight:700;color:var(--accent-dark);margin:28px 0 10px;text-transform:uppercase;letter-spacing:1.5px;}
+.fact-strip{display:grid;grid-template-columns:repeat(3,1fr);margin:32px 0 18px;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:white;}
+.fact-item{padding:22px 16px;text-align:center;border-right:1px solid var(--border);}
+.fact-item:last-child{border-right:none;}
+.fact-num{font-family:'Playfair Display',serif;font-size:34px;font-weight:700;color:var(--accent);line-height:1;}
+.fact-label{font-size:11.5px;color:var(--light);margin-top:8px;line-height:1.5;font-family:'Be Vietnam Pro',sans-serif;}
+.fact-explain{background:var(--blush);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:14px 20px;margin:0 0 32px;font-family:'Lora',serif;font-size:14.5px;line-height:1.75;color:var(--mid);font-style:italic;}
+.fact-explain strong{color:var(--accent-dark);font-style:normal;}
+.personal-note{background:linear-gradient(135deg,#FAFCF8,#E8EFE3);border:1px solid var(--border);border-left:4px solid var(--accent-mid);border-radius:0 14px 14px 0;padding:22px 28px;margin:28px 0;font-family:'Lora',serif;font-style:italic;}
+.personal-note-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent-mid);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;font-style:normal;}
+.personal-note p{font-size:16px;line-height:1.8;color:var(--mid);margin:0;}
+.personal-note strong{color:var(--accent-dark);font-style:normal;}
+.science-box{background:var(--blush);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:0 12px 12px 0;padding:20px 24px;margin:24px 0;}
+.sb-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent-mid);margin-bottom:8px;font-family:'Be Vietnam Pro',sans-serif;}
+.science-box p{font-size:15px;color:var(--mid);margin:0 0 10px;line-height:1.75;font-family:'Lora',serif;}
+.science-box p:last-child{margin-bottom:0;}
+.science-box p.bullet{padding-left:20px;margin-bottom:10px;position:relative;}
+.science-box p.bullet::before{content:'•';position:absolute;left:4px;color:var(--accent);font-weight:bold;}
+.science-box p.bullet.sub{padding-left:40px;}
+.science-box p.bullet.sub::before{left:24px;}
+.science-box p.bullet + p.bullet{margin-top:0;}
+.science-box strong{color:var(--accent-dark);}
+.science-box em{color:var(--accent);}
+.study-card{background:white;border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:10px;padding:18px 22px;margin:14px 0;}
+.study-meta{font-family:'Be Vietnam Pro',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
+.study-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--accent-dark);margin-bottom:6px;line-height:1.35;}
+.study-result{font-family:'Lora',serif;font-size:14.5px;line-height:1.65;color:var(--mid);}
+.study-result strong{color:var(--accent-dark);}
+.diagram{margin:22px 0 6px;display:block;background:white;border:1px solid var(--border);border-radius:12px;padding:18px;}
+.diagram-caption{font-family:'Be Vietnam Pro',sans-serif;font-size:11.5px;color:var(--light);text-align:center;margin-top:-2px;margin-bottom:28px;font-style:italic;line-height:1.5;}
+.pull-quote{margin:38px 0;padding:30px 36px;background:var(--accent-dark);border-radius:14px;color:white;text-align:center;position:relative;}
+.pull-quote::before{content:'"';font-family:'Playfair Display',serif;font-size:80px;line-height:0.5;color:rgba(255,255,255,0.12);position:absolute;top:26px;left:22px;}
+.pull-quote p{font-family:'Lora',serif;font-size:19px;line-height:1.6;color:rgba(255,255,255,0.95);font-style:italic;margin:0 0 8px;}
+.pull-quote cite{font-family:'Be Vietnam Pro',sans-serif;font-size:12px;color:rgba(255,255,255,0.6);font-style:normal;letter-spacing:1.5px;text-transform:uppercase;}
+.info-table{width:100%;table-layout:fixed;border-collapse:collapse;margin:22px 0 28px;background:white;border:1px solid var(--border);border-radius:12px;overflow:hidden;font-family:'Be Vietnam Pro',sans-serif;}
+.info-table th,.info-table td{width:50%;}
+.info-table thead th{padding:14px 16px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--border);text-align:left;}
+.info-table thead th.ok{background:#3a5a44;color:white;}
+.info-table thead th.warn{background:#a85550;color:white;}
+.info-table td{padding:12px 16px;font-size:13.5px;line-height:1.65;color:var(--mid);border-bottom:1px solid var(--border);vertical-align:top;}
+.info-table td.ok{background:#f3f7f0;}
+.info-table td.warn{background:#fcf2ef;}
+.info-table tr:last-child td{border-bottom:none;}
+.info-table td strong{color:var(--accent-dark);}
+.info-table td.ok strong{color:#3a5a44;}
+.info-table td.warn strong{color:#8B3A4A;}
+.info-table td em{font-style:italic;color:var(--light);font-size:12.5px;}
+@media(max-width:600px){.info-table{font-size:12px;} .info-table td,.info-table th{padding:10px 12px;}}
+.soft-invitation{background:var(--blush);border:1px solid var(--border);border-radius:10px;padding:20px 26px;margin:28px 0;font-family:'Lora',serif;font-size:15.5px;line-height:1.8;color:var(--mid);font-style:italic;}
+.soft-invitation strong{color:var(--accent-dark);font-style:normal;font-weight:700;}
+.soft-invitation em{color:var(--accent);font-style:italic;}
+.takeaway{background:linear-gradient(135deg,var(--accent-dark),var(--accent));border-radius:14px;padding:28px 32px;margin:36px 0 0;color:white;}
+.takeaway-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
+.takeaway p{font-size:16px;color:rgba(255,255,255,0.95);line-height:1.8;margin:0 0 12px;font-family:'Lora',serif;}
+.takeaway p:last-child{margin-bottom:0;}
+.takeaway strong{color:white;font-weight:700;}
+.takeaway em{color:rgba(255,255,255,0.88);font-style:italic;}
+.cta-box{background:var(--plum);border-radius:14px;padding:30px 32px;margin-top:36px;text-align:center;}
+.cta-box .cta-eyebrow{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--rose);margin-bottom:10px;font-family:'Be Vietnam Pro',sans-serif;}
+.cta-box .cta-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:white;margin-bottom:10px;line-height:1.35;}
+.cta-box .cta-desc{font-size:14px;color:rgba(255,255,255,0.72);max-width:400px;margin:0 auto 22px;line-height:1.7;font-family:'Lora',serif;}
+.cta-btn{display:inline-block;background:var(--mint);color:#1A3A28;font-size:14px;font-weight:700;padding:13px 32px;border-radius:100px;text-decoration:none;font-family:'Be Vietnam Pro',sans-serif;transition:opacity .2s,transform .2s;box-shadow:0 2px 12px rgba(168,200,176,0.25);}
+.cta-btn:hover{opacity:0.92;transform:translateY(-1px);}
+.article-footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--border);}
+.footer-brand{font-size:12.5px;color:var(--light);line-height:1.8;font-family:'Be Vietnam Pro',sans-serif;}
+.footer-brand strong{color:var(--accent-dark);}
+.footer-brand a{color:var(--accent);text-decoration:none;}
+.site-footer{background:var(--plum);padding:28px 40px;text-align:center;font-size:12px;color:rgba(255,255,255,0.45);line-height:1.8;font-family:'Be Vietnam Pro',sans-serif;}
+.site-footer a{color:var(--rose);text-decoration:none;}
+.site-footer strong{color:rgba(255,255,255,0.75);}
+@media(max-width:600px){
+  .article-h1{font-size:28px;}
+  .article-deck{font-size:15.5px;}
+  .fact-strip{grid-template-columns:1fr;}
+  .fact-item{border-right:none;border-bottom:1px solid var(--border);}
+  .fact-item:last-child{border-bottom:none;}
+  .article-wrap{padding:32px 18px 60px;}
+  .site-nav{padding:12px 20px;}
+  .article-hero{padding:36px 18px 30px;}
+}
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">🌿</div>
+    <div>
+      <div class="nav-logo-name">H21 - Cho Đời Mãi Xanh</div>
+      <div class="nav-logo-tag">Khoa Học Gia Thuy-Trinh Nguyen</div>
+    </div>
+  </a>
+  <a href="index.html" class="nav-back">&#8592; Trở về Blog</a>
+</nav>
+
+<section class="article-hero">
+  <div class="hero-inner">
+    <div class="series-badge"><span class="series-badge-dot"></span> 🛡️ Miễn Dịch &amp; Ung Thư Vú</div>
+    <h1 class="article-h1">Hệ Miễn Dịch &amp; Ung Thư Vú &mdash;<br><em>Đội Quân Phát Hiện Sớm</em></h1>
+    <p class="article-deck">Mỗi ngày, cơ thể bạn sản sinh ra <em>hàng nghìn tế bào có lỗi</em> &mdash; đột biến, bất thường, có tiềm năng trở thành ung thư. Nhưng hầu hết các bạn vẫn khỏe mạnh, vì trong cơ thể có một <em>đội quân thầm lặng</em> tuần tra 24/7, phát hiện và tiêu diệt những tế bào nguy hiểm <strong>trước khi chúng kịp lớn</strong>. Khi đội quân này yếu đi &mdash; ung thư mới có cơ hội. Bài viết giải mã tế bào NK, T CD8+, và cách thực phẩm đánh thức hệ miễn dịch.</p>
+  </div>
+</section>
+<div class="byline-bar">
+  <div class="byline-inner">
+    <div class="byline-av">TT</div>
+    <div>
+      <div class="byline-name">Thuy-Trinh Nguyen</div>
+      <div class="byline-role">Khoa Học Gia &middot; Nhà Sáng Lập H21 - Cho Đời Mãi Xanh</div>
+    </div>
+    <div class="byline-meta">
+      <div class="byline-url">www.h21chodoimaixanh.com</div>
+      <div class="read-time">&#9200; Đọc trong 8 phút</div>
+    </div>
+  </div>
+</div>
+
+<div class="article-wrap">
+  <div class="article-body">
+
+    <div class="hero-banner">
+      <img src="he-mien-dich.jpg" alt="Hệ Miễn Dịch & Ung Thư Vú — Đội Quân Phát Hiện Sớm cùng Khoa Học Gia Thuy-Trinh Nguyen">
+    </div>
+
+    <div class="personal-note">
+      <div class="personal-note-label">🌿 Điểm Khởi Đầu</div>
+      <p>Nhiều bạn nghĩ hệ miễn dịch chỉ có nhiệm vụ <em>chống vi khuẩn, virus</em> &mdash; như chống cảm cúm, nhiễm trùng. Nhưng sự thật lớn hơn nhiều: <strong>hệ miễn dịch là hàng rào cuối cùng chống ung thư</strong>. Mỗi ngày, cơ thể tạo ra khoảng 1-2 triệu tế bào mới, và một phần nhỏ trong số đó có lỗi DNA. Nếu không có hệ miễn dịch, <em>mọi người đều sẽ bị ung thư từ rất sớm</em>. Điều kỳ diệu là: hệ miễn dịch này không chỉ được di truyền &mdash; nó còn được <strong>nuôi dưỡng hoặc làm suy yếu</strong> mỗi ngày bởi cách bạn ăn, ngủ, vận động.</p>
+    </div>
+
+    <div class="fact-strip">
+      <div class="fact-item">
+        <div class="fact-num">1-2M</div>
+        <div class="fact-label">tế bào có lỗi DNA được tạo ra mỗi ngày — hệ miễn dịch tiêu diệt đa số</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-num">50%</div>
+        <div class="fact-label">giảm hoạt tính tế bào NK ở người ngủ dưới 6 giờ/đêm</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-num">30-40%</div>
+        <div class="fact-label">giảm nguy cơ ung thư vú ở nhóm có hệ miễn dịch hoạt động mạnh</div>
+      </div>
+    </div>
+
+    <div class="fact-explain">
+      Ba con số cho thấy vai trò <strong>quyết định</strong> của hệ miễn dịch trong phòng ngừa ung thư. Điều đặc biệt: hệ miễn dịch là một trong những hệ thống <em>phản ứng nhanh nhất</em> với thay đổi lối sống &mdash; chỉ cần <strong>một đêm ngủ đủ</strong> hoặc <strong>một bữa ăn giàu rau củ</strong> là hoạt tính tế bào miễn dịch đã thay đổi rõ rệt. Đây là lý do các bạn không cần đợi &#8220;kết quả lâu dài&#8221; &mdash; hệ miễn dịch phản hồi ngay trong <em>24-48 giờ</em>.
+    </div>
+
+    <h2>Phần 1 &middot; Hệ Miễn Dịch &mdash; &#8220;Đội Quân Bảo Vệ&#8221; Của Cơ Thể</h2>
+
+    <p>Hãy tưởng tượng cơ thể bạn như <em>một thành phố lớn</em>. Trong thành phố đó có:</p>
+
+    <p class="bullet"><strong>Cảnh sát tuần tra</strong> (tế bào miễn dịch) đi khắp các khu phố (mạch máu và mô), kiểm tra từng &#8220;công dân&#8221; (tế bào) xem ai có hành vi đáng ngờ.</p>
+
+    <p class="bullet"><strong>Đội đặc nhiệm phản ứng nhanh</strong> (tế bào NK) &mdash; phát hiện kẻ xấu là <em>tấn công ngay</em>, không cần chờ lệnh.</p>
+
+    <p class="bullet"><strong>Lực lượng tinh nhuệ</strong> (tế bào T CD8+) &mdash; được huấn luyện để nhận diện từng &#8220;dấu vân tay&#8221; của tế bào ung thư và tiêu diệt chính xác.</p>
+
+    <p>Khi đội quân này <strong>đông đảo, tinh nhanh, khỏe mạnh</strong> &mdash; thành phố an toàn, không có tội phạm. Khi đội quân bị <em>mệt mỏi, thiếu người, suy yếu</em> &mdash; tội phạm (tế bào ung thư) có cơ hội lẩn trốn, sinh sôi, và thành lập &#8220;băng nhóm&#8221; (khối u).</p>
+
+    <div class="science-box">
+      <div class="sb-label">🔬 Ví Dụ: Khu Phố Có Và Không Có Cảnh Sát</div>
+      <p>Hãy hình dung <em>hai khu phố giống hệt nhau</em> trong cùng một thành phố:</p>
+      <p class="bullet"><strong>Khu phố A</strong> có đội cảnh sát đầy đủ, tuần tra đều đặn, thiết bị hiện đại. Khi có kẻ gian xuất hiện, cảnh sát phát hiện ngay, xử lý ngay &mdash; khu phố an toàn, không ai biết có chuyện gì.</p>
+      <p class="bullet"><strong>Khu phố B</strong> cảnh sát quá ít, thiết bị hỏng, lương thấp nên làm việc uể oải. Kẻ gian vào thong dong, tụ tập, lập băng nhóm &mdash; dần dần khu phố trở thành &#8220;điểm đen&#8221; tội phạm.</p>
+      <p>Hai khu phố có <em>cùng số lượng kẻ gian</em> vào mỗi ngày. Nhưng số phận khác nhau hoàn toàn &mdash; chỉ vì <strong>hệ thống bảo vệ khác nhau</strong>. Đây chính là khác biệt giữa cơ thể có hệ miễn dịch mạnh và yếu.</p>
+    </div>
+
+    <svg class="diagram" viewBox="0 0 720 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cơ thể có vs không có hệ miễn dịch mạnh">
+      <text x="360" y="28" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" font-weight="700" fill="#3A5236" letter-spacing="2">HỆ MIỄN DỊCH MẠNH vs YẾU &mdash; HAI SỐ PHẬN</text>
+
+      <!-- TOP: Same input - cells with DNA errors -->
+      <rect x="240" y="55" width="240" height="54" rx="12" fill="white" stroke="#3A5236" stroke-width="2"/>
+      <text x="360" y="77" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#3A5236">1-2 TRIỆU TẾ BÀO CÓ LỖI DNA</text>
+      <text x="360" y="95" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#2F4A2C" font-style="italic">mỗi ngày &mdash; ai cũng có</text>
+
+      <!-- Fork: 2 arrows going left (strong) and right (weak) -->
+      <line x1="310" y1="115" x2="175" y2="148" stroke="#3A5236" stroke-width="2.5"/>
+      <polygon points="175,148 187,145 182,155" fill="#3A5236"/>
+      <line x1="410" y1="115" x2="545" y2="148" stroke="#3A5236" stroke-width="2.5"/>
+      <polygon points="545,148 533,145 538,155" fill="#3A5236"/>
+
+      <!-- LEFT PATH: Strong immunity (green) -->
+      <rect x="40" y="150" width="270" height="60" rx="12" fill="#EFF4ED" stroke="#3a5a44" stroke-width="2.5"/>
+      <text x="175" y="173" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12" font-weight="700" fill="#3a5a44">HỆ MIỄN DỊCH MẠNH</text>
+      <text x="175" y="193" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#2a4434" font-style="italic">&#8220;cảnh sát tuần tra đầy đủ&#8221;</text>
+
+      <!-- RIGHT PATH: Weak immunity (red) -->
+      <rect x="410" y="150" width="270" height="60" rx="12" fill="#FCF0ED" stroke="#8B3A4A" stroke-width="2.5"/>
+      <text x="545" y="173" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12" font-weight="700" fill="#8B3A4A">HỆ MIỄN DỊCH YẾU</text>
+      <text x="545" y="193" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#7a1d2a" font-style="italic">&#8220;cảnh sát thiếu, uể oải&#8221;</text>
+
+      <!-- Arrows down -->
+      <line x1="175" y1="215" x2="175" y2="240" stroke="#3a5a44" stroke-width="3"/>
+      <polygon points="175,240 170,230 180,230" fill="#3a5a44"/>
+      <line x1="545" y1="215" x2="545" y2="240" stroke="#8B3A4A" stroke-width="3"/>
+      <polygon points="545,240 540,230 550,230" fill="#8B3A4A"/>
+
+      <!-- LEFT detail -->
+      <rect x="40" y="245" width="270" height="82" rx="10" fill="white" stroke="#3a5a44" stroke-width="1.8"/>
+      <text x="175" y="265" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#3a5a44">TẾ BÀO XẤU BỊ TIÊU DIỆT</text>
+      <text x="175" y="287" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#1A2818">NK &amp; T cells phát hiện ngay</text>
+      <text x="175" y="303" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#1A2818">Tiêu diệt trước khi sinh sôi</text>
+      <text x="175" y="319" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#1A2818" font-style="italic">cơ thể không hay biết chuyện gì</text>
+
+      <!-- RIGHT detail -->
+      <rect x="410" y="245" width="270" height="82" rx="10" fill="white" stroke="#8B3A4A" stroke-width="1.8"/>
+      <text x="545" y="265" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10.5" font-weight="700" fill="#8B3A4A">TẾ BÀO XẤU LẨN TRỐN</text>
+      <text x="545" y="287" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#1A2818">Không ai phát hiện</text>
+      <text x="545" y="303" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#1A2818">Tụ tập, lập &#8220;băng nhóm&#8221;</text>
+      <text x="545" y="319" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#1A2818" font-style="italic">khối u hình thành dần</text>
+
+      <!-- Arrows down -->
+      <line x1="175" y1="333" x2="175" y2="358" stroke="#3a5a44" stroke-width="3"/>
+      <polygon points="175,358 170,348 180,348" fill="#3a5a44"/>
+      <line x1="545" y1="333" x2="545" y2="358" stroke="#7a1d2a" stroke-width="3"/>
+      <polygon points="545,358 540,348 550,348" fill="#7a1d2a"/>
+
+      <!-- Final pills -->
+      <rect x="55" y="362" width="240" height="48" rx="24" fill="#3a5a44" stroke="#2a4434" stroke-width="2"/>
+      <text x="175" y="391" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12" font-weight="900" fill="white" letter-spacing="1.2">CƠ THỂ KHỎE MẠNH</text>
+
+      <rect x="425" y="362" width="240" height="48" rx="24" fill="#7a1d2a" stroke="#5a0e18" stroke-width="2"/>
+      <text x="545" y="391" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="12" font-weight="900" fill="white" letter-spacing="1.2">UNG THƯ PHÁT TRIỂN</text>
+    </svg>
+    <div class="diagram-caption">Cùng một lượng tế bào có lỗi DNA mỗi ngày &mdash; nhưng <strong>kết quả hoàn toàn khác nhau</strong> tùy vào sức mạnh của "đội quân" bên trong. Lối sống quyết định đội quân đó mạnh hay yếu.</div>
+
+    <h2>Phần 2 &middot; 3 &#8220;Chiến Binh&#8221; Quan Trọng Nhất</h2>
+
+    <p>Hệ miễn dịch có hàng chục loại tế bào khác nhau, nhưng trong cuộc chiến chống ung thư vú, <strong>3 loại tế bào đóng vai trò quyết định</strong>:</p>
+
+    <ol class="num-list">
+      <li><strong>Tế bào NK (Natural Killer)</strong> &mdash; &#8220;đội đặc nhiệm&#8221; phản ứng nhanh. Chúng tuần tra khắp cơ thể và <em>tấn công ngay</em> khi gặp tế bào bất thường, không cần huấn luyện trước. NK là <strong>tuyến phòng thủ đầu tiên</strong> chống ung thư &mdash; giống như <em>chó nghiệp vụ phát hiện kẻ gian bằng khứu giác, cắn ngay không cần lệnh</em>.</li>
+      <li><strong>Tế bào T CD8+ (Cytotoxic T cells)</strong> &mdash; &#8220;lực lượng tinh nhuệ&#8221; chuyên biệt. Mỗi tế bào T được huấn luyện để nhận diện <em>một loại dấu vân tay cụ thể</em> của tế bào ung thư. Khi phát hiện, nó tiết ra chất độc tiêu diệt tế bào ung thư với độ chính xác cao. Giống như <em>xạ thủ bắn tỉa chỉ bắn đúng mục tiêu, không gây thương vong vô tội</em>.</li>
+      <li><strong>Đại thực bào (Macrophages)</strong> &mdash; &#8220;đội dọn dẹp&#8221;. Sau khi NK và T cells tiêu diệt tế bào ung thư, đại thực bào đến <em>ăn sạch xác tế bào chết</em>, giữ cho mô không bị viêm. Giống như <em>đội vệ sinh dọn dẹp hiện trường sau cuộc đột kích</em>.</li>
+    </ol>
+
+    <p>Ba loại tế bào này phối hợp thành <strong>một dây chuyền phòng thủ hoàn hảo</strong>: NK phát hiện và đánh chặn nhanh, T cells tấn công chính xác, đại thực bào dọn dẹp sạch sẽ. Khi một khâu yếu, cả hệ thống giảm hiệu quả.</p>
+
+    <svg class="diagram" viewBox="0 0 720 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="3 chiến binh miễn dịch chống ung thư">
+      <text x="360" y="28" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11.5" font-weight="700" fill="#3A5236" letter-spacing="2">3 CHIẾN BINH &mdash; DÂY CHUYỀN PHÒNG THỦ HOÀN HẢO</text>
+
+      <!-- CENTER TOP: Cancer cell (target) -->
+      <circle cx="360" cy="105" r="42" fill="#FCF0ED" stroke="#8B3A4A" stroke-width="3" stroke-dasharray="4,3"/>
+      <text x="360" y="100" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" font-weight="700" fill="#8B3A4A">TẾ BÀO</text>
+      <text x="360" y="115" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" font-weight="700" fill="#8B3A4A">UT VÚ</text>
+      <text x="360" y="130" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="8" fill="#7a1d2a" font-style="italic">mục tiêu</text>
+
+      <!-- 3 arrows converging (attacking) the target -->
+      <line x1="145" y1="215" x2="325" y2="125" stroke="#3a5a44" stroke-width="3"/>
+      <polygon points="325,125 313,127 318,137" fill="#3a5a44"/>
+      <line x1="360" y1="240" x2="360" y2="155" stroke="#3a5a44" stroke-width="3"/>
+      <polygon points="360,155 355,165 365,165" fill="#3a5a44"/>
+      <line x1="575" y1="215" x2="395" y2="125" stroke="#3a5a44" stroke-width="3"/>
+      <polygon points="395,125 407,127 402,137" fill="#3a5a44"/>
+
+      <!-- 3 WARRIOR BOXES -->
+      <!-- WARRIOR 1: NK Cell (left) -->
+      <rect x="40" y="220" width="210" height="170" rx="12" fill="#EFF4ED" stroke="#3a5a44" stroke-width="2.5"/>
+      <!-- Warrior icon circle (dog) -->
+      <circle cx="145" cy="255" r="22" fill="#5A7854" stroke="#3a5a44" stroke-width="2"/>
+      <text x="145" y="263" text-anchor="middle" font-size="22">🐕</text>
+      
+      <text x="145" y="298" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="800" fill="#3a5a44">TẾ BÀO NK</text>
+      <text x="145" y="313" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#2a4434">(Natural Killer)</text>
+      <line x1="80" y1="321" x2="210" y2="321" stroke="#3a5a44" stroke-width="1" opacity="0.4"/>
+      <text x="145" y="338" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" font-weight="700" fill="#1A2818">PHẢN ỨNG NHANH</text>
+      <text x="145" y="357" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#1A2818" font-style="italic">&#8220;chó nghiệp vụ&#8221;</text>
+      <text x="145" y="374" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#1A2818" font-style="italic">cắn ngay không cần lệnh</text>
+
+      <!-- WARRIOR 2: T CD8+ (middle) -->
+      <rect x="255" y="250" width="210" height="170" rx="12" fill="#EFF4ED" stroke="#3a5a44" stroke-width="2.5"/>
+      <circle cx="360" cy="285" r="22" fill="#5A7854" stroke="#3a5a44" stroke-width="2"/>
+      <text x="360" y="293" text-anchor="middle" font-size="22">🎯</text>
+
+      <text x="360" y="328" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="800" fill="#3a5a44">TẾ BÀO T CD8+</text>
+      <text x="360" y="343" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#2a4434">(Cytotoxic T cells)</text>
+      <line x1="295" y1="351" x2="425" y2="351" stroke="#3a5a44" stroke-width="1" opacity="0.4"/>
+      <text x="360" y="368" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" font-weight="700" fill="#1A2818">TẤN CÔNG CHÍNH XÁC</text>
+      <text x="360" y="387" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#1A2818" font-style="italic">&#8220;xạ thủ bắn tỉa&#8221;</text>
+      <text x="360" y="404" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#1A2818" font-style="italic">chỉ trúng mục tiêu</text>
+
+      <!-- WARRIOR 3: Macrophages (right) -->
+      <rect x="470" y="220" width="210" height="170" rx="12" fill="#EFF4ED" stroke="#3a5a44" stroke-width="2.5"/>
+      <circle cx="575" cy="255" r="22" fill="#5A7854" stroke="#3a5a44" stroke-width="2"/>
+      <text x="575" y="263" text-anchor="middle" font-size="22">🧹</text>
+
+      <text x="575" y="298" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="800" fill="#3a5a44">ĐẠI THỰC BÀO</text>
+      <text x="575" y="313" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#2a4434">(Macrophages)</text>
+      <line x1="510" y1="321" x2="640" y2="321" stroke="#3a5a44" stroke-width="1" opacity="0.4"/>
+      <text x="575" y="338" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="10" font-weight="700" fill="#1A2818">DỌN DẸP SẠCH SẼ</text>
+      <text x="575" y="357" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#1A2818" font-style="italic">&#8220;đội vệ sinh&#8221;</text>
+      <text x="575" y="374" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#1A2818" font-style="italic">dọn hiện trường sau đột kích</text>
+    </svg>
+    <div class="diagram-caption">3 chiến binh phối hợp như một <strong>dây chuyền hoàn hảo</strong>: NK đánh chặn nhanh, T cells tấn công chính xác, đại thực bào dọn dẹp sạch. Khi một khâu yếu, cả hệ thống giảm hiệu quả.</div>
+
+    <h2>Phần 3 &middot; Điều Gì Làm Yếu Hệ Miễn Dịch?</h2>
+
+    <p>Hệ miễn dịch là một trong những hệ thống <em>nhạy cảm nhất</em> với lối sống. Có <strong>6 tác nhân chính</strong> làm suy yếu đội quân bảo vệ này &mdash; và điều đáng mừng là cả 6 đều <em>nằm trong tầm kiểm soát của bạn</em>:</p>
+
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th class="warn">⚠️ TÁC NHÂN LÀM YẾU</th>
+          <th class="warn">TÁC ĐỘNG CỤ THỂ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="warn"><strong>Thiếu ngủ</strong><br><em>ngủ dưới 6 giờ/đêm</em></td>
+          <td class="warn">Giảm <strong>50% hoạt tính tế bào NK</strong> chỉ sau 1 đêm &mdash; một trong những tác động nhanh nhất lên cơ thể</td>
+        </tr>
+        <tr>
+          <td class="warn"><strong>Căng thẳng mạn tính</strong><br><em>cortisol cao kéo dài</em></td>
+          <td class="warn">Ức chế <strong>trực tiếp</strong> hoạt động của tế bào NK và T CD8+</td>
+        </tr>
+        <tr>
+          <td class="warn"><strong>Chế độ ăn kém</strong><br><em>đường, thịt chế biến, dầu công nghiệp</em></td>
+          <td class="warn">Gây <strong>viêm mạn tính</strong>, làm "mệt mỏi" hệ miễn dịch (xem <a href="viem-man-tinh.html">Viêm Mạn Tính</a>)</td>
+        </tr>
+        <tr>
+          <td class="warn"><strong>Thiếu vận động</strong><br><em>lối sống ít vận động</em></td>
+          <td class="warn">Tế bào NK và T cells không được <strong>kích hoạt</strong> &mdash; miễn dịch "ngủ gật"</td>
+        </tr>
+        <tr>
+          <td class="warn"><strong>Mất cân bằng vi sinh ruột</strong><br><em>chế độ ăn ít chất xơ</em></td>
+          <td class="warn"><strong>70% tế bào miễn dịch sống trong ruột</strong> &mdash; ruột kém = miễn dịch yếu (xem <a href="vi-sinh-duong-ruot.html">Vi Sinh Đường Ruột</a>)</td>
+        </tr>
+        <tr>
+          <td class="warn"><strong>Thiếu chất dinh dưỡng</strong><br><em>vitamin D, kẽm, selen, vitamin C</em></td>
+          <td class="warn">Tế bào miễn dịch thiếu <strong>"vũ khí"</strong> để hoạt động hiệu quả</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Phần 4 &middot; Thực Phẩm Đánh Thức Hệ Miễn Dịch</h2>
+
+    <p>Đây là phần hấp dẫn nhất: <strong>hệ miễn dịch phản hồi cực nhanh với thực phẩm</strong>. Chỉ sau <em>vài ngày</em> thay đổi chế độ ăn, hoạt tính tế bào NK và T cells đã tăng rõ rệt. Dưới đây là nhóm thực phẩm đối lập:</p>
+
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th class="ok">🌿 ĐÁNH THỨC MIỄN DỊCH</th>
+          <th class="warn">⚠️ LÀM YẾU MIỄN DỊCH</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ok"><strong>Nấm</strong><br><em>hương, đông cô, linh chi — chứa beta-glucan kích hoạt NK cells mạnh nhất</em></td>
+          <td class="warn"><strong>Đường &amp; thức uống ngọt</strong><br><em>làm giảm hoạt tính bạch cầu 50% trong 5 giờ sau ăn</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Tỏi &amp; hành</strong><br><em>allicin tăng hoạt động tế bào NK, được dùng trong y học cổ truyền hàng nghìn năm</em></td>
+          <td class="warn"><strong>Thịt chế biến</strong><br><em>nitrate và hợp chất gây viêm ức chế T cells</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Rau họ cải</strong><br><em>sulforaphane kích hoạt đường dẫn tín hiệu tế bào T</em></td>
+          <td class="warn"><strong>Rượu bia</strong><br><em>ức chế trực tiếp tế bào NK — 1 ly rượu giảm 30% hoạt tính</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Gừng, nghệ, quế</strong><br><em>kháng viêm tự nhiên, hỗ trợ miễn dịch hoạt động bền bỉ</em></td>
+          <td class="warn"><strong>Thực phẩm siêu chế biến</strong><br><em>phụ gia làm mất cân bằng vi sinh ruột → miễn dịch suy yếu</em></td>
+        </tr>
+        <tr>
+          <td class="ok"><strong>Quả mọng &amp; cam quýt</strong><br><em>vitamin C + polyphenol tăng sản xuất bạch cầu</em></td>
+          <td class="warn"><strong>Dầu công nghiệp &amp; đồ chiên</strong><br><em>chất béo trans gây viêm, làm &#8220;mệt&#8221; hệ miễn dịch</em></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="science-box">
+      <div class="sb-label">🔬 Nấm &mdash; &#8220;Vua&#8221; Của Thực Phẩm Tăng Miễn Dịch</div>
+      <p>Nghiên cứu tại City of Hope (Mỹ) trên phụ nữ trước mãn kinh cho thấy: ăn <strong>chỉ 10g nấm tươi/ngày</strong> giảm <em>64% nguy cơ ung thư vú</em>. Đây là một trong những tác động mạnh nhất của một thực phẩm đơn lẻ trong dinh dưỡng phòng ung thư.</p>
+      <p>Lý do: nấm chứa <strong>beta-glucan</strong> &mdash; một polysaccharide đặc biệt kích hoạt tế bào NK và đại thực bào mạnh hơn bất kỳ thực phẩm nào khác. Nấm cũng có khả năng <em>ức chế enzyme aromatase</em> &mdash; enzyme tạo estrogen từ mô mỡ.</p>
+      <p>Lưu ý: <strong>phải nấu chín nấm</strong> &mdash; không ăn sống. Nhiệt độ giải phóng beta-glucan và phá hủy chất gây khó tiêu tự nhiên trong nấm.</p>
+    </div>
+
+    <h2>Phần 5 &middot; Bằng Chứng Từ Nghiên Cứu Lâm Sàng</h2>
+
+    <div class="study-card">
+      <div class="study-meta">Zhang et al., International Journal of Cancer 2009 &middot; n≈2,000</div>
+      <div class="study-title">Ăn nấm giảm 64% nguy cơ ung thư vú</div>
+      <div class="study-result">Nghiên cứu case-control tại Trung Quốc trên gần 2,000 phụ nữ: nhóm ăn <em>10g nấm tươi/ngày</em> (bất kỳ loại) có <strong>giảm 64% nguy cơ ung thư vú</strong>. Kết hợp nấm với trà xanh: <strong>giảm 89% nguy cơ</strong> &mdash; một trong những tác động mạnh nhất từng được ghi nhận từ 2 thực phẩm.</div>
+    </div>
+
+    <div class="study-card">
+      <div class="study-meta">Irwin et al., Brain, Behavior &amp; Immunity 2012 &middot; RCT</div>
+      <div class="study-title">Thiếu ngủ giảm 50% hoạt tính tế bào NK</div>
+      <div class="study-result">Nghiên cứu RCT trên người trưởng thành khỏe mạnh: chỉ <em>1 đêm ngủ 4 giờ</em> đã làm <strong>giảm 50% hoạt tính tế bào NK</strong>. Hoạt tính trở lại bình thường sau 1 đêm ngủ đủ 7-8 giờ. Đây là bằng chứng về khả năng phục hồi nhanh của hệ miễn dịch khi có giấc ngủ tốt.</div>
+    </div>
+
+    <div class="study-card">
+      <div class="study-meta">Canniato et al., JNCI 2021 &middot; n=1,340</div>
+      <div class="study-title">Tập thể dục &gt;300 phút/tuần giảm 68% tử vong</div>
+      <div class="study-result">Nghiên cứu trên 1,340 bệnh nhân ung thư vú sau hóa trị: nhóm tập thể dục <em>hơn 300 phút/tuần</em> có <strong>giảm 68% nguy cơ tử vong</strong> và <strong>giảm 55% nguy cơ tái phát</strong>. Cơ chế chính: vận động <em>kích hoạt tế bào NK và T cells</em>, cải thiện hệ miễn dịch chống ung thư.</div>
+    </div>
+
+    <div class="pull-quote">
+      <p>Trong cơ thể bạn có một đội quân không bao giờ nghỉ. Họ không xin tiền, không đòi danh vọng &mdash; chỉ xin bạn ăn uống lành mạnh, ngủ đủ, siêng vận động. Nuôi họ, và họ sẽ bảo vệ bạn suốt đời.</p>
+      <cite>— H21 Cho Đời Mãi Xanh</cite>
+    </div>
+
+    <div class="takeaway">
+      <div class="takeaway-label">&#128161; Điểm Mấu Chốt</div>
+      <p>Hệ miễn dịch không chỉ chống nhiễm trùng &mdash; nó là <strong>tuyến phòng thủ cuối cùng chống ung thư</strong>. Mỗi ngày, cơ thể tạo ra hàng triệu tế bào có lỗi, và tế bào NK + T CD8+ tiêu diệt chúng trước khi thành khối u.</p>
+      <p>Tin tốt: <em>hệ miễn dịch phản hồi cực nhanh</em> với lối sống. Chỉ cần <strong>1 đêm ngủ đủ, 1 bữa ăn nhiều rau, 30 phút vận động</strong> là hoạt tính tế bào NK đã tăng rõ rệt. Thực phẩm quan trọng nhất để đánh thức miễn dịch: <strong>nấm</strong> (beta-glucan), <strong>rau họ cải</strong> (sulforaphane), <strong>tỏi</strong> (allicin), <strong>quả mọng</strong> (polyphenol), và <strong>gia vị đậm</strong> (nghệ, gừng, quế).</p>
+      <p>Đây không chỉ là phòng ung thư vú &mdash; mà còn là <strong>phòng hàng chục loại ung thư khác</strong>, nhiễm trùng, bệnh tự miễn, lão hóa. Nuôi dưỡng hệ miễn dịch là một trong những đầu tư sức khỏe <em>có lợi nhất</em> mà các bạn có thể làm mỗi ngày &mdash; cho cả nam và nữ, mọi lứa tuổi.</p>
+    </div>
+
+    <div class="soft-invitation">
+      H21 là môi trường nơi chúng tôi thực hành triết lý <em>&#8220;thức ăn là thuốc, và thuốc chính là thức ăn&#8221;</em>. Mỗi bữa ăn trong chương trình H21 được thiết kế để <strong>nuôi dưỡng đội quân miễn dịch</strong> &mdash; nấm hương trong canh buổi tối, tỏi trong món xào, rau họ cải trong đĩa salad, quả mọng trong bữa sáng, gia vị đậm như nghệ và gừng. Đây không phải &#8220;thần dược&#8221; &mdash; đây là <em>những thực phẩm có khả năng đánh thức</em> tế bào NK và T cells đã được chứng minh trong hàng trăm nghiên cứu. <strong>Khi đội quân bên trong mạnh, bạn không cần phải sợ những đe dọa bên ngoài.</strong>
+    </div>
+
+<div class="cta-box">
+  <div class="cta-eyebrow">Khoa Học Lối Sống · H21 Cho Đời Mãi Xanh</div>
+  <h3 class="cta-title">Nuôi dưỡng đội quân miễn dịch bên trong bạn</h3>
+  <p class="cta-desc">Tham gia cộng đồng H21 để học cách biến mỗi bữa ăn thành một &#8220;liều thuốc miễn dịch&#8221; &mdash; dựa trên khoa học, áp dụng hàng ngày.</p>
+  <a href="https://www.facebook.com/xanhlenbenhxuong/" target="_blank" class="cta-btn">Đăng Ký Khóa Học H21 &#8594;</a>
+</div>
+
+  </div>
+<div class="article-footer">
+  <div class="footer-brand">
+    <strong>Thuy-Trinh Nguyen</strong> &middot; Khoa Học Gia &amp; Nhà Sáng Lập<br>
+    <strong>H21 - Cho Đời Mãi Xanh</strong> &middot; <a href="https://www.h21chodoimaixanh.com">www.h21chodoimaixanh.com</a><br>
+    Mang khoa học từ phòng thí nghiệm đến căn bếp mỗi gia đình
+  </div>
+</div>
+</div>
+<footer class="site-footer">
+  <strong>H21 - Cho Đời Mãi Xanh</strong> &middot; Khoa Học Gia Thuy-Trinh Nguyen<br>
+  <a href="https://blog.h21chodoimaixanh.com">blog.h21chodoimaixanh.com</a> &middot; <a href="https://www.h21chodoimaixanh.com">www.h21chodoimaixanh.com</a><br>
+  <em style="font-style:italic;">Mang khoa học từ phòng thí nghiệm đến căn bếp mỗi gia đình.</em>
+</footer>
+</body>
+</html>
