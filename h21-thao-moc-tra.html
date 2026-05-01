@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>H21 Thảo Mộc Trà – Nền Tảng Y Học Dự Phòng</title>
+<meta property="fb:app_id" content="1795887841390104">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -416,9 +417,27 @@
 .cta-h21 p{color:rgba(255,255,255,.65);font-size:14px;max-width:420px;margin:0 auto 24px}
 .cta-h21-btn{display:inline-block;background:#52b788;color:#fff;font-size:14px;font-weight:600;padding:12px 30px;border-radius:100px;text-decoration:none;font-family:'Be Vietnam Pro',sans-serif;transition:opacity .2s}
 .cta-h21-btn:hover{opacity:.85}
+
+/* === FB ENGAGE BOX === */
+.fb-engage-box{background:linear-gradient(135deg,#EDF7EC 0%,#D4ECD2 100%);border:1.5px solid #d8f3dc;border-radius:14px;padding:24px 28px;margin:40px 0;text-align:center}
+.fb-engage-label{font-family:'Be Vietnam Pro',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1e4a2e;margin-bottom:8px}
+.fb-engage-title{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:#1e4a2e;margin-bottom:6px;line-height:1.4}
+.fb-engage-sub{font-family:'DM Sans',sans-serif;font-size:14px;font-style:italic;color:#2d6a4f;margin-bottom:18px;line-height:1.6}
+.fb-engage-buttons{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;min-height:32px}
+.fb-engage-buttons .fb-like,.fb-engage-buttons .fb-share-button{display:inline-flex !important}
+.fb-engage-note{font-family:'Be Vietnam Pro',sans-serif;font-size:12px;color:#52735c;margin-top:14px;line-height:1.6}
+.fb-engage-note strong{color:#1e4a2e;font-weight:600}
+@media(max-width:600px){.fb-engage-box{padding:20px 18px;border-radius:12px}.fb-engage-title{font-size:17px}.fb-engage-sub{font-size:13px}}
 </style>
 </head>
 <body>
+
+<!-- ============ FACEBOOK SDK (async) ============ -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v19.0&appId=1795887841390104"
+  nonce="h21thm"></script>
+
 
 <nav class="h21-nav">
   <a href="index.html" class="brand">H21 <span>Cho Đời Mãi Xanh</span></a>
@@ -633,6 +652,28 @@
 </div>
 
 <div style="max-width:760px;margin:0 auto;padding:0 1.5rem">
+
+  <!-- ============ FB ENGAGE BOX — Like + Share ============ -->
+  <div class="fb-engage-box">
+    <div class="fb-engage-label">Cộng Đồng H21</div>
+    <div class="fb-engage-title">Bài viết hữu ích cho bạn?</div>
+    <p class="fb-engage-sub">Một cú click giúp bạn bè và người thân của bạn cũng nhìn thấy — lan toả khoa học lối sống đến nhiều gia đình Việt hơn.</p>
+    <div class="fb-engage-buttons">
+      <div class="fb-like"
+        data-href="https://blog.h21chodoimaixanh.com/h21-thao-moc-tra.html"
+        data-width=""
+        data-layout="button_count"
+        data-action="like"
+        data-size="large"
+        data-share="false"></div>
+      <div class="fb-share-button"
+        data-href="https://blog.h21chodoimaixanh.com/h21-thao-moc-tra.html"
+        data-layout="button_count"
+        data-size="large"></div>
+    </div>
+    <p class="fb-engage-note"><strong>Cảm ơn bạn</strong> — mỗi lượt thích và chia sẻ là một cánh tay tiếp sức cho hành trình "Mang khoa học từ phòng thí nghiệm đến căn bếp mỗi gia đình".</p>
+  </div>
+
   <div class="cta-h21">
     <h3>Bạn muốn hiểu đúng hơn về dinh dưỡng?</h3>
     <p>Tham gia cộng đồng H21 — nơi khoa học dinh dưỡng được dịch thành thói quen thực tế mỗi ngày.</p>

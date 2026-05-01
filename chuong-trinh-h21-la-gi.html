@@ -281,6 +281,17 @@ p.bullet::before{content:'•';position:absolute;left:6px;top:0;color:var(--acce
 .takeaway strong{color:var(--ink);}
 .takeaway em{color:var(--accent);font-weight:500;}
 
+/* === FB ENGAGE BOX === */
+.fb-engage-box{background:linear-gradient(135deg,#EEF8F3 0%,#E0F0E8 100%);border:1.5px solid var(--border);border-radius:14px;padding:24px 28px;margin:32px 0;text-align:center;}
+.fb-engage-label{font-family:'Be Vietnam Pro',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent-dark);margin-bottom:8px;}
+.fb-engage-title{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--ink);margin-bottom:6px;line-height:1.4;}
+.fb-engage-sub{font-family:'Lora',serif;font-size:14px;font-style:italic;color:var(--light);margin-bottom:18px;line-height:1.6;}
+.fb-engage-buttons{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;min-height:32px;}
+.fb-engage-buttons .fb-like,.fb-engage-buttons .fb-share-button{display:inline-flex !important;}
+.fb-engage-note{font-family:'Be Vietnam Pro',sans-serif;font-size:12px;color:var(--light);margin-top:14px;line-height:1.6;}
+.fb-engage-note strong{color:var(--accent-dark);font-weight:600;}
+@media(max-width:600px){.fb-engage-box{padding:20px 18px;border-radius:12px;}.fb-engage-title{font-size:17px;}.fb-engage-sub{font-size:13px;}}
+
 .cta-box{background:linear-gradient(135deg,var(--hero-dark) 0%,var(--hero-mid) 100%);border-radius:16px;padding:38px 40px;margin:48px 0;text-align:center;color:white;box-shadow:0 12px 32px rgba(10,61,43,0.32);}
 .cta-box h3{font-family:'Playfair Display',serif;font-size:26px;margin-bottom:14px;color:white;}
 .cta-box p{font-size:16px;line-height:1.7;color:rgba(255,255,255,0.92);margin-bottom:22px;}
@@ -344,6 +355,13 @@ p.bullet::before{content:'•';position:absolute;left:6px;top:0;color:var(--acce
 </style>
 </head>
 <body>
+
+<!-- ============ FACEBOOK SDK (async) ============ -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v19.0&appId=1795887841390104"
+  nonce="h21ctr"></script>
+
 
 <nav class="site-nav">
   <a href="https://www.h21chodoimaixanh.com" class="nav-logo">
@@ -785,6 +803,27 @@ p.bullet::before{content:'•';position:absolute;left:6px;top:0;color:var(--acce
       <h3>H21 — Không Phải Đọc Bài, Mà Là Có Người Đồng Hành</h3>
       <p>21 ngày là <em>biết</em>. 90 ngày là <em>thuộc</em>. Một năm là <em>sống</em>. Nhưng <strong>không ai có thể đi qua 90 ngày một mình</strong>. Đó là lý do H21 tồn tại — để các bạn có một Coach 1:1 đồng hành, không tốn thêm thời gian, không cần đọc lý thuyết, có chuyên gia ngay trong căn bếp.</p>
       <p>Các bạn không cần thay đổi cuộc sống. Các bạn chỉ cần <em>nâng chất lượng những điều</em> các bạn vốn đã làm mỗi ngày. <strong>Cho đời mãi xanh.</strong></p>
+    </div>
+
+    <!-- ============ FB ENGAGE BOX — Like + Share ============ -->
+    <div class="fb-engage-box">
+      <div class="fb-engage-label">Cộng Đồng H21</div>
+      <div class="fb-engage-title">Bài viết hữu ích cho bạn?</div>
+      <p class="fb-engage-sub">Một cú click giúp bạn bè và người thân của bạn cũng nhìn thấy — lan toả khoa học lối sống đến nhiều gia đình Việt hơn.</p>
+      <div class="fb-engage-buttons">
+        <div class="fb-like"
+          data-href="https://blog.h21chodoimaixanh.com/chuong-trinh-h21-la-gi.html"
+          data-width=""
+          data-layout="button_count"
+          data-action="like"
+          data-size="large"
+          data-share="false"></div>
+        <div class="fb-share-button"
+          data-href="https://blog.h21chodoimaixanh.com/chuong-trinh-h21-la-gi.html"
+          data-layout="button_count"
+          data-size="large"></div>
+      </div>
+      <p class="fb-engage-note"><strong>Cảm ơn bạn</strong> — mỗi lượt thích và chia sẻ là một cánh tay tiếp sức cho hành trình "Mang khoa học từ phòng thí nghiệm đến căn bếp mỗi gia đình".</p>
     </div>
 
     <div class="cta-box">
